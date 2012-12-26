@@ -1,0 +1,19 @@
+wait(1000)
+enemyownscloaked_jump(detection)
+enemyownsairtech_jump(air)
+repeat()
+
+--detection--
+build(1, Protoss Gateway, 80)
+wait_build(1, Protoss Gateway)
+build(1, Protoss Cybernetics Core, 80)
+wait_build(1, Protoss Cybernetics Core)
+build(1, Protoss Robotics Facility, 80)
+wait_build(1, Protoss Robotics Facility)
+build(1, Protoss Observatory, 80)
+wait_build(1, Protoss Observatory)
+train(1, Protoss Observer)
+repeat()
+
+--air--
+repeat()

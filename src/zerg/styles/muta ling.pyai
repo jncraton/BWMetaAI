@@ -1,0 +1,40 @@
+valid_style_against(Zerg, Terran, Protoss)
+
+train(4, Zerg Zergling)
+multirun(muta_ling_tech)
+
+--muta_ling_loop--
+train(36, Zerg Zergling)
+train(12, Zerg Mutalisk)
+random_jump(160, muta_ling_loop_attack)
+expand(99, gen_expansion)
+
+--muta_ling_loop_attack--
+attack_do()
+attack_clear()
+attack_add(36, Zerg Zergling)
+attack_add(12, Zerg Mutalisk)
+attack_prepare()
+wait(300)
+
+attack_do()
+goto(muta_ling_loop)
+
+--muta_ling_tech--
+build(2, Zerg Hatchery, 80)
+wait_buildstart(2, Zerg Hatchery)
+build(1, Zerg Lair, 80)
+wait_buildstart(1, Zerg Lair)
+build(3, Zerg Hatchery, 80)
+wait_buildstart(3, Zerg Hatchery)
+wait_build(1, Zerg Lair)
+build(1, Zerg Spire, 80)
+wait_buildstart(1, Zerg Spire)
+upgrade(1, Metabolic Boost, 80)
+wait(2000)
+build(4, Zerg Hatchery, 80)
+wait_buildstart(4, Zerg Hatchery)
+build(5, Zerg Hatchery, 80)
+wait_buildstart(5, Zerg Hatchery)
+include(ground_upgrades)
+stop()

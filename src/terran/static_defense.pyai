@@ -1,0 +1,7 @@
+player_need(1, Terran Barracks)
+creep(3)
+build(1, Terran Bunker, 80)
+wait_buildstart(1, Terran Bunker)
+player_need(1, Terran Engineering Bay)
+build(3, Terran Missile Turret, 80)
+wait_buildstart(3, Terran Missile Turret)

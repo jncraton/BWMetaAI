@@ -1,0 +1,10 @@
+wait(1000)
+enemyownscloaked_jump(detection)
+enemyownsairtech_jump(air)
+repeat()
+
+--detection--
+repeat()
+
+--air--
+repeat()

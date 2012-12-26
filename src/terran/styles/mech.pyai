@@ -1,0 +1,57 @@
+valid_style_against(Terran, Protoss)
+
+multirun(mech_tech)
+build_finish(1, Terran Factory)
+build_start(1, Terran Machine Shop)
+train(3, Terran Vulture)
+wait_build(1, Terran Machine Shop)
+tech(Tank Siege Mode, 80)
+train(4, Terran Siege Tank)
+tech(Spider Mines, 80)
+train(9, Terran Vulture)
+upgrade(1, Ion Thrusters, 80)
+
+--mech_loop_core--
+attack_do()
+attack_clear()
+
+enemyownsairtech_jump(mech_loop_aa)
+attack_train(12, Terran Siege Tank)
+goto(mech_loop_finish)
+
+--mech_loop_aa--
+build_finish(1, Terran Armory)
+attack_train(8, Terran Goliath)
+upgrade(1, Charon Booster, 80)
+attack_train(8, Terran Siege Tank)
+
+--mech_loop_finish--
+attack_train(15, Terran Vulture)
+random_jump(128, mech_perhaps_expand)
+attack_train(18, Terran Siege Tank)
+attack_train(18, Terran Vulture)
+
+--mech_perhaps_expand--
+random_jump(160, mech_loop_attack)
+expand(99, gen_expansion)
+
+--mech_loop_attack--
+attack_prepare()
+wait(300)
+
+attack_do()
+goto(mech_loop_core)
+
+--mech_tech--
+build_finish(1, Terran Barracks)
+build_finish(1, Terran Factory)
+build_start(1, Terran Machine Shop)
+build_finish(2, Terran Factory)
+build_start(2, Terran Machine Shop)
+build_finish(3, Terran Factory)
+build_start(3, Terran Machine Shop)
+build_finish(4, Terran Factory)
+build_start(4, Terran Machine Shop)
+wait(6000)
+include(mech_upgrades)
+stop()

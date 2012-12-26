@@ -1,0 +1,8 @@
+start_town()
+transports_off()
+farms_notiming()
+
+build(1, Town Hall, 150)
+wait_buildstart(1, Town Hall)
+build(5, Peon, 80)
+wait_buildstart(5, Peon)

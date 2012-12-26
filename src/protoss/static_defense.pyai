@@ -1,0 +1,6 @@
+build(1, Protoss Pylon, 80)
+player_need(1, Protoss Forge)
+wait_build(1, Protoss Pylon)
+creep(3)
+build(3, Protoss Photon Cannon, 80)
+wait_buildstart(3, Protoss Photon Cannon)
