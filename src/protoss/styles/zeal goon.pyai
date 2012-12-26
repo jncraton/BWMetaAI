@@ -1,4 +1,4 @@
-valid_style_against(Zerg, Terran, Protoss)
+valid_style_against(Terran, Protoss)
 
 multirun(zeal_goon_tech)
 --zeal_goon_loop--

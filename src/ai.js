@@ -58,6 +58,8 @@ function AI (race_name) {
         append("stop()")
         append(race.loadContents('fortified_expansion'))
         append("stop()")
+        append(race.loadContents('fast_expansion'))
+        append("stop()")
     
         return src;
     }
