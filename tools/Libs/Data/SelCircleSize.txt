@@ -1,0 +1,20 @@
+22 pixels
+32 pixels
+46 pixels
+62 pixels
+72 pixels
+94 pixels
+110 pixels
+122 pixels
+146 pixels
+224 pixels
+22 pixels [Dashed]
+32 pixels [Dashed]
+46 pixels [Dashed]
+62 pixels [Dashed]
+72 pixels [Dashed]
+94 pixels [Dashed]
+110 pixels [Dashed]
+122 pixels [Dashed]
+146 pixels [Dashed]
+224 pixels [Dashed]

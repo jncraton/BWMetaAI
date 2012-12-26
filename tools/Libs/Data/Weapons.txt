@@ -1,0 +1,131 @@
+Gauss Rifle (Normal)
+Gauss Rifle (Jim Raynor-Marine)
+C-10 Concussion Rifle (Normal)
+C-10 Concussion Rifle (Sarah Kerrigan)
+Fragmentation Grenade (Normal)
+Fragmentation Grenade (Jim Raynor-Vulture)
+Spider Mines
+Twin Autocannons (Normal)
+Hellfire Missile Pack (Normal)
+Twin Autocannons (Alan Schezar)
+Hellfire Missile Pack (Alan Schezar)
+Arclite Cannon (Normal)
+Arclite Cannon (Edmund Duke)
+Fusion Cutter
+Fusion Cutter (Harvest)
+Gemini Missiles (Normal)
+Burst Lasers (Normal)
+Gemini Missiles (Tom Kazansky)
+Burst Lasers (Tom Kazansky)
+ATS Laser Battery (Normal)
+ATA Laser Battery (Normal)
+ATS Laser Battery (Norad II+Mengsk+DuGalle)
+ATA Laser Battery (Norad II+Mengsk+DuGalle)
+ATS Laser Battery (Hyperion)
+ATA Laser Battery (Hyperion)
+Flame Thrower (Normal)
+Flame Thrower (Gui Montag)
+Arclite Shock Cannon (Normal)
+Arclite Shock Cannon (Edmund Duke)
+Longbolt Missiles
+Yamato Gun
+Nuclear Missile
+Lockdown
+EMP Shockwave
+Irradiate
+Claws (Normal)
+Claws (Devouring One)
+Claws (Infested Kerrigan)
+Needle Spines (Normal)
+Needle Spines (Hunter Killer)
+Kaiser Blades (Normal)
+Kaiser Blades (Torrasque)
+Toxic Spores (Broodling)
+Spines
+Spines (Harvest)
+Acid Spray (Unused)
+Acid Spore (Normal)
+Acid Spore (Kukulza-Guardian)
+Glave Wurm (Normal)
+Glave Wurm (Kukulza-Mutalisk)
+Venom (Unused-Defiler)
+Venom (Unused-Defiler Hero)
+Seeker Spores
+Subterranean Tentacle
+Suicide (Infested Terran)
+Suicide (Scourge)
+Parasite
+Spawn Broodlings
+Ensnare
+Dark Swarm
+Plague
+Consume
+Particle Beam
+Particle Beam (Harvest)
+Psi Blades (Normal)
+Psi Blades (Fenix-Zealot)
+Phase Disruptor (Normal)
+Phase Disruptor (Fenix-Dragoon)
+Psi Assault (Normal-Unused)
+Psi Assault (Tassadar+Aldaris)
+Psionic Shockwave (Normal)
+Psionic Shockwave (Tassadar/Zeratul Archon)
+Unknown72
+Dual Photon Blasters (Normal)
+Anti-matter Missiles (Normal)
+Dual Photon Blasters (Mojo)
+Anti-matter Missiles (Mojo)
+Phase Disruptor Cannon (Normal)
+Phase Disruptor Cannon (Danimoth)
+Pulse Cannon
+STS Photon Cannon
+STA Photon Cannon
+Scarab
+Stasis Field
+Psi Storm
+Warp Blades (Zeratul)
+Warp Blades (Dark Templar Hero)
+Missiles (Unused)
+Laser Battery1 (Unused)
+Tormentor Missiles (Unused)
+Bombs (Unused)
+Raider Gun (Unused)
+Laser Battery2 (Unused)
+Laser Battery3 (Unused)
+Dual Photon Blasters (Unused)
+Flechette Grenade (Unused)
+Twin Autocannons (Floor Trap)
+Hellfire Missile Pack (Wall Trap)
+Flame Thrower (Wall Trap)
+Hellfire Missile Pack (Floor Trap)
+Neutron Flare
+Disruption Web
+Restoration
+Halo Rockets
+Corrosive Acid
+Mind Control
+Feedback
+Optical Flare
+Maelstrom
+Subterranean Spines
+Gauss Rifle0 (Unused)
+Warp Blades (Normal)
+C-10 Concussion Rifle (Samir Duran)
+C-10 Concussion Rifle (Infested Duran)
+Dual Photon Blasters (Artanis)
+Anti-matter Missiles (Artanis)
+C-10 Concussion Rifle (Alexei Stukov)
+Unknown117
+Unknown118
+Unknown119
+Unknown120
+Unknown121
+Unknown122
+Unknown123
+Unknown124
+Unknown125
+Unknown126
+Unknown127
+Unknown128
+Unknown129
+None

@@ -1,0 +1,517 @@
+2/38 Ash
+2/39 Ash
+2/41 Ash
+2/40 Ash
+2/42 Ash
+2/43 Ash
+2/44 Ash 
+2/1 Ash
+2/4 Ash
+2/5 Ash
+2/30 Ash
+2/28 Ash
+2/29 Ash
+4/1 Ash 
+4/2 Ash
+4/3 Ash
+4/56 Jungle
+4/57 Jungle
+4/58 Jungle
+4/59 Jungle
+9/5 Jungle
+9/6 Jungle
+9/7 Jungle
+4/51 Jungle
+4/52 Jungle
+4/54 Jungle
+4/53 Jungle
+9/1 Jungle
+9/2 Jungle
+9/3 Jungle
+9/4 Jungle
+4/12 Jungle
+4/13 Jungle
+4/1 Jungle
+4/3 Jungle
+4/2 Jungle
+4/5 Jungle
+4/4 Jungle
+4/9 Jungle
+4/10 Jungle
+5/5 Jungle
+5/7 Jungle
+5/6 Jungle
+5/9 Jungle
+5/8 Jungle
+4/6 Jungle
+4/7 Jungle
+4/17 Jungle
+13/4 Jungle
+11/5 Jungle
+11/6 Jungle
+11/7 Jungle
+11/8 Jungle
+11/10 Jungle
+11/11 Jungle
+11/12 Jungle
+7/4 Platform
+7/5 Platform
+7/6 Platform
+7/1 Platform
+7/2 Platform
+7/3 Platform
+7/9 Platform
+7/10 Platform
+7/8 Platform
+7/7 Platform
+7/26 Platform
+7/24 Platform
+7/28 Platform
+7/27 Platform
+7/25 Platform
+7/29 Platform
+7/30 Platform
+7/31 Platform
+12/1 Platform
+9/27 Platform
+5/54 Badlands
+5/55 Badlands
+5/56 Badlands
+5/57 Badlands
+6/16 Badlands
+6/17 Badlands
+6/20 Badlands
+6/21 Badlands
+5/10 Badlands
+5/50 Badlands
+5/52 Badlands
+5/53 Badlands
+5/51 Badlands
+6/3 Badlands
+11/3 Badlands
+11/8 Badlands
+11/6 Badlands
+11/7 Badlands
+11/9 Badlands
+11/10 Badlands
+11/11 Badlands
+11/12 Badlands
+11/13 Badlands
+11/14 Badlands
+1/13 Badlands
+1/9 Badlands
+1/11 Badlands
+1/14 Badlands
+1/10 Badlands
+1/12 Badlands
+1/15 Badlands
+1/7 Badlands
+1/5 Badlands
+1/16 Badlands
+1/8 Badlands
+1/6 Badlands1
+1/6 Badlands2
+1/6 Badlands3
+1/6 Badlands4
+1/6 Badlands5
+1/6 Badlands6
+1/6 Badlands7
+1/6 Badlands8
+4/15 Installation1
+4/15 Installation2
+3/9 Installation
+3/10 Installation
+3/11 Installation
+3/12 Installation
+1/6 Badlands9
+1/6 Badlands10
+3/1 Installation
+3/2 Installation
+1/6 Badlands11
+Scourge
+Scourge Death
+Scourge Explosion
+Broodling
+Broodling Remnants
+Infested Terran
+Infested Terran Explosion
+Guardian Cocoon
+Defiler
+Defiler Remnants
+Drone
+Drone Remnants
+Egg
+Egg Remnants
+Guardian
+Guardian Death
+Hydralisk
+Hydralisk Remnants
+Infested Kerrigan
+Larva
+Larva Remnants
+Mutalisk
+Mutalisk Death
+Overlord
+Overlord Death
+Queen
+Queen Death
+Ultralisk
+Ultralisk Remnants
+Zergling
+Zergling Remnants
+Cerebrate
+Infested Command Center
+Spawning Pool
+Mature Chrysalis
+Evolution Chamber
+Creep Colony
+Hatchery
+Hive
+Lair
+Sunken Colony
+Greater Spire
+Defiler Mound
+Queen's Nest
+Nydus Canal
+Overmind With Shell
+Overmind Without Shell
+Ultralisk Cavern
+Extractor
+Hydralisk Den
+Spire
+Spore Colony
+Zerg Building Spawn (Small)
+Zerg Building Spawn (Medium)
+Zerg Building Spawn (Large)
+Zerg Building Explosion
+Zerg Building Rubble (Small)
+Zerg Building Rubble (Large)
+Arbiter
+Archon Energy
+Carrier
+Dragoon
+Dragoon Remnants
+Interceptor
+Probe
+Scout
+Shuttle
+High Templar
+Dark Templar (Hero)
+Reaver
+Scarab
+Zealot
+Observer
+Templar Archives
+Assimilator
+Observatory
+Citadel of Adun
+Forge
+Gateway
+Cybernetics Core
+Khaydarin Crystal Formation
+Nexus
+Photon Cannon
+Arbiter Tribunal
+Pylon
+Robotics Facility
+Shield Battery
+Stargate
+Stasis Cell/Prison
+Robotics Support Bay
+Protoss Temple
+Fleet Beacon
+Explosion (Large)
+Protoss Building Rubble (Small)
+Protoss Building Rubble (Large)
+Battlecruiser
+Civilian
+Dropship
+Firebat
+Ghost
+Ghost Remnants
+Nuke Target Dot
+Goliath Base
+Goliath Turret
+Sarah Kerrigan
+Marine
+Marine Remnants
+Scanner Sweep
+Wraith
+SCV
+Siege Tank (Tank) Base
+Siege Tank (Tank) Turret
+Siege Tank (Siege) Base
+Siege Tank (Siege) Turret
+Vulture
+Spider Mine
+Science Vessel (Base)
+Science Vessel (Turret)
+Terran Academy
+Barracks
+Armory
+Comsat Station
+Command Center
+Supply Depot
+Control Tower
+Factory
+Covert Ops
+Ion Cannon
+Machine Shop
+Missile Turret (Base)
+Crashed Batlecruiser
+Physics Lab
+Bunker
+Refinery
+Science Facility
+Nuclear Silo
+Nuclear Missile
+Nuke Hit
+Starport
+Engineering Bay
+Terran Construction (Large)
+Terran Construction (Small)
+Building Explosion (Large)
+Terran Building Rubble (Small)
+Terran Building Rubble (Large)
+Vespene Geyser
+Ragnasaur (Ash)
+Rhynadon (Badlands)
+Bengalaas (Jungle)
+Mineral Field Type1
+Mineral Field Type2
+Mineral Field Type3
+Independent Starport (Unused)
+Zerg Beacon
+Terran Beacon
+Protoss Beacon
+Dark Swarm
+Flag
+Young Chrysalis
+Psi Emitter
+Data Disc
+Khaydarin Crystal
+Mineral Chunk Type1
+Mineral Chunk Type2
+Protoss Gas Orb Type1
+Protoss Gas Orb Type2
+Zerg Gas Sac Type1
+Zerg Gas Sac Type2
+Terran Gas Tank Type1
+Terran Gas Tank Type2
+White Circle (Invisible)
+Start Location
+Map Revealer
+Floor Gun Trap
+Wall Missile Trap
+Wall Missile Trap2
+Wall Flame Trap
+Wall Flame Trap2
+Floor Missile Trap
+Longbolt/Gemini Missiles Trail
+Grenade Shot Smoke
+Vespene Geyser Smoke1
+Vespene Geyser Smoke2
+Vespene Geyser Smoke3
+Vespene Geyser Smoke4
+Vespene Geyser Smoke5
+Small Explosion (Unused)
+Double Explosion
+Cursor Marker
+Egg Spawn
+High Templar Glow
+Psi Field (Right Upper)
+Burrowing Dust
+Building Landing Dust Type1
+Building Landing Dust Type2
+Building Landing Dust Type3
+Building Landing Dust Type4
+Building Landing Dust Type5
+Building Lifting Dust Type1
+Building Lifting Dust Type2
+Building Lifting Dust Type3
+Building Lifting Dust Type4
+Needle Spines
+Dual Photon Blasters Hit
+Particle Beam Hit
+Anti-Matter Missile
+Pulse Cannon
+Phase Disruptor
+STA/STS Photon Cannon Overlay
+Psionic Storm
+Fusion Cutter Hit
+Gauss Rifle Hit
+Gemini Missiles
+Fragmentation Grenade
+Magna Pulse (Unused)
+Lockdown/LongBolt/Hellfire Missile
+C-10 Canister Rifle Hit
+ATS/ATA Laser Battery
+Burst Lasers
+Arclite Shock Cannon Hit
+Yamato Gun
+Yamato Gun Trail
+EMP Shockwave Missile
+Needle Spine Hit
+Plasma Drip Hit (Unused)
+Sunken Colony Tentacle
+Venom (Unused Zerg Weapon)
+Acid Spore
+Glave Wurm
+Seeker Spores
+Queen Spell Holder
+Stasis Field Hit
+Plague Cloud
+Consume
+Ensnare
+Glave Wurm/Seeker Spores Hit
+Psionic Shockwave Hit
+Glave Wurm Trail
+Seeker Spores Overlay
+Phase Disruptor (Unused)
+White Circle
+Acid Spray (Unused)
+Plasma Drip (Unused)
+Scarab/Anti-Matter Missile Overlay
+Hallucination Death1
+Hallucination Death2
+Hallucination Death3
+Bunker Overlay
+FlameThrower
+Recall Field
+Scanner Sweep Hit
+Left Upper Level Door
+Right Upper Level Door
+Substructure Left Door
+Substructure Right Door
+Substructure Opening Hole
+7/13 Twilight
+7/14 Twilight
+7/16 Twilight
+7/15 Twilight
+7/19 Twilight
+7/20 Twilight
+7/21 Twilight
+Unknown Twilight
+7/17 Twilight
+6/1 Twilight
+6/2 Twilight
+6/3 Twilight
+6/4 Twilight
+6/5 Twilight
+8/3 Twilight
+8/3 Twilight
+9/29 Ice
+9/28 Ice
+12/38 Ice 
+12/37 Ice
+12/33 Ice
+9/21 Ice
+9/15 Ice
+9/16 Ice
+Unknown410
+Unknown411
+12/9 Ice1
+12/10 Ice
+9/24 Ice 
+9/23 Ice
+Unknown416
+12/7 Ice
+12/8 Ice
+12/9 Ice2
+12/10 Ice
+12/40 Ice
+12/41 Ice
+12/42 Ice
+12/5 Ice
+12/6 Ice 
+12/36 Ice
+12/32 Ice
+12/33 Ice
+12/34 Ice
+12/24 Ice
+12/25 Ice
+9/22 Ice
+12/31 Ice
+12/20 Ice
+12/24 Ice
+12/25 Ice
+12/30 Ice
+12/30 Ice
+Unknown439
+4/1 Ice
+6/1 Ice
+5/6 Ice 
+5/7 Ice 
+5/8 Ice 
+5/9 Ice
+10/10 Desert1
+10/12 Desert1
+10/8 Desert
+10/9 Desert1
+6/10 Desert
+6/13 Desert
+Unknown Desert
+10/12 Desert2
+10/9 Desert2
+10/10 Desert2
+10/11 Desert
+10/14 Desert
+10/41 Desert
+10/39 Desert
+10/8 Desert
+10/6 Desert
+10/7 Desert
+4/6 Desert
+4/11 Desert
+4/10 Desert
+4/9 Desert
+4/7 Desert
+4/12 Desert
+4/8 Desert
+4/13 Desert
+6/13 Desert
+4/17 Desert
+6/20 Desert
+4/15 Desert1
+4/15 Desert2
+10/23 Desert
+8/23 Desert
+10/5 Desert
+12/1 Desert Overlay
+11/3 Desert
+Lurker Egg
+Devourer
+Devourer Death
+Lurker Remnants
+Lurker
+Dark Archon Energy
+Corsair
+Dark Templar (Unit)
+Medic
+Medic Remnants
+Valkyrie
+Scantid (Desert)
+Kakaru (Twilight)
+Ursadon (Ice)
+Overmind Cocoon
+Power Generator
+Xel'Naga Temple
+Psi Disrupter
+Warp Gate
+Feedback Hit (Small)
+Feedback Hit (Medium)
+Feedback Hit (Large)
+Disruption Web
+White Circle
+Halo Rockets Trail
+Neutron Flare
+Neutron Flare Overlay (Unused)
+Optical Flare Grenade
+Halo Rockets
+Subterranean Spines Hit
+Subterranean Spines
+Corrosive Acid Shot
+Corrosive Acid Hit
+Maelstrom Hit
+Uraj
+Khalis

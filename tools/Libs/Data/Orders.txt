@@ -1,0 +1,190 @@
+Die
+Stop
+Guard (Normal)
+Guard (Player)
+Guard (Subunit)
+Guard (Bunker)
+Ignore (Normal)
+Stop (Reaver)
+Attack
+Attack (Obscured)
+Attack Unit (Normal)
+Attack In Range
+Attack Ground (Unused)
+Hover (Unused)
+Attack Move
+Building Is Being Infested
+Nothing 1 (Unused)
+Power-Up (Unused)
+Guard (Building)
+Attack (Building)
+Script (Spider Mine)
+Stay In Range
+Attack (Subunit)
+Nothing 2 (Normal)
+Nothing 3 (Unused)
+Drone Start Mutate
+Drone Mutate
+Use Ability (Infest 1)
+Use Ability (Infest 2)
+Infest (Queen)
+Build (SCV)
+Build (Probe)
+Create Building (Probe)
+Is Building (SCV)
+Repair Unit (SCV)
+Repair Unit (Obscured)
+Place Add-On
+Build Add-On
+Train (Normal)
+Rally to Visible Unit
+Rally to Ground Tile
+Zerg Birth
+Unit Morph
+Building Morph
+Building Is Constructed (Terran)
+Zerg Build Self
+Build (Nydus Canal Exit)
+Enter (Nydus Canal)
+Building Is Constructed (Protoss)
+Follow
+Idle (Carrier)
+Move (Carrier&Reaver)
+Stop (Carrier)
+Attack (Carrier)
+Attack Obscured (Carrier)
+Ignore 2 (Carrier)
+Attack Unit (Carrier)
+Hold Position (Carrier)
+Idle (Reaver)
+Attack (Reaver)
+Attack Obscured (Reaver)
+Attack Unit (Reaver)
+Hold Position (Reaver)
+Training (Subunit)
+Move&Attack (Interceptor)
+Move&Attack (Scarab)
+Recharge Shields (Unit)
+Recharge Shields (Global)
+Shield Battery Is Recharging
+Return To Parent (Interceptor)
+Land (Drone)
+Land (Building)
+Lift Off (Building)
+Lift Off (Drone)
+Is Lifting Off
+Is Researching Technology
+Is Performing Upgrade
+Idle (Larva)
+Is Spawning Larva
+Move to Harvest
+Move to Harvest Obscured
+Move to Harvest Gas
+Can Enter Gas Mine
+Enter/Exit Gas Mine
+Return Gas
+Move to Harvest Minerals
+Can Harvest Minerals
+Harvesting Minerals
+Harvesting Minerals Interrupted
+Harvest 4 (Unknown)
+Return Minerals
+Harvesting Interrupted - Recharge Shields
+Move/Enter Transport
+Idle (Transport)
+Load Unit (Mobile Transport)
+Load Unit (Bunker)
+Load Unit (Unknown)
+Idle (Power-Up)
+Siege Mode
+Tank Mode
+Watch Target
+Script (Starting Creep Growth)
+Script (Spread Creep&Spawn Larva)
+Script (Stopping Creep Growth)
+Guardian Aspect (Unused)
+Move and Morph Archon
+Completing Archon Summon
+Hold Position (Normal)
+Hold Position (Queen)
+Cloak
+Decloak
+Unload Unit (Transport)
+Move&Unload Unit (Transport)
+Use Ability (Yamato Gun)
+Use Ability  On Obscured (Yamato Gun)
+Use Ability  (Lockdown)
+Burrow
+Idle (Burrowed)
+Unburrow
+Use Ability (Dark Swarm)
+Use Ability (Parasite)
+Use Ability (Spawn Broodling)
+Use Ability (EMP Shockwave)
+Unknown
+Idle (Nuclear Silo)
+Attack (Nuke)
+Move&Paint Nuke Target
+Attack Unit (Nuke)
+Attack Ground (Nuke)
+Nuke Track (Ghost)
+Script (Cloak Nearby Units)
+Cloak Nearby Units (Freezes the casting unit)
+Place Spider Mine
+Script (Right-Click Action)
+Attack Unit (Infested Terran)
+Attack Ground (Infested Terran)
+Hold Position (Suicide Units)
+Use Ability (Recall)
+Teleport To Location (Freezes the casting unit)
+Use Ability (Scanner Sweep)
+Idle (Scanner Sweep)
+Use Ability (Defensive Matrix)
+Use Ability (Psionic Storm)
+Use Ability (Irradiate)
+Use Ability (Plague)
+Use Ability (Consume)
+Use Ability (Ensnare)
+Use Ability (Stasis Field)
+Use Ability (Hallucination)
+Script (Hallucination)
+Reset Collision (2 Units)
+Reset Collision (Harvester&Mine)
+Patrol (Normal)
+CTF COP (Initialize)
+Idle (CTF COP)
+Unknown CTF COP 2
+Script (Computer)
+Attack Move (Computer)
+Move (Harass)
+Patrol (Computer)
+Guard (Computer)
+Idle (Rescuable)
+Idle (Neutral)
+Return To Base (Computer)
+Script (PSI Provider)
+Fatal (Scarab)
+Idle (Critter)
+Idle (Trap)
+Open Door
+Close Door
+Stop (Trap)
+Attack (Trap)
+Enable Doodad
+Disable Doodad
+Warp In (Unused)
+Idle (Medic)
+Use Ability (Heal)
+Move (Medic)
+Hold Position&Heal (Medic)
+Return To Idle After Heal
+Use Ability (Restoration)
+Use Ability (Disruption Web)
+Use Ability (Mind Control)
+Dark Archon Meld
+Use Ability (Feedback)
+Use Ability (Optical Flare)
+Use Ability (Maelstrom)
+Move (Junk Yard Dog)
+Fatal
+None

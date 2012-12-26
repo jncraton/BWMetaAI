@@ -1,0 +1,18 @@
+Normal Draw
+Unknown1
+Enemy Unit Cloak(+spell)
+Own Unit Cloak(+spell)
+Ally Unit Cloak
+Own Unit Cloak(+spell)
+Own Unit Cloak(draw only)
+(crash)
+EMP Shockwave
+Use Remapping
+Shadow/FoW(dark.pcx)
+Unknown11
+Warp Flash(SEdit crash)
+Don't Mirror Frames
+Unknown14
+Hide Gfx,Show Size Rect
+Hallucination
+Warp Flash

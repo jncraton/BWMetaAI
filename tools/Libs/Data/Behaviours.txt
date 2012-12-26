@@ -1,0 +1,10 @@
+Fly & Don't Follow Target 
+Fly & Follow Target
+Appear on Target Unit
+Persist on Target Site
+Appear on Target Site
+Appear on Attacker
+Attack & Self-Destruct
+Bounce
+Attack Target 3x3 Area
+Go to Max. Range

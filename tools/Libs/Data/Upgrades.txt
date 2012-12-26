@@ -1,0 +1,62 @@
+Terran Infantry Armor 
+Terran Vehicle Plating 
+Terran Ship Plating 
+Zerg Carapace 
+Zerg Flyer Caparace 
+Protoss Armor 
+Protoss Plating 
+Terran Infantry Weapons 
+Terran Vehicle Weapons 
+Terran Ship Weapons 
+Zerg Melee Attacks 
+Zerg Missile Attacks 
+Zerg Flyer Attacks 
+Protoss Ground Weapons 
+Protoss Air Weapons 
+Protoss Plasma Shields 
+U-238 Shells
+Ion Thrusters
+Burst Lasers (Unused)
+Titan Reactor (SV +50)
+Ocular Implants
+Moebius Reactor (Ghost +50)
+Apollo Reactor (Wraith +50)
+Colossus Reactor (BC +50)
+Ventral Sacs
+Antennae
+Pneumatized Carapace
+Metabolic Boost
+Adrenal Glands
+Muscular Augments
+Grooved Spines
+Gamete Meiosis (Queen +50)
+Metasynaptic Node (Defiler +50)
+Singularity Charge
+Leg Enhancements
+Scarab Damage 
+Reaver Capacity 
+Gravitic Drive
+Sensor Array
+Gravitic Boosters
+Khaydarin Amulet (HT +50)
+Apial Sensors
+Gravitic Thrusters
+Carrier Capacity 
+Khaydarin Core (Arbiter +50)
+Unknown Upgrade45
+Unknown Upgrade46
+Argus Jewel (Corsair +50)
+Unknown Upgrade48
+Argus Talisman (DA +50)
+Unknown Upgrade50
+Caduceus Reactor (Medic +50)
+Chitinous Plating
+Anabolic Synthesis
+Charon Booster
+Unknown Upgrade55
+Unknown Upgrade56
+Unknown Upgrade57
+Unknown Upgrade58
+Unknown Upgrade59
+Unknown Upgrade60
+None

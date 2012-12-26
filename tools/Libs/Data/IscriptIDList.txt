@@ -1,0 +1,412 @@
+Scourge
+Unknown1
+Scourge Death
+Scourge Explosion
+Broodling
+Broodling Remnants
+Infested Terran
+Infested Terran Explosion
+Guardian Cocoon
+Defiler
+Defiler Remnants
+Drone
+Drone Remnants
+Egg
+Egg Remnants
+Guardian
+Guardian Birth
+Guardian Death
+Hydralisk
+Hydralisk Remnants
+Infested Kerrigan
+Larva
+Larva Remnants
+Mutalisk
+Mutalisk Death
+Overlord
+Overlord Death
+Queen
+Queen Death
+Ultralisk
+Ultralisk Remnants
+Zergling
+Zergling Remnants
+Zerg Air Death Explosion
+Zerg Building Explosion
+Unknown35
+Zerg Birth
+Egg Spawn
+Cerebrate
+Infested Command Center
+Spawning Pool
+Evolution Chamber
+Creep Colony
+Hatchery
+Hive
+Lair
+Sunken Colony
+Mature Chrysalis
+Greater Spire
+Defiler Mound
+Queen Nest
+Nydus Canal
+Overmind(with Shell)
+Overmind Remnants
+Overmind(without Shell)
+Ultralisk Cavern
+Extractor
+Hydralisk Den
+Spire
+Spore Colony
+Infested Command Center Overlay
+Zerg Construction(Small)
+Zerg Construction(Medium)
+Zerg Building Morph
+Zerg Construction(Large)
+Zerg Building Spawn
+Battlecruiser
+Civilian
+Dropship
+Firebat
+Ghost
+Ghost Remnants
+Ghost Death
+Nuke Beam
+Nuke Target Dot
+Goliath(Base)
+Goliath(Turret)
+Sarah Kerrigan
+Marine
+Marine Remnants
+Marine Death
+Scanner Sweep
+Wraith
+Wraith Afterburners
+SCV
+Unknown85
+Vulture
+Spider Mine
+Science Vessel(Base)
+Science Vessel(Turret)
+Siege Tank(Tank) Base
+Siege Tank(Tank) Turret
+Siege Tank(Siege) Base
+Siege Tank(Siege) Turret
+Academy
+Academy Overlay
+Barracks
+Armory
+Armory Overlay
+Comsat Station
+Comsat Connector
+Comsat Overlay
+Command Center
+Command Center Overlay
+Crashed Battlecruiser
+Supply Depot
+Supply Depot Overlay
+Control Tower
+Control Tower Connector
+Control Tower Overlay
+Unknown110
+Factory
+Factory Overlay
+Covert Ops
+Covert Ops Connector
+Covert Ops Overlay
+Ion Cannon
+Machine Shop
+Machine Shop Connector
+Missile Turret(Base)
+Missile Turret(Turret)
+Physics Lab
+Physics Lab Connector
+Bunker
+Bunker Overlay
+Refinery
+Science Facility
+Science Facility Overlay
+Nuclear Silo
+Nuclear Silo Connector
+Nuclear Silo Overlay
+Nuclear Missile
+Unknown132
+Nuke Explosion
+Starport
+Starport Overlay
+Engineering Bay
+Engineering Bay Overlay
+Terran Construction(Large)
+Terran Construction(Medium)
+Terran Construction(Small)
+Addon Construction
+Explosion(Small)
+Explosion(Medium)
+Explosion(Large)
+Building Rubble Header
+Arbiter
+Archon Energy
+Archon Being
+Archon Swirl
+Unknown150
+Carrier
+Dark Templar(Hero)
+Dragoon
+Dragoon Remnants
+Interceptor
+Probe
+Shuttle
+High Templar
+Reaver
+Scarab
+Scout
+Scout Engines
+Zealot
+Zealot Death
+Observer
+Templar Archives
+Assimilator
+Observatory
+Unknown169
+Citadel Of Adun
+Forge
+Forge Overlay
+Gateway
+Cybernetics Core
+Cybrnetics Core Overlay
+Khaydarin Crystal Formation
+Nexus
+Nexus Overlay
+Photon Cannon
+Arbiter Tribunal
+Pylon
+Robotics Facility
+Shield Battery
+Shield Battery Overlay
+Stargate
+Stargate Overlay
+Stasis Cell/Prison
+Robotics Support Bay
+Temple
+Fleet Beacon
+Warp Anchor
+Warp Flash Header
+Warp Texture
+Unknown194
+Unknown195
+Unknown196
+Unknown197
+Ragnasaur(Ashworld Critter)
+Rhynadon(Badlands Critter)
+Bengalaas(Jungle Critter)
+Vespene Geyser
+Vespene Geyser2
+Vespene Geyser Shadow
+Mineral Field Type1
+Mineral Field Type2
+Mineral Field Type3
+Unknown207
+Zerg Beacon Overlay
+Terran Beacon Overlay
+Protoss Beacon Overlay
+Zerg Beacon
+Protoss Beacon
+Terran Beacon
+Unknwon214
+Powerups Shadow Header
+Flag
+Psi Emitter
+Data Disk
+Crystals Shadows
+Young Chrysalis
+Ore Chunk
+Ore Chunk2
+Gas Sac
+Gas Sac2
+Gas Orb
+Gas Orb2
+Gas Tank
+Gas Tank2
+Archon Overlay
+Particle Beam Hit
+Dual Photon Blaster Hit
+Anti-Matter Missile
+Pulse Cannon
+Phase Disruptor
+STA/STS Photon Cannon Overlay
+Psionic Storm
+Fusion Cutter Hit
+Gauss Rifle Hit
+Gemini Missiles
+Longbolt Missile
+C-10 Canister Rifle Hit
+Fragmentation Grenade
+ATA/ATS Laser Battery/Burst Lasers
+Unknown244
+Lockdown Hit
+Arclite Shock Cannon Hit
+Yamato Gun
+Yamato Gun Trail
+Lockdown/EMP Shockwave Missile
+Siege Tank(Tank) Turret Overlay
+Siege Tank(Siege) Turret Overlay
+Science Vessel Overlay
+Hallucination Hit
+Unknown254
+Unknown255
+Needle Spines Hit
+Venom (Unused)
+Subterranean Tentacle
+Venom Hit (Unused)
+Acid Spore
+Acid Spore Hit
+Guardian Attack Overlay
+Unknown263
+Glave Wurm
+Glave Wurm Hit
+Seeker Spores
+Queen Spell Holder
+Psionic Shockwave Hit
+Glave Wurm Trail
+Seeker Spores Overlay
+Acid Spray
+Unknown272
+Longbolt\Halo\Gemini Missiles Trail
+Burowing Dust
+Shadow Header
+Shield Overlay
+Unknown277
+Double Explosion
+Nuclear Missile Death
+Spider Mine Explosion
+Vespene Geyser Smokes
+Unknown282
+Fragmentation Grenade Hit
+Grenade Shot Smoke
+Phase Disruptor/Anti-Matter Missile Hit
+Scarab/Anti-Matter Missile Overlay
+Scarab Hit
+Cursor Marker
+Circle Marker
+Carrier Engines
+Engines/Glow Header
+White Circle
+Battlecruiser Attack Overlay
+ATA/ATS Laser Battery/Burst Lasers Hit
+Unknown295
+Plague Cloud
+Plague Overlay
+Consume
+Dark Swarm
+Defensive Matrix Overlay
+Defensive Matrix Hit
+Ensnare
+Ensnare Overlay
+Irradiate
+Recall Field
+Stasis Field Overlay
+Stasis Field Hit
+Recharge Shields(Large)
+Recharge Shields(Small)
+High Templar Glow
+Needle Spines Overlay
+Flamethrower
+Gemini Missiles Explosion
+Yamato Gun Overlay
+Yamato Gun Hit
+Unknown316
+Psionic Storm Part Variant1
+Psionic Storm Part Variant2
+EMP Shockwave Hit(Part1)
+EMP Shockwave Hit(Part2)
+Hallucination Death
+Flames(Small)
+Unknown323
+Bleeding(Small) Variant1
+Bleeding(Small) Variant2
+Flames(Large)
+Unknown327
+Bleeding(Large) Variant1
+Bleeding(Large) Variant2
+Dust Variant1
+Dust Variant2
+Confirm Circle
+Psi Field Type1
+Psi Field Type2
+Start Location
+Doodad Header
+Doodad Header(secondary)
+Space Platform Doodad
+Space Platform Doodad2
+Installation Doodad
+Installation Doodad2
+Installation Right Wall Fans
+Installation Left Wall Fans
+Installation Gear
+Floor Missile Trap
+Floor Missile Trap Turret
+Floor Gun Trap
+Wall Missile Trap Type1
+Wall Missile Trap Typet2
+Wall Flame Trap Type1
+Wall Flame Trap Type2
+Map Revealer
+Lurker Egg
+Lurker
+Unknown355
+Lurker Remnants
+Devourer
+Devourer Birth
+Devourer Death
+Medic
+Medic Remnants
+Valkyrie
+Unknown363
+Unknown364
+Dark Archon Energy
+Dark Archon Being
+Dark Archon Swirl
+Dark Archon Death
+Corsair
+Corsair Engines
+Unknown371
+Dark Templar(Unit)
+Neutron Flare
+Disruption Web
+Scantid(Desert Critter)
+Kakaru(Twilight Critter)
+Ursadon(Ice Critter)
+Halo Rocket
+Optical Flare
+Subterranean Spines
+Corrosive Acid
+Corrosive Acid Hit
+Acid Spores (1) Overlay
+Acid Spores (2-3) Overlay
+Acid Spores (4-5) Overlay
+Acid Spores (6-9) Overlay
+Ice Doodad
+Doodad Shadows Header (BW)
+Restoration Hit
+Mind Control Hit
+Optical Flare Hit
+Feedback
+Maelstorm Overlay
+Unknown394
+Unknown395
+Desert Doodad
+Desert Doodad2
+Desert Doodad3
+Desert Doodad Overlay
+Desert Doodad
+Twilight Doodad
+Twilight Doodad
+Twilight Doodad
+Twilight Doodad
+Overmind Cocoon
+Warp Gate
+Psi Disrupter
+Power Generator
+Warp Gate Overlay
+Xel'Naga Temple
+Maelstrom Hit

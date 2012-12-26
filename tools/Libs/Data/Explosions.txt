@@ -1,0 +1,25 @@
+None 
+Normal Hit
+Splash (Radial)
+Splash (Enemy)
+Lockdown
+Nuclear Missile
+Parasite
+Broodlings
+EMP Shockwave
+Irradiate
+Ensnare
+Plague
+Stasis Field
+Dark Swarm
+Consume
+Yamato Gun
+Restoration
+Disruption Web
+Corrosive Acid
+Mind Control
+Feedback
+Optical Flare
+Maelstrom
+Unknown (Crash)
+Splash (Air)

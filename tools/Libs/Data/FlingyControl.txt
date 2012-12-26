@@ -1,0 +1,3 @@
+Flingy.dat Control
+Partially Mobile, Weapon
+Iscript.bin Control

@@ -1,0 +1,10 @@
+No remapping
+ofire.pcx (Orange)
+gfire.pcx (Green)
+bfire.pcx (Blue)
+bexpl.pcx (Blue2)
+Special (Own cloak)
+(crash)
+(crash)
+Unk8 (?)
+Unk9 (?)

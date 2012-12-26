@@ -1,0 +1,221 @@
+Marine - Idle Portrait
+Ghost - Idle Portrait
+Firebat - Idle Portrait 
+Vulture - Idle Portrait 
+Spider Mine - Idle Portrait
+Goliath - Idle Portrait
+Seige Tank - Idle Portrait
+SCV - Idle Portrait
+Wraith - Idle Portrait
+Science Vessel - Idle Portrait
+Dropship - Idle Portrait
+Battlecruiser - Idle Portrait
+Sarah Kerrigan - Idle Portrait
+Jim Raynor  - Idle Portrait
+Edmund Duke - Idle Portrait
+Civilian - Idle Portrait
+Arcturus Mengsk - Idle Portrait
+Terran Advisor - Idle Portrait
+Larva - Idle Portrait
+Egg - Idle Portrait
+Zergling - Idle Portrait
+Hydralisk - Idle Portrait
+Ultralisk - Idle Portrait
+Broodling - Idle Portrait
+Drone - Idle Portrait
+Overlord - Idle Portrait
+Mutalisk - Idle Portrait
+Guardian - Idle Portrait
+Queen - Idle Portrait
+Defiler - Idle Portrait
+Scourge - Idle Portrait
+Cocoon - Idle Portrait
+Mature Chrysalis - Idle Portrait
+Infested Terran - Idle Portrait
+Zasz - Idle Portrait
+Daggoth - Idle Portrait
+Infested Kerrigan - Idle Portrait
+Hunter Killer - Idle Portrait
+Overmind - Idle Portrait
+Probe - Idle Portrait
+Zealot - Idle Portrait
+Dragoon - Idle Portrait
+High Templar - Idle Portrait
+Archon - Idle Portrait
+Shuttle - Idle Portrait
+Scout - Idle Portrait
+Arbiter - Idle Portrait
+Carrier - Idle Portrait
+Interceptor - Idle Portrait
+Dark Templar - Idle Portrait
+Fenix (Zealot) - Idle Portrait
+Fenix (Dragoon) - Idle Portrait
+Zeratul - Idle Portrait
+Tassadar - Idle Portrait
+Gantrithor - Idle Portrait
+Observer - Idle Portrait
+Reaver - Idle Portrait
+Scarab - Idle Portrait
+Khaydarin Crystal Formation - Idle Portrait
+Aldaris - Idle Portrait
+Protoss Advisor - Idle Portrait
+Merc Biker - Idle Portrait
+Rhynadon - Idle Portrait
+Bengalaas - Idle Portrait
+Ragnasaur - Idle Portrait
+Cargo Ship - Idle Portrait
+Merc Gunship - Idle Portrait
+Raider - Idle Portrait
+Grom Biker - Idle Portrait
+Space Critter - Idle Portrait
+Sally - Idle Portrait
+Greedo - Idle Portrait
+Boskk - Idle Portrait
+Peter - Idle Portrait
+Independant Advisor - Idle Portrait
+Terran Gas Tank - Idle Portrait
+Protoss Gas Orb - Idle Portrait
+Zerg Gas Sac - Idle Portrait
+Mineral Cluster - Idle Portrait
+Data Disc - Idle Portrait
+Psi Emitter - Idle Portrait
+Khaydarin Crystal - Idle Portrait
+Flag (Red) - Idle Portrait (Pl.1)
+Flag (Blue) - Idle Portrait (Pl.2)
+Flag (Teal) - Idle Portrait (Pl.3)
+Flag (Purple) - Idle Portrait (Pl.4)
+Flag (Orange) - Idle Portrait (Pl.5)
+Flag (Brown) - Idle Portrait (Pl.6)
+Flag (White) - Idle Portrait (Pl.7)
+Flag (Yellow) - Idle Portrait (Pl.8)
+Medic - Idle Portrait
+Valkyrie - Idle Portrait
+Dugalle - Idle Portrait
+Stukov - Idle Portrait
+Duran - Idle Portrait
+Artanis - Idle Portrait
+Raszagal - Idle Portrait
+Devourer - Idle Portrait
+Lurker - Idle Portrait
+Dark Archon - Idle Portrait
+Corsair - Idle Portrait
+Scantid - Idle Portrait
+Kakaru - Idle Portrait
+Ursadon - Idle Portrait
+Uraj Crystal - Idle Portrait
+Khalis Crystal - Idle Portrait
+Flag (Green) - Idle Portrait (Pl.9)
+Flag (Bright Yellow) - Idle Portrait (Pl.10)
+Flag (Tan) - Idle Portrait (Pl.11)
+Flag (Blue) - Idle Portrait (Pl.12)
+Marine - Talking Portrait
+Ghost - Talking Portrait
+Firebat - Talking Portrait
+Vulture - Talking Portrait
+Spider Mine - Talking Portrait
+Goliath - Talking Portrait
+Seige Tank - Talking Portrait
+SCV - Talking Portrait
+Wraith - Talking Portrait
+Science Vessel - Talking Portrait
+Dropship - Talking Portrait
+Battlecruiser - Talking Portrait
+Sarah Kerrigan - Talking Portrait
+Jim Raynor  - Talking Portrait
+Edmund Duke - Talking Portrait
+Civilian - Talking Portrait
+Arcturus Mengsk - Talking Portrait
+Terran Advisor - Talking Portrait
+Larva - Talking Portrait
+Egg - Talking Portrait
+Zergling - Talking Portrait
+Hydralisk - Talking Portrait
+Ultralisk - Talking Portrait
+Broodling - Talking Portrait
+Drone - Talking Portrait
+Overlord - Talking Portrait
+Mutalisk - Talking Portrait
+Guardian - Talking Portrait
+Queen - Talking Portrait
+Defiler - Talking Portrait
+Scourge - Talking Portrait
+Cocoon - Talking Portrait
+Mature Chrysalis - Talking Portrait
+Infested Terran - Talking Portrait
+Zasz - Talking Portrait
+Daggoth - Talking Portrait
+Infested Kerrigan - Talking Portrait
+Hunter Killer - Talking Portrait
+Overmind - Talking Portrait
+Probe - Talking Portrait
+Zealot - Talking Portrait
+Dragoon - Talking Portrait
+High Templar - Talking Portrait
+Archon - Talking Portrait
+Shuttle - Talking Portrait
+Scout - Talking Portrait
+Arbiter - Talking Portrait
+Carrier - Talking Portrait
+Interceptor - Talking Portrait
+Dark Templar - Talking Portrait
+Fenix (Zealot) - Talking Portrait
+Fenix (Dragoon) - Talking Portrait
+Zeratul - Talking Portrait
+Tassadar - Talking Portrait
+Gantrithor - Talking Portrait
+Observer - Talking Portrait
+Reaver - Talking Portrait
+Scarab - Talking Portrait
+Khaydarin Crystal Formation - Talking Portrait
+Aldaris - Talking Portrait
+Protoss Advisor - Talking Portrait
+Merc Biker - Talking Portrait
+Rhynadon - Talking Portrait
+Bengalaas - Talking Portrait
+Ragnasaur - Talking Portrait
+Cargo Ship - Talking Portrait
+Merc Gunship - Talking Portrait
+Raider - Talking Portrait
+Grom Biker - Talking Portrait
+Space Critter - Talking Portrait
+Sally - Talking Portrait
+Greedo - Talking Portrait
+Boskk - Talking Portrait
+Peter - Talking Portrait
+Independant Advisor - Talking Portrait
+Terran Gas Tank - Talking Portrait
+Protoss Gas Orb - Talking Portrait
+Zerg Gas Sac - Talking Portrait
+Mineral Cluster - Talking Portrait
+Data Disc - Talking Portrait
+Psi Emitter - Talking Portrait
+Khaydarin Crystal - Talking Portrait
+Flag (Red) - Talking Portrait (Pl.1)
+Flag (Blue) - Talking Portrait (Pl.2)
+Flag (Teal) - Talking Portrait (Pl.3)
+Flag (Purple) - Talking Portrait (Pl.4)
+Flag (Orange) - Talking Portrait (Pl.5)
+Flag (Brown) - Talking Portrait (Pl.6)
+Flag (White) - Talking Portrait (Pl.7)
+Flag (Yellow) - Talking Portrait (Pl.8)
+Medic - Talking Portrait
+Valkyrie - Talking Portrait
+Dugalle - Talking Portrait
+Stukov - Talking Portrait
+Duran - Talking Portrait
+Artanis - Talking Portrait
+Raszagal - Talking Portrait
+Devourer - Talking Portrait
+Lurker - Talking Portrait
+Dark Archon - Talking Portrait
+Corsair - Talking Portrait
+Scantid - Talking Portrait
+Kakaru - Talking Portrait
+Ursadon - Talking Portrait
+Uraj Crystal - Talking Portrait
+Khalis Crystal - Talking Portrait
+Flag (Green) - Talking Portrait (Pl.9)
+Flag (Bright Yellow) - Talking Portrait (Pl.10)
+Flag (Tan) - Talking Portrait (Pl.11)
+Flag (Blue) - Talking Portrait (Pl.12)
+None

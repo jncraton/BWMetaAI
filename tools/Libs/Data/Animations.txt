@@ -1,0 +1,29 @@
+Initial
+Death
+Ground Attack - Initial
+Air Attack - Initial
+Unused1
+Ground Attack - Repeat
+Air Attack - Repeat
+Cast Spell
+Return to Idle from Ground Attack
+Return to Idle from Air Attack
+Unused2
+Walking
+Return to Idle from Walking
+Special State 1 (Bouncing Animation)
+Special State 2
+Almost Built
+Built
+Landing
+Lift-Off
+Building Is Working
+Return to Idle from Working
+Warp In
+Unused 3
+Initial (StarEdit only)
+Disable
+Burrow
+UnBurrow
+Enable
+No Animation

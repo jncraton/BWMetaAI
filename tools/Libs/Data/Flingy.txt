@@ -1,0 +1,209 @@
+Scourge
+Broodling
+Infested Terran
+Guardian Cocoon
+Defiler
+Drone
+Egg
+Guardian
+Hydralisk
+Infested Kerrigan
+Larva
+Mutalisk
+Overlord
+Queen
+Ultralisk
+Zergling
+Cerebrate
+Infested Command Center
+Spawning Pool
+Mature Chrysalis
+Evolution Chamber
+Creep Colony
+Hatchery
+Hive
+Lair
+Sunken Colony
+Greater Spire
+Defiler Mound
+Queen's Nest
+Nydus Canal
+Overmind With Shell
+Overmind Without Shell
+Ultralisk Cavern
+Extractor
+Hydralisk Den
+Spire
+Spore Colony
+Arbiter
+Archon Energy
+Carrier
+Dragoon
+Interceptor
+Probe
+Scout
+Shuttle
+High Templar
+Dark Templar (Hero)
+Reaver
+Scarab
+Zealot
+Observer
+Templar Archives
+Assimilator
+Observatory
+Citadel of Adun
+Forge
+Gateway
+Cybernetics Core
+Khaydarin Crystal Formation
+Nexus
+Photon Cannon
+Arbiter Tribunal
+Pylon
+Robotics Facility
+Shield Battery
+Stargate
+Stasis Cell/Prison
+Robotics Support Bay
+Protoss Temple
+Fleet Beacon
+Battlecruiser
+Civilian
+Dropship
+Firebat
+Ghost
+Goliath Base
+Goliath Turret
+Sarah Kerrigan
+Marine
+Scanner Sweep
+Wraith
+SCV
+Siege Tank (Tank) Base
+Siege Tank (Tank) Turret
+Siege Tank (Siege) Base
+Siege Tank (Siege) Turret
+Science Vessel (Base)
+Science Vessel (Turret)
+Vulture
+Spider Mine
+Academy
+Barracks
+Armory
+Comsat Station
+Command Center
+Supply Depot
+Control Tower
+Factory
+Covert Ops
+Ion Cannon
+Machine Shop
+Missile Turret (Base)
+Crashed Battlecruiser
+Physics Lab
+Bunker
+Refinery
+Immobile Barracks
+Science Facility
+Nuke Silo
+Nuclear Missile
+Starport
+Engineering Bay
+Terran Construction (Large)
+Terran Construction (Small)
+Ragnasaur (Ashworld)
+Rhynadon (Badlands)
+Bengalaas (Jungle)
+Vespene Geyser
+Mineral Field Type1
+Mineral Field Type2
+Mineral Field Type3
+Independent Starport (Unused)
+Zerg Beacon
+Terran Beacon
+Protoss Beacon
+Dark Swarm
+Flag
+Young Chrysalis
+Psi Emitter
+Data Disc
+Khaydarin Crystal
+Mineral Chunk Type1
+Mineral Chunk Type2
+Protoss Gas Orb Type1
+Protoss Gas Orb Type2
+Zerg Gas Sac Type1
+Zerg Gas Sac Type2
+Terran Gas Tank Type1
+Terran Gas Tank Type2
+Map Revealer
+Start Location
+Fusion Cutter Hit
+Gauss Rifle Hit
+C-10 Canister Rifle Hit
+Gemini Missiles
+Fragmentation Grenade
+Lockdown/LongBolt/Hellfire Missile
+Unused Lockdown
+ATS/ATA Laser Battery
+Burst Lasers
+Arclite Shock Cannon Hit
+EMP Missile
+Dual Photon Blasters Hit
+Particle Beam Hit
+Anti-Matter Missile
+Pulse Cannon
+Psionic Shockwave Hit
+Psionic Storm
+Yamato Gun
+Phase Disruptor
+STA/STS Cannon Overlay
+Sunken Colony Tentacle
+Venom (Unused Zerg Weapon)
+Acid Spore
+Plasma Drip Hit (Unused)
+Glave Wurm
+Seeker Spores
+Queen Spell Carrier
+Plague Cloud
+Consume
+Ensnare
+Needle Spine Hit
+White Circle (Invisible)
+Left Upper Level Door
+Right Upper Level Door
+Substructure Left Door
+Substructure Right Door
+Substructure Opening Hole
+Floor Gun Trap
+Floor Missile Trap
+Wall Missile Trap
+Wall Missile Trap2
+Wall Flame Trap
+Wall Flame Trap2
+Lurker Egg
+Devourer
+Lurker
+Dark Archon Energy
+Dark Templar (Unit)
+Medic
+Valkyrie
+Corsair
+Disruption Web
+Overmind Cocoon
+Psi Disrupter
+Warp Gate
+Power Generator
+Xel'Naga Temple
+Scantid (Desert)
+Kakaru (Twilight)
+Ursadon (Ice)
+Optical Flare Grenade
+Halo Rockets
+Subterranean Spines
+Corrosive Acid Shot
+Corrosive Acid Hit
+Neutron Flare
+Uraj
+Khalis

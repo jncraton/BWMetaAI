@@ -1,0 +1,390 @@
+Marine
+Ghost
+Vulture
+Goliath
+Blank (Goliath Turret)
+Siege Tank (Tank Mode)
+Blank (Tank Turret)
+SCV
+Wraith
+Science Vessel
+Gui Montag (Firebat)
+Dropship
+Battlecruiser
+Vulture Spider Mine
+Nuclear Missile
+Civilian
+Sarah Kerrigan (Ghost)
+Alan Schezar (Goliath)
+Blank (Alan Turret)
+Jim Raynor (Vulture)
+Jim Raynor (Marine)
+Tom Kazansky (Wraith)
+Magellan (Science Vessel)
+Edmund Duke (Siege Tank)
+Blank (Duke Turret)
+Edmund Duke (Siege Mode)
+Blank (Duke Turret)
+Blank (Arcturus Mengsk)
+Hyperion (Battlecruiser)
+Norad II (Battlecruiser)
+Terran Siege Tank (Siege Mode)
+Blank (Siege Tank Turret)
+Firebat
+Marine (Scanner Sweep)
+Medic
+Larva
+Radioactive (Zerg Egg)
+Zergling
+Hydralisk
+Ultralisk
+Broodling
+Drone
+Overlord
+Mutalisk
+Guardian
+Queen
+Defiler
+Scourge
+Torrarsque (Ultralisk)
+Matriarch (Queen)
+Infested Terran
+Infested Kerrigan (Infested Terran)
+Unclean One (Defiler)
+Hunter Killer (Hydralisk)
+Devouring One (Zergling)
+Kukulza (Mutalisk)
+Kukulza (Guardian)
+Yggdrasill (Overlord)
+Valkyrie
+Mutalisk/Guardian Cocoon
+Corsair
+Dark Templar (Unit)
+Devourer
+Dark Archon
+Probe
+Zealot
+Dragoon
+High Templar
+Archon
+Shuttle
+Scout
+Arbiter
+Carrier
+Interceptor
+Dark Templar (Hero)
+Zeratul (Dark Templar)
+Tassadar/Zeratul (Archon)
+Fenix (Zealot)
+Fenix (Dragoon)
+Tassadar (Templar)
+Mojo (Scout)
+Warbringer (Reaver)
+Gantrithor (Carrier)
+Reaver
+Observer
+Scarab
+Danimoth (Arbiter)
+Blank (Aldaris)
+Artanis (Scout)
+Rhynadon (Badlands Critter)
+Bengalaas (Jungle Critter)
+Lurker (Cargo Ship - Unused)
+Mercenary Gunship (Unused)
+Scantid (Desert Critter)
+Kakaru (Twilight Critter)
+Ragnasaur (Ashworld Critter)
+Ursadon (Ice Critter)
+Blank (Zerg Lurker Egg)
+Blank (Raszagal)
+Samir Duran (Ghost)
+Alexei Stukov (Ghost)
+Map Revealer
+Blank (Gerard DuGalle)
+Lurker
+Infested Duran (Infested Terran)
+Blank (Disruption Field)
+Command Center
+Comsat Station
+Nuclear Silo
+Supply Depot
+Refinery
+Barracks
+Academy
+Factory
+Starport
+Control Tower
+Science Facility
+Covert Ops
+Physics Lab
+Blank (Starbase - Unused)
+Machine Shop
+Repair Bay (Unused)
+Engineering Bay
+Armory
+Missile Tower
+Bunker
+Crashed Norad II
+Ion Cannon
+Uraj
+Khalis
+Infested Command Center
+Hatchery
+Lair
+Hive
+Nydus Canal
+Hydralisk Den
+Defiler Mound
+Greater Spire
+Queen's Nest
+Evolution Chamber
+Ultralisk Cavern
+Spire
+Spawning Pool
+Creep Colony
+Spore Colony
+Radioactive (Zerg Bldg1 - Unused)
+Sunken Colony
+Overmind (Without Shell)
+Overmind (With Shell)
+Extractor
+Mature Chrysalis
+Cerebrate
+Cerebrate Daggoth
+Blank (Zerg Bldg2 - Unused)
+Nexus
+Robotics Facility
+Pylon
+Assimilator
+Blank (Protoss Bldg1 - Unused)
+Observatory
+Gateway
+Blank (Protoss Bldg2 - Unused)
+Photon Cannon
+Citadel of Adun
+Cybernetics Core
+Templar Archives
+Forge
+Stargate
+Stasis Cell/Prison
+Fleet Beacon
+Arbiter Tribunal
+Robotics Support Bay
+Shield Battery
+Khaydarin Crystal Formation
+Protoss Temple
+Xel'Naga Temple
+Mineral Cluster (Type 1)
+Mineral Cluster (Type 2)
+Mineral Cluster (Type 3)
+Blank (Cave - Unused)
+Blank (Cave-in - Unused)
+Blank (Cantina - Unused)
+Blank (Mining Platform - Unused)
+Blank (Independent CC - Unused)
+Blank (Independent Starport - Unused)
+Blank (Jump Gate - Unused)
+Blank (Ruins - Unused)
+Blank (Khayd. Crystal Form. - Unused)
+Vespene Geyser
+Warp Gate
+Psi Disrupter
+Blank (Zerg Marker)
+Blank (Terran Marker)
+Blank (Protoss Marker)
+Zerg Beacon
+Terran Beacon
+Protoss Beacon
+Zerg Flag Beacon
+Terran Flag Beacon
+Protoss Flag Beacon
+Power Generator
+Overmind Cocoon
+Blank (Dark Swarm)
+Blank (Floor Missile Trap)
+Blank (Floor Hatch - Unused)
+Blank (Left Upper Level Door)
+Blank (Right Upper Level Door)
+Blank (Left Pit Door)
+Blank (Right Pit Door)
+Blank (Floor Gun Trap)
+Blank (Left Wall Missile Trap)
+Blank (Left Wall Flame Trap)
+Infested Mine (Unused)
+Blank (Right Wall Flame Trap)
+Start Location
+Flag
+Young Chrysalis
+Psi Emitter
+Data Disc
+Khaydarin Crystal
+Blank (Mineral Chunk Type 1)
+Blank (Mineral Chunk Type 2)
+Blank (Protoss Vespene Orb Type 1)
+Blank (Protoss Vespene Orb Type 2)
+Blank (Zerg Vespene Sac Type 1)
+Blank (Zerg Vespene Sac Type 2)
+Blank (Terran Vespene Tank Type 1)
+Blank (Terran Vespene Tank Type 2)
+Move
+Stop
+Attack
+Gather
+Repair
+Return Resources
+Terran Basic Buildings
+Terran Advanced Buildings
+Cancel
+Use Stimpack
+U-238 Shells
+Burst Lasers (Unused)
+Lockdown
+EMP Shockwave
+Irradiate
+Use Spider Mines
+Afterburners (Unused Terran Upgrade)
+Seige Mode
+Tank Mode
+Defensive Matrix
+Titan Reactor
+Ocular Implants
+Scanner Sweep
+Yamato Gun
+Cloak
+Decloak
+Patrol
+Hold Position
+Moebius Reactor
+Zerg Basic Buildings
+Zerg Advanced Buildings
+Burrow
+Unburrow
+Ventral Sacs
+Antennae
+Metabolic Boost
+Adrenal Glands
+Plague
+Muscular Augments
+Ensnare
+Grooved Spines
+Roar (Unused Zerg Upgrade)
+Dark Swarm
+Parasite
+Protoss Basic Buildings
+Protoss Advanced Buildings
+Mind Control (SC Beta - Unused)
+Psionic Storm
+Gravitic Boosters
+Hallucination
+Stasis Field
+Blank
+Recall
+Singularity Charge
+Lift off
+Land
+Apollo Reactor
+Colossus Reactor
+Set Rally Point
+Ion Thrusters
+Infantry Weapons
+Vehicle Weapons
+Ship Weapons
+Ship Plating
+Infantry Armor
+Vehicle Armor
+Gamete Meiosis
+Metasynaptic Node
+Pneumatized Caparace
+Zerg Caparace
+Flyer Caparace
+Melee Attacks
+Missile Attacks
+Flyer Attacks
+Consume
+Ground Armor
+Air Plating
+Ground Weapons
+Air Weapons
+Leg Enhancements
+Recharge Shields
+Load (into Transport)
+Plasma Shields
+Nuclear Strike
+Unload All (from Transport/Bunker)
+Infest Command Center
+Scarab Damage
+Reaver Capacity
+Gravitic Drive
+Sensor Array
+Khaydarin Amulet
+Apial Sensors
+Gravitic Thrusters
+Carrier Capacity
+Khaydarin Core
+Gauss Rifle
+C-10 Canister Rifle
+Fragmentation Grenade
+Twin Autocannons
+Hellfire Missile Pack
+Arclite Cannon
+Fusion Cutter
+Fusion Cutter (Harvest)
+Gemini Missiles
+Burst Lasers
+ATS Laser Battery
+ATA Laser Battery
+Flame Thrower
+Arclite Shock Cannon
+Longbolt Missile
+Claws
+Needle Spines
+Kaiser Blades
+Toxic Spores
+Spines
+Flyer Attack
+Acid Spore
+Glave Wurm
+Venom (Unused Zerg Weapon)
+Seeker Spores
+Subterranean Tentacle
+Suicide (Infested Terran)
+Suicide (Scourge)
+Particle Beam
+Particle Beam (Harvest)
+Psi/Warp Blades
+Phase Disruptor
+Psi Assault
+Psionic Shockwave
+Radioactive (Unused)
+Dual Photon Blasters
+Anti-matter Missiles
+Phase Disruptor Cannon
+Pulse Cannon
+Photon Cannon
+Radioactive (Unused)
+Spider Mine
+Heal
+Restoration
+Restoration
+Disruption Web
+Disruption Web
+Unknown371
+Mind Control
+Feedback
+Optical Flare
+Afterburners ON (Unused)
+Afterburners OFF (Unused)
+Lurker Aspect
+Unknown378
+Anabolic Synthesis
+Chitinous Plating
+Charon Boosters
+Maelstrom
+Subterranean Spines
+Argus Jewel
+Caduceus Reactor
+Argus Talisman
+Play (Replay)
+Pause (Replay)
+Speed Up (Replay)
+Slow Down (Replay)
