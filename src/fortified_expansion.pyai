@@ -42,4 +42,4 @@ build(19, Peon, 80)
 wait_build(19, Peon)
 build(20, Peon, 80)
 wait_build(20, Peon)
-
+include(static_defense2)
