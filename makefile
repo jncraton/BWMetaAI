@@ -4,10 +4,10 @@ launcher = d:\games\sc\Chaoslauncher\chaoslauncher.exe
 all: mpq
 
 run: patch
-	$(launcher)
+	@$(launcher)
 
 patch: mpq
-	cp build/patch_rt.mpq $(sc_path)\patch_rt.mpq
+	@cp build/patch_rt.mpq $(sc_path)\patch_rt.mpq
 
 mpq: bins
 	python tools\pyai.pyw -c -w -m ../build/patch_rt.mpq ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
@@ -16,8 +16,8 @@ bins: combined_scripts
 	python tools\pyai.pyw -c -w ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
 
 combined_scripts: terran.pyai zerg.pyai protoss.pyai
-	cat build/terran.pyai build/zerg.pyai build/protoss.pyai > build/combined.pyai
+	@cat build/terran.pyai build/zerg.pyai build/protoss.pyai > build/combined.pyai
 
 %.pyai:
-	cd src; node build_ai.js $(subst .pyai,,$@) ../build/$@; cd ..
+	@cd src; node build_ai.js $(subst .pyai,,$@) ../build/$@; cd ..
 
