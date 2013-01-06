@@ -1,4 +1,4 @@
-valid_style_against(Terran, Protoss)
+valid_style_against(Protoss)
 
 train(4, Zerg Zergling)
 multirun(hyrda_tech)
