@@ -41,7 +41,11 @@ function AI (race_name) {
         var styles = fs.readdirSync(race_name + '/styles');
 
         for(var i = 0; i < styles.length; i += 1) {
-            append("random_jump(1, " + "gen_styles_" + styles[i].replace('.pyai','').replace(/ /g,'_') + ")");
+            if(styles[i][0] == '_') {
+                append("goto(gen_styles_" + styles[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+            } else {
+                append("random_jump(1, " + "gen_styles_" + styles[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+            }
         }
 
         append('goto(gen_styles)');

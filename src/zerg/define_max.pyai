@@ -1,6 +1,6 @@
 define_max(80, Zerg Drone)
-define_max(64, Zerg Zergling)
-define_max(36, Zerg Hydralisk)
+define_max(120, Zerg Zergling)
+define_max(120, Zerg Hydralisk)
 define_max(24, Zerg Lurker)
 define_max(48, Zerg Mutalisk)
 define_max(36, Zerg Devourer)
