@@ -24,11 +24,7 @@ random_jump(160, bio_loop_attack)
 expand(99, gen_expansion)
 
 --bio_loop_attack--
-attack_do()
-attack_clear()
-attack_prepare()
-wait(300)
-attack_do()
+include(attack)
 goto(bio_loop)
 
 --bio_tech--

@@ -1,0 +1,5 @@
+attack_do()
+attack_clear()
+attack_prepare()
+wait(300)
+attack_do()
