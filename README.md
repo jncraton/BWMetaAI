@@ -1,10 +1,64 @@
-A Brood War AI preprocessor. This uses pyAI to build the scripts in aiscript.bin and bwscript.bin.
+A Brood War AI designed to follow a metagame closer to modern 1v1 than the original Brood War AI.
+
+# Installation
+
+1. Open your Brood War folder (C:\Program Files\StarCraft by default)
+2. Create a backup copy of your patch_rt.mpq file
+3. Copy build/patch_rt.mpq from this project over the patch_rt.mpq in your Brood War folder
+4. Create a game and this AI should be used
+5. Replace your original patch_rt.mpq to restore the original AI
+
+# Build Orders
+ 
+## Terran
+
+* Siege Expand
+* 1 Rax FE
+* 2 Rax FE
+* 14 CC
+
+## Zerg
+ 
+* 5 Pool
+* 9 Pool
+* Overpool
+* 12 Hatch 12 Pool
+
+## Protoss
+
+* Forge Fast Expand
+* 12 Nexus
+* 2 Gate Range Expand
+
+# Play styles
+
+## Terran
+
+* SK
+* Mech
+
+## Zerg
+
+* Muta-ling
+* Lurker-ling
+* Hydra
+
+## Protoss
+
+* Zealot Dragoon
+* Zealot Archon
 
 # New AI commands/macros:
+
+This includes an AI preprocessor which implements some new commands that you can use if you want to add your own syles or build orders.
 
 ## build_start(amount, building, [priority])
 
 Builds {amount} of {building} at {priority} and waits for construction to start. Priority defaults to 80.
+
+## build_finish(amount, building, [priority])
+
+Builds {amount} of {building} at {priority} and waits for construction to complete. Priority defaults to 80.
 
 ## enemyownsairtech_jump(block)
 
