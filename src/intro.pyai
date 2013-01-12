@@ -1,6 +1,7 @@
 start_town()
 transports_off()
 farms_notiming()
+defaultbuild_off()
 
 build(1, Town Hall, 150)
 wait_buildstart(1, Town Hall)
