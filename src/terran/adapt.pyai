@@ -4,13 +4,11 @@ enemyownsairtech_jump(air)
 repeat()
 
 --detection--
-build(1, Terran Academy, 80)
-wait_build(1, Terran Academy)
-build(1, Terran Comsat Station, 80)
+build_finish(1, Terran Academy, 80)
+build_start(1, Terran Comsat Station, 80)
 repeat()
 
 --air--
 player_need(1, Terran Engineering Bay)
-build(4, Terran Missile Turret, 80)
-wait_buildstart(4, Terran Missile Turret)
+build_start(4, Terran Missile Turret, 80)
 repeat()
