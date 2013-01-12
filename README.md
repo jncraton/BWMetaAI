@@ -29,6 +29,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 * Forge Fast Expand
 * 12 Nexus
 * 2 Gate Range Expand
+* Fast Corsair
 
 # Play styles
 
