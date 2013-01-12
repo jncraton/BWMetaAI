@@ -22,6 +22,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 * 5 Pool
 * 9 Pool
 * Overpool
+* 1 Base Muta
 * 12 Hatch 12 Pool
 
 ## Protoss
