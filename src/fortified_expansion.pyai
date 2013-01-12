@@ -1,7 +1,7 @@
 start_town()
 build(1, Town Hall, 150)
 wait_build(1, Town Hall)
-guard_all()
+include(defenseuse)
 build(2, Peon, 80)
 wait_build(2, Peon)
 build(3, Peon, 80)
