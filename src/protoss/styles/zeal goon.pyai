@@ -3,11 +3,11 @@ valid_style_against(Terran, Protoss)
 multirun(zeal_goon_tech)
 --zeal_goon_loop--
 
+train(8, Protoss Dragoon)
+train(8, Protoss Zealot)
 notowns_jump(Protoss Templar Archives, zeal_goon_skip_build_templar)
 train(5, Protoss High Templar)
 --zeal_goon_skip_build_templar--
-train(8, Protoss Dragoon)
-train(8, Protoss Zealot)
 train(16, Protoss Dragoon)
 train(16, Protoss Zealot)
 train(24, Protoss Dragoon)
