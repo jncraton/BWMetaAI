@@ -16,6 +16,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 * 1 Rax FE
 * 2 Rax FE
 * 14 CC
+* 2 Factory Push
 
 ## Zerg
  
