@@ -23,6 +23,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 * 9 Pool
 * Overpool
 * 1 Base Muta
+* 1 Base Lurker
 * 12 Hatch 12 Pool
 
 ## Protoss
@@ -30,7 +31,9 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 * Forge Fast Expand
 * 12 Nexus
 * 2 Gate Range Expand
-* Fast Corsair
+* 2 Gate Corsair
+* 2 Gate Zealots
+* Fast DT
 
 # Play styles
 
