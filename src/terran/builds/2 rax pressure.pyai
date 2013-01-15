@@ -1,14 +1,9 @@
 valid_build_against(Zerg)
-build_start(9, Terran SCV, 80)
-build_start(1, Terran Supply Depot, 80)
-build_start(11, Terran SCV, 80)
-build_start(1, Terran Barracks, 80)
-build_start(13, Terran SCV, 80)
-build_start(2, Terran Barracks, 80)
-build_start(14, Terran SCV, 80)
-build_start(2, Terran Supply Depot, 80)
-build_start(15, Terran SCV, 80)
-build_start(1, Terran Refinery, 80)
+9 Terran Supply Depot
+11 Terran Barracks
+13 Terran Barracks
+14 Terran Supply Depot
+15 Terran Refinery
 attack_clear()
 attack_train(1, Terran Marine)
 build_start(17, Terran SCV)
