@@ -152,10 +152,10 @@ function Race(name) {
                 '--' + block_name + '--\n' +
                 original + '\n';
         });
+        */
         
         return comment + block + content;
     }
-    */
     function getFileBlock(filename) {
         var block = 'gen_' + filename;
         block = block.replace(/[-_ \/]/g, '_');
