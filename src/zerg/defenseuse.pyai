@@ -1,3 +1,5 @@
 defenseuse_gg(1, Zerg Zergling)
 defenseuse_gg(1, Zerg Hydralisk)
 defenseuse_gg(1, Zerg Lurker)
+
+creep(3)

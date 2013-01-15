@@ -7,4 +7,11 @@ repeat()
 repeat()
 
 --air--
+player_need(1, Zerg Evolution Chamber)
+build_start(1, Zerg Creep Colony)
+build_start(2, Zerg Creep Colony)
+build_finish(1, Zerg Creep Colony)
+build_start(1, Zerg Spore Colony)
+build_finish(2, Zerg Creep Colony)
+build_start(2, Zerg Spore Colony)
 repeat()
