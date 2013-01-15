@@ -21,11 +21,7 @@ multirun(zealot_archon_tech)
     expand(99, gen_expansion)
 
     --zealot_archon_loop_attack--
-    attack_do()
-    attack_clear()
-    attack_prepare()
-    wait(300)
-    attack_do()
+    include(attack)
 goto(zealot_archon_loop)
 
 --zealot_archon_tech--
@@ -53,6 +49,7 @@ build_start(13, Protoss Gateway, 80)
 build_finish(1, Protoss Citadel of Adun, 80)
 build_finish(1, Protoss Templar Archives, 80)
 tech(Psionic Storm, 30)
+wait(5000)
 upgrade(2, Protoss Ground Weapons, 30)
 upgrade(2, Protoss Armor, 30)
 upgrade(1, Leg Enhancements, 30)
