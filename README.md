@@ -15,6 +15,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 * Siege Expand
 * 1 Rax FE
 * 2 Rax FE
+* 2 Rax Pressure
 * 14 CC
 * 2 Factory Push
 
@@ -47,6 +48,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 
 * Muta-ling
 * Lurker-ling
+* Ultra-ling
 * Hydra
 
 ## Protoss
