@@ -30,6 +30,8 @@ function Race(name) {
         var comment = "\n#" + filename + '\n';
         var block;
         
+        var owned = {};
+            
         if(!skip_block_header) {
             block = (filename.indexOf('header') > -1 ? '' : '--' + getFileBlock(filename) + '--\n');
         } else {
@@ -107,6 +109,18 @@ function Race(name) {
             var unit = args[1];
             return 'train(' + amount + ', ' + unit + ')\n' +
                    'attack_add(' + amount + ', ' + unit + ')';
+        });
+
+        content = content.replace(/^(\d+) (.*)$/mg, function(original, supply, building) {
+            if(!owned[building]) {
+                owned[building] = 0;
+            }
+            owned[building] += 1;
+            
+            return 'build(' + supply + ', Peon, 80)\n' +
+                      'wait_buildstart(' + supply + ', Peon)\n' +
+                      'build(' + owned[building] + ', ' + building + ', 80)\n' +
+                      'wait_buildstart(' + owned[building] + ', ' + building + ')\n';
         });
 
         if (name === 'terran') {
