@@ -3,6 +3,7 @@ var fs = require('fs');
 var debug_count = 0;
 
 function Race(name) {
+    debug_level = 0;
 
     function loadContents(filename, skip_block_header) {
         var raw;
@@ -144,15 +145,15 @@ function Race(name) {
             content = content.replace(/Gas/g, "Protoss Assimilator");
         }
         
-        
-        content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-)).+$/mg, function(original) {
-            debug_count += 1;
-            var block_name = 'd_' + debug_count;
-            return '\ndebug(' + block_name + ', ' + debug_count + ')\n' +
-                '--' + block_name + '--\n' +
-                original + '\n';
-        });
-        
+        if (debug_level >= 100) {
+            content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-)).+$/mg, function(original) {
+                debug_count += 1;
+                var block_name = 'd_' + debug_count;
+                return '\ndebug(' + block_name + ', ' + debug_count + ')\n' +
+                    '--' + block_name + '--\n' +
+                    original + '\n';
+            });
+        }
         
         return comment + block + content;
     }
