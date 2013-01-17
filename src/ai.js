@@ -32,6 +32,7 @@ function AI (race_name) {
         for(var i = 0; i < builds.length; i += 1) {
             append(race.loadContents(race_name + '/builds/' + builds[i]));
             append('multirun(gen_adapt)');
+            append('multirun(gen_expand_loop)');
             append('goto(gen_styles)');
         }
         
@@ -56,6 +57,9 @@ function AI (race_name) {
         }
         
         append(race.loadContents('adapt'))
+        append("stop()")
+
+        append(race.loadContents('expand_loop'))
         append("stop()")
 
         append(race.loadContents('expansion'))
