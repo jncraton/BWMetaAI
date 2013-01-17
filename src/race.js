@@ -43,7 +43,7 @@ function Race(name) {
         
         var content = fs.readFileSync(filename, 'utf-8');
     
-        content = content.replace(/repeat\(\)/g, 'goto(' + getFileBlock(filename) + ')');
+        content = content.replace(/repeat\(\)/g, 'wait(300)\ngoto(' + getFileBlock(filename) + ')');
         
         content = content.replace(/include\((.*)\)/g, function(command, filename) {
             return loadContents(filename, true);
@@ -144,15 +144,15 @@ function Race(name) {
             content = content.replace(/Gas/g, "Protoss Assimilator");
         }
         
-        /*
-        content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-)).*$/mg, function(original) {
+        
+        content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-)).+$/mg, function(original) {
             debug_count += 1;
             var block_name = 'd_' + debug_count;
             return '\ndebug(' + block_name + ', ' + debug_count + ')\n' +
                 '--' + block_name + '--\n' +
                 original + '\n';
         });
-        */
+        
         
         return comment + block + content;
     }
