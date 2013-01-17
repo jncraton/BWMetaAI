@@ -7,7 +7,11 @@ repeat()
 repeat()
 
 --air--
+notowns_jump(Zerg Evolution Chamber, adapt_get_evo)
+goto(adapt_has_evo)
+--adapt_get_evo--
 build_finish(1, Zerg Evolution Chamber)
+--adapt_has_evo--
 build_start(1, Zerg Creep Colony)
 build_start(2, Zerg Creep Colony)
 build_finish(1, Zerg Creep Colony)
