@@ -19,5 +19,5 @@ combined_scripts: terran.pyai zerg.pyai protoss.pyai
 	@cat build/terran.pyai build/zerg.pyai build/protoss.pyai > build/combined.pyai
 
 %.pyai:
-	@cd src; node build_ai.js $(subst .pyai,,$@) ../build/$@; cd ..
+	@cd src; node build_ai $(subst .pyai,,$@) ../build/$@; cd ..
 
