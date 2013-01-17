@@ -7,10 +7,10 @@ Build necessary farms only when it hits the maximum supply available.
 Build necessary farms with a correct timing, so nothing is paused by a maximum supply limit hit.
 
 ## start_areatown
-Starts the AI Script for area town management.
+Starts the AI Script for area town management. Should only be used in campaign scripts, as it uses the trigger location as its bounds (or area).
 
 ## start_campaign
-Starts the AI Script for Campaign.
+Starts the AI Script for Campaign. Note: This command may have many subtle (but significant in number) changes to AI behaviour which may be desirable in some cases, but not in others.
 
 ## start_town
 Starts the AI Script for town management.
@@ -19,13 +19,12 @@ Starts the AI Script for town management.
 Computer will not manage/build transports on its own.
 
 ## check_transports
-Informs computer to use transports up to the defined Max#. Used with header transports_off.
-* was noted in old forum that 5 was max transport. Needs to be confirmed.
+Informs computer to build transports on its own. If start_campaign was called, then 2 transports will be built, otherwise 5 will be built. The first transport is built at priority 80 and subsequent transports are built at priority 50. Protoss also trains up to 2 observers at priority 80. Used with header transports_off. 
 
 # Build/Attack/Defense order commands
 
 ## attack_add (byte) (military)
-Add %1(byte) %2(military) to the current attacking party.
+Add %1(byte) %2(military) to the current attacking party. %1 (byte) can be at most 62, otherwise the command is ignored.
 
 ## attack_clear
 Clear the attack data.
@@ -37,7 +36,7 @@ Attack the enemy with the current attacking party.
 Prepare the attack.
 
 ## build (byte) (building) (byte)
-Build %2(building) until it commands %1(byte) of them, at priority %3(byte).
+Build %2(building) until it commands %1(byte) of them, at priority %3(byte). The maximum value of %1(byte) is 30.
 
 ## defensebuild_aa (byte) (military)
 Build %1(byte) %2(military) to defend against enemy attacking air units.
@@ -85,12 +84,14 @@ This command takes X number of workers from the main to move to the expansion. S
 Uses all available units to guard the town.
 
 ## guard_resources (military)
-Send units of type %1(military) to guard as many resources spots as possible(1 per spot).
+Send units of type %1(military) to guard as many unacquired base locations as possible(1 per spot).
 
 ## place_guard (unit) (byte)
-Place %2(byte) guards using %1(unit) to guard town. 
-* index starts at 0 for first guard
-for example place_guard medic 0 = place 1 medic to guard town.
+Place one %1(unit) to guard town at strategic location %2.
+Location:
+0 = town center
+1 = mineral line
+2 = geyser/refinery
 
 ## player_need (byte) (building)
 If the player does not own %1(byte) number of %2(building), then build it at priority 80, otherwise ignore this opcode.
@@ -106,12 +107,10 @@ Research technology %1(technology), at priority %2(byte).
 Train %2(military) until it commands %1(byte) of them.
 
 ## upgrade (byte) (upgrade) (byte)
-Research upgrade %2(upgrade) up to level %1(byte), at priority %3(byte).
+Research upgrade %2(upgrade) up to level %1(byte), at priority %3(byte). The maximum supported upgrade level is 31.
 
 ## wait (word)
-Wait for %1(word) tenths of second in normal game speed.
-* NOTE normal game speed. Fastest game speed is still undetermined.
-see this post for further details.
+Wait for %1(word) logical game frames. A game frame is 42 milliseconds on fastest game speed.
 
 ## wait_finishattack
 Wait until attacking party has finished to attack.
@@ -131,9 +130,9 @@ Wait until computer commands %1(byte) %2(military).
 # Flow control commands
 
 ## call (block)
-Call %1(block) as a sub-routine. Only one call can be made in the game at a time.
+Call %1(block) as a sub-routine. Only one call can be made in the game at all times from any computer player running a script.
 If an AI owned by player 1 makes a call, then player 2 makes a call, will override player 1's call and controls the flow of the return statement.
-Be sure that there is no wait command inside the call to have it function correctly.
+Be sure that there is no wait command or blocking command inside the call to have it function correctly.
 
 ## enemyowns_jump (unit) (block)
 If enemy has a %1(unit), jump to %2(block).
@@ -145,7 +144,7 @@ If enemy has at least %1(word) minerals and %2(word) gas then jump in %3(block).
 Jump to %1(block).
 
 ## groundmap_jump (block)
-If it is a ground map(in other words, if the enemy is reachable without transports), jump to %1(block).
+If it is a ground map(in other words, if the enemy is reachable without transports), jump to %1(block). This will jump if any enemy structure is reachable at any given point.
 
 ## if_owned (unit) (block)
 If the player owns a %1(unit) (includes incomplete) then jump to %2(block).
@@ -154,7 +153,7 @@ If the player owns a %1(unit) (includes incomplete) then jump to %2(block).
 Allows the current thread to be killed by another one.
 
 ## kill_thread
-Kills all threads that have the killable attribute (including threads owned by other players).
+Kills all threads that have the killable attribute (including threads owned by other players). This should not be used in a script.
 
 ## notowns_jump (unit) (block)
 If computer doesn't have a %1(unit), jump to %2(block).
@@ -173,7 +172,62 @@ Return to the flow point of the call command.
 
 ## rush (byte) (block)
 will jump to %2(block) if %1(byte) conditions exist.
-see post #76 for updated conditions
+
+### Rush scoring system:
+Protoss Air Score = Protoss Dragoons + Protoss Scouts
+Zerg Ground Score = Zerg Hydralisks + Zerg Sunken Colonies * 2
+Zerg Air Score = Zerg Hydralisks + Zerg Mutalisks + Zerg Spore Colonies * 2
+Terran Infantry Score = bunkers * 4 <= marines ? marines + bunkers * 4 : 2 * marines
+
+### Rush conditions:
+
+#### Terran
+0: Commands a Barracks
+1: Terran Infantry Score > 16
+2: Terran Infantry Score > 24
+3: Terran Infantry Score > 5
+4: Terran Infantry Score > 16
+5: Terran Infantry Score > 6
+6: Terran Infantry Score > 12
+7: Commands a Siege Tank
+8: Terran Infantry Score > 5
+9: Terran Infantry Score > 9
+10: Terran Infantry Score > 4
+11: Terran Infantry Score > 10
+12: Terran Infantry Score > 16
+13: Terran Infantry Score > 24
+
+#### Zerg
+0: Commands a Spawning Pool
+1: Zerg Ground Score > 10
+2: Zerg Air Score > 10
+3: Zerg Ground Score > 2, or commands a Hydralisk Den
+4: Zerg Ground Score > 10
+5: Zerg Ground Score > 6
+6: Zerg Sunken Colonies > 1
+7: Commands a Queen
+8: Zerg Ground Score > 2
+9: Zerg Ground Score > 4
+10: Zerg Ground Score > 4
+11: Zerg Ground Score > 10
+12: Zerg Air Score > 5
+13: Zerg Air Score > 10
+
+#### Protoss
+0: Commands a Gateway
+1: Protoss Zealots > 6
+2: Not used
+3: Protoss Zealots > 1
+4: Protoss Zealots > 8
+5: Protoss Zealots > 3
+6: Protoss Dragoons > 1
+7: Protoss Zealots > 6
+8: Protoss Zealots > 1
+9: Protoss Zealots > 5
+10: Protoss Zealots > 2
+11: Protoss Zealots > 5
+12: Protoss Air Score > 2
+13: Protoss Air Score > 7
 
 ## stop
 Stop script code execution. Often used to close script blocks called simultaneously.
@@ -192,8 +246,7 @@ Run code at %2(block) for expansion number %1(byte)
 ## multirun (block)
 Run simultaneously code at %1(block).
 
-## 
-Miscellaneous commands
+# Miscellaneous commands
 
 ## create_nuke
 Create a nuke. Should only be used in campaign scripts.
@@ -206,7 +259,7 @@ Builds structures(towers?) far if the flag is set to 4, or near if the flag is a
 The creep command is used for expanding the zerg creep.
 
 ## debug (block) (string)
-Show debug string %2(string) and continue in %1(block). (unsupported by scAIEditIII
+Show debug string %2(string) and continue in %1(block). (unsupported by scAIEditIII)
 
 ## define_max (byte) (unit)
 Define maximum number of %2(unit) to %1(byte).
@@ -221,15 +274,14 @@ Gives 2000 ore if ore is currently below 500 and gives 2000 gas if gas is curren
 Launch a nuke at map position (x,y) where x = %1(word) and y = %2(word). Should only be used in campaign scripts.
 
 ## nuke_rate (byte)
-Builds nukes every %1(byte) minutes.
-*see post#27 for further details
+Builds and uses nukes every %1(byte) minutes.
 
 ## send_suicide (byte)
 Send all units to suicide mission. %1(byte) determines which type: 0 = Strategic suicide; 1 = Random suicide.
 * 1 = includes workers too.
 
 ## set_randomseed (dword)
-Set random seed to %1(dword).
+Set random seed to %1(dword). Note: This affects other scripts and should not be used.
 
 # StarEdit commands
 
@@ -289,39 +341,31 @@ Does not exist in memory.
 ## scout_with (military)
 This command has no action associated with it and therefore cannot be used.
 
-## 
-List of unknown or unclear commands 
+#  List of unknown or unclear commands 
 Unknown purpose commands
 Note: These are the most interesting commands to make research on. With the accurate opcode name list, they're now easier to decipher, but many still don't act as expected, or are still too obscure. 
 
 ## allies_watch (byte) (block)
-The use of this command is unknown. Takes %1(byte) and %2(block) as parameters.
-Byte might represent expansion number.
+Expands at hardcoded expansion number %1 (byte) using %2 (block). Note: If %1 is < 8 then it is a player's start location, otherwise it is a map's base location. Does nothing if the expansion is occupied. The maximum value for %1 (byte) is 250.
 
 ## capt_expand
 Causes the AI to expand using a default expansion block. Takes no parameter.
 The actual expansion block is unknown and needs research.
 
 ## default_min (byte)
-The use of this command is unclear. Takes %1(byte) as parameter.
-Racine used this command in our BWARAi War I.
-see his scripts in this post for more details:
-BWAi War I
-Update/Suggestion: perhaps it specifies minimum number of expansions to acquire
+Defines how much standing army (from defenseuse commands) will be placed at expansions. The greater the value, more units will be sent. If (byte) = 0, then it will send units only if the expansion is under attack
 
 ## defaultbuild_off
-The use of this command is unknown. Takes no parameter.
-"default build" is on by default."
+Turns off default_build. Note: "default build" is on by default.
 
 ## fake_nuke
-The use of this command is unknown. Takes no parameters.
 Resets the AI nuke timer. Behaviour is unknown.
 
 ## max_force (word)
 Takes %1(word) as parameter. Unknown.
 
 ## panic (block)
-Appears to trigger (block) if attacked. Still unclear.
+If AI has not expanded yet and total unmined minerals in the mineral line are less than 7500, then it will expand using (block). If the AI has expanded before, the command triggers every time there are less than 7500 unmined minerals total in all owned bases, or there are less than 2 owned Refineries that are not depleted.
 
 ## region_size (byte) (block)
 Jump to block %2 if the computer's region tile count is below %1. Untested.
@@ -333,16 +377,21 @@ The use of this command is unknown. Takes %1(byte) as parameter.
 The use of this command is unknown. Takes no parameter.
 appeared in vanilla SC scripts. Looks like was a general "attack" command not necessarily expansions.
 Update: This only sets a flag. The actual effects from that flag are unknown.
+Update2: Only used with set_attacks, does nothing if the start_campaign opcode was executed.
 
 ## build_bunkers
-Supposedly builds bunkers. Takes no parameters.
+Builds up to 3 bunkers around the base (Terran only). Takes no parameters.
 
 ## build_turrets
-Supposedly builds turrets. Takes no parameters.
+Builds up to 6 missile turrets around the base (Terran only). Takes no parameters.
 
 ## default_build
-The use of this command is unknown. Takes no parameter.
-"default build" is on by default."
+If the AI has more than 600 minerals and 300 gas, it will continuously train race specific units until it reaches the define_max value.
+Terran: marine, ghost, siege tank, goliath, wraith, battlecruiser.
+Zerg: hydralisk, mutalisk.
+Protoss: zealot, dragoon, reaver, scout, carrier.
+
+Note: "default build" is on by default. To turn it off, use defaultbuild_off
 
 ## easy_attack (byte) (unit)
 The definition of this command is unknown. Supposedly attacks the enemy with %1 units of type %2 without having to do attack_add, attack_prepare, and attack_do.
@@ -372,6 +421,6 @@ The definition of this command is unknown. Takes no parameters.
 Supposedly waits for the command build_turrets to finish. Takes no parameters.
 
 ## wait_upgrades
-Supposedly waits for all upgrades to finish. Takes no parameter.
+Waits for all upgrades and research to finish. Takes no parameter.
 
 http://www.broodwarai.com/forums/index.php?showtopic=11&st=0
