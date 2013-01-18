@@ -8,6 +8,14 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 4. Create a game and this AI should be used
 5. Replace your original patch_rt.mpq to restore the original AI
 
+# Building from source
+
+Prerequisits: node.js, Python 2.7 32 bit on Windows 
+
+Windows is required for mpq manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
+
+1. Run `make`
+
 # Build Orders
  
 ## Terran
