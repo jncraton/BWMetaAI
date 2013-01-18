@@ -1,5 +1,5 @@
-wait(1000)
-random_jump(40, expand_loop_expand)
+wait(3000)
+random_jump(100, expand_loop_expand)
 repeat()
 --expand_loop_expand--
 expand(99, gen_expansion)
