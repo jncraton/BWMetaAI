@@ -7,7 +7,7 @@ if(process.argv[3]) {
     src = AI(process.argv[2]).build();
     
 exec('git rev-parse HEAD', function (error, commit) {
-    commit = commit.replace('\n', '');
+    commit = commit.replace('\n', '').substring(0,6);
     src = src.replace(/{commit}/g, commit);
     fs.writeFileSync(process.argv[3], src);
 });
