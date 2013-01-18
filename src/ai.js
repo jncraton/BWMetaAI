@@ -39,6 +39,7 @@ function AI (race_name) {
         // Strategies
         append("--gen_styles--")
         append("farms_timing()")
+        append(race.loadContents(race_name + '/defenseuse'));
         var styles = fs.readdirSync(race_name + '/styles');
 
         for(var i = 0; i < styles.length; i += 1) {

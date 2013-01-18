@@ -8,4 +8,5 @@ define_max(36, Zerg Guardian)
 define_max(36, Zerg Defiler)
 define_max(36, Zerg Ultralisk)
 define_max(12, Zerg Queen)
-include(defenseuse)
+
+creep(3)
