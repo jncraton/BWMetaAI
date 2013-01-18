@@ -1,6 +1,5 @@
 start_town()
-build(1, Town Hall, 150)
-wait_build(1, Town Hall)
+build_finish(1, Town Hall, 150)
 include(defenseuse)
 build_finish(2, Peon, 80)
 build_finish(3, Peon, 80)
