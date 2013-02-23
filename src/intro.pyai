@@ -9,7 +9,7 @@ wait_buildstart(1, Town Hall)
 build(5, Peon, 80)
 wait_buildstart(5, Peon)
 
-debug(intro_start1, bwai version {commit})
+debug(intro_start1, BWMetaAI version {commit})
 --intro_start1--
 debug(intro_start2, gl hf)
 --intro_start2--
