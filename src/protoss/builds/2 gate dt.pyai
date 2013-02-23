@@ -1,18 +1,14 @@
 valid_build_against(Protoss, Terran)
 defenseclear()
 8 Protoss Pylon
-8 Protoss Pylon
 10 Protoss Gateway
 12 Protoss Assimilator
 13 Protoss Cybernetics Core
 train(1, Protoss Zealot)
-defense_ground(Protoss Zealot)
 build_start(15, Protoss Probe, 80)
 build_start(2, Protoss Pylon, 80)
 build_start(17, Protoss Probe, 80)
 train(1, Protoss Dragoon)
-defense_ground(Protoss Zealot)
-defense_air(Protoss Zealot)
 build_start(1, Protoss Citadel of Adun)
 build_start(20, Protoss Probe, 80)
 build_start(1, Protoss Templar Archives)
