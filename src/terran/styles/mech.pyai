@@ -1,4 +1,5 @@
 valid_style_against(Terran, Protoss)
+define_max(4, Terran Marine)
 
 multirun(mech_tech)
 build_finish(1, Terran Factory)
