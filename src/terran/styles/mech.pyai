@@ -1,5 +1,11 @@
 valid_style_against(Terran, Protoss)
+
 define_max(4, Terran Marine)
+
+defenseclear()
+defense_ground(Terran Vulture)
+defense_ground(Terran Siege Tank)
+defense_air(Terran Goliath)
 
 multirun(mech_tech)
 build_finish(1, Terran Factory)

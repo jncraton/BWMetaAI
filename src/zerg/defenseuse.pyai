@@ -1,6 +1,1 @@
-defenseuse_gg(1, Zerg Zergling)
-defenseuse_gg(1, Zerg Hydralisk)
-defenseuse_gg(1, Zerg Lurker)
-
-defensebuild_gg(1, Zerg Zergling)
-defensebuild_ag(1, Zerg Hydralisk)
+defense_ground(Zerg Zergling)

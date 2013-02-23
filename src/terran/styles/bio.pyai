@@ -1,5 +1,9 @@
 valid_style_against(Zerg)
 
+defenseclear()
+defense_ground(Terran Marine)
+defense_air(Terran Marine)
+
 multirun(bio_tech)
 --bio_loop--
 attack_train(15, Terran Marine)

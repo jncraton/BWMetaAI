@@ -1,11 +1,1 @@
-defenseuse_gg(1, Terran Marine)
-defenseuse_gg(1, Terran Vulture)
-defenseuse_gg(1, Terran Siege Tank)
-defenseuse_ag(1, Terran Marine)
-defenseuse_ag(1, Terran Goliath)
-
-defensebuild_gg(1, Terran Marine)
-defensebuild_gg(1, Terran Vulture)
-defensebuild_gg(1, Terran Siege Tank)
-defensebuild_ag(1, Terran Marine)
-defensebuild_ag(1, Terran Goliath)
+defense_ground(Terran Marine)
