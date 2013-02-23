@@ -1,10 +1,7 @@
 valid_build_against(Zerg, Protoss)
-build_start(8, Protoss Probe, 80)
-build_start(1, Protoss Pylon, 80)
-build_start(10, Protoss Probe, 80)
-build_start(1, Protoss Gateway)
-build_start(12, Protoss Probe, 80)
-build_start(2, Protoss Gateway)
+8 Protoss Pylon
+10 Protoss Gateway
+12 Protoss Gateway
 build_start(13, Protoss Probe, 80)
 train(1, Protoss Zealot)
 build_start(14, Protoss Probe, 80)
