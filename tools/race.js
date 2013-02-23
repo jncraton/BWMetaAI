@@ -84,7 +84,14 @@ function Race(name) {
         });
         
         content = content.replace(/valid_style_against\((.*)\)/g, function(original, races) {
-            return race_skip(races, 'gen_styles')
+            var message = '';
+            
+            if (config.verbosity >= 5) {
+                var styleName = block.replace(/[\-\n ]/g, '').replace('gen_styles_', '').replace(/_/g, ' ');
+                message = debug('Using ' + styleName + ' style');
+            }
+
+            return race_skip(races, 'gen_styles') + message;
         });
 
         content = content.replace(/enemyownscloaked_jump\((.*)\)/g, function(original, block) {
