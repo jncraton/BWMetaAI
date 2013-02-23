@@ -5,6 +5,9 @@ multirun(zeal_goon_tech)
 
 train(8, Protoss Dragoon)
 train(8, Protoss Zealot)
+notowns_jump(Protoss Arbiter Tribunal, zeal_goon_skip_build_arbiter)
+train(1, Protoss Arbiter)
+--zeal_goon_skip_build_arbiter--
 notowns_jump(Protoss Templar Archives, zeal_goon_skip_build_templar)
 train(5, Protoss High Templar)
 --zeal_goon_skip_build_templar--
@@ -18,6 +21,9 @@ expand(99, gen_expansion)
 --zeal_goon_loop_attack--
 attack_do()
 attack_clear()
+notowns_jump(Protoss Arbiter, zeal_goon_skip_add_arbiter)
+attack_add(1, Protoss Arbiter)
+--zeal_goon_skip_add_arbiter--
 notowns_jump(Protoss High Templar, zeal_goon_skip_add_templar)
 attack_add(5, Protoss High Templar)
 --zeal_goon_skip_add_templar--
@@ -66,8 +72,10 @@ wait_build(1, Protoss Templar Archives)
 tech(Psionic Storm, 80)
 upgrade(2, Protoss Ground Weapons, 80)
 upgrade(2, Protoss Armor, 80)
-wait(5000)
+build_finish(1, Protoss Stargate)
+build_finish(1, Protoss Arbiter Tribunal)
+tech(Stasis Field, 80)
+wait(3000)
 upgrade(3, Protoss Ground Weapons, 80)
 upgrade(3, Protoss Armor, 80)
-wait(5000)
 stop()
