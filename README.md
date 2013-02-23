@@ -1,6 +1,10 @@
+BWMetaAI
+========
+
 A Brood War AI designed to follow a metagame closer to modern 1v1 than the original Brood War AI.
 
-# Installation
+Installation
+------------
 
 1. Open your Brood War folder (C:\Program Files\StarCraft by default)
 2. Create a backup copy of your patch_rt.mpq file
@@ -8,7 +12,8 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 4. Create a game and this AI should be used
 5. Replace your original patch_rt.mpq to restore the original AI
 
-# Building from source
+Building from source
+--------------------
 
 Prerequisites: node.js, Python 2.7 32 bit on Windows 
 
@@ -16,9 +21,10 @@ Windows is required for mpq manipulation. If you just want to generate the sourc
 
 1. Run `make`
 
-# Build Orders
+Build Orders
+------------
  
-## Terran
+### Terran
 
 * Siege Expand
 * 1 Rax FE
@@ -28,7 +34,7 @@ Windows is required for mpq manipulation. If you just want to generate the sourc
 * 14 CC
 * 2 Factory Push
 
-## Zerg
+### Zerg
  
 * 5 Pool
 * 9 Pool
@@ -37,7 +43,7 @@ Windows is required for mpq manipulation. If you just want to generate the sourc
 * 1 Base Lurker
 * 12 Hatch 12 Pool
 
-## Protoss
+### Protoss
 
 * Forge Fast Expand
 * 12 Nexus
@@ -46,57 +52,59 @@ Windows is required for mpq manipulation. If you just want to generate the sourc
 * 2 Gate Zealots
 * Fast DT
 
-# Play styles
+Play styles
+-----------
 
-## Terran
+### Terran
 
 * SK
 * Mech
 
-## Zerg
+### Zerg
 
 * Muta-ling
 * Lurker-ling
 * Ultra-ling
 * Hydra
 
-## Protoss
+### Protoss
 
 * Zealot Dragoon
 * Zealot Archon
 
-# New AI commands/macros:
+New AI commands/macros:
+-----------------------
 
 This includes an AI preprocessor which implements some new commands that you can use if you want to add your own syles or build orders.
 
-## build_start(amount, building, [priority])
+### build_start(amount, building, [priority])
 
 Builds {amount} of {building} at {priority} and waits for construction to start. Priority defaults to 80.
 
-## build_finish(amount, building, [priority])
+### build_finish(amount, building, [priority])
 
 Builds {amount} of {building} at {priority} and waits for construction to complete. Priority defaults to 80.
 
-## enemyownsairtech_jump(block)
+### enemyownsairtech_jump(block)
 
 Jumps to block if enemy has Starport, Stargate, or Spire
 
-## enemyownscloaked_jump(block)
+### enemyownscloaked_jump(block)
 
 Jumps to block if enemy has units that can cloak
 
-## repeat()
+### repeat()
 
 Jumps to the beginning of the current file
 
-## valid_build_against(Race, Race, Race)
+### valid_build_against(Race, Race, Race)
 
 Skips this build if nearest race is not in the list of races
 
-## valid_style_against(Race, Race, Race)
+### valid_style_against(Race, Race, Race)
 
 Skips this style if nearest race is not in the list of races
 
-## include(file)
+### include(file)
 
 Includes the text of the selected file in place of this command. This is similar to the #include C preprocessor macro.
