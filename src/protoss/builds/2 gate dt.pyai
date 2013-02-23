@@ -1,13 +1,10 @@
 valid_build_against(Protoss, Terran)
 defenseclear()
-build_start(8, Protoss Probe, 80)
-build_start(1, Protoss Pylon, 80)
-build_start(10, Protoss Probe, 80)
-build_start(1, Protoss Gateway)
-build_start(11, Protoss Probe, 80)
-build_start(1, Protoss Assimilator, 80)
-build_start(13, Protoss Probe, 80)
-build_start(1, Protoss Cybernetics Core, 80)
+8 Protoss Pylon
+8 Protoss Pylon
+10 Protoss Gateway
+12 Protoss Assimilator
+13 Protoss Cybernetics Core
 train(1, Protoss Zealot)
 defense_ground(Protoss Zealot)
 build_start(15, Protoss Probe, 80)
