@@ -5,8 +5,6 @@ var debug_count = 0;
 var config = require('./config.json');
 
 function Race(name) {
-    debug_level = 0;
-
     function loadContents(filename, skip_block_header) {
         var raw;
         
@@ -75,7 +73,14 @@ function Race(name) {
         }
         
         content = content.replace(/valid_build_against\((.*)\)/g, function(original, races) {
-            return race_skip(races, 'gen_opening')
+            var message = '';
+            
+            if (config.verbosity >= 5) {
+                var buildName = block.replace(/[\-\n ]/g, '').replace('gen_builds_', '').replace(/_/g, ' ');
+                message = debug('Using ' + buildName + ' build');
+            }
+
+            return race_skip(races, 'gen_opening') + message;
         });
         
         content = content.replace(/valid_style_against\((.*)\)/g, function(original, races) {
@@ -149,7 +154,15 @@ function Race(name) {
             content = content.replace(/Gas/g, "Protoss Assimilator");
         }
         
-        if (debug_level >= 100) {
+        function debug(message) {
+            debug_count += 1;
+            var block_name = 'd_' + debug_count;
+            
+            return ('\ndebug(' + block_name + ', ' + message + ')\n' +
+                    '--' + block_name + '--\n');
+        }
+        
+        if (config.verbosity >= 10) {
             content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-)).+$/mg, function(original) {
                 debug_count += 1;
                 var block_name = 'd_' + debug_count;
