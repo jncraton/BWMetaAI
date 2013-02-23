@@ -143,6 +143,13 @@ function Race(name) {
                    'attack_add(' + amount + ', ' + unit + ')';
         });
 
+        content = content.replace(/defenseclear\(()\)/g, function(original) {
+            return 'defenseclear_gg()\n' +
+                   'defenseclear_ga()\n' +
+                   'defenseclear_ag()\n' +
+                   'defenseclear_aa()\n';
+        });
+
         content = content.replace(/^(\d+) (.*)$/mg, function(original, supply, building) {
             if(!owned[building]) {
                 owned[building] = 0;
