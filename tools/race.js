@@ -72,6 +72,12 @@ function Race(name) {
                 '--' + complete + '--\n');
         }
         
+        content = content.replace(/build_weight\((.*)\)/g, function(original, weight) {
+            var skip_chance = parseInt((1 - weight) * 255);
+            
+            return 'random_jump(' + skip_chance + ', gen_opening)';
+        });
+        
         content = content.replace(/valid_build_against\((.*)\)/g, function(original, races) {
             var message = '';
             
