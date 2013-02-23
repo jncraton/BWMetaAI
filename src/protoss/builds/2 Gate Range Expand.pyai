@@ -1,18 +1,12 @@
 valid_build_against(Terran, Protoss)
 defenseclear()
-build_start(8, Protoss Probe, 80)
-build_start(1, Protoss Pylon, 80)
-build_start(10, Protoss Probe, 80)
-build_start(1, Protoss Gateway)
-build_start(12, Protoss Probe, 80)
-build_start(1, Protoss Assimilator, 80)
-build_start(13, Protoss Probe, 80)
-build_start(1, Protoss Cybernetics Core, 80)
-build_start(15, Protoss Probe, 80)
-build_start(2, Protoss Pylon, 80)
-build_start(17, Protoss Probe, 80)
+8 Protoss Pylon
+10 Protoss Gateway
+12 Protoss Assimilator
+13 Protoss Cybernetics Core
+15 Protoss Pylon
 build_start(18, Protoss Probe, 80)
-upgrade(1, Singularity Charge, 30)
+upgrade(1, Singularity Charge, 150)
 build_start(2, Protoss Gateway)
 build_start(20, Protoss Probe, 80)
 expand(1, gen_expansion)
