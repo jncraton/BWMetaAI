@@ -1,5 +1,6 @@
 sc_path = d:\games\sc
 launcher = d:\games\sc\Chaoslauncher\chaoslauncher.exe
+src = src
 
 all: mpq
 
@@ -19,5 +20,5 @@ combined_scripts: terran.pyai zerg.pyai protoss.pyai
 	@cat build/terran.pyai build/zerg.pyai build/protoss.pyai > build/combined.pyai
 
 %.pyai:
-	@cd src; node build_ai $(subst .pyai,,$@) ../build/$@; cd ..
+	node tools/build_ai $(subst .pyai,,$@) build/$@;
 

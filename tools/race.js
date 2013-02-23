@@ -2,6 +2,8 @@ var fs = require('fs');
 
 var debug_count = 0;
 
+var config = require('./config.json');
+
 function Race(name) {
     debug_level = 0;
 
@@ -11,8 +13,10 @@ function Race(name) {
         filename = filename.replace('.pyai', '')
         filename += '.pyai'
         
-        if(fs.existsSync(name + '/' + filename)) {
-            filename = name + '/' + filename;
+        if(fs.existsSync(config.srcPath + name + '/' + filename)) {
+            filename = config.srcPath + name + '/' + filename;
+        } else {
+            filename = config.srcPath + filename;
         }
         
         return parseTemplate(filename, skip_block_header);
@@ -158,7 +162,7 @@ function Race(name) {
         return comment + block + content;
     }
     function getFileBlock(filename) {
-        var block = 'gen_' + filename;
+        var block = 'gen_' + filename.replace(config.srcPath, '');
         block = block.replace(/[-_ \/]/g, '_');
         block = block.replace('.pyai', '')
         block = block.replace(name, '');

@@ -1,5 +1,6 @@
 var fs = require('fs');
 var Race = require('./race');
+var config = require('./config.json');
 
 function AI (race_name) {
     var race = new Race(race_name);
@@ -17,7 +18,7 @@ function AI (race_name) {
         
         // Opening builds
         append("--gen_opening--")
-        var builds = fs.readdirSync(race_name + '/builds');
+        var builds = fs.readdirSync(config.srcPath + race_name + '/builds');
         
         for(var i = 0; i < builds.length; i += 1) {
             if(builds[i][0] == '_') {
@@ -40,7 +41,7 @@ function AI (race_name) {
         append("--gen_styles--")
         append("farms_timing()")
         append(race.loadContents(race_name + '/defenseuse'));
-        var styles = fs.readdirSync(race_name + '/styles');
+        var styles = fs.readdirSync(config.srcPath + race_name + '/styles');
 
         for(var i = 0; i < styles.length; i += 1) {
             if(styles[i][0] == '_') {
