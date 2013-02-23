@@ -1,3 +1,4 @@
 {
-    "srcPath": "src/"
+    "srcPath": "src/",
+    "verbosity": 0
 }
