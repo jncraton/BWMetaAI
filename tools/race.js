@@ -150,6 +150,16 @@ function Race(name) {
                    'defenseclear_aa()\n';
         });
 
+        content = content.replace(/defense_ground\((.*)\)/g, function(original, unit) {
+            return 'defenseuse_gg(1, ' + unit + ')\n' +
+                   'defensebuild_gg(1, ' + unit + ')\n';
+        });
+
+        content = content.replace(/defense_air\((.*)\)/g, function(original, unit) {
+            return 'defenseuse_ag(1, ' + unit + ')\n' +
+                   'defensebuild_ag(1, ' + unit + ')\n';
+        });
+
         content = content.replace(/^(\d+) (.*)$/mg, function(original, supply, building) {
             if(!owned[building]) {
                 owned[building] = 0;
