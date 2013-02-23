@@ -11,5 +11,3 @@ wait_buildstart(5, Peon)
 
 debug(intro_start1, BWMetaAI version {commit})
 --intro_start1--
-debug(intro_start2, gl hf)
---intro_start2--
