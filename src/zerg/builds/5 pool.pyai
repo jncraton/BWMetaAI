@@ -1,4 +1,5 @@
 valid_build_against(Zerg, Terran, Protoss)
+build_weight(.25)
 build_start(5, Zerg Drone)
 build_start(1, Zerg Spawning Pool, 130)
 build_start(6, Zerg Drone)
