@@ -1,5 +1,10 @@
 valid_style_against(Terran, Protoss)
 
+defenseclear()
+defense_ground(Protoss Zealot)
+defense_ground(Protoss Dragoon)
+defense_air(Protoss Dragoon)
+
 multirun(zeal_goon_tech)
 --zeal_goon_loop--
 
