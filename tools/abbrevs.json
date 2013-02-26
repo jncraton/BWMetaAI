@@ -1,0 +1,477 @@
+{
+    "Terran Marine": [
+        "Marine",
+        "Rine"
+    ],
+    "Terran Ghost": [
+        "Ghost"
+    ],
+    "Terran Vulture": [
+        "Vulture",
+        "Vult"
+    ],
+    "Terran Goliath": [
+        "Goliath",
+        "Gol",
+        "Golie"
+    ],
+    "Terran SCV": [
+        "SCV"
+    ],
+    "Terran Wraith": [
+        "Wraith"
+    ],
+    "Terran Valkyrie": [
+        "Valkyrie",
+        "Valk"
+    ],
+    "Terran Science Vessel": [
+        "Science Vessel",
+        "Vessel"
+    ],
+    "Terran Dropship": [
+        "Dropship"
+    ],
+    "Terran Battlecruiser": [
+        "Battlecruiser",
+        "BC"
+    ],
+    "Terran Siege Tank": [
+        "Siege Tank",
+        "Tank"
+    ],
+    "Terran Firebat": [
+        "Firebat",
+        "Bat"
+    ],
+    "Terran Medic": [
+        "Medic"
+    ],
+    "Zerg Zergling": [
+        "Zergling",
+        "Ling"
+    ],
+    "Zerg Hydralisk": [
+        "Hydralisk",
+        "Hydra"
+    ],
+    "Zerg Ultralisk": [
+        "Ultralisk",
+        "Ultra"
+    ],
+    "Zerg Broodling": [
+        "Broodling"
+    ],
+    "Zerg Drone": [
+        "Drone"
+    ],
+    "Zerg Overlord": [
+        "Overlord",
+        "Ovie"
+    ],
+    "Zerg Mutalisk": [
+        "Mutalisk",
+        "Muta"
+    ],
+    "Zerg Guardian": [
+        "Guardian"
+    ],
+    "Zerg Queen": [
+        "Queen"
+    ],
+    "Zerg Defiler": [
+        "Defiler"
+    ],
+    "Zerg Scourge": [
+        "Scourge"
+    ],
+    "Zerg Lurker": [
+        "Lurker",
+        "Lurk"
+    ],
+    "Zerg Devourer": [
+        "Devourer"
+    ],
+    "Protoss Corsair": [
+        "Corsair",
+        "Sair"
+    ],
+    "Protoss Dark Templar": [
+        "Dark Templar",
+        "DT"
+    ],
+    "Protoss Dark Archon": [
+        "Dark Archon",
+        "DA"
+    ],
+    "Protoss Probe": [
+        "Probe"
+    ],
+    "Protoss Zealot": [
+        "Zealot",
+        "Zeal"
+    ],
+    "Protoss Dragoon": [
+        "Dragoon",
+        "Goon"
+    ],
+    "Protoss High Templar": [
+        "High Templar",
+        "HT"
+    ],
+    "Protoss Archon": [
+        "Archon"
+    ],
+    "Protoss Shuttle": [
+        "Shuttle"
+    ],
+    "Protoss Scout": [
+        "Scout"
+    ],
+    "Protoss Arbiter": [
+        "Arbiter"
+    ],
+    "Protoss Carrier": [
+        "Carrier"
+    ],
+    "Protoss Interceptor": [
+        "Interceptor"
+    ],
+    "Protoss Reaver": [
+        "Reaver"
+    ],
+    "Protoss Observer": [
+        "Observer",
+        "Ob"
+    ],
+    "Terran Command Center": [
+        "Command Center",
+        "CC"
+    ],
+    "Terran Comsat Station": [
+        "Comsat Station",
+        "Comsat"
+    ],
+    "Terran Nuclear Silo": [
+        "Nuclear Silo",
+        "Silo"
+    ],
+    "Terran Supply Depot": [
+        "Supply Depot",
+        "Depot"
+    ],
+    "Terran Refinery": [
+        "Refinery"
+    ],
+    "Terran Barracks": [
+        "Barracks",
+        "Rax"
+    ],
+    "Terran Academy": [
+        "Academy"
+    ],
+    "Terran Factory": [
+        "Factory",
+        "Fac",
+        "Fact"
+    ],
+    "Terran Starport": [
+        "Starport",
+        "Port"
+    ],
+    "Terran Control Tower": [
+        "Control Tower"
+    ],
+    "Terran Science Facility": [
+        "Science Facility"
+    ],
+    "Terran Covert Ops": [
+        "Covert Ops"
+    ],
+    "Terran Physics Lab": [
+        "Physics Lab"
+    ],
+    "Terran Machine Shop": [
+        "Machine Shop"
+    ],
+    "Terran Engineering Bay": [
+        "Engineering Bay",
+        "Ebay"
+    ],
+    "Terran Armory": [
+        "Armory"
+    ],
+    "Terran Missile Turret": [
+        "Missile Turret",
+        "Turret"
+    ],
+    "Terran Bunker": [
+        "Bunker"
+    ],
+    "Zerg Hatchery": [
+        "Hatchery",
+        "Hatch"
+    ],
+    "Zerg Lair": [
+        "Lair"
+    ],
+    "Zerg Hive": [
+        "Hive"
+    ],
+    "Zerg Nydus Canal": [
+        "Nydus Canal",
+        "Nydus"
+    ],
+    "Zerg Hydralisk Den": [
+        "Hydralisk Den",
+        "Den"
+    ],
+    "Zerg Defiler Mound": [
+        "Defiler Mound"
+    ],
+    "Zerg Greater Spire": [
+        "Greater Spire"
+    ],
+    "Zerg Queen's Nest": [
+        "Queen's Nest"
+    ],
+    "Zerg Evolution Chamber": [
+        "Evolution Chamber",
+        "Evo Chamber",
+        "Evo"
+    ],
+    "Zerg Ultralisk Cavern": [
+        "Ultralisk Cavern",
+        "Ultra Cavern",
+        "Cavern"
+    ],
+    "Zerg Spire": [
+        "Spire"
+    ],
+    "Zerg Spawning Pool": [
+        "Spawning Pool",
+        "Pool"
+    ],
+    "Zerg Creep Colony": [
+        "Creep Colony"
+    ],
+    "Zerg Spore Colony": [
+        "Spore Colony",
+        "Spore"
+    ],
+    "Zerg Sunken Colony": [
+        "Sunken Colony",
+        "Sunken"
+    ],
+    "Zerg Extractor": [
+        "Extractor"
+    ],
+    "Protoss Nexus": [
+        "Nexus",
+        "Nex"
+    ],
+    "Protoss Robotics Facility": [
+        "Robotics Facility",
+        "Robotics",
+        "Robo"
+    ],
+    "Protoss Pylon": [
+        "Pylon"
+    ],
+    "Protoss Assimilator": [
+        "Assimilator"
+    ],
+    "Protoss Observatory": [
+        "Observatory"
+    ],
+    "Protoss Gateway": [
+        "Gateway",
+        "Gate"
+    ],
+    "Protoss Photon Cannon": [
+        "Photon Cannon",
+        "Photon",
+        "Cannon"
+    ],
+    "Protoss Citadel of Adun": [
+        "Citadel of Adun",
+        "Citadel"
+    ],
+    "Protoss Cybernetics Core": [
+        "Cybernetics Core",
+        "Core"
+    ],
+    "Protoss Templar Archives": [
+        "Templar Archives",
+        "Archives"
+    ],
+    "Protoss Forge": [
+        "Forge"
+    ],
+    "Protoss Stargate": [
+        "Stargate"
+    ],
+    "Protoss Fleet Beacon": [
+        "Fleet Beacon"
+    ],
+    "Protoss Arbiter Tribunal": [
+        "Arbiter Tribunal"
+    ],
+    "Protoss Robotics Support Bay": [
+        "Robotics Support Bay"
+    ],
+    "Protoss Shield Battery": [
+        "Shield Battery",
+        "Battery"
+    ],
+    "Terran Infantry Armor": [
+        "Infantry Armor"
+    ],
+    "Terran Vehicle Plating": [
+        "Vehicle Plating"
+    ],
+    "Terran Ship Plating": [
+        "Ship Plating"
+    ],
+    "Zerg Carapace": [
+        "Carapace"
+    ],
+    "Zerg Flyer Caparace": [
+        "Flyer Caparace"
+    ],
+    "Protoss Armor": [
+        "Ground Armor"
+    ],
+    "Protoss Plating": [
+        "Air Armor"
+    ],
+    "Terran Infantry Weapons": [
+        "Infantry Weapons"
+    ],
+    "Terran Vehicle Weapons": [
+        "Vehicle Weapons"
+    ],
+    "Terran Ship Weapons": [
+        "Ship Weapons"
+    ],
+    "Zerg Melee Attacks": [
+        "Melee Attacks"
+    ],
+    "Zerg Missile Attacks": [
+        "Missile Attacks"
+    ],
+    "Zerg Flyer Attacks": [
+        "Flyer Attacks"
+    ],
+    "Protoss Ground Weapons": [
+        "Ground Weapons"
+    ],
+    "Protoss Air Weapons": [
+        "Air Weapons"
+    ],
+    "Protoss Plasma Shields": [
+        "Plasma Shields"
+    ],
+    "U-238 Shells": [
+        "U-238 Shells"
+    ],
+    "Ion Thrusters": [
+        "Ion Thrusters"
+    ],
+    "Titan Reactor": [
+        "Titan Reactor"
+    ],
+    "Ocular Implants": [
+        "Ocular Implants"
+    ],
+    "Moebius Reactor": [
+        "Moebius Reactor"
+    ],
+    "Apollo Reactor": [
+        "Apollo Reactor"
+    ],
+    "Colossus Reactor": [
+        "Colossus Reactor"
+    ],
+    "Ventral Sacs": [
+        "Ventral Sacs"
+    ],
+    "Antennae": [
+        "Antennae"
+    ],
+    "Pneumatized Carapace": [
+        "Pneumatized Carapace"
+    ],
+    "Metabolic Boost": [
+        "Metabolic Boost"
+    ],
+    "Adrenal Glands": [
+        "Adrenal Glands"
+    ],
+    "Muscular Augments": [
+        "Muscular Augments"
+    ],
+    "Grooved Spines": [
+        "Grooved Spines"
+    ],
+    "Gamete Meiosis": [
+        "Gamete Meiosis"
+    ],
+    "Metasynaptic Node": [
+        "Metasynaptic Node"
+    ],
+    "Singularity Charge": [
+        "Singularity Charge"
+    ],
+    "Leg Enhancements": [
+        "Leg Enhancements"
+    ],
+    "Scarab Damage": [
+        "Scarab Damage"
+    ],
+    "Reaver Capacity": [
+        "Reaver Capacity"
+    ],
+    "Gravitic Drive": [
+        "Gravitic Drive"
+    ],
+    "Sensor Array": [
+        "Sensor Array"
+    ],
+    "Gravitic Boosters": [
+        "Gravitic Boosters"
+    ],
+    "Khaydarin Amulet": [
+        "Khaydarin Amulet"
+    ],
+    "Apial Sensors": [
+        "Apial Sensors"
+    ],
+    "Gravitic Thrusters": [
+        "Gravitic Thrusters"
+    ],
+    "Carrier Capacity": [
+        "Carrier Capacity"
+    ],
+    "Khaydarin Core": [
+        "Khaydarin Core"
+    ],
+    "Argus Jewel": [
+        "Argus Jewel"
+    ],
+    "Argus Talisman": [
+        "Argus Talisman"
+    ],
+    "Caduceus Reactor": [
+        "Caduceus Reactor"
+    ],
+    "Chitinous Plating": [
+        "Chitinous Plating"
+    ],
+    "Anabolic Synthesis": [
+        "Anabolic Synthesis"
+    ],
+    "Charon Booster": [
+        "Charon Booster"
+    ]
+}
