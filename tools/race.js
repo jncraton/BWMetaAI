@@ -6,6 +6,7 @@ var config = require('./config.json');
 
 var abbrevs = require('./abbrevs.js');
 var macros = require('./macros.js');
+var buildConverter = require('./buildConverter.js');
 
 function Race(name) {
     function loadContents(filename, skip_block_header) {
@@ -29,8 +30,6 @@ function Race(name) {
         var comment = "\n#" + filename + '\n';
         var block;
         
-        var owned = {};
-            
         if(!skip_block_header) {
             block = (filename.indexOf('header') > -1 ? '' : '--' + getFileBlock(filename) + '--\n');
         } else {
@@ -99,18 +98,7 @@ function Race(name) {
             return race_skip(races, 'gen_styles') + message;
         });
 
-        content = content.replace(/^(\d+) (.*)$/mg, function(original, supply, building) {
-            if(!owned[building]) {
-                owned[building] = 0;
-            }
-            owned[building] += 1;
-            
-            return 'build(' + supply + ', Peon, 80)\n' +
-                      'wait_buildstart(' + supply + ', Peon)\n' +
-                      'build(' + owned[building] + ', ' + building + ', 80)\n' +
-                      'wait_buildstart(' + owned[building] + ', ' + building + ')\n';
-        });
-
+        content = buildConverter.parse(content);
         content = macros.parse(content);
         content = abbrevs.parse(content);
     
