@@ -1,15 +1,11 @@
 valid_build_against(Zerg)
 9 Depot
 11 Rax
-build_start(14, SCV)
-train(1, Marine)
-build_start(15, SCV)
-expand(1, gen_expansion)
-build_start(2, Depot, 60)
-train(2, Marine)
-build_start(16, SCV)
-build_start(2, Barracks)
-train(3, Marine)
-build_start(17, SCV)
-train(4, Marine)
-build_start(1, Refinery)
+14 Marine
+16 Expand
+16 Depot
+16 Marine
+18 Barracks
+18 Marine
+20 Marine
+21 Refinery
