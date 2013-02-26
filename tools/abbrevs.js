@@ -10,11 +10,18 @@ Object.keys(abbrevs).forEach(function(key) {
     }
 });
 
+var expand = function expand(abbrev) {
+    abbrevsReplacements.forEach(function(a) {
+        abbrev = abbrev.replace(RegExp('^' + a.short + '$', 'i'), a.long);
+    });
+    
+    return abbrev;
+}
+
 var parse = function parse(content) {
     content = content.replace(/([,\(] *)([A-Za-z ']*?)([,\)])/g, function(original, prefix, arg, postfix) {
-        abbrevsReplacements.forEach(function(abbrev) {
-            arg = arg.replace(RegExp('^' + abbrev.short + '$', 'i'), abbrev.long);
-        });
+        arg = expand(arg);
+        
         return prefix + arg + postfix;
     });
     
@@ -22,3 +29,4 @@ var parse = function parse(content) {
 }
 
 exports.parse = parse;
+exports.expand = expand;
