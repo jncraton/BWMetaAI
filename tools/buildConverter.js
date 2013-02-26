@@ -36,6 +36,8 @@ var parse = function parse(content) {
             supplyFromUnits += parseInt(getUnitInfo(unit).supply);
             
             ret += 'train(' + owned[unit] + ', ' + unit + ')\n';
+        } else if (unit === 'Expand' || unit === 'expand') {
+            ret += 'expand(1, gen_expansion)\n';
         } else {
             ret += 'build(' + owned[unit] + ', ' + unit + ', 80)\n' +
                    'wait_buildstart(' + owned[unit] + ', ' + unit + ')\n';
