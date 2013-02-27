@@ -67,7 +67,7 @@ function Race(name) {
         content = content.replace(/build_weight\((.*)\)/g, function(original, weight) {
             var skip_chance = parseInt((1 - weight) * 255);
             
-            return 'random_jump(' + skip_chance + ', gen_opening)';
+            return 'random_jump(' + skip_chance + ', gen_builds)';
         });
         
         content = content.replace(/style_weight\((.*)\)/g, function(original, weight) {
@@ -84,7 +84,7 @@ function Race(name) {
                 message = debug('Using ' + buildName + ' build');
             }
 
-            return race_skip(races, 'gen_opening') + message;
+            return race_skip(races, 'gen_builds') + message;
         });
         
         content = content.replace(/valid_style_against\((.*)\)/g, function(original, races) {

@@ -40,7 +40,7 @@ function AI (race_name) {
         append(race.loadContents('intro'));
         append(race.loadContents('define_max'));
         
-        
+        /*
         // Opening builds
         append("--gen_opening--")
         var builds = fs.readdirSync(config.srcPath + race_name + '/builds');
@@ -58,8 +58,13 @@ function AI (race_name) {
         for(var i = 0; i < builds.length; i += 1) {
             append(race.loadContents(race_name + '/builds/' + builds[i]));
             append('goto(end_build)');
-        }
+        }*/
 
+        chooseFromDir('builds', {
+            afterEach: function() {
+                append('goto(end_build)');
+            }
+        });
         
         append("--end_build--")
         append("farms_timing()")
@@ -68,9 +73,6 @@ function AI (race_name) {
         append(race.loadContents(race_name + '/defenseuse'));
 
         chooseFromDir('styles', {
-            beforeAll: function() {
-                
-            },
             afterEach: function() {
                 append('stop()');
             }
