@@ -73,7 +73,7 @@ function Race(name) {
         content = content.replace(/style_weight\((.*)\)/g, function(original, weight) {
             var skip_chance = parseInt((1 - weight) * 255);
             
-            return 'random_jump(' + skip_chance + ', gen_styles)';
+            return 'random_jump(' + skip_chance + ', gen_lategame)';
         });
         
         content = content.replace(/valid_build_against\((.*)\)/g, function(original, races) {
@@ -91,11 +91,11 @@ function Race(name) {
             var message = '';
             
             if (config.verbosity >= 5) {
-                var styleName = block.replace(/[\-\n ]/g, '').replace('gen_styles_', '').replace(/_/g, ' ');
+                var styleName = block.replace(/[\-\n ]/g, '').replace('gen_lategame_', '').replace(/_/g, ' ');
                 message = debug('Using ' + styleName + ' style');
             }
 
-            return race_skip(races, 'gen_styles') + message;
+            return race_skip(races, 'gen_lategame') + message;
         });
 
         content = buildConverter.parse(content);

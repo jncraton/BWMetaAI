@@ -52,7 +52,8 @@ function AI (race_name) {
         append('multirun(gen_expand_loop)');
         append(race.loadContents(race_name + '/defenseuse'));
 
-        chooseFromDir('styles', {
+        append("--end_midgame--")
+        chooseFromDir('lategame', {
             afterEach: function() {
                 append('stop()');
             }
