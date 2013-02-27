@@ -40,26 +40,6 @@ function AI (race_name) {
         append(race.loadContents('intro'));
         append(race.loadContents('define_max'));
         
-        /*
-        // Opening builds
-        append("--gen_opening--")
-        var builds = fs.readdirSync(config.srcPath + race_name + '/builds');
-        
-        for(var i = 0; i < builds.length; i += 1) {
-            if(builds[i][0] == '_') {
-                append("goto(gen_builds" + builds[i].replace('.pyai','').replace(/ /g,'_') + ")");
-            } else {
-                append("random_jump(1, " + "gen_builds_" + builds[i].replace('.pyai','').replace(/ /g,'_') + ")");
-            }
-        }
-
-        append('goto(gen_opening)');
-        
-        for(var i = 0; i < builds.length; i += 1) {
-            append(race.loadContents(race_name + '/builds/' + builds[i]));
-            append('goto(end_build)');
-        }*/
-
         chooseFromDir('builds', {
             afterEach: function() {
                 append('goto(end_build)');
