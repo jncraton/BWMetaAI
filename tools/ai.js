@@ -10,11 +10,33 @@ function AI (race_name) {
         src += text + '\n';
     }
 
+    function chooseFromDir(dir) {
+        append('--gen_' + dir + '--')
+        var files = fs.readdirSync(config.srcPath + race_name + '/' + dir);
+
+        for(var i = 0; i < files.length; i += 1) {
+            if(files[i][0] == '_') {
+                append("goto(gen_styles_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+            } else {
+                append("random_jump(1, " + "gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+            }
+        }
+
+        append('goto(gen_' + dir + ')');
+        
+        for(var i = 0; i < files.length; i += 1) {
+            append(race.loadContents(race_name + '/' + dir + '/' + files[i]));
+            append('stop()');
+        }
+
+    }
+    
     this.build = function() {
         // Default boilerplate
         append(race.loadContents('header'));
         append(race.loadContents('intro'));
         append(race.loadContents('define_max'));
+        
         
         // Opening builds
         append("--gen_opening--")
@@ -28,6 +50,8 @@ function AI (race_name) {
             }
         }
 
+        append("farms_timing()")
+        append(race.loadContents(race_name + '/defenseuse'));
         append('goto(gen_opening)');
         
         for(var i = 0; i < builds.length; i += 1) {
@@ -37,26 +61,7 @@ function AI (race_name) {
             append('goto(gen_styles)');
         }
         
-        // Strategies
-        append("--gen_styles--")
-        append("farms_timing()")
-        append(race.loadContents(race_name + '/defenseuse'));
-        var styles = fs.readdirSync(config.srcPath + race_name + '/styles');
-
-        for(var i = 0; i < styles.length; i += 1) {
-            if(styles[i][0] == '_') {
-                append("goto(gen_styles_" + styles[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
-            } else {
-                append("random_jump(1, " + "gen_styles_" + styles[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
-            }
-        }
-
-        append('goto(gen_styles)');
-        
-        for(var i = 0; i < styles.length; i += 1) {
-            append(race.loadContents(race_name + '/styles/' + styles[i]));
-            append('stop()');
-        }
+        chooseFromDir('styles');
         
         append(race.loadContents('adapt'))
         append("stop()")
