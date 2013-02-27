@@ -57,14 +57,14 @@ function AI (race_name) {
         
         for(var i = 0; i < builds.length; i += 1) {
             append(race.loadContents(race_name + '/builds/' + builds[i]));
-            append('multirun(gen_adapt)');
-            append('multirun(gen_expand_loop)');
             append('goto(end_build)');
         }
 
         
         append("--end_build--")
         append("farms_timing()")
+        append('multirun(gen_adapt)');
+        append('multirun(gen_expand_loop)');
         append(race.loadContents(race_name + '/defenseuse'));
 
         chooseFromDir('styles', {
