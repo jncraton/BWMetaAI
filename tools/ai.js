@@ -10,13 +10,15 @@ function AI (race_name) {
         src += text + '\n';
     }
 
-    function chooseFromDir(dir) {
+    function chooseFromDir(dir, callbacks) {
+        if (!callbacks) callbacks = {};
+        
         append('--gen_' + dir + '--')
         var files = fs.readdirSync(config.srcPath + race_name + '/' + dir);
 
         for(var i = 0; i < files.length; i += 1) {
             if(files[i][0] == '_') {
-                append("goto(gen_styles_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+                append("goto(gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
             } else {
                 append("random_jump(1, " + "gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
             }
@@ -25,8 +27,9 @@ function AI (race_name) {
         append('goto(gen_' + dir + ')');
         
         for(var i = 0; i < files.length; i += 1) {
+            if (callbacks.beforeEach) callbacks.beforeEach();
             append(race.loadContents(race_name + '/' + dir + '/' + files[i]));
-            append('stop()');
+            if (callbacks.afterEach) callbacks.afterEach();
         }
 
     }
@@ -50,18 +53,28 @@ function AI (race_name) {
             }
         }
 
-        append("farms_timing()")
-        append(race.loadContents(race_name + '/defenseuse'));
         append('goto(gen_opening)');
         
         for(var i = 0; i < builds.length; i += 1) {
             append(race.loadContents(race_name + '/builds/' + builds[i]));
             append('multirun(gen_adapt)');
             append('multirun(gen_expand_loop)');
-            append('goto(gen_styles)');
+            append('goto(end_build)');
         }
+
         
-        chooseFromDir('styles');
+        append("--end_build--")
+        append("farms_timing()")
+        append(race.loadContents(race_name + '/defenseuse'));
+
+        chooseFromDir('styles', {
+            beforeAll: function() {
+                
+            },
+            afterEach: function() {
+                append('stop()');
+            }
+        });
         
         append(race.loadContents('adapt'))
         append("stop()")
