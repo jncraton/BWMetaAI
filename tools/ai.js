@@ -27,11 +27,12 @@ function AI (race_name) {
         append('goto(gen_' + dir + ')');
         
         for(var i = 0; i < files.length; i += 1) {
-            if (callbacks.beforeEach) callbacks.beforeEach();
             append(race.loadContents(race_name + '/' + dir + '/' + files[i]));
             if (callbacks.afterEach) callbacks.afterEach();
+            append('goto(' + 'gen_end_' + dir + ')');
         }
-
+        
+        append('--gen_end_' + dir + '--');
     }
     
     this.build = function() {
@@ -40,13 +41,8 @@ function AI (race_name) {
         append(race.loadContents('intro'));
         append(race.loadContents('define_max'));
         
-        chooseFromDir('builds', {
-            afterEach: function() {
-                append('goto(end_build)');
-            }
-        });
+        chooseFromDir('builds');
         
-        append("--end_build--")
         append("farms_timing()")
         append('multirun(gen_adapt)');
         append('multirun(gen_expand_loop)');
