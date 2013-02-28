@@ -48,6 +48,16 @@ function Race(name) {
             return loadContents(filename) + "stop()\n";
         });
             
+        content = content.replace(/multirun_file\((.*)\)/g, function(command, filename) {
+            debug_count += 1;
+            
+            return "multirun(gen_" + filename + ")\n" +
+                "goto(gen_" + filename + "_done_" + debug_count + ")\n" +
+                loadContents(filename) + "\n" +
+                "stop()\n" +
+                "--gen_" + filename + "_done_" + debug_count + "--";
+        });
+
         function chooseFromDir(dir) {
             var ret = "";
             function append(text) {
