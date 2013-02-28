@@ -21,7 +21,7 @@ function Race(name) {
             filename = config.srcPath + filename;
         }
         
-        return parseTemplate(filename, skip_block_header);
+        return parseTemplate(filename, skip_block_header) + "\n";
     }
 
     this.loadContents = loadContents;
@@ -43,7 +43,53 @@ function Race(name) {
         content = content.replace(/include\((.*)\)/g, function(command, filename) {
             return loadContents(filename, true);
         });
-        
+            
+        content = content.replace(/include_block\((.*)\)/g, function(command, filename) {
+            return loadContents(filename) + "stop()\n";
+        });
+            
+        function chooseFromDir(dir) {
+            var ret = "";
+            function append(text) {
+                ret += text + '\n';
+            }
+            
+            append('--gen_' + dir + '--')
+            
+            var files = [];
+                
+            try {
+                var files = fs.readdirSync(config.srcPath + name + '/' + dir);
+            } catch (e) {
+                console.log('Missing directory');
+            }
+
+            if (files.length) {
+                for(var i = 0; i < files.length; i += 1) {
+                    if(files[i][0] == '_') {
+                        append("goto(gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+                    } else {
+                        append("random_jump(1, " + "gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+                    }
+                }
+
+                append('goto(gen_' + dir + ')');
+                
+                for(var i = 0; i < files.length; i += 1) {
+                    append(loadContents(name + '/' + dir + '/' + files[i]));
+                    append('goto(' + 'gen_end_' + dir + ')');
+                }
+            }
+            
+            append('--gen_end_' + dir + '--');
+            
+            return ret;
+        }
+
+        content = content.replace(/choose_from_dir\((.*)\)/g, function(command, dir) {
+            return chooseFromDir(dir);
+        });
+            
         function race_skip(races, skip_block) {
             races = races.replace(/ /g, '');
             races = races.split(',');

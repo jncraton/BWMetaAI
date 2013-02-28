@@ -43,6 +43,20 @@ function AI (race_name) {
     
     this.build = function() {
         // Default boilerplate
+        switch (race_name) {
+            case 'terran':
+                append('TMCx(1342, 101, aiscript):\n');
+                break;
+            case 'protoss':
+                append('PMCx(1343, 101, aiscript):\n');
+                break;
+            case 'zerg':
+                append('ZMCx(1344, 101, aiscript):\n');
+                break;
+        }
+        
+        append(race.loadContents('main'));
+        /*
         append(race.loadContents('header'));
         append(race.loadContents('intro'));
         append(race.loadContents('define_max'));
@@ -70,7 +84,7 @@ function AI (race_name) {
         append("stop()")
         append(race.loadContents('fast_expansion'))
         append("stop()")
-    
+    */
         return src;
     }
     
