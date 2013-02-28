@@ -10,9 +10,7 @@ function AI (race_name) {
         src += text + '\n';
     }
 
-    function chooseFromDir(dir, callbacks) {
-        if (!callbacks) callbacks = {};
-        
+    function chooseFromDir(dir) {
         append('--gen_' + dir + '--')
         
         var files = [];
@@ -36,7 +34,6 @@ function AI (race_name) {
             
             for(var i = 0; i < files.length; i += 1) {
                 append(race.loadContents(race_name + '/' + dir + '/' + files[i]));
-                if (callbacks.afterEach) callbacks.afterEach();
                 append('goto(' + 'gen_end_' + dir + ')');
             }
         }
@@ -59,12 +56,7 @@ function AI (race_name) {
 
         chooseFromDir('midgame');
 
-        append("--end_midgame--")
-        chooseFromDir('lategame', {
-            afterEach: function() {
-                append('stop()');
-            }
-        });
+        chooseFromDir('lategame');
         
         append(race.loadContents('adapt'))
         append("stop()")
