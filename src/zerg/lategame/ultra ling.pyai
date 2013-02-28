@@ -1,7 +1,6 @@
 valid_style_against(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
-multirun(ultra_ling_tech)
 
 --ultra_ling_loop--
 attack_train(36, Zerg Zergling)
@@ -14,20 +13,3 @@ expand(99, gen_fortified_expansion)
 --ultra_ling_loop_attack--
 include(attack)
 goto(ultra_ling_loop)
-
---ultra_ling_tech--
-build_start(2, Zerg Hatchery, 80)
-build_start(1, Zerg Lair, 80)
-expand(99, gen_fortified_expansion)
-wait_build(1, Zerg Lair)
-build_start(1, Zerg Queen's Nest, 80)
-upgrade(1, Metabolic Boost, 80)
-wait(2000)
-build(3, Zerg Hatchery, 80)
-wait_build(1, Zerg Queen's Nest)
-build_start(1, Zerg Hive)
-wait_build(3, Zerg Hatchery)
-wait_build(1, Zerg Hive)
-build_finish(1, Zerg Ultralisk Cavern)
-include(ground_upgrades)
-stop()

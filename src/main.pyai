@@ -10,6 +10,8 @@ include(defenseuse)
 
 choose_from_dir(midgame)
 
+multirun_file(all_tech)
+
 choose_from_dir(lategame)
 
 stop()
