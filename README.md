@@ -52,8 +52,8 @@ Build Orders
 * 2 Gate Zealots
 * Fast DT
 
-Play styles
------------
+Late game 
+---------
 
 ### Terran
 
@@ -69,7 +69,7 @@ Play styles
 
 ### Protoss
 
-* Zealot Dragoon
+* Zealot Dragoon Arbiter
 * Zealot Archon
 
 New AI commands/macros:
