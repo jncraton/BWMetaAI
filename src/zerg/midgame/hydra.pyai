@@ -2,22 +2,7 @@ valid_style_against(Protoss)
 
 train(4, Zerg Zergling)
 multirun(hyrda_tech)
-
---hyrda_loop--
-build_finish(1, Zerg Hydralisk Den)
-train(36, Zerg Hydralisk)
-random_jump(160, hyrda_loop_attack)
-expand(99, gen_expansion)
-
---hyrda_loop_attack--
-attack_do()
-attack_clear()
-attack_add(36, Zerg Hydralisk)
-attack_prepare()
-wait(300)
-
-attack_do()
-goto(hyrda_loop)
+goto(hydra_loop)
 
 --hyrda_tech--
 build(1, Zerg Hydralisk Den, 80)
@@ -35,3 +20,19 @@ upgrade(1, Grooved Spines, 80)
 build(4, Zerg Hatchery, 80)
 wait_buildstart(4, Zerg Hatchery)
 stop()
+
+--hydra_loop--
+build_finish(1, Zerg Hydralisk Den)
+train(36, Zerg Hydralisk)
+random_jump(160, hyrda_loop_attack)
+expand(99, gen_expansion)
+
+--hyrda_loop_attack--
+attack_do()
+attack_clear()
+attack_add(36, Zerg Hydralisk)
+attack_prepare()
+wait(300)
+
+attack_do()
+random_jump(128, hydra_loop)

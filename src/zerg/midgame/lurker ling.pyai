@@ -2,22 +2,6 @@ valid_style_against(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
 multirun(lurker_ling_tech)
-
---lurker_ling_loop--
-train(36, Zerg Zergling)
-train(12, Zerg Lurker)
-random_jump(160, lurker_ling_loop_attack)
-expand(99, gen_expansion)
-
---lurker_ling_loop_attack--
-attack_do()
-attack_clear()
-attack_add(36, Zerg Zergling)
-attack_add(12, Zerg Lurker)
-attack_prepare()
-wait(300)
-
-attack_do()
 goto(lurker_ling_loop)
 
 --lurker_ling_tech--
@@ -35,3 +19,20 @@ wait(2000)
 build(4, Zerg Hatchery, 80)
 wait_buildstart(4, Zerg Hatchery)
 stop()
+
+--lurker_ling_loop--
+train(36, Zerg Zergling)
+train(12, Zerg Lurker)
+random_jump(160, lurker_ling_loop_attack)
+expand(99, gen_expansion)
+
+--lurker_ling_loop_attack--
+attack_do()
+attack_clear()
+attack_add(36, Zerg Zergling)
+attack_add(12, Zerg Lurker)
+attack_prepare()
+wait(300)
+
+attack_do()
+random_jump(128, lurker_ling_loop)
