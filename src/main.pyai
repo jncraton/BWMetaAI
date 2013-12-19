@@ -10,6 +10,8 @@ include(defenseuse)
 
 choose_from_dir(midgame)
 
+check_transports()
+
 multirun_file(all_tech)
 
 choose_from_dir(lategame)
