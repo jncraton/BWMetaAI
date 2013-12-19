@@ -71,7 +71,7 @@ function Race(name) {
             try {
                 var files = fs.readdirSync(config.srcPath + name + '/' + dir);
             } catch (e) {
-                console.log('Missing directory');
+                console.log('Missing directory ' + config.srcPath + name + '/' + dir);
             }
 
             if (files.length) {
