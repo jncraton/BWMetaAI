@@ -27,6 +27,13 @@ var parse = function parse(content) {
             '--' + loop_escape + '--\n';
     });
 
+    content = content.replace(/message\((.*)\)/g, function(original, message) {
+        var next_block = nextBlockName();
+        
+        return 'debug(' + next_block + ',' + message + ')\n' +
+            '--' + next_block + '--\n';
+    });
+
     content = content.replace(/enemyownscloaked_jump\((.*)\)/g, function(original, block) {
         var units = ['Zerg Lurker', 'Protoss Dark Templar', 'Terran Ghost', 'Terran Wraith'];
         return expandEnemyOwns(units, block);
