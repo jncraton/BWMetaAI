@@ -42,6 +42,7 @@ Build Orders
 * 1 Base Muta
 * 1 Base Lurker
 * 12 Hatch 12 Pool
+* 4 Hatch Lair
 
 ### Protoss
 
