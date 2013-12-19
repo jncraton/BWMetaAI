@@ -1,3 +1,5 @@
+var block_counter = 0;
+
 var parse = function parse(content) {
     function expandEnemyOwns(units, block) {
         var out = "";
@@ -8,6 +10,22 @@ var parse = function parse(content) {
         
         return out;
     }
+    
+    function nextBlockName() {
+        block_counter++;
+        return 'gen_macro_' + block_counter;
+    }
+
+    content = content.replace(/wait_resources\((.*),(.*)\)/g, function(original, minerals, gas) {
+        var loop_start = nextBlockName();
+        var loop_escape = nextBlockName();
+        
+        return '--' + loop_start + '--\n' +
+            'resources_jump(' + minerals + ',' + gas + ',' + loop_escape + ')\n' +
+            'wait(10)\n' +
+            'goto(' + loop_start + ')\n' +
+            '--' + loop_escape + '--\n';
+    });
 
     content = content.replace(/enemyownscloaked_jump\((.*)\)/g, function(original, block) {
         var units = ['Zerg Lurker', 'Protoss Dark Templar', 'Terran Ghost', 'Terran Wraith'];
