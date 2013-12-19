@@ -78,6 +78,14 @@ New AI commands/macros:
 
 This includes an AI preprocessor which implements some new commands that you can use if you want to add your own syles or build orders.
 
+### message(string)
+
+Displays the string as a message from the AI. This does not require a block to jump to like debug() does.
+
+### wait_resources(min, gas)
+
+Waits until the ai has the corresponding amount of minerals and gas in the bank.
+
 ### build_start(amount, building, [priority])
 
 Builds {amount} of {building} at {priority} and waits for construction to start. Priority defaults to 80.
