@@ -1,13 +1,11 @@
 start_town()
+
+build_start(1, Town Hall, 200)
+build_start(5, Peon, 200)
+
 transports_off()
 farms_notiming()
 defaultbuild_off()
 default_min(7)
 
-build(1, Town Hall, 150)
-wait_buildstart(1, Town Hall)
-build(5, Peon, 80)
-wait_buildstart(5, Peon)
-
-debug(intro_start1, BWMetaAI version {commit})
---intro_start1--
+message(BWMetaAI version {commit})
