@@ -6,6 +6,7 @@ wait_buildstart(1, Protoss Pylon)
 build(12, Protoss Probe, 80)
 wait_build(11, Protoss Probe)
 wait_buildstart(12, Protoss Probe)
+wait_resources(300,0)
 expand(1, gen_expansion)
 # 1 probe is lost to the expansion
 wait(500)
