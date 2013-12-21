@@ -1,4 +1,4 @@
-use_lategame_vs(Zerg, Terran, Protoss)
+use_midgame_vs(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
 multirun(muta_ling_tech)

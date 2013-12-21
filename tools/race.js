@@ -143,6 +143,17 @@ function Race(name) {
             return race_skip(races, 'gen_builds') + message;
         });
         
+        content = content.replace(/use_midgame_vs\((.*)\)/g, function(original, races) {
+            var message = '';
+            
+            if (config.verbosity >= 5) {
+                var styleName = block.replace(/[\-\n ]/g, '').replace('gen_midgame_', '').replace(/_/g, ' ');
+                message = debug('Using ' + styleName + ' style');
+            }
+
+            return race_skip(races, 'gen_midgame') + message;
+        });
+
         content = content.replace(/use_lategame_vs\((.*)\)/g, function(original, races) {
             var message = '';
             

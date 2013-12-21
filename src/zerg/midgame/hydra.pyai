@@ -1,4 +1,4 @@
-use_lategame_vs(Protoss)
+use_midgame_vs(Protoss)
 
 train(4, Zerg Zergling)
 multirun(hyrda_tech)
