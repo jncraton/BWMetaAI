@@ -1,61 +1,20 @@
 use_lategame_vs(Zerg)
 
-multirun(zealot_archon_tech)
+if_owned(Protoss Templar Archives, zealot_archon_build_templar)
+attack_train(20, Protoss Zealot)
+attack_train(6, Protoss Dragoon)
+goto(zealot_archon_attack)
 
---zealot_archon_loop--
-    attack_train(20, Protoss Zealot)
-    attack_train(6, Protoss Dragoon)
+--zealot_archon_build_templar--
+attack_train(30, Protoss Zealot)
+attack_train(8, Protoss Dragoon)
+attack_train(3, Protoss High Templar)
+attack_train(1, Protoss Dark Templar)
+attack_train(2, Protoss Archon)
+--zealot_archon_attack--
 
-    if_owned(Protoss Templar Archives, zealot_archon_build_templar)
-    goto(zealot_archon_attack)
+random_jump(160, zealot_archon_loop_attack)
+expand(99, gen_expansion)
 
-    --zealot_archon_build_templar--
-    attack_train(30, Protoss Zealot)
-    attack_train(8, Protoss Dragoon)
-    attack_train(3, Protoss High Templar)
-    attack_train(1, Protoss Dark Templar)
-    attack_train(2, Protoss Archon)
-    --zealot_archon_attack--
-
-    random_jump(160, zealot_archon_loop_attack)
-    expand(99, gen_expansion)
-
-    --zealot_archon_loop_attack--
-    include(attack)
-goto(zealot_archon_loop)
-
---zealot_archon_tech--
-build_start(1, Protoss Gateway, 80)
-build_start(2, Protoss Gateway, 80)
-wait_build(1, Protoss Gateway)
-build_start(1, Protoss Cybernetics Core, 80)
-build_start(3, Protoss Gateway, 80)
-build_start(4, Protoss Gateway, 80)
-wait_build(1, Protoss Cybernetics Core)
-build_finish(5, Protoss Gateway, 80)
-build_finish(6, Protoss Gateway, 80)
-build_finish(7, Protoss Gateway, 80)
-build_finish(8, Protoss Gateway, 80)
-build_start(2, Protoss Forge, 80)
-wait_build(2, Protoss Forge)
-upgrade(1, Protoss Ground Weapons, 30)
-upgrade(1, Protoss Armor, 30)
-build_start(9, Protoss Gateway, 80)
-build_start(10, Protoss Gateway, 80)
-build_start(1, Protoss Citadel of Adun, 80)
-build_start(11, Protoss Gateway, 80)
-build_start(12, Protoss Gateway, 80)
-build_start(13, Protoss Gateway, 80)
-build_finish(1, Protoss Citadel of Adun, 80)
-build_finish(1, Protoss Templar Archives, 80)
-tech(Psionic Storm, 30)
-wait(5000)
-upgrade(2, Protoss Ground Weapons, 30)
-upgrade(2, Protoss Armor, 30)
-upgrade(1, Leg Enhancements, 30)
-wait(5000)
-upgrade(3, Protoss Ground Weapons, 30)
-upgrade(3, Protoss Armor, 30)
-upgrade(1, Singularity Charge, 30)
-wait(5000)
-stop()
+--zealot_archon_loop_attack--
+include(attack)
