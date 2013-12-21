@@ -1,0 +1,49 @@
+use_midgame_vs(Terran, Protoss)
+
+defenseclear()
+defense_ground(Protoss Zealot)
+defense_ground(Protoss Dragoon)
+defense_air(Protoss Dragoon)
+
+build_start(1, Protoss Gateway)
+build_start(2, Protoss Gateway)
+build_start(1, Protoss Cybernetics Core, 80)
+build_start(3, Protoss Gateway)
+build_start(4, Protoss Gateway)
+build_finish(1, Protoss Cybernetics Core)
+upgrade(1, Singularity Charge, 80)
+
+attack_do()
+attack_clear()
+
+train(8, Protoss Dragoon)
+train(8, Protoss Zealot)
+
+message(Adding gateways)
+build_start(5, Protoss Gateway)
+build_start(6, Protoss Gateway)
+
+train(10, Protoss Dragoon)
+train(10, Protoss Zealot)
+
+message(upgrades)
+build_start(1, Protoss Citadel of Adun, 80)
+build_start(2, Protoss Forge)
+wait_build(1, Protoss Citadel of Adun)
+upgrade(1, Leg Enhancements, 80)
+wait_build(2, Protoss Forge)
+upgrade(1, Protoss Ground Weapons, 80)
+upgrade(1, Protoss Armor, 80)
+
+attack_train(14, Protoss Dragoon)
+attack_train(14, Protoss Zealot)
+
+random_jump(160, zeal_goon_midgame_attack)
+
+expand(99, gen_expansion)
+
+--zeal_goon_midgame_attack--
+message(attacking)
+attack_prepare()
+wait(300)
+attack_do()

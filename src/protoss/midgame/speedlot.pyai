@@ -1,0 +1,28 @@
+use_midgame_vs(Zerg)
+
+defense_ground(Protoss Zealot)
+defense_ground(Protoss Dragoon)
+defense_air(Protoss Dragoon)
+
+build_start(1, Protoss Gateway)
+build_start(2, Protoss Gateway)
+build_start(1, Protoss Cybernetics Core)
+build_start(3, Protoss Gateway)
+build_start(4, Protoss Gateway)
+
+train(10, Protoss Zealot)
+build_start(1, Protoss Forge)
+build_start(1, Protoss Citadel of Adun)
+attack_train(6, Protoss Dragoon)
+build_finish(1, Protoss Forge)
+upgrade(1, Protoss Ground Weapons, 30)
+build_finish(1, Protoss Citadel of Adun)
+upgrade(1, Leg Enhancements, 30)
+build_start(6, Protoss Gateway)
+attack_train(16, Protoss Zealot)
+
+random_jump(160, speedlot_midgame_attack)
+expand(99, gen_expansion)
+
+--speedlot_midgame_attack--
+include(attack)
