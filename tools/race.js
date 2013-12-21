@@ -148,7 +148,7 @@ function Race(name) {
             
             if (config.verbosity >= 5) {
                 var styleName = block.replace(/[\-\n ]/g, '').replace('gen_midgame_', '').replace(/_/g, ' ');
-                message = debug('Using ' + styleName + ' style');
+                message = debug('Using ' + styleName + ' midgame');
             }
 
             return race_skip(races, 'gen_midgame') + message;
@@ -159,7 +159,7 @@ function Race(name) {
             
             if (config.verbosity >= 5) {
                 var styleName = block.replace(/[\-\n ]/g, '').replace('gen_lategame_', '').replace(/_/g, ' ');
-                message = debug('Using ' + styleName + ' style');
+                message = debug('Using ' + styleName + ' lategame');
             }
 
             return race_skip(races, 'gen_lategame') + message;
