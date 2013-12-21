@@ -20,5 +20,6 @@ goto(lategame_loop)
 
 include_block(expansion)
 include_block(fortified_expansion)
+include_block(fortified_fe)
 include_block(fast_expansion)
 include_block(attack_thread)

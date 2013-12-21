@@ -1,0 +1,3 @@
+player_need(1, Terran Barracks)
+creep(3)
+build_start(1, Bunker)
