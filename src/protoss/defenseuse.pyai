@@ -1,1 +1,3 @@
-defense_ground(Protoss Zealot)
+defense_ground(Zealot)
+defense_ground(Dragoon)
+defense_air(Dragoon)
