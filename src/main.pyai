@@ -14,9 +14,9 @@ check_transports()
 
 multirun_file(all_tech)
 
+--lategame_loop--
 choose_from_dir(lategame)
-
-stop()
+goto(lategame_loop)
 
 include_block(expansion)
 include_block(fortified_expansion)

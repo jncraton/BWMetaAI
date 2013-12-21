@@ -2,7 +2,6 @@ use_lategame_vs(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
 
---ultra_ling_loop--
 attack_train(36, Zerg Zergling)
 notowns_jump(Zerg Ultralisk Cavern, ultra_ling_skip_ultra)
 attack_train(12, Zerg Ultralisk)
@@ -12,4 +11,3 @@ expand(99, gen_fortified_expansion)
 
 --ultra_ling_loop_attack--
 include(attack)
-goto(ultra_ling_loop)
