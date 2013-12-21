@@ -80,12 +80,12 @@ var parse = function parse(content) {
 
     content = content.replace(/defense_ground\((.*)\)/g, function(original, unit) {
         return 'defenseuse_gg(1, ' + unit + ')\n' +
-               'defensebuild_gg(1, ' + unit + ')\n';
+               'defenseuse_ga(1, ' + unit + ')\n';
     });
 
     content = content.replace(/defense_air\((.*)\)/g, function(original, unit) {
         return 'defenseuse_ag(1, ' + unit + ')\n' +
-               'defensebuild_ag(1, ' + unit + ')\n';
+               'defenseuse_aa(1, ' + unit + ')\n';
     });
 
     return content;
