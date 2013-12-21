@@ -1,1 +1,4 @@
 defense_ground(Terran Marine)
+defense_ground(Terran Vulture)
+defense_ground(Terran Siege Tank)
+defense_air(Terran Marine)
