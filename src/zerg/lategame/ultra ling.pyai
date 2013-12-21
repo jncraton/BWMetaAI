@@ -1,4 +1,4 @@
-valid_style_against(Zerg, Terran, Protoss)
+use_lategame_vs(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
 

@@ -1,4 +1,4 @@
-valid_build_against(Zerg, Protoss)
+use_build_vs(Zerg, Protoss)
 8 Protoss Pylon
 10 Protoss Gateway
 12 Protoss Gateway

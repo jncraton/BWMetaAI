@@ -1,4 +1,4 @@
-valid_build_against(Terran, Protoss)
+use_build_vs(Terran, Protoss)
 build(8, Protoss Probe, 80)
 wait_buildstart(8, Protoss Probe)
 build(1, Protoss Pylon, 80)

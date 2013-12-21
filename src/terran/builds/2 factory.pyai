@@ -1,4 +1,4 @@
-valid_build_against(Terran, Protoss)
+use_build_vs(Terran, Protoss)
 build_start(8, Terran SCV)
 build_start(1, Terran Supply Depot)
 build_start(10, Terran SCV)

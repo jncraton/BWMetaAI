@@ -1,4 +1,4 @@
-valid_build_against(Zerg, Terran, Protoss)
+use_build_vs(Zerg, Terran, Protoss)
 build_start(8, Zerg Drone)
 build_start(1, Zerg Spawning Pool, 130)
 build_start(9, Zerg Drone)

@@ -1,4 +1,4 @@
-valid_style_against(Terran, Protoss)
+use_lategame_vs(Terran, Protoss)
 
 defenseclear()
 defense_ground(Protoss Zealot)

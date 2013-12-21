@@ -1,4 +1,4 @@
-valid_build_against(Zerg)
+use_build_vs(Zerg)
 build_start(9, Terran SCV, 80)
 build_start(1, Terran Supply Depot, 80)
 build_start(12, Terran SCV, 80)

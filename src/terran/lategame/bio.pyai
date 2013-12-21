@@ -1,4 +1,4 @@
-valid_style_against(Zerg)
+use_lategame_vs(Zerg)
 
 defenseclear()
 defense_ground(Terran Marine)

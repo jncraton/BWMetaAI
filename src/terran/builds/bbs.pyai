@@ -1,4 +1,4 @@
-valid_build_against(Zerg, Terran, Protoss)
+use_build_vs(Zerg, Terran, Protoss)
 build_weight(.25)
 9 Terran Barracks
 9 Terran Barracks

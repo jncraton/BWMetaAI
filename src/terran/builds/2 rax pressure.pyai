@@ -1,4 +1,4 @@
-valid_build_against(Zerg)
+use_build_vs(Zerg)
 9 Terran Supply Depot
 11 Terran Barracks
 13 Terran Barracks

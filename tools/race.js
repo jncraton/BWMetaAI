@@ -132,7 +132,7 @@ function Race(name) {
             return 'random_jump(' + skip_chance + ', gen_lategame)';
         });
         
-        content = content.replace(/valid_build_against\((.*)\)/g, function(original, races) {
+        content = content.replace(/use_build_vs\((.*)\)/g, function(original, races) {
             var message = '';
             
             if (config.verbosity >= 5) {
@@ -143,7 +143,7 @@ function Race(name) {
             return race_skip(races, 'gen_builds') + message;
         });
         
-        content = content.replace(/valid_style_against\((.*)\)/g, function(original, races) {
+        content = content.replace(/use_lategame_vs\((.*)\)/g, function(original, races) {
             var message = '';
             
             if (config.verbosity >= 5) {

@@ -1,4 +1,4 @@
-valid_build_against(Terran, Protoss)
+use_build_vs(Terran, Protoss)
 build_start(9, Zerg Drone)
 build_start(2, Zerg Overlord)
 build_start(9, Zerg Drone)

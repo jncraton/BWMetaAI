@@ -1,4 +1,4 @@
-valid_build_against(Protoss, Terran)
+use_build_vs(Protoss, Terran)
 defenseclear()
 8 Protoss Pylon
 10 Protoss Gateway

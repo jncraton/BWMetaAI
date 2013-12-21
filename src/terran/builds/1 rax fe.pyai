@@ -1,4 +1,4 @@
-valid_build_against(Zerg)
+use_build_vs(Zerg)
 9 Depot
 11 Rax
 14 Marine
