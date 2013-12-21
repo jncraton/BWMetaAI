@@ -1,0 +1,33 @@
+use_build_vs(Terran)
+8 Pylon
+10 Gateway
+11 Assimilator
+13 Core
+15 Gateway
+wait_build(1, Core)
+upgrade(1, Singularity Charge, 80)
+train(1, Dragoon)
+build_start(2, Pylon)
+train(3, Dragoon)
+build_start(16, Probe)
+build_start(3, Pylon)
+build_start(17, Probe)
+train(5, Dragoon)
+build_start(18, Probe)
+build_start(19, Probe)
+wait_train(5, Dragoon)
+build_start(20, Probe)
+attack_add(5, Dragoon)
+multirun(gen_attack_thread)
+# Sometimes attack with multiple waves
+--10_15_gate_goons_attack_wave--
+random_jump(128, 10_15_gate_goons_skip_attack)
+train(6, Dragoon)
+wait_train(6, Dragoon)
+attack_clear()
+attack_add(6, Dragoon)
+multirun(gen_attack_thread)
+random_jump(64, 10_15_gate_goons_attack_wave)
+--10_15_gate_goons_skip_attack--
+expand(1, gen_expansion)
+farms_timing()
