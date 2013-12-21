@@ -1,0 +1,4 @@
+attack_prepare()
+attack_do()
+attack_clear()
+stop()
