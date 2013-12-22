@@ -1,1 +1,7 @@
-defense_ground(Zerg Zergling)
+defense_ground(Zergling)
+defense_ground(Hydralisk)
+defense_air(Hydralisk)
+defense_ground(Mutalisk)
+defense_air(Mutalisk)
+defense_ground(Lurker)
+defense_ground(Ultralisk)
