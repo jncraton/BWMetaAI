@@ -1,10 +1,10 @@
 include(intro)
 include(define_max)
 
+multirun_file(adapt)
 choose_from_dir(builds)
 
 farms_timing()
-multirun_file(adapt)
 multirun_file(expand_loop)
 include(defenseuse)
 
