@@ -33,6 +33,7 @@ Build Orders
 * BBS
 * 14 CC
 * 2 Factory Push
+* +1 5 Rax
 
 ### Zerg
  
