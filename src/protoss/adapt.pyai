@@ -4,16 +4,11 @@ enemyownsairtech_jump(air)
 repeat()
 
 --detection--
-multirun(obs)
 if_owned(Protoss Cybernetics Core, obs)
 build_finish(1, Protoss Forge, 150)
 build_start(1, Protoss Photon Cannon, 150)
 build_start(2, Protoss Photon Cannon, 150)
 enemyownsairtech_jump(air)
-repeat()
-
---air--
-repeat()
 
 --obs--
 build_finish(1, Protoss Gateway, 150)
@@ -21,4 +16,8 @@ build_finish(1, Protoss Cybernetics Core, 150)
 build_finish(1, Protoss Robotics Facility, 150)
 build_finish(1, Protoss Observatory, 150)
 train(1, Protoss Observer)
-stop()
+enemyownsairtech_jump(air)
+
+--air--
+repeat()
+
