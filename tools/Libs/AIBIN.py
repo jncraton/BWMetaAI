@@ -393,7 +393,7 @@ class AIBIN:
 			[self.ai_byte],
 			[self.ai_address],
 			[self.ai_byte,self.ai_building],
-			None,
+			[self.ai_byte,self.ai_unit],
 			None,
 			[self.ai_address],
 			[self.ai_byte, self.ai_address],
