@@ -1,0 +1,10 @@
+wait(75)
+race_jump(idle_builder_t,idle_builder_z,idle_builder_p)
+
+--idle_builder_t--
+--idle_builder_p--
+repeat()
+
+--idle_builder_z--
+do_morph(36, marine)
+repeat()

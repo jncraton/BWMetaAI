@@ -6,9 +6,17 @@ repeat()
 --detection--
 build_finish(1, Academy, 80)
 build_start(1, Comsat Station, 80)
+enemyownsairtech_jump(air)
 repeat()
 
 --air--
 player_need(1, Engineering Bay)
-build_start(4, Missile Turret, 80)
+wait(1000)
+player_need(1, Missile Turret)
+wait(200)
+player_need(2, Missile Turret)
+wait(200)
+player_need(3, Missile Turret)
+wait(200)
+player_need(4, Missile Turret)
 repeat()

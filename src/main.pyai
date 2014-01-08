@@ -6,6 +6,7 @@ choose_from_dir(builds)
 
 farms_timing()
 multirun_file(expand_loop)
+multirun_file(idle_builder)
 include(defenseuse)
 
 choose_from_dir(midgame)
