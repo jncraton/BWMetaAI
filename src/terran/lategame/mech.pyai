@@ -1,4 +1,4 @@
-use_lategame_vs(Terran, Protoss)
+use_midgame_vs(Terran, Protoss)
 
 define_max(4, Terran Marine)
 
@@ -6,15 +6,6 @@ defenseclear()
 defense_ground(Terran Vulture)
 defense_ground(Terran Siege Tank)
 defense_air(Terran Goliath)
-
-multirun(mech_tech)
-build_finish(1, Terran Factory)
-build_start(1, Terran Machine Shop)
-train(1, Terran Vulture)
-train(1, Terran Siege Tank)
-wait_build(1, Terran Machine Shop)
-train(5, Terran Siege Tank)
-train(9, Terran Vulture)
 
 --mech_loop_core--
 attack_do()
@@ -32,11 +23,11 @@ attack_train(8, Terran Siege Tank)
 
 --mech_loop_finish--
 attack_train(15, Terran Vulture)
-random_jump(128, mech_perhaps_expand)
+random_jump(128, endgame_mech_perhaps_expand)
 attack_train(18, Terran Siege Tank)
 attack_train(18, Terran Vulture)
 
---mech_perhaps_expand--
+--endgame_mech_perhaps_expand--
 random_jump(160, mech_loop_attack)
 expand(99, gen_expansion)
 
@@ -46,22 +37,3 @@ wait(300)
 
 attack_do()
 goto(mech_loop_core)
-
---mech_tech--
-build_finish(1, Terran Barracks)
-build_start(2, Terran Factory)
-build_finish(1, Terran Factory)
-build_start(1, Terran Machine Shop)
-build_finish(2, Terran Factory)
-build_start(2, Terran Machine Shop)
-tech(Tank Siege Mode, 80)
-wait(1000)
-build_finish(3, Terran Factory)
-build_start(3, Terran Machine Shop)
-tech(Spider Mines, 80)
-build_finish(4, Terran Factory)
-build_start(4, Terran Machine Shop)
-upgrade(1, Ion Thrusters, 80)
-wait(6000)
-include(mech_upgrades)
-stop()

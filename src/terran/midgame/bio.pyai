@@ -1,0 +1,21 @@
+use_midgame_vs(Zerg)
+
+defenseclear()
+defense_ground(Terran Marine)
+defense_air(Terran Marine)
+
+build_start(1, Rax)
+build_start(2, Rax)
+build_start(3, Rax)
+build_start(4, Rax)
+build_start(5, Rax)
+build_start(6, Rax)
+build_start(1, Academy)
+
+attack_train(18, Terran Marine)
+attack_train(5, Terran Medic)
+random_jump(160, bio_loop_attack)
+expand(99, gen_expansion)
+
+--bio_loop_attack--
+include(attack)

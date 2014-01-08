@@ -1,0 +1,37 @@
+use_midgame_vs(Terran, Protoss)
+
+define_max(4, Terran Marine)
+
+defenseclear()
+defense_ground(Terran Vulture)
+defense_ground(Terran Siege Tank)
+defense_air(Terran Goliath)
+
+build_finish(1, Terran Barracks)
+build_start(1, Terran Factory)
+build_finish(1, Terran Factory)
+build_start(1, Terran Machine Shop)
+build_start(2, Terran Factory)
+train(1, Terran Vulture)
+wait_build(1, Terran Machine Shop)
+train(1, Terran Siege Tank)
+build_start(3, Terran Factory)
+wait_build(2, Terran Factory)
+build_start(2, Machine Shop)
+train(5, Terran Siege Tank)
+train(9, Terran Vulture)
+
+attack_train(12, Terran Siege Tank)
+attack_train(15, Terran Vulture)
+random_jump(128, midgame_mech_perhaps_expand)
+attack_train(18, Terran Siege Tank)
+attack_train(18, Terran Vulture)
+
+--midgame_mech_perhaps_expand--
+random_jump(160, midgame_mech_loop_attack)
+expand(99, gen_expansion)
+
+--midgame_mech_loop_attack--
+attack_prepare()
+wait(300)
+attack_do()
