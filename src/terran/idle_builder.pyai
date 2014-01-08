@@ -3,6 +3,11 @@ race_jump(idle_builder_t,idle_builder_z,idle_builder_p)
 
 --idle_builder_t--
 --idle_builder_p--
+resources_jump(200,200,idle_builder_tank)
+do_morph(12, Vulture)
+repeat()
+--idle_builder_tank--
+do_morph(12, Tank)
 repeat()
 
 --idle_builder_z--
