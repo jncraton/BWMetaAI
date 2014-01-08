@@ -1,4 +1,4 @@
 attack_prepare()
-wait(75)
+wait(10)
 attack_do()
 attack_clear()

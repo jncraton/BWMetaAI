@@ -19,4 +19,5 @@ attack_train(46, Terran Marine)
 random_jump(160, bio_loop_attack)
 expand(99, gen_expansion)
 
+--bio_loop_attack--
 include(attack)

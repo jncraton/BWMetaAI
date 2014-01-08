@@ -14,8 +14,8 @@ build_start(1, Academy)
 
 attack_train(18, Terran Marine)
 attack_train(5, Terran Medic)
-random_jump(160, bio_loop_attack)
 expand(99, gen_expansion)
 
---bio_loop_attack--
-include(attack)
+attack_prepare()
+wait(10)
+attack_do()
