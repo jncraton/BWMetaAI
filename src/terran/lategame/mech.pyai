@@ -1,31 +1,31 @@
 use_midgame_vs(Terran, Protoss)
 
-define_max(4, Terran Marine)
+define_max(4, Marine)
 
 defenseclear()
-defense_ground(Terran Vulture)
-defense_ground(Terran Siege Tank)
-defense_air(Terran Goliath)
+defense_ground(Vulture)
+defense_ground(Siege Tank)
+defense_air(Goliath)
 
 --mech_loop_core--
 attack_do()
 attack_clear()
 
 enemyownsairtech_jump(mech_loop_aa)
-attack_train(12, Terran Siege Tank)
+attack_train(12, Siege Tank)
 goto(mech_loop_finish)
 
 --mech_loop_aa--
-build_finish(1, Terran Armory)
-attack_train(8, Terran Goliath)
+build_finish(1, Armory)
+attack_train(8, Goliath)
 upgrade(1, Charon Booster, 80)
-attack_train(8, Terran Siege Tank)
+attack_train(8, Siege Tank)
 
 --mech_loop_finish--
-attack_train(15, Terran Vulture)
+attack_train(15, Vulture)
 random_jump(128, endgame_mech_perhaps_expand)
-attack_train(18, Terran Siege Tank)
-attack_train(18, Terran Vulture)
+attack_train(18, Siege Tank)
+attack_train(18, Vulture)
 
 --endgame_mech_perhaps_expand--
 random_jump(160, mech_loop_attack)
