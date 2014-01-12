@@ -11,7 +11,7 @@ patch: mpq
 	@echo Overwriting existing patch_rt.mpq
 	@cp build/patch_rt.mpq $(sc_path)\patch_rt.mpq
 
-mpq: bins
+mpq: combined_scripts
 	@echo Creating MPQ
 	@python tools\pyai.pyw -c -w -m ../build/patch_rt.mpq ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
 
