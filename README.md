@@ -89,6 +89,10 @@ Displays the string as a message from the AI. This does not require a block to j
 
 Waits until the ai has the corresponding amount of minerals and gas in the bank.
 
+### wait_until(minutes)
+
+Waits until {minutes} normal games minutes have elapsed.
+
 ### build_start(amount, building, [priority])
 
 Builds {amount} of {building} at {priority} and waits for construction to start. Priority defaults to 80.
