@@ -97,6 +97,10 @@ Builds {amount} of {building} at {priority} and waits for construction to start.
 
 Builds {amount} of {building} at {priority} and waits for construction to complete. Priority defaults to 80.
 
+### build_separately(amount, building, [priority])
+
+Builds {amount} of {building} at {priority} one at a time and waits for construction to complete. Priority defaults to 80.
+
 ### enemyownsairtech_jump(block)
 
 Jumps to block if enemy has Starport, Stargate, or Spire

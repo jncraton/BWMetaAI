@@ -63,6 +63,22 @@ var parse = function parse(content) {
                'wait_build(' + amount + ', ' + building + ')';
     });
 
+    content = content.replace(/build_separately\((.*)\)/g, function(original, args) {
+        args = args.split(',');
+        var amount = args[0];
+        var building = args[1];
+        var priority = args[2] || '80';
+        var ret = '';
+        
+        for (var i = 1; i <= amount; i++) {
+            ret += 'build(' + amount + ', ' + building + ', ' + priority + ')\n' +
+               'wait_buildstart(' + amount + ', ' + building + ')\n' +
+               'wait_build(' + amount + ', ' + building + ')\n';
+        }
+        
+        return ret
+    });
+
     content = content.replace(/attack_train\((.*)\)/g, function(original, args) {
         args = args.split(',');
         var amount = args[0];
