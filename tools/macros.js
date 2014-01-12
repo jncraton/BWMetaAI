@@ -71,9 +71,9 @@ var parse = function parse(content) {
         var ret = '';
         
         for (var i = 1; i <= amount; i++) {
-            ret += 'build(' + amount + ', ' + building + ', ' + priority + ')\n' +
-               'wait_buildstart(' + amount + ', ' + building + ')\n' +
-               'wait_build(' + amount + ', ' + building + ')\n';
+            ret += 'build(' + i + ', ' + building + ', ' + priority + ')\n' +
+               'wait_buildstart(' + i + ', ' + building + ')\n' +
+               'wait_build(' + i + ', ' + building + ')\n';
         }
         
         return ret
