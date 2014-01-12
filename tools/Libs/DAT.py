@@ -178,7 +178,6 @@ class UnitsDAT:
 			stat_txt = os.path.join(BASE_DIR, 'Libs', 'MPQ', 'rez', 'stat_txt.tbl')
 		if isstr(stat_txt):
 			self.tbl = TBL.TBL()
-			print stat_txt
 			self.tbl.load_file(stat_txt)
 		else:
 			self.tbl = stat_txt

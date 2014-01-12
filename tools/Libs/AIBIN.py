@@ -1386,7 +1386,6 @@ class AIBIN:
 							aiinfo[i[0]][1].remove(l)
 						else:
 							bwinfo[i[0]][1].remove(l)
-			print remove
 			for b,r in enumerate(remove):
 				for i in r.iterkeys():
 					if r[i]:

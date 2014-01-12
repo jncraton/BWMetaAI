@@ -3545,18 +3545,14 @@ def main():
 						print "Loading base bwscript.bin '%s', units.dat '%s', upgrades.dat '%s', techdata.dat '%s', and stat_txt.tbl '%s'" % (os.path.abspath(opt.bwscript),opt.units,opt.upgrades,opt.techdata,opt.stattxt)
 						bin = AIBIN.AIBIN(os.path.abspath(opt.bwscript),opt.units,opt.upgrades,opt.techdata,opt.stattxt)
 					else:
-						print "Loading units.dat '%s', upgrades.dat '%s', techdata.dat '%s', and stat_txt.tbl '%s'" % (opt.units,opt.upgrades,opt.techdata,opt.stattxt)
 						bin = AIBIN.AIBIN('',opt.units,opt.upgrades,opt.techdata,opt.stattxt)
-					print " - Loading finished successfully"
 					if opt.aiscript:
 						print "Loading base aiscript.bin '%s'..." % os.path.abspath(opt.aiscript)
 						bin.load_file(os.path.abspath(opt.aiscript))
-						print " - aiscript.bin read successfully"
 					print "Interpreting file '%s'..." % args[0]
 					warnings.extend(bin.interpret(args[0],opt.deffile))
-					print " - '%s' read successfully\nCompiling file '%s' to aiscript.bin '%s' and bwscript.bin '%s'..." % (args[0], args[0], args[1], args[2])
+					print "Compiling to '%s' and '%s'..." % (args[1], args[2])
 					bin.compile(args[1], args[2], opt.extrainfo)
-					print " - aiscript.bin '%s' and bwscript.bin '%s' written succesfully" % (args[1], args[2])
 					if(opt.mpq):
 						print "Saving to " + opt.mpq
 						h = MpqOpenArchiveForUpdate(opt.mpq, MOAU_OPEN_ALWAYS | MOAU_MAINTAIN_LISTFILE)
