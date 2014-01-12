@@ -1,6 +1,7 @@
 var fs = require('fs');
 
 var debug_count = 0;
+var nonce = 0
 
 var config = require('./config.json');
 
@@ -29,16 +30,19 @@ function Race(name) {
     function parseTemplate(filename, skip_block_header) {
         var comment = "\n#" + filename + '\n';
         var block;
+        var file_block;
         
         if(!skip_block_header) {
-            block = (filename.indexOf('header') > -1 ? '' : '--' + getFileBlock(filename) + '--\n');
+            file_block = getFileBlock(filename);
         } else {
-            block = "";
+            file_block = getFileBlock(filename) + (nonce++);
         }
+        
+        block = (filename.indexOf('header') > -1 ? '' : '--' + file_block + '--\n');
         
         var content = fs.readFileSync(filename, 'utf-8');
         
-        content = content.replace(/repeat\(\)/g, 'wait(300)\ngoto(' + getFileBlock(filename) + ')');
+        content = content.replace(/repeat\(\)/g, 'wait(300)\ngoto(' + file_block + ')');
         
         content = content.replace(/include\((.*)\)/g, function(command, filename) {
             return loadContents(filename, true);
@@ -110,7 +114,7 @@ function Race(name) {
                 valid_enemies[races[i].toLowerCase()[0]] = true;
             }
             
-            var complete = getFileBlock(filename) + '_race_checked';
+            var complete = file_block + '_race_checked';
             
             return('race_jump(' +
                 (valid_enemies.t ? complete : skip_block) + ',' +
