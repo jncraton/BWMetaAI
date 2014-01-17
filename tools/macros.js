@@ -73,7 +73,7 @@ var parse = function parse(content) {
         var escape = nextBlockName();
         
         return 'multirun(' + start + ')\n' + 
-            'goto(' + escape + '\n' +
+            'goto(' + escape + ')\n' +
             '--' + start + '--\n' +
             'attack_prepare()\n' +
             'attack_do()\n' +
