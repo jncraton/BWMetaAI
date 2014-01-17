@@ -116,11 +116,9 @@ function Race(name) {
             
             var complete = file_block + '_race_checked';
             
-            return('race_jump(' +
-                (valid_enemies.t ? complete : skip_block) + ',' +
-                (valid_enemies.z ? complete : skip_block) + ',' +
-                (valid_enemies.p ? complete : skip_block) +
-                ')\n' +
+            return('enemyowns_jump(command center, ' + (valid_enemies.t ? complete : skip_block) + ')\n' + 
+                    'enemyowns_jump(hatchery, ' + (valid_enemies.z ? complete : skip_block) + ')\n' + 
+                    'enemyowns_jump(nexus, ' + (valid_enemies.p ? complete : skip_block) + ')\n' + 
                 '--' + complete + '--\n');
         }
         
