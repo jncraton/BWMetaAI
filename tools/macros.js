@@ -173,7 +173,7 @@ var parse = function parse(content) {
         
         return 'defenseuse_gg(1, ' + unit + ')\n' +
                'defenseuse_ga(1, ' + unit + ')\n' +
-               'time_jump(10, ' + do_build + ')\n' +
+               'time_jump(6, ' + do_build + ')\n' +
                'goto(' + skip_build + ')\n' +
                '--' + do_build + '--\n' +
                'defensebuild_gg(1, ' + unit + ')\n' +
@@ -187,7 +187,7 @@ var parse = function parse(content) {
         
         return 'defenseuse_ag(1, ' + unit + ')\n' +
                'defenseuse_aa(1, ' + unit + ')\n' +
-               'time_jump(10, ' + do_build + ')\n' +
+               'time_jump(6, ' + do_build + ')\n' +
                'goto(' + skip_build + ')\n' +
                '--' + do_build + '--\n' +
                'defensebuild_ag(1, ' + unit + ')\n' +
