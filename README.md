@@ -89,6 +89,10 @@ Waits until the ai has the corresponding amount of minerals and gas in the bank.
 
 Waits until {minutes} normal games minutes have elapsed.
 
+### attack_async()
+
+Spawns a new thread to attack and continues execution of calling thread immediately.
+
 ### build_start(amount, building, [priority])
 
 Builds {amount} of {building} at {priority} and waits for construction to start. Priority defaults to 80.
