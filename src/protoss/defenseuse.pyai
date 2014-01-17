@@ -4,4 +4,3 @@ if owned(Gateway):
 if owned(Cybernetics Core):
     defense_ground(Dragoon)
     defense_air(Dragoon)
-repeat()

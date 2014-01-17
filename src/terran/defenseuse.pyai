@@ -6,4 +6,3 @@ if owned(Factory):
     defense_ground(Terran Vulture)
 if owned(Machine Shop):
     defense_ground(Terran Siege Tank)
-repeat()

@@ -11,4 +11,3 @@ if owned(lurker):
     defense_ground(Lurker)
 if owned(ultralisk cavern):
     defense_ground(Ultralisk)
-repeat()
