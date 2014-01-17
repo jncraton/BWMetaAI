@@ -18,7 +18,7 @@ build_start(19, Probe)
 wait_train(5, Dragoon)
 build_start(20, Probe)
 attack_add(5, Dragoon)
-multirun(gen_attack_thread)
+attack_async()
 # Sometimes attack with multiple waves
 --10_15_gate_goons_attack_wave--
 random_jump(128, 10_15_gate_goons_skip_attack)
@@ -26,7 +26,7 @@ train(6, Dragoon)
 wait_train(6, Dragoon)
 attack_clear()
 attack_add(6, Dragoon)
-multirun(gen_attack_thread)
+attack_async()
 random_jump(64, 10_15_gate_goons_attack_wave)
 --10_15_gate_goons_skip_attack--
 expand(1, gen_expansion)
