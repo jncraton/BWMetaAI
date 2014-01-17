@@ -84,7 +84,7 @@ var parse = function parse(content) {
         
         return '--' + loop_start + '--\n' +
             'time_jump(' + time + ',' + loop_escape + ')\n' +
-            'wait(10)\n' +
+            'wait(300)\n' +
             'goto(' + loop_start + ')\n' +
             '--' + loop_escape + '--\n';
     });
@@ -95,7 +95,7 @@ var parse = function parse(content) {
         
         return '--' + loop_start + '--\n' +
             'if_owned(' + unit + ',' + loop_escape + ')\n' +
-            'wait(10)\n' +
+            'wait(300)\n' +
             'goto(' + loop_start + ')\n' +
             '--' + loop_escape + '--\n';
     });
