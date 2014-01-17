@@ -16,4 +16,4 @@ random_jump(160, bio_loop_attack)
 expand(99, expansion)
 
 --bio_loop_attack--
-include(attack)
+attack_simple()

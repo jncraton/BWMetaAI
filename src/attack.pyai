@@ -1,4 +1,0 @@
-attack_prepare()
-wait(75)
-attack_do()
-attack_clear()

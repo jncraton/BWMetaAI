@@ -10,4 +10,4 @@ random_jump(160, ultra_ling_loop_attack)
 expand(99, fortified_expansion)
 
 --ultra_ling_loop_attack--
-include(attack)
+attack_simple()

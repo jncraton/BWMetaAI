@@ -21,4 +21,4 @@ random_jump(160, speedlot_midgame_attack)
 expand(99, expansion)
 
 --speedlot_midgame_attack--
-include(attack)
+attack_simple()
