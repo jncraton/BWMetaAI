@@ -17,8 +17,6 @@ upgrade(1, Muscular Augments, 80)
 wait_build(1, Zerg Lair)
 wait(2000)
 upgrade(1, Grooved Spines, 80)
-build(4, Zerg Hatchery, 80)
-wait_buildstart(4, Zerg Hatchery)
 stop()
 
 --hydra_loop--

@@ -16,8 +16,6 @@ wait_buildstart(3, Zerg Hatchery)
 wait_build(1, Zerg Lair)
 tech(Lurker Aspect, 80)
 wait(2000)
-build(4, Zerg Hatchery, 80)
-wait_buildstart(4, Zerg Hatchery)
 stop()
 
 --lurker_ling_loop--
