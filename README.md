@@ -93,6 +93,10 @@ Waits until {minutes} normal games minutes have elapsed.
 
 Spawns a new thread to attack and continues execution of calling thread immediately.
 
+### attack_simple()
+
+Prepares, attacks with, and clears the current attacking parting.
+
 ### build_start(amount, building, [priority])
 
 Builds {amount} of {building} at {priority} and waits for construction to start. Priority defaults to 80.

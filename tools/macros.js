@@ -67,7 +67,6 @@ var parse = function parse(content) {
         content += '--' + blocks.pop() + '--\n'
     }
     
-    
     content = content.replace(/attack_async\(\)/g, function(original) {
         var start = nextBlockName();
         var escape = nextBlockName();
@@ -80,6 +79,13 @@ var parse = function parse(content) {
             'attack_clear()\n' +
             'stop()\n' +
             '--' + escape + '--\n';
+    });
+    
+    content = content.replace(/attack_simple\(\)/g, function(original) {
+        return 'attack_prepare()\n' +
+                'wait(75)\n' +
+                'attack_do()\n' +
+                'attack_clear()'
     });
     
     content = content.replace(/wait_resources\((.*),(.*)\)/g, function(original, minerals, gas) {
