@@ -155,17 +155,31 @@ var parse = function parse(content) {
     });
 
     content = content.replace(/defense_ground\((.*)\)/g, function(original, unit) {
+        var do_build = nextBlockName()
+        var skip_build = nextBlockName()
+        
         return 'defenseuse_gg(1, ' + unit + ')\n' +
-               'defensebuild_gg(1, ' + unit + ')\n' +
                'defenseuse_ga(1, ' + unit + ')\n' +
-               'defensebuild_ga(1, ' + unit + ')\n'
+               'time_jump(5, ' + do_build + ')\n' +
+               'goto(' + skip_build + ')\n' +
+               '--' + do_build + '--\n' +
+               'defensebuild_gg(1, ' + unit + ')\n' +
+               'defensebuild_ga(1, ' + unit + ')\n' +
+               '--' + skip_build + '--\n'
     });
 
     content = content.replace(/defense_air\((.*)\)/g, function(original, unit) {
+        var do_build = nextBlockName()
+        var skip_build = nextBlockName()
+        
         return 'defenseuse_ag(1, ' + unit + ')\n' +
-               'defensebuild_ag(1, ' + unit + ')\n' +
                'defenseuse_aa(1, ' + unit + ')\n' +
-               'defensebuild_aa(1, ' + unit + ')\n'
+               'time_jump(5, ' + do_build + ')\n' +
+               'goto(' + skip_build + ')\n' +
+               '--' + do_build + '--\n' +
+               'defensebuild_ag(1, ' + unit + ')\n' +
+               'defensebuild_aa(1, ' + unit + ')\n' +
+               '--' + skip_build + '--\n'
     });
 
     return content;
