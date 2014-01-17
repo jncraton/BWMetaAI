@@ -1,4 +1,6 @@
-race_jump(all_tech_tvt,all_tech_tvz,all_tech_tvp)
+enemyowns_jump(cc, all_tech_tvt)
+enemyowns_jump(hatchery, all_tech_tvz)
+enemyowns_jump(nexus, all_tech_tvp)
 
 --all_tech_tvz--
 build_finish(1, Barracks, 80)
