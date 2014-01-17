@@ -14,4 +14,3 @@ if enemyownscloaked():
 if enemyownsairtech():
     
 repeat()
-
