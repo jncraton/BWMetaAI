@@ -1,16 +1,10 @@
-wait(10)
-race_jump(idle_builder_t,idle_builder_z,idle_builder_p)
+if enemyowns(nexus):
+    do_morph(36, Zealot)
 
---idle_builder_t--
---idle_builder_p--
-resources_jump(300,200,idle_builder_dragoon)
-do_morph(36, Zealot)
-repeat()
---idle_builder_dragoon--
-do_morph(36, Zealot)
-do_morph(36, Dragoon)
-repeat()
+if enemyowns(cc):
+    do_morph(36, Zealot)
 
---idle_builder_z--
-do_morph(36, Zealot)
+if enemyowns(hatchery):
+    do_morph(36, Zealot)
+
 repeat()
