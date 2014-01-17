@@ -8,9 +8,6 @@ build_start(4, Protoss Gateway)
 build_finish(1, Protoss Cybernetics Core)
 upgrade(1, Singularity Charge, 80)
 
-attack_do()
-attack_clear()
-
 train(8, Protoss Dragoon)
 train(8, Protoss Zealot)
 
