@@ -1,4 +1,15 @@
-include(intro)
+start_town()
+
+build_start(1, Town Hall, 200)
+build_start(5, Peon, 200)
+
+transports_off()
+farms_notiming()
+defaultbuild_off()
+default_min(7)
+
+message(BWMetaAI version {commit})
+
 include(define_max)
 
 multirun_file(adapt)
