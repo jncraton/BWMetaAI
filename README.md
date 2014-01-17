@@ -3,23 +3,19 @@ BWMetaAI
 
 A Brood War AI designed to follow a metagame closer to modern 1v1 than the original Brood War AI.
 
-Installation
-------------
-
-1. Open your Brood War folder (C:\Program Files\StarCraft by default)
-2. Create a backup copy of your patch_rt.mpq file
-3. Copy build/patch_rt.mpq from this project over the patch_rt.mpq in your Brood War folder
-4. Create a game and this AI should be used
-5. Replace your original patch_rt.mpq to restore the original AI
-
-Building from source
+Running from source
 --------------------
 
 Prerequisites: node.js, Python 2.7 32 bit on Windows 
 
 Windows is required for mpq manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
 
-1. Run `make`
+Build and patch SC
+===============
+
+1. Edit the makefile to use your SC path
+2. Edit the makefile to use the absolute path to your prefered SC launcher. This can simply be starcraft.exe if no launcher is used
+3. Run `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory.
 
 Build Orders
 ------------
