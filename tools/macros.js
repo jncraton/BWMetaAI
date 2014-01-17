@@ -34,7 +34,11 @@ var parse = function parse(content) {
         
         if (line.search('if ') > -1) {
             line = line.replace(/if (.*)\((.*)\)/, function (match, function_name, params) {
-                return function_name + '_jump(' + params + ')'
+                if (function_name == 'owned') {
+                    return 'if_owned(' + params + ')'
+                } else {
+                    return function_name + '_jump(' + params + ')'
+                }
             })
         }
         
@@ -44,7 +48,11 @@ var parse = function parse(content) {
             blocks.push(end_block)
             indent_level++;
             line = line.replace(':', '')
-            line = line.replace(')', start_block + ')')
+            if (line.search(/[a-zA-Z]\)/) > -1) {
+                line = line.replace(')', ', ' + start_block + ')')
+            } else {
+                line = line.replace(')', start_block + ')')
+            }
             content += line + '\n'
             content += 'goto(' + end_block + ')\n'
             content += '--' + start_block + '--\n'
@@ -148,12 +156,16 @@ var parse = function parse(content) {
 
     content = content.replace(/defense_ground\((.*)\)/g, function(original, unit) {
         return 'defenseuse_gg(1, ' + unit + ')\n' +
-               'defenseuse_ga(1, ' + unit + ')\n';
+               'defensebuild_gg(1, ' + unit + ')\n' +
+               'defenseuse_ga(1, ' + unit + ')\n' +
+               'defensebuild_ga(1, ' + unit + ')\n'
     });
 
     content = content.replace(/defense_air\((.*)\)/g, function(original, unit) {
         return 'defenseuse_ag(1, ' + unit + ')\n' +
-               'defenseuse_aa(1, ' + unit + ')\n';
+               'defensebuild_ag(1, ' + unit + ')\n' +
+               'defenseuse_aa(1, ' + unit + ')\n' +
+               'defensebuild_aa(1, ' + unit + ')\n'
     });
 
     return content;
