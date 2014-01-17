@@ -182,52 +182,55 @@ Terran Infantry Score = bunkers * 4 <= marines ? marines + bunkers * 4 : 2 * mar
 ### Rush conditions:
 
 #### Terran
-0: Commands a Barracks
-1: Terran Infantry Score > 16
-2: Terran Infantry Score > 24
-3: Terran Infantry Score > 5
-4: Terran Infantry Score > 16
-5: Terran Infantry Score > 6
-6: Terran Infantry Score > 12
-7: Commands a Siege Tank
-8: Terran Infantry Score > 5
-9: Terran Infantry Score > 9
-10: Terran Infantry Score > 4
-11: Terran Infantry Score > 10
-12: Terran Infantry Score > 16
-13: Terran Infantry Score > 24
+
+0. Commands a Barracks
+1. Terran Infantry Score > 16
+2. Terran Infantry Score > 24
+3. Terran Infantry Score > 5
+4. Terran Infantry Score > 16
+5. Terran Infantry Score > 6
+6. Terran Infantry Score > 12
+7. Commands a Siege Tank
+8. Terran Infantry Score > 5
+9. Terran Infantry Score > 9
+10. Terran Infantry Score > 4
+11. Terran Infantry Score > 10
+12. Terran Infantry Score > 16
+13. Terran Infantry Score > 24
 
 #### Zerg
-0: Commands a Spawning Pool
-1: Zerg Ground Score > 10
-2: Zerg Air Score > 10
-3: Zerg Ground Score > 2, or commands a Hydralisk Den
-4: Zerg Ground Score > 10
-5: Zerg Ground Score > 6
-6: Zerg Sunken Colonies > 1
-7: Commands a Queen
-8: Zerg Ground Score > 2
-9: Zerg Ground Score > 4
-10: Zerg Ground Score > 4
-11: Zerg Ground Score > 10
-12: Zerg Air Score > 5
-13: Zerg Air Score > 10
+
+0. Commands a Spawning Pool
+1. Zerg Ground Score > 10
+2. Zerg Air Score > 10
+3. Zerg Ground Score > 2, or commands a Hydralisk Den
+4. Zerg Ground Score > 10
+5. Zerg Ground Score > 6
+6. Zerg Sunken Colonies > 1
+7. Commands a Queen
+8. Zerg Ground Score > 2
+9. Zerg Ground Score > 4
+10. Zerg Ground Score > 4
+11. Zerg Ground Score > 10
+12. Zerg Air Score > 5
+13. Zerg Air Score > 10
 
 #### Protoss
-0: Commands a Gateway
-1: Protoss Zealots > 6
-2: Not used
-3: Protoss Zealots > 1
-4: Protoss Zealots > 8
-5: Protoss Zealots > 3
-6: Protoss Dragoons > 1
-7: Protoss Zealots > 6
-8: Protoss Zealots > 1
-9: Protoss Zealots > 5
-10: Protoss Zealots > 2
-11: Protoss Zealots > 5
-12: Protoss Air Score > 2
-13: Protoss Air Score > 7
+
+0. Commands a Gateway
+1. Protoss Zealots > 6
+2. Not used
+3. Protoss Zealots > 1
+4. Protoss Zealots > 8
+5. Protoss Zealots > 3
+6. Protoss Dragoons > 1
+7. Protoss Zealots > 6
+8. Protoss Zealots > 1
+9. Protoss Zealots > 5
+10. Protoss Zealots > 2
+11. Protoss Zealots > 5
+12. Protoss Air Score > 2
+13. Protoss Air Score > 7
 
 ## stop
 Stop script code execution. Often used to close script blocks called simultaneously.
