@@ -7,6 +7,8 @@ if owned(den):
 if owned(spire):
     defense_ground(Mutalisk)
     defense_air(Mutalisk)
+    if enemyownsairtech():
+        defense_air(Scourge)
 if owned(lurker):
     defense_ground(Lurker)
 if owned(ultralisk cavern):
