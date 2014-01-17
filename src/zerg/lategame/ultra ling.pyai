@@ -7,7 +7,7 @@ notowns_jump(Zerg Ultralisk Cavern, ultra_ling_skip_ultra)
 attack_train(12, Zerg Ultralisk)
 --ultra_ling_skip_ultra--
 random_jump(160, ultra_ling_loop_attack)
-expand(99, gen_fortified_expansion)
+expand(99, fortified_expansion)
 
 --ultra_ling_loop_attack--
 include(attack)

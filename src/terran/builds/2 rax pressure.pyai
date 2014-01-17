@@ -25,5 +25,5 @@ attack_train(11, Terran Marine)
 attack_prepare()
 wait(50)
 attack_do()
-expand(1, gen_expansion)
+expand(1, expansion)
 

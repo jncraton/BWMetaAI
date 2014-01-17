@@ -29,7 +29,7 @@ attack_add(3, Terran Siege Tank)
 include(attack)
 farms_timing()
 build_start(20, Terran SCV)
-expand(1, gen_expansion)
+expand(1, expansion)
 build_start(22, Terran SCV)
 
 

@@ -18,7 +18,7 @@ build_start(6, Protoss Gateway)
 attack_train(16, Protoss Zealot)
 
 random_jump(160, speedlot_midgame_attack)
-expand(99, gen_expansion)
+expand(99, expansion)
 
 --speedlot_midgame_attack--
 include(attack)

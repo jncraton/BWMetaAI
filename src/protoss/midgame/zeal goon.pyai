@@ -30,7 +30,7 @@ attack_train(14, Protoss Zealot)
 
 random_jump(160, zeal_goon_midgame_attack)
 
-expand(99, gen_expansion)
+expand(99, expansion)
 
 --zeal_goon_midgame_attack--
 attack_prepare()

@@ -3,7 +3,7 @@ build_start(8, Probe, 150)
 build_start(1, Pylon)
 build_start(12, Probe, 150)
 wait(300)
-expand(1, gen_expansion)
+expand(1, expansion)
 # 1 probe is lost to the expansion
 build_start(12, Probe)
 build_start(1, Gateway)

@@ -22,7 +22,7 @@ stop()
 train(36, Zerg Zergling)
 train(12, Zerg Lurker)
 random_jump(160, lurker_ling_loop_attack)
-expand(99, gen_expansion)
+expand(99, expansion)
 
 --lurker_ling_loop_attack--
 attack_do()

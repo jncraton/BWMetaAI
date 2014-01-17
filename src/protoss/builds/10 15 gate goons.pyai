@@ -29,5 +29,5 @@ attack_add(6, Dragoon)
 attack_async()
 random_jump(64, 10_15_gate_goons_attack_wave)
 --10_15_gate_goons_skip_attack--
-expand(1, gen_expansion)
+expand(1, expansion)
 farms_timing()

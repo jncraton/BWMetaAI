@@ -23,7 +23,7 @@ stop()
 build_finish(1, Zerg Hydralisk Den)
 train(36, Zerg Hydralisk)
 random_jump(160, hyrda_loop_attack)
-expand(99, gen_expansion)
+expand(99, expansion)
 
 --hyrda_loop_attack--
 attack_do()

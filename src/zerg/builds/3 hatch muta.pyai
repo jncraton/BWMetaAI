@@ -2,7 +2,7 @@ use_build_vs(Terran, Protoss)
 build_start(8, Drone, 80)
 build_start(2, Overlord, 80)
 build_start(12, Drone, 80)
-expand(1, 3_hatch_muta_natural)
+expand(1, three_hatch_muta_natural)
 build_start(1, Spawning Pool, 80)
 build_start(13, Drone, 80)
 build_start(2, Hatch, 80)
@@ -32,7 +32,7 @@ upgrade(1, Carapace, 30)
 farms_timing()
 
 goto(3_hatch_muta_end)
---3_hatch_muta_natural--
+--gen_expansions_three_hatch_muta_natural--
 start_town()
 build_finish(1, Hatch, 150)
 get_oldpeons(7)

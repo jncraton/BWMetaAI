@@ -13,7 +13,7 @@ tech(Stim Packs, 80)
 
 attack_train(18, Terran Marine)
 attack_train(5, Terran Medic)
-expand(99, gen_expansion)
+expand(99, expansion)
 
 attack_prepare()
 wait(10)

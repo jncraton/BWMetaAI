@@ -30,7 +30,7 @@ attack_train(14, Vulture)
 
 --midgame_mech_perhaps_expand--
 random_jump(160, midgame_mech_loop_attack)
-expand(99, gen_expansion)
+expand(99, expansion)
 
 --midgame_mech_loop_attack--
 attack_prepare()

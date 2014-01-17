@@ -14,7 +14,7 @@ attack_train(2, Protoss Archon)
 --zealot_archon_attack--
 
 random_jump(160, zealot_archon_loop_attack)
-expand(99, gen_expansion)
+expand(99, expansion)
 
 --zealot_archon_loop_attack--
 include(attack)

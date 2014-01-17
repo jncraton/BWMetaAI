@@ -37,7 +37,7 @@ var parse = function parse(content) {
             
             ret += 'train(' + owned[unit] + ', ' + unit + ')\n';
         } else if (unit === 'Expand' || unit === 'expand') {
-            ret += 'expand(1, gen_expansion)\n';
+            ret += 'expand(1, gen_expansions_expansion)\n';
         } else {
             ret += 'build(' + owned[unit] + ', ' + unit + ', 80)\n' +
                    'wait_buildstart(' + owned[unit] + ', ' + unit + ')\n';

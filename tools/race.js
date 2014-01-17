@@ -20,6 +20,10 @@ function Race(name) {
             filename = config.srcPath + name + '/managers/' + filename;
         } else if(fs.existsSync(config.srcPath + 'managers/' + filename)) {
             filename = config.srcPath + 'managers/' + filename;
+        } else if(fs.existsSync(config.srcPath + name + '/expansions/' + filename)) {
+            filename = config.srcPath + name + '/expansions/' + filename;
+        } else if(fs.existsSync(config.srcPath + 'expansions/' + filename)) {
+            filename = config.srcPath + 'expansions/' + filename;
         } else {
             filename = config.srcPath + filename;
         }
@@ -58,6 +62,10 @@ function Race(name) {
             
         content = content.replace(/include_block\((.*)\)/g, function(command, filename) {
             return loadContents(filename) + "stop()\n";
+        });
+            
+        content = content.replace(/expand\(([\d, ]+)(.*)\)/g, function(command, num, block) {
+            return 'expand(' + num + 'gen_expansions_' + block + ')'
         });
             
         content = content.replace(/multirun_file\((.*)\)/g, function(command, relative_filename) {
