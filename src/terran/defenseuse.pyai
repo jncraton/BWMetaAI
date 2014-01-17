@@ -1,10 +1,11 @@
 defenseclear()
-if owned(Barracks):
-    defense_ground(Terran Marine)
-    defense_air(Terran Marine)
+if owned(Machine Shop):
+    defense_ground(Terran Siege Tank)
 if owned(Factory):
     if enemyowns(marine):
         defensebuild_gg(1, Vulture)
     defense_ground(Terran Vulture)
-if owned(Machine Shop):
-    defense_ground(Terran Siege Tank)
+if enemyowns(hatchery):
+    if owned(Barracks):
+        defense_ground(Terran Marine)
+        defense_air(Terran Marine)

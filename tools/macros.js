@@ -88,6 +88,17 @@ var parse = function parse(content) {
             'goto(' + loop_start + ')\n' +
             '--' + loop_escape + '--\n';
     });
+    
+    content = content.replace(/wait_owned\((.*)\)/g, function(original, unit) {
+        var loop_start = nextBlockName();
+        var loop_escape = nextBlockName();
+        
+        return '--' + loop_start + '--\n' +
+            'if_owned(' + unit + ',' + loop_escape + ')\n' +
+            'wait(10)\n' +
+            'goto(' + loop_start + ')\n' +
+            '--' + loop_escape + '--\n';
+    });
 
     content = content.replace(/message\((.*)\)/g, function(original, message) {
         var next_block = nextBlockName();
