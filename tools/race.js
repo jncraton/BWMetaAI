@@ -10,17 +10,25 @@ var macros = require('./macros.js');
 var buildConverter = require('./buildConverter.js');
 
 function Race(name) {
-    function loadContents(filename, skip_block_header) {
-        var raw;
-        
+    function getFullPath(filename) {
         filename = filename.replace('.pyai', '')
         filename += '.pyai'
         
         if(fs.existsSync(config.srcPath + name + '/' + filename)) {
             filename = config.srcPath + name + '/' + filename;
+        } else if(fs.existsSync(config.srcPath + name + '/managers/' + filename)) {
+            filename = config.srcPath + name + '/managers/' + filename;
+        } else if(fs.existsSync(config.srcPath + 'managers/' + filename)) {
+            filename = config.srcPath + 'managers/' + filename;
         } else {
             filename = config.srcPath + filename;
         }
+        
+        return filename;
+    }
+    
+    function loadContents(filename, skip_block_header) {
+        filename = getFullPath(filename)
         
         return parseTemplate(filename, skip_block_header) + "\n";
     }
@@ -52,14 +60,16 @@ function Race(name) {
             return loadContents(filename) + "stop()\n";
         });
             
-        content = content.replace(/multirun_file\((.*)\)/g, function(command, filename) {
+        content = content.replace(/multirun_file\((.*)\)/g, function(command, relative_filename) {
             debug_count += 1;
             
-            return "multirun(gen_" + filename + ")\n" +
-                "goto(gen_" + filename + "_done_" + debug_count + ")\n" +
-                loadContents(filename) + "\n" +
+            var block = getFileBlock(getFullPath(relative_filename))
+            
+            return "multirun("+ block + ")\n" +
+                "goto(" + block + "_done_" + debug_count + ")\n" +
+                loadContents(relative_filename) + "\n" +
                 "stop()\n" +
-                "--gen_" + filename + "_done_" + debug_count + "--";
+                "--" + block + "_done_" + debug_count + "--";
         });
 
         function chooseFromDir(dir) {
