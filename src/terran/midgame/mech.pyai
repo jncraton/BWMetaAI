@@ -1,12 +1,5 @@
 use_midgame_vs(Terran, Protoss)
 
-define_max(4, Marine)
-
-defenseclear()
-defense_ground(Vulture)
-defense_ground(Siege Tank)
-defense_air(Goliath)
-
 build_finish(1, Barracks)
 build_start(1, Factory)
 build_finish(1, Factory)

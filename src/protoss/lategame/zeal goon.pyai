@@ -1,10 +1,5 @@
 use_lategame_vs(Terran, Protoss)
 
-defenseclear()
-defense_ground(Protoss Zealot)
-defense_ground(Protoss Dragoon)
-defense_air(Protoss Dragoon)
-
 train(8, Protoss Dragoon)
 train(8, Protoss Zealot)
 notowns_jump(Protoss Arbiter Tribunal, zeal_goon_skip_build_arbiter)

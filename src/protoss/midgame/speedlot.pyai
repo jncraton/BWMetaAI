@@ -1,9 +1,5 @@
 use_midgame_vs(Zerg)
 
-defense_ground(Protoss Zealot)
-defense_ground(Protoss Dragoon)
-defense_air(Protoss Dragoon)
-
 build_start(1, Protoss Gateway)
 build_start(2, Protoss Gateway)
 build_start(1, Protoss Cybernetics Core)
