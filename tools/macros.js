@@ -24,11 +24,13 @@ var parse = function parse(content) {
     var blocks = [];
     lines.forEach(function (line) {
         if (indent_level > 0) {
-            if (line.search('    ') > -1) {
-                line = line.replace('    ', '')
-            } else {
-                indent_level--;
-                content += '--' + blocks.pop() + '--\n'
+            for(var i = indent_level; i > 0; i--) {
+                if (line.search('    ') > -1) {
+                    line = line.replace('    ', '')
+                } else {
+                    indent_level--;
+                    content += '--' + blocks.pop() + '--\n'
+                }
             }
         }
         
