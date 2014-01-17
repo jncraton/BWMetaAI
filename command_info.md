@@ -404,7 +404,18 @@ The definition of this command is unknown. Supposedly attacks the enemy with %1 
 Jumps to a block when an unknown condition related to the town and attack manager are met. Also uses enemy unit ground/air strength values to compare with something.
 
 ## harass_factor (word)
-Something related to unit strengths in a region.
+Duplicates/triplicates the current attack group of the attack manager, depending on the <word> value and the nearest enemy player.
+
+This command does the following:
+
+- Find the owner of the closest non-allied unit near the current script's region.
+- Calculate the sum of strengths of all enemy units that are owned by the player found in step 1.
+- Compares the sum of enemy strength with the <word>value:
+    - If the total enemy strength is more than the double of the <word> value, duplicates the attack group of the current AI.
+    - If the total enemy strength is more than the triple of the <word> value, triplicates the attack group of the current AI.
+    - Otherwise, the command does nothing.
+
+The number of units in the duplicated/triplicated attack group cannot exceed the attack group maximum size (64 units).
 
 ## if_dif (byte) (byte) (block)
 Jumps to block %3 if value %2 is different than an unknown internal value (related to attacking?), using modifier %1(0 = greater than, 1 = less than).
@@ -974,16 +985,16 @@ Note: Base IDs are assigned to potential bases on game start. Player start locat
 === harass_factor ===
  harass_factor <word>
 
-Duplicates/triplicates the current attack group of the attack manager, depending on the <tt><word></tt> value and the nearest enemy player.
+Duplicates/triplicates the current attack group of the attack manager, depending on the <word> value and the nearest enemy player.
 
 This command does the following:
 
-# Find the owner of the closest non-allied unit near the current script's region [NEEDS VERIFICATION].
-# Calculate the sum of strengths of all enemy units that are owned by the player found in step 1.
-# Compares the sum of enemy strength with the <tt><word></tt> value:
-## If the total enemy strength is more than the double of the <tt><word></tt> value, duplicates the attack group of the current AI.
-## If the total enemy strength is more than the triple of the <tt><word></tt> value, triplicates the attack group of the current AI.
-## Otherwise, the command does nothing.
+- Find the owner of the closest non-allied unit near the current script's region.
+- Calculate the sum of strengths of all enemy units that are owned by the player found in step 1.
+- Compares the sum of enemy strength with the <word>value:
+    - If the total enemy strength is more than the double of the <word> value, duplicates the attack group of the current AI.
+    - If the total enemy strength is more than the triple of the <word> value, triplicates the attack group of the current AI.
+    - Otherwise, the command does nothing.
 
 The number of units in the duplicated/triplicated attack group cannot exceed the attack group maximum size (64 units).
 
