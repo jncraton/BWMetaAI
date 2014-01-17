@@ -1,3 +1,7 @@
-defense_ground(Zealot)
-defense_ground(Dragoon)
-defense_air(Dragoon)
+defenseclear()
+if owned(Gateway):
+    defense_ground(Zealot)
+if owned(Cybernetics Core):
+    defense_ground(Dragoon)
+    defense_air(Dragoon)
+repeat()

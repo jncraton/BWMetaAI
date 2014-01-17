@@ -1,4 +1,9 @@
-defense_ground(Terran Marine)
-defense_ground(Terran Vulture)
-defense_ground(Terran Siege Tank)
-defense_air(Terran Marine)
+defenseclear()
+if owned(Barracks):
+    defense_ground(Terran Marine)
+    defense_air(Terran Marine)
+if owned(Factory):
+    defense_ground(Terran Vulture)
+if owned(Machine Shop):
+    defense_ground(Terran Siege Tank)
+repeat()
