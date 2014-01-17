@@ -174,10 +174,11 @@ Return to the flow point of the call command.
 will jump to %2(block) if %1(byte) conditions exist.
 
 ### Rush scoring system:
-Protoss Air Score = Protoss Dragoons + Protoss Scouts
-Zerg Ground Score = Zerg Hydralisks + Zerg Sunken Colonies * 2
-Zerg Air Score = Zerg Hydralisks + Zerg Mutalisks + Zerg Spore Colonies * 2
-Terran Infantry Score = bunkers * 4 <= marines ? marines + bunkers * 4 : 2 * marines
+
+- Protoss Air Score = Protoss Dragoons + Protoss Scouts
+- Zerg Ground Score = Zerg Hydralisks + Zerg Sunken Colonies * 2
+- Zerg Air Score = Zerg Hydralisks + Zerg Mutalisks + Zerg Spore Colonies * 2
+- Terran Infantry Score = bunkers * 4 <= marines ? marines + bunkers * 4 : 2 * marines
 
 ### Rush conditions:
 
