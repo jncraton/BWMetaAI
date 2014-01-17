@@ -9,8 +9,7 @@ run: patch
 
 patch: mpq
 	@echo Overwriting existing patch_rt.mpq
-	@cp build/patch_rt.mpq $(sc_path)\patch_rt.mpq
-	@cp $(sc_path)\patch_rt_original.mpq $(sc_path)\patch_rt.mpq
+	@cp $(sc_path)/patch_rt_bwmetaai.mpq $(sc_path)\patch_rt.mpq
 
 mpq: combined_scripts $(sc_path)/patch_rt_original.mpq
 	@echo Creating MPQ
