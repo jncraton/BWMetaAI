@@ -15,7 +15,48 @@ var parse = function parse(content) {
         block_counter++;
         return 'gen_macro_' + block_counter;
     }
-
+    
+    var lines = content.split(/[\r\n]+/);
+    
+    content = '';
+    
+    var indent_level = 0;
+    var blocks = [];
+    lines.forEach(function (line) {
+        if (indent_level > 0) {
+            if (line.search('    ') > -1) {
+                line = line.replace('    ', '')
+            } else {
+                indent_level--;
+                content += '--' + blocks.pop() + '--\n'
+            }
+        }
+        
+        if (line.search('if ') > -1) {
+            line = line.replace(/if (.*)\((.*)\)/, function (match, function_name, params) {
+                return function_name + '_jump(' + params + ')'
+            })
+        }
+        
+        if (line.indexOf(':') > -1) {
+            var start_block = nextBlockName()
+            var end_block = nextBlockName()
+            blocks.push(end_block)
+            indent_level++;
+            line = line.replace(':', '')
+            line = line.replace(')', start_block + ')')
+            content += line + '\n'
+            content += 'goto(' + end_block + ')\n'
+            content += '--' + start_block + '--\n'
+        } else {
+            content += line + '\n'
+        }
+    })
+    
+    while (blocks.length > 0) {
+        content += '--' + blocks.pop() + '--\n'
+    }
+    
     content = content.replace(/wait_resources\((.*),(.*)\)/g, function(original, minerals, gas) {
         var loop_start = nextBlockName();
         var loop_escape = nextBlockName();
