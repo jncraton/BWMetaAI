@@ -1,15 +1,10 @@
-wait(75)
-race_jump(idle_builder_t,idle_builder_z,idle_builder_p)
+if enemyowns(hatchery):
+    do_morph(36, marine)
 
---idle_builder_t--
---idle_builder_p--
-resources_jump(200,200,idle_builder_tank)
-do_morph(12, Vulture)
-repeat()
---idle_builder_tank--
-do_morph(12, Tank)
-repeat()
+if enemyowns(command center):
+    do_morph(24, Vulture)
 
---idle_builder_z--
-do_morph(36, marine)
+if enemyowns(nexus):
+    do_morph(24, Vulture)
+
 repeat()
