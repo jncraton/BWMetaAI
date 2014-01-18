@@ -1,13 +1,17 @@
 include(defenseuse)
 
 if enemyownscloaked():
-    if owned(Protoss Cybernetics Core):
-        build_finish(1, Protoss Robotics Facility, 150)
-        build_finish(1, Protoss Observatory, 150)
-        train(1, Protoss Observer)
-    build_finish(1, Protoss Forge, 150)
-    build_start(1, Protoss Photon Cannon, 150)
-    build_start(2, Protoss Photon Cannon, 150)
+    if owned(Cybernetics Core):
+        if notowns(Robotics Facility):
+            build(1, Robotics Facility, 150)
+        if owned(Robotics Facility):
+            if notowns(Observatory):
+                build(1, Observatory, 150)
+            if owned(Observer):
+                do_morph(1, Observer)
+    if notowns(Forge):
+        build_finish(1, Forge, 150)
+    build(2, Cannon, 150)
 
 if enemyownsairtech():
     
