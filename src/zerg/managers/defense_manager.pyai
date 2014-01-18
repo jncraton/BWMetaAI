@@ -1,11 +1,8 @@
 include(defenseuse)
 
 if enemyownsairtech():
-    notowns_jump(Zerg Evolution Chamber, adapt_get_evo)
-    goto(adapt_has_evo)
-    --adapt_get_evo--
-    build_finish(1, Zerg Evolution Chamber, 150)
-    --adapt_has_evo--
+    if notowns(Zerg Evolution Chamber):
+        build_finish(1, Zerg Evolution Chamber, 150)
     build_start(1, Zerg Creep Colony, 150)
     build_start(2, Zerg Creep Colony, 150)
     build_finish(1, Zerg Creep Colony)
