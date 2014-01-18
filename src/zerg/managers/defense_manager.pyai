@@ -11,6 +11,5 @@ if enemyownsairtech():
     build_start(2, Zerg Spore Colony, 150)
 
 if enemyownscloaked():
-    
 
 repeat()
