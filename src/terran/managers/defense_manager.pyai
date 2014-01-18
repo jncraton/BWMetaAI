@@ -1,3 +1,5 @@
+include(defenseuse)
+
 if enemyownscloaked():
     build_finish(1, Academy, 80)
     build_start(1, Comsat Station, 80)

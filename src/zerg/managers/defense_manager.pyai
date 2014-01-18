@@ -1,3 +1,5 @@
+include(defenseuse)
+
 if enemyownsairtech():
     notowns_jump(Zerg Evolution Chamber, adapt_get_evo)
     goto(adapt_has_evo)
