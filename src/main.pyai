@@ -12,7 +12,7 @@ message(BWMetaAI version {commit})
 
 include(define_max)
 
-multirun_file(adapt)
+multirun_file(base_defense_manager)
 multirun_file(defensive_unit_manager)
 choose_from_dir(builds)
 
