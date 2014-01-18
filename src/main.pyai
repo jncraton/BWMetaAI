@@ -1,8 +1,13 @@
+# Entry point for a race's script
+
+# Start the main base thread
 start_town()
 
+# Build initial town hall and workers
 build_start(1, Town Hall, 200)
 build_start(5, Peon, 200)
 
+# Set initial states
 transports_off()
 farms_notiming()
 defaultbuild_off()
@@ -10,26 +15,50 @@ default_min(7)
 
 message(BWMetaAI version {commit})
 
+# Set maximums unit production
 include(define_max)
 
+# Start the base defense manager
+# This handles building defensive structures when needed
 multirun_file(base_defense_manager)
+
+# Start the defensive unit manager
+# This handles training and assigning units for defensive purposes
 multirun_file(defensive_unit_manager)
+
+# Begin a build order from the builds directory
 choose_from_dir(builds)
 
+# Let BW handle building farms on it's own during the midgame
 farms_timing()
+
+# Start the expansion timing manager
+# This handles expanding at appropriate times
 multirun_file(expansion_timing_manager)
+
+# Start the unit training manager
+# This ensures that there are units to train when the main script may 
+# be busy doing other things
 multirun_file(unit_training_manager)
 
+# Select a midgame strategy from midgame directory
 choose_from_dir(midgame)
 
+# Allow BW to manage transports from here on
 check_transports()
 
+# Start the tech manager
+# This ensures that all necessary tech and research is completed so that
+# the late game attacks don't have to worry about that
 multirun_file(tech_manager)
 
+# Choose and execute a late game attack from the lategame directory
+# These simply continue until the games ends
 --lategame_loop--
 choose_from_dir(lategame)
 goto(lategame_loop)
 
+# Tack on the expansion blocks to the bottom of the script
 include_block(expansion)
 include_block(fortified_expansion)
 include_block(fortified_fe)
