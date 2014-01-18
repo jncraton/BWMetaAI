@@ -10,8 +10,9 @@ if enemyownscloaked():
             if owned(Observer):
                 do_morph(1, Observer)
     if notowns(Forge):
-        build_finish(1, Forge, 150)
-    build(2, Cannon, 150)
+        build(1, Forge, 150)
+    if owned(Forge):
+        build(2, Cannon, 150)
 
 if enemyownsairtech():
     
