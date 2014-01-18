@@ -3,12 +3,8 @@ include(defenseuse)
 if enemyownsairtech():
     if notowns(Zerg Evolution Chamber):
         build_finish(1, Zerg Evolution Chamber, 150)
-    build_start(1, Zerg Creep Colony, 150)
-    build_start(2, Zerg Creep Colony, 150)
-    build_finish(1, Zerg Creep Colony)
-    build_start(1, Zerg Spore Colony, 150)
-    build_finish(2, Zerg Creep Colony)
-    build_start(2, Zerg Spore Colony, 150)
+    build(2, Zerg Creep Colony, 150)
+    build(2, Zerg Spore Colony, 150)
 
 if enemyownscloaked():
 
