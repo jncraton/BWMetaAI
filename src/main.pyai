@@ -24,7 +24,7 @@ choose_from_dir(midgame)
 
 check_transports()
 
-multirun_file(all_tech)
+multirun_file(tech_manager)
 
 --lategame_loop--
 choose_from_dir(lategame)
