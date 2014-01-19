@@ -15,7 +15,7 @@ default_min(7)
 
 message(BWMetaAI version {commit})
 
-# Set maximums unit production
+# Set maximums for unit production
 include(define_max)
 
 # Start the defense manager
