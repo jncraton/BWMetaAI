@@ -87,6 +87,8 @@ function Race(name) {
             }
             
             append('--gen_' + dir + '--')
+            append('wait(50)')
+            append('--gen_jump_loop' + dir + '--')
             
             var files = [];
                 
@@ -105,7 +107,7 @@ function Race(name) {
                     }
                 }
 
-                append('goto(gen_' + dir + ')');
+                append('goto(gen_jump_loop' + dir + ')');
                 
                 for(var i = 0; i < files.length; i += 1) {
                     append(loadContents(name + '/' + dir + '/' + files[i]));
