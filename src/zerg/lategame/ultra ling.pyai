@@ -4,7 +4,4 @@ attack_train(36, Zerg Zergling)
 if owned(Ultralisk cavern):
     attack_train(12, Zerg Ultralisk)
 
-if random(160,):
-    expand(99, fortified_expansion)
-
 attack_simple()

@@ -7,7 +7,4 @@ if owned(Protoss Templar Archives):
     attack_train(1, Protoss Dark Templar)
     attack_train(2, Protoss Archon)
 
-if random(96,):
-    expand(99, expansion)
-
 attack_simple()

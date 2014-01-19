@@ -12,8 +12,6 @@ attack_train(1, Terran Science Vessel)
 attack_train(41, Terran Marine)
 attack_train(46, Terran Marine)
 --bio_skip_vessels--
-random_jump(160, bio_loop_attack)
-expand(99, expansion)
 
 --bio_loop_attack--
 attack_simple()

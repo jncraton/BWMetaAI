@@ -12,8 +12,6 @@ train(16, Protoss Dragoon)
 train(16, Protoss Zealot)
 train(24, Protoss Dragoon)
 train(24, Protoss Zealot)
-random_jump(160, zeal_goon_loop_attack)
-expand(99, expansion)
 
 --zeal_goon_loop_attack--
 attack_do()

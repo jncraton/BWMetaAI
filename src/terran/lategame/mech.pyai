@@ -21,8 +21,6 @@ attack_train(18, Siege Tank)
 attack_train(18, Vulture)
 
 --endgame_mech_perhaps_expand--
-random_jump(160, mech_loop_attack)
-expand(99, expansion)
 
 --mech_loop_attack--
 attack_prepare()
