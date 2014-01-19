@@ -2,10 +2,15 @@ wait_until(16)
 build(1, Pylon, 80)
 build(1, Gateway, 80)
 build(2, Gateway, 80)
-wait_until(25)
-player_need(1, gateway)
-player_need(1, core)
-player_need(2, forge)
-player_need(1, citadel)
-player_need(1, archives)
+wait_until(40)
+if notowns(gateway):
+    build(1, gateway, 80)
+if notowns(core):
+    build(1, core, 80)
+if notowns(forge):
+    build(1, forge, 80)
+if notowns(citadel):
+    build(1, citadel, 80)
+if notowns(archives):
+    build(1, archives, 80)
 repeat()
