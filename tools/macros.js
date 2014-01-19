@@ -216,6 +216,26 @@ var parse = function parse(content) {
                '--' + skip_build + '--\n'
     });
 
+    content = content.replace(/defense_ground_train\((.*)\)/g, function(original, unit) {
+        var do_build = nextBlockName()
+        var skip_build = nextBlockName()
+        
+        return 'defenseuse_gg(1, ' + unit + ')\n' +
+               'defenseuse_ga(1, ' + unit + ')\n' +
+               'defensebuild_gg(1, ' + unit + ')\n' +
+               'defensebuild_ga(1, ' + unit + ')\n';
+    });
+
+    content = content.replace(/defense_air_train\((.*)\)/g, function(original, unit) {
+        var do_build = nextBlockName()
+        var skip_build = nextBlockName()
+        
+        return 'defenseuse_ag(1, ' + unit + ')\n' +
+               'defenseuse_aa(1, ' + unit + ')\n' +
+               'defensebuild_ag(1, ' + unit + ')\n' +
+               'defensebuild_aa(1, ' + unit + ')\n'
+        });
+
     return content;
 }
 
