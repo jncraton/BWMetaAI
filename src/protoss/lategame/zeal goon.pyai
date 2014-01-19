@@ -2,29 +2,17 @@ use_lategame_vs(Terran, Protoss)
 
 train(8, Protoss Dragoon)
 train(8, Protoss Zealot)
-notowns_jump(Protoss Arbiter Tribunal, zeal_goon_skip_build_arbiter)
-train(2, Protoss Arbiter)
---zeal_goon_skip_build_arbiter--
-notowns_jump(Protoss Templar Archives, zeal_goon_skip_build_templar)
-train(5, Protoss High Templar)
---zeal_goon_skip_build_templar--
+
+if owned(stargate):
+    if owned(arbiter tribunal):
+        attack_train(2, Protoss Arbiter)
+
+if owned(Templar Archives):
+    attack_train(5, Protoss High Templar)
+
 train(16, Protoss Dragoon)
 train(16, Protoss Zealot)
-train(24, Protoss Dragoon)
-train(24, Protoss Zealot)
+attack_train(24, Protoss Dragoon)
+attack_train(24, Protoss Zealot)
 
---zeal_goon_loop_attack--
-attack_do()
-attack_clear()
-notowns_jump(Protoss Arbiter, zeal_goon_skip_add_arbiter)
-attack_add(2, Protoss Arbiter)
---zeal_goon_skip_add_arbiter--
-notowns_jump(Protoss High Templar, zeal_goon_skip_add_templar)
-attack_add(5, Protoss High Templar)
---zeal_goon_skip_add_templar--
-attack_add(24, Protoss Zealot)
-attack_add(24, Protoss Dragoon)
-attack_prepare()
-wait(300)
-
-attack_do()
+attack_simple()
