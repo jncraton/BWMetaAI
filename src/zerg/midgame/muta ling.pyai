@@ -28,4 +28,4 @@ if random(96):
 
 attack_simple()
 
-random_jump(128, muta_ling_loop)
+random_jump(64, muta_ling_loop)
