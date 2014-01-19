@@ -17,8 +17,7 @@ upgrade(1, Leg Enhancements, 30)
 build_start(6, Protoss Gateway)
 attack_train(16, Protoss Zealot)
 
-random_jump(160, speedlot_midgame_attack)
-expand(99, expansion)
+if random(96):
+    expand(99, expansion)
 
---speedlot_midgame_attack--
 attack_simple()
