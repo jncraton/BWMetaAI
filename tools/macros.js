@@ -50,7 +50,7 @@ var parse = function parse(content) {
             blocks.push(end_block)
             indent_level++;
             line = line.replace(':', '')
-            if (line.search(/[a-zA-Z]\)/) > -1) {
+            if (line.search(/[a-zA-Z0-9]\)/) > -1) {
                 line = line.replace(')', ', ' + start_block + ')')
             } else {
                 line = line.replace(')', start_block + ')')
