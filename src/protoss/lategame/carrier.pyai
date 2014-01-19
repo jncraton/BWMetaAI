@@ -1,0 +1,15 @@
+use_lategame_vs(Terran, Protoss)
+
+build_start(1, Stargate)
+build_start(2, Stargate)
+build_start(3, Stargate)
+build_start(4, Stargate)
+build_finish(1, Stargate)
+build_start(1, Fleet Beacon)
+
+if owned(Arbiter Tribunal):
+    attack_train(2, Arbiter)
+
+attack_train(12, Carrier)
+
+attack_simple()
