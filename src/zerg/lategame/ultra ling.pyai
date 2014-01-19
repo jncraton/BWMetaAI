@@ -1,13 +1,10 @@
 use_lategame_vs(Zerg, Terran, Protoss)
 
-train(4, Zerg Zergling)
-
 attack_train(36, Zerg Zergling)
-notowns_jump(Zerg Ultralisk Cavern, ultra_ling_skip_ultra)
-attack_train(12, Zerg Ultralisk)
---ultra_ling_skip_ultra--
-random_jump(160, ultra_ling_loop_attack)
-expand(99, fortified_expansion)
+if owned(Ultralisk cavern):
+    attack_train(12, Zerg Ultralisk)
 
---ultra_ling_loop_attack--
+if random(160,):
+    expand(99, fortified_expansion)
+
 attack_simple()
