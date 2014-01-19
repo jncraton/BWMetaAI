@@ -2,16 +2,8 @@ use_lategame_vs(Zerg)
 
 attack_train(36, Terran Marine)
 attack_train(10, Terran Medic)
-notowns_jump(Terran Science Facility, bio_skip_vessels)
-build_finish(1, Terran Factory)
-build_finish(1, Terran Starport)
-build_finish(1, Terran Control Tower)
-build_finish(1, Terran Science Facility)
-do_morph(12, Science Vessel)
-attack_train(1, Terran Science Vessel)
-attack_train(41, Terran Marine)
-attack_train(46, Terran Marine)
---bio_skip_vessels--
+if owned(science facility):
+    if owned(control tower):
+        attack_train(1, Terran Science Vessel)
 
---bio_loop_attack--
 attack_simple()
