@@ -87,9 +87,8 @@ function Race(name) {
             }
             
             append('--gen_' + dir + '--')
-            append('wait(10)')
             append('--gen_jump_loop' + dir + '--')
-            append('wait(10)')
+            append('wait(1)')
             
             var files = [];
                 
