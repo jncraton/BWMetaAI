@@ -1,5 +1,8 @@
 if enemyowns(hatchery):
     do_morph(36, marine)
+    if owned(science facility):
+        if owned(control tower):
+            do_morph(8, vessel)
 
 if enemyowns(command center):
     do_morph(24, Vulture)
