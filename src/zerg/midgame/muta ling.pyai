@@ -20,18 +20,12 @@ wait_build(3, Zerg Hatchery)
 stop()
 
 --muta_ling_loop--
-train(36, Zerg Zergling)
-train(12, Zerg Mutalisk)
-random_jump(160, muta_ling_loop_attack)
-expand(99, fortified_expansion)
+attack_train(36, Zerg Zergling)
+attack_train(12, Zerg Mutalisk)
 
---muta_ling_loop_attack--
-attack_do()
-attack_clear()
-attack_add(36, Zerg Zergling)
-attack_add(12, Zerg Mutalisk)
-attack_prepare()
-wait(300)
+if random(96):
+    expand(99, fortified_expansion)
 
-attack_do()
+attack_simple()
+
 random_jump(128, muta_ling_loop)
