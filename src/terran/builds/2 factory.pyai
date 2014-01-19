@@ -16,6 +16,7 @@ build_start(19, Terran SCV)
 train(1, Terran Siege Tank)
 train(1, Terran Vulture)
 build_start(3, Terran Supply Depot)
+tech(Tank Siege Mode, 150)
 train(2, Terran Vulture)
 train(2, Terran Siege Tank)
 train(3, Terran Vulture)
@@ -31,5 +32,3 @@ farms_timing()
 build_start(20, Terran SCV)
 expand(1, expansion)
 build_start(22, Terran SCV)
-
-
