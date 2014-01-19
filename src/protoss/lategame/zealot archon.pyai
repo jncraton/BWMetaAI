@@ -1,20 +1,13 @@
 use_lategame_vs(Zerg)
 
-if_owned(Protoss Templar Archives, zealot_archon_build_templar)
-attack_train(20, Protoss Zealot)
-attack_train(6, Protoss Dragoon)
-goto(zealot_archon_attack)
-
---zealot_archon_build_templar--
 attack_train(30, Protoss Zealot)
 attack_train(8, Protoss Dragoon)
-attack_train(3, Protoss High Templar)
-attack_train(1, Protoss Dark Templar)
-attack_train(2, Protoss Archon)
---zealot_archon_attack--
+if owned(Protoss Templar Archives):
+    attack_train(3, Protoss High Templar)
+    attack_train(1, Protoss Dark Templar)
+    attack_train(2, Protoss Archon)
 
-random_jump(160, zealot_archon_loop_attack)
-expand(99, expansion)
+if random(96,):
+    expand(99, expansion)
 
---zealot_archon_loop_attack--
 attack_simple()
