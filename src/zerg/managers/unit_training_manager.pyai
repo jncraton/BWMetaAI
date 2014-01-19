@@ -1,3 +1,7 @@
-wait_resources(400,0)
-do_morph(36, zergling)
+if owned(spawning pool):
+    do_morph(36, zergling)
+if owned(hydralisk den):
+    do_morph(6, hydralisk)
+if owned(ultralisk cavern):
+    do_morph(2, ultralisk)
 repeat()
