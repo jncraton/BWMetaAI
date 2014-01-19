@@ -74,7 +74,6 @@ var parse = function parse(content) {
         return 'multirun(' + start + ')\n' + 
             'goto(' + escape + ')\n' +
             '--' + start + '--\n' +
-            'attack_clear()\n' +
             'attack_prepare()\n' +
             'attack_do()\n' +
             'attack_clear()\n' +
@@ -83,8 +82,7 @@ var parse = function parse(content) {
     });
     
     content = content.replace(/attack_simple\(\)/g, function(original) {
-        return 'attack_clear()\n' +
-                'attack_prepare()\n' +
+        return 'attack_prepare()\n' +
                 'wait(75)\n' +
                 'attack_do()\n' +
                 'attack_clear()'
