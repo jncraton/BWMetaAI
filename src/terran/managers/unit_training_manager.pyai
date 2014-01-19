@@ -1,8 +1,8 @@
 if enemyowns(hatchery):
     if owned(barracks):
         do_morph(36, marine)
-    if owned(academy):
-        do_morph(6, medic)
+        if owned(academy):
+            do_morph(6, medic)
     if owned(science facility):
         if owned(control tower):
             do_morph(8, vessel)
