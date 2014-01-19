@@ -1,9 +1,3 @@
-wait(10)
-race_jump(idle_builder_t,idle_builder_z,idle_builder_p)
-
---idle_builder_t--
---idle_builder_p--
---idle_builder_z--
 wait_resources(400,0)
 do_morph(36, zergling)
 repeat()
