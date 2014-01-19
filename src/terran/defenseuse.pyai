@@ -8,4 +8,6 @@ if owned(Factory):
 if enemyowns(hatchery):
     if owned(Barracks):
         defense_ground(Terran Marine)
-        defense_air(Terran Marine)
+if enemyownsairtech():
+    if owned(rax):
+        defense_air_train(marine)
