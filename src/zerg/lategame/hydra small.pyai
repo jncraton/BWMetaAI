@@ -1,0 +1,4 @@
+use_lategame_vs(Zerg, Terran, Protoss)
+
+attack_train(18, Hydtalisk)
+attack_simple()
