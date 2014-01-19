@@ -1,0 +1,42 @@
+use_build_vs(Zerg, Terran)
+build_weight(.25)
+
+9 Depot
+12 Refinery
+12 Rax
+16 Factory
+16 Supply Depot
+
+build_start(18, scv)
+train(1, marine)
+train(1, vulture)
+build_start(1, starport)
+build_start(2, starport)
+build_start(19, scv)
+train(2, marine)
+train(2, vulture)
+build_start(3, depot)
+build_start(4, depot)
+build_start(20, scv)
+train(2, wraith)
+build_start(5, depot)
+train(3, marine)
+train(3, vulture)
+train(4, wraith)
+build_start(6, depot)
+train(4, marine)
+train(4, vulture)
+attack_train(6, wraith)
+train(5, marine)
+train(5, vulture)
+attack_simple()
+
+build_start(1, control tower)
+train(1, wraith)
+build_start(7, depot)
+build_finish(1, control tower)
+tech(Cloaking Field, 80)
+attack_train(7, wraith)
+expand(1, expansion)
+attack_simple()
+
