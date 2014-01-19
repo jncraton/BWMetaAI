@@ -1,0 +1,14 @@
+use_lategame_vs(Terran, Zerg, Protoss)
+
+if owned(science facility):
+    build_start(1, physics lab)
+    build_start(1, Starport)
+    build_start(2, Starport)
+    build_start(3, Starport)
+    build_start(4, Starport)
+    wait_build(4, Starport)
+    build_start(4, control tower)
+    wait_build(4, control tower)
+    wait_build(1, physics lab)
+    attack_train(12, battlecruiser)
+    attack_simple()
