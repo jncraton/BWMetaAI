@@ -15,7 +15,7 @@ upgrade(1, Protoss Ground Weapons, 30)
 build_finish(1, Protoss Citadel of Adun)
 upgrade(1, Leg Enhancements, 30)
 build_start(6, Protoss Gateway)
-attack_train(16, Protoss Zealot)
+attack_train(12, Protoss Zealot)
 
 if random(96):
     expand(99, expansion)
