@@ -2,7 +2,7 @@ use_midgame_vs(Protoss)
 
 train(4, Zerg Zergling)
 multirun(hyrda_tech)
-goto(hydra_loop)
+goto(hyrda_tech_done)
 
 --hyrda_tech--
 build(1, Zerg Hydralisk Den, 80)
@@ -19,18 +19,11 @@ wait(2000)
 upgrade(1, Grooved Spines, 80)
 stop()
 
---hydra_loop--
+--hyrda_tech_done--
 build_finish(1, Zerg Hydralisk Den)
-train(36, Zerg Hydralisk)
-random_jump(160, hyrda_loop_attack)
-expand(99, expansion)
+attack_train(36, Zerg Hydralisk)
 
---hyrda_loop_attack--
-attack_do()
-attack_clear()
-attack_add(36, Zerg Hydralisk)
-attack_prepare()
-wait(300)
+if random(96):
+    expand(99, expansion)
 
-attack_do()
-random_jump(128, hydra_loop)
+attack_simple()
