@@ -4,7 +4,6 @@ use_build_vs(Zerg)
 13 Terran Barracks
 14 Terran Supply Depot
 15 Terran Refinery
-attack_clear()
 attack_train(1, Terran Marine)
 build_start(17, Terran SCV)
 train(3, Terran Marine)
@@ -22,8 +21,5 @@ train(11, Terran Marine)
 build_start(22, Terran SCV)
 attack_train(3, Terran Medic)
 attack_train(11, Terran Marine)
-attack_prepare()
-wait(50)
-attack_do()
 expand(1, expansion)
-
+attack_simple()

@@ -33,6 +33,4 @@ random_jump(160, midgame_mech_loop_attack)
 expand(99, expansion)
 
 --midgame_mech_loop_attack--
-attack_prepare()
-wait(75)
-attack_do()
+attack_simple()

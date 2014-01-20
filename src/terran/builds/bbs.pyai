@@ -4,10 +4,8 @@ build_weight(.25)
 9 Terran Barracks
 9 Terran Supply Depot
 build_start(10, Terran SCV)
-attack_clear()
-attack_add(7, Terran Marine)
-attack_do()
-attack_clear()
+attack_train(7, Terran Marine)
+attack_async()
 build_start(2, Terran Supply Depot)
 expand(1, expansion)
 build_start(11, Terran SCV)
