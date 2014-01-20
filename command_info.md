@@ -41,14 +41,22 @@ Build %2(building) until it commands %1(byte) of them, at priority %3(byte). The
 ## defensebuild_aa (byte) (military)
 Build %1(byte) %2(military) to defend against enemy attacking air units.
 
+- aa: List of unit types to use for defense when enemy air units are attacking the AI's air units.
+
 ## defensebuild_ag (byte) (military)
 Build %1(byte) %2(military) to defend against enemy attacking air units.
+
+- ag: List of unit types to use for defense when enemy air units are attacking the AI's ground units.
 
 ## defensebuild_ga (byte) (military)
 Build %1(byte) %2(military) to defend against enemy attacking ground units.
 
+- ga: List of unit types to use for defense when enemy ground units are attacking the AI's air units.
+
 ## defensebuild_gg (byte) (military)
 Build %1(byte) %2(military) to defend against enemy attacking ground units.
+
+- gg: List of unit types to use for defense when enemy ground units are attacking the AI's ground units.
 
 ## defenseclear_aa
 Clear defense against enemy attacking air units.
