@@ -1,30 +1,14 @@
 use_lategame_vs(Terran, Protoss)
 
---mech_loop_core--
-attack_do()
-attack_clear()
+train(6, Siege Tank)
 
-enemyownsairtech_jump(mech_loop_aa)
-attack_train(12, Siege Tank)
-goto(mech_loop_finish)
+if enemyownsairtech():
+    build_finish(1, Armory)
+    attack_train(8, Goliath)
+    upgrade(1, Charon Booster, 80)
 
---mech_loop_aa--
-build_finish(1, Armory)
-attack_train(8, Goliath)
-upgrade(1, Charon Booster, 80)
-attack_train(8, Siege Tank)
-
---mech_loop_finish--
-attack_train(15, Vulture)
-random_jump(128, endgame_mech_perhaps_expand)
+train(8, Vulture)
 attack_train(18, Siege Tank)
-attack_train(18, Vulture)
+attack_train(15, Vulture)
 
---endgame_mech_perhaps_expand--
-
---mech_loop_attack--
-attack_prepare()
-wait(300)
-
-attack_do()
-goto(mech_loop_core)
+attack_simple()
