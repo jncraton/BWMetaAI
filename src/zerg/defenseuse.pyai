@@ -3,12 +3,13 @@ if owned(pool):
     defense_ground(Zergling)
 if owned(den):
     defense_ground(Hydralisk)
-    defense_air(Hydralisk)
+    if enemyownsairtech():
+        defense_air_train(Hydralisk)
 if owned(spire):
     defense_ground(Mutalisk)
     defense_air(Mutalisk)
     if enemyownsairtech():
-        defense_air(Scourge)
+        defense_air_train(Scourge)
 if owned(lurker):
     defense_ground(Lurker)
 if owned(ultralisk cavern):
