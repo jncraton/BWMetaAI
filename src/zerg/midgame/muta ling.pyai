@@ -2,7 +2,7 @@ use_midgame_vs(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
 multirun(muta_ling_tech)
-goto(muta_ling_loop)
+goto(muta_ling_tech_done)
 
 --muta_ling_tech--
 build(2, Zerg Hatchery, 80)
@@ -16,10 +16,9 @@ wait_buildstart(1, Zerg Spire)
 upgrade(1, Metabolic Boost, 80)
 wait(2000)
 build(3, Zerg Hatchery, 80)
-wait_build(3, Zerg Hatchery)
 stop()
 
---muta_ling_loop--
+--muta_ling_tech_done--
 attack_train(36, Zerg Zergling)
 attack_train(12, Zerg Mutalisk)
 
@@ -27,5 +26,3 @@ if random(96):
     expand(99, fortified_expansion)
 
 attack_simple()
-
-random_jump(64, muta_ling_loop)
