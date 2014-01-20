@@ -1,6 +1,4 @@
 wait(3000)
-random_jump(100, expand_loop_expand)
-repeat()
---expand_loop_expand--
-expand(99, expansion)
+if random(100):
+    expand(99, expansion)
 repeat()
