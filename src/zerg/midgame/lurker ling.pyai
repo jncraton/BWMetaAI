@@ -7,7 +7,7 @@ goto(lurker_ling_tech_done)
 --lurker_ling_tech--
 build_start(2, Hatchery)
 build_start(1, Lair)
-build_finish(1, Hydra Den)
+build_finish(1, Hydralisk Den)
 build_start(3, Hatchery)
 wait_build(1, Zerg Lair)
 tech(Lurker Aspect, 80)
