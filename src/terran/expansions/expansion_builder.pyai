@@ -8,16 +8,16 @@ if notowns(rax):
 if owned(rax):
     if notowns(factory):
         build(1, factory, 80)
-if owned(factory):
-    if notowns(armory):
-        build(1, armory, 80)
-    if notowns(machine shop):
-        build(1, machine shop, 80)
-    if notowns(starport):
-        build(1, starport, 80)
-if owned(starport):
-    if notowns(science facility):
-        build(1, science facility, 80)
-    if notowns(control tower):
-        build(1, control tower, 80)
+    if owned(factory):
+        if notowns(armory):
+            build(1, armory, 80)
+        if notowns(machine shop):
+            build(1, machine shop, 80)
+        if notowns(starport):
+            build(1, starport, 80)
+        if owned(starport):
+            if notowns(science facility):
+                build(1, science facility, 80)
+            if notowns(control tower):
+                build(1, control tower, 80)
 repeat()
