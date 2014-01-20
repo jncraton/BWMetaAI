@@ -1,7 +1,7 @@
 use_lategame_vs(Zerg, Terran, Protoss)
 
-if owned(hydralisk den):
-    if owned(lair):
+if owned(hive):
+    if owned(hydralisk den):
         if owned(defiler mound):
             attack_train(3, defiler)
         attack_train(24, Ling)
