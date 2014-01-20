@@ -41,9 +41,6 @@ multirun_file(unit_training_manager)
 # Select a midgame strategy from midgame directory
 choose_from_dir(midgame)
 
-# Allow BW to manage transports from here on
-check_transports()
-
 # Start the tech manager
 # This ensures that all necessary tech and research is completed so that
 # the late game attacks don't have to worry about that
