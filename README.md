@@ -87,6 +87,25 @@ New AI commands/macros:
 
 This includes an AI preprocessor which implements some new commands that you can use if you want to add your own syles or build orders.
 
+### If blocks
+
+Many _jump commands can be accessed using a Pythonic if structure. Here's how you would normally create a block that executes 50% of the time:
+
+    random_jump(128, maybe)
+    goto(always)
+    --maybe--
+    # sometimes do this
+    --always--
+    # always do this
+    
+If blocks allow you to write the same code like this:
+
+    if random(128):
+        # sometime do this
+    # always do this
+    
+Else is not yet supported.
+
 ### message(string)
 
 Displays the string as a message from the AI. This does not require a block to jump to like debug() does.
