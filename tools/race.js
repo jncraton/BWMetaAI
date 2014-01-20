@@ -102,7 +102,7 @@ function Race(name) {
                     if(files[i][0] == '_') {
                         append("goto(gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
                     } else {
-                        append("random_jump(5, " + "gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+                        append("random_jump(20, " + "gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
                     }
                 }
 
