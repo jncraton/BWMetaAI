@@ -1,4 +1,6 @@
 use_lategame_vs(Zerg, Terran, Protoss)
 
-attack_train(24, ling)
-attack_simple()
+if owned(hatchery):
+    if owned(pool):
+        attack_train(24, ling)
+        attack_simple()
