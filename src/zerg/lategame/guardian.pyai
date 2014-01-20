@@ -2,7 +2,7 @@ use_lategame_vs(Zerg, Terran, Protoss)
 
 if owned(spire):
     if owned(hive):
-        build(1, greater spire)
+        build(1, greater spire, 80)
         attack_train(12, mutalisk)
         attack_train(6, guardian)
         attack_simple()
