@@ -89,7 +89,7 @@ This includes an AI preprocessor which implements some new commands that you can
 
 ### If blocks
 
-Many _jump commands can be accessed using a Pythonic if structure. Here's how you would normally create a block that executes 50% of the time:
+Many _jump commands can be accessed using a new Pythonic `if` structure. Here's how you would normally create a block that executes 50% of the time:
 
     random_jump(128, maybe)
     goto(always)
