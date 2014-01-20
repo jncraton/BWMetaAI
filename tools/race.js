@@ -183,7 +183,8 @@ function Race(name) {
                 message = debug('Using ' + styleName + ' lategame');
             }
 
-            return race_skip(races, 'gen_lategame') + message;
+            return 'wait(50)\n' +  
+                race_skip(races, 'gen_lategame') + message;
         });
 
         content = buildConverter.parse(content);
