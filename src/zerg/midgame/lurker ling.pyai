@@ -2,7 +2,7 @@ use_midgame_vs(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
 multirun(lurker_ling_tech)
-goto(lurker_ling_loop)
+goto(lurker_ling_tech_done)
 
 --lurker_ling_tech--
 build(2, Zerg Hatchery, 80)
@@ -17,20 +17,15 @@ wait_build(1, Zerg Lair)
 tech(Lurker Aspect, 80)
 wait(2000)
 stop()
+--lurker_ling_tech_done--
 
---lurker_ling_loop--
-train(36, Zerg Zergling)
-train(12, Zerg Lurker)
-random_jump(160, lurker_ling_loop_attack)
-expand(99, expansion)
+train(12, Zergling)
+train(6, Hydralisk)
 
---lurker_ling_loop_attack--
-attack_do()
-attack_clear()
-attack_add(36, Zerg Zergling)
-attack_add(12, Zerg Lurker)
-attack_prepare()
-wait(300)
+attack_train(24, Zergling)
+attack_train(8, Lurker)
 
-attack_do()
-random_jump(128, lurker_ling_loop)
+if random(96):
+    expand(99, expansion)
+
+attack_simple()
