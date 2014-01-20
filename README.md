@@ -3,19 +3,12 @@ BWMetaAI
 
 A Brood War AI designed to follow a metagame closer to modern 1v1 than the original Brood War AI.
 
-Running from source
---------------------
+Purpose
+--------
 
-Prerequisites: node.js, Python 2.7 32 bit on Windows 
+There are a lot of good BW AI mods already available (http://broodwarai.com/wiki/index.php?title=AI_script_mods). This project seeks to create a non-cheating AI that provides a unique experience with each game. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting important.
 
-Windows is required for mpq manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
-
-Build and patch SC
-===============
-
-1. Edit the makefile to use your SC path
-2. Edit the makefile to use the absolute path to your prefered SC launcher. This can simply be starcraft.exe if no launcher is used
-3. Run `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory.
+It includes a number of build order that have been relatively popular in high level play.
 
 Build Orders
 ------------
@@ -74,6 +67,20 @@ Late game
 * Zealot Dragoon Arbiter
 * Zealot Archon
 * Carriers
+
+Running from source
+--------------------
+
+Prerequisites: node.js, Python 2.7 32 bit on Windows 
+
+Windows is required for mpq manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
+
+Build and patch SC
+===============
+
+1. Edit the makefile to use your SC path
+2. Edit the makefile to use the absolute path to your prefered SC launcher. This can simply be starcraft.exe if no launcher is used
+3. Run `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory.
 
 New AI commands/macros:
 -----------------------
