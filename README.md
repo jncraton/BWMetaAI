@@ -30,6 +30,7 @@ Build Orders
 * 14 CC
 * 2 Factory Push
 * +1 5 Rax
+* 2 port wraith
 
 ### Zerg
  
@@ -59,18 +60,20 @@ Late game
 
 * SK
 * Mech
+* Battlecruisers
 
 ### Zerg
 
 * Muta-ling
-* Lurker-ling
-* Ultra-ling
+* Lurker-ling-defiler
+* Ultra-ling-defiler
 * Hydra
 
 ### Protoss
 
 * Zealot Dragoon Arbiter
 * Zealot Archon
+* Carriers
 
 New AI commands/macros:
 -----------------------
