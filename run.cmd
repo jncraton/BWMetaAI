@@ -1,0 +1,2 @@
+@make run
+@pause
