@@ -24,4 +24,12 @@ if owned(hatchery):
         build(2, Zerg Spore Colony, 150)
     if enemyownscloaked():
 
+if time(16):
+    if owned(pool):
+        if owned(evo chamber):
+            creep(3)
+            build(6, creep colony, 80)
+            build(4, sunken colony, 80)
+            build(2, spore colony, 80)
+
 repeat()
