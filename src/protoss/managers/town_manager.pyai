@@ -31,4 +31,5 @@ if time(16):
     build(1, Pylon, 80)
     build(1, Gateway, 80)
 
+wait(1000)
 repeat()

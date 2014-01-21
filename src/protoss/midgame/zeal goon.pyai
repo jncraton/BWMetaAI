@@ -33,6 +33,4 @@ random_jump(160, zeal_goon_midgame_attack)
 expand(99, expansion)
 
 --zeal_goon_midgame_attack--
-attack_prepare()
-wait(300)
-attack_do()
+attack_simple()
