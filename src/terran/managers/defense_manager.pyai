@@ -1,4 +1,16 @@
-include(defenseuse)
+defenseclear()
+if owned(Factory):
+    if owned(Machine Shop):
+        defense_ground(Terran Siege Tank)
+    if enemyowns(marine):
+        defensebuild_gg(1, Vulture)
+    defense_ground(Terran Vulture)
+if enemyowns(hatchery):
+    if owned(Barracks):
+        defense_ground(Terran Marine)
+if enemyownsairtech():
+    if owned(rax):
+        defense_air_train(marine)
 
 if enemyownscloaked():
     if notowns(academy):
@@ -17,5 +29,28 @@ if enemyownsairtech():
         build(3, missile turret, 150)
         wait(200)
         build(4, missile turret, 150)
+
+if time(16):
+    build(1, Barracks, 80)
+    build(1, Factory, 80)
+    build(1, Machine Shop, 80)
+if time(40):
+    if notowns(rax):
+        build(1, rax, 80)
+    if owned(rax):
+        if notowns(factory):
+            build(1, factory, 80)
+        if owned(factory):
+            if notowns(armory):
+                build(1, armory, 80)
+            if notowns(machine shop):
+                build(1, machine shop, 80)
+            if notowns(starport):
+                build(1, starport, 80)
+            if owned(starport):
+                if notowns(science facility):
+                    build(1, science facility, 80)
+                if notowns(control tower):
+                    build(1, control tower, 80)
 
 repeat()

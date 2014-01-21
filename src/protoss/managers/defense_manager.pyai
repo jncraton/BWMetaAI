@@ -1,4 +1,9 @@
-include(defenseuse)
+defenseclear()
+if owned(Gateway):
+    defense_ground(Zealot)
+if owned(Cybernetics Core):
+    defense_ground(Dragoon)
+    defense_air(Dragoon)
 
 if enemyownscloaked():
     if owned(Cybernetics Core):

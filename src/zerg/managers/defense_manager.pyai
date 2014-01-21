@@ -1,4 +1,20 @@
-include(defenseuse)
+defenseclear()
+if owned(hatchery):
+    if owned(pool):
+        defense_ground(Zergling)
+    if owned(den):
+        defense_ground(Hydralisk)
+        if enemyownsairtech():
+            defense_air_train(Hydralisk)
+    if owned(spire):
+        defense_ground(Mutalisk)
+        if enemyownsairtech():
+            defense_air_train(Mutalisk)
+    if owned(hydralisk den):
+        if owned(lurker):
+            defense_ground(Lurker)
+    if owned(ultralisk cavern):
+        defense_ground(Ultralisk)
 
 if owned(hatchery):
     if enemyownsairtech():
