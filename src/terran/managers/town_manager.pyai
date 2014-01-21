@@ -17,6 +17,10 @@ if enemyownscloaked():
         build(1, Academy, 150)
     if owned(academy):
         build(1, Comsat Station, 150)
+    if notowns(engineering bay):
+        build(1, engineering bay, 150)
+    if owned(engineering bay):
+        build(1, missile turret, 150)
 
 if enemyownsairtech():
     if notowns(engineering bay):
