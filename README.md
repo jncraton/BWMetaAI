@@ -86,7 +86,7 @@ Build and patch SC
 
 1. Edit the makefile to use your SC path
 2. Edit the makefile to use the absolute path to your prefered SC launcher. This can simply be starcraft.exe if no launcher is used
-3. Run `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory.
+3. Execute run.cmd to compile the AIs, build an MPQ, and replace the default in your SC directory. Alternatively, you can call `make run` directly from the command line.
 
 New AI commands/macros:
 -----------------------
