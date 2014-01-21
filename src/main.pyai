@@ -21,7 +21,7 @@ include(define_max)
 # Start the defense manager
 # This handles building defensive structures when needed and training
 # units for defensive purposes
-multirun_file(defense_manager)
+multirun_file(town_manager)
 
 # Begin a build order from the builds directory
 choose_from_dir(builds)

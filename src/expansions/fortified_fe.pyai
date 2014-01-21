@@ -1,7 +1,7 @@
 start_town()
 build_finish(1, Town Hall, 150)
 include(static_defense_fe)
-multirun(gen_managers_defense_manager)
+multirun(gen_managers_town_manager)
 build_separately(8, Peon)
 build(1, Gas, 80)
 build_separately(20, Peon)
