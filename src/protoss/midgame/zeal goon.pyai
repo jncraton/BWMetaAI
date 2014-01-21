@@ -28,9 +28,7 @@ upgrade(1, Protoss Armor, 80)
 attack_train(14, Protoss Dragoon)
 attack_train(14, Protoss Zealot)
 
-random_jump(160, zeal_goon_midgame_attack)
+if random(96):
+    expand(99, expansion)
 
-expand(99, expansion)
-
---zeal_goon_midgame_attack--
 attack_simple()
