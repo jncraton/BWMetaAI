@@ -73,7 +73,11 @@ Late game
 Running from source
 --------------------
 
-Prerequisites: node.js, Python 2.7 32 bit on Windows 
+Prerequisites: 
+
+- [node.js](http://nodejs.org/download/)
+- make ([MSYS](http://www.mingw.org/wiki/MSYS) on Windows)
+- [Python](http://www.python.org/download/) 2.7 32 bit on Windows 
 
 Windows is required for mpq manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
 
