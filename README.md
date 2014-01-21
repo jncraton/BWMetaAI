@@ -6,9 +6,11 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 Purpose
 --------
 
-There are a lot of good BW AI mods already available (http://broodwarai.com/wiki/index.php?title=AI_script_mods). This project seeks to create a non-cheating AI that provides a unique experience with each game. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting important.
+There are a lot of [good BW AI mods](http://broodwarai.com/wiki/index.php?title=AI_script_mods) already available . This project seeks to create a non-cheating AI that provides a unique experience with each game. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting and early defense important.
 
-It includes a number of build order that have been relatively popular in high level play.
+This AI should provide a significantly better learning experience for new players. Because it rarely performs early all-in style attacks, it encourages scouting and fast expanding to match the AI's economy rather than 1 or 2 base turtle play.
+
+The scripts include a number of build orders that have been relatively popular in high level play. Once the initial build is completed, one of several common midgame transitions are used to take the AI into a variety of late game attacks.
 
 Build Orders
 ------------
@@ -85,7 +87,7 @@ Build and patch SC
 New AI commands/macros:
 -----------------------
 
-This includes an AI preprocessor which implements some new commands that you can use if you want to add your own syles or build orders.
+This includes an AI preprocessor which implements some new commands that you can use if you want to contribute to this project.
 
 ### If blocks
 
@@ -154,9 +156,9 @@ Jumps to the beginning of the current file
 
 Skips this build if nearest race is not in the list of races
 
-### valid_style_against(Race, Race, Race)
+### valid_midgame_against(Race, Race, Race)
 
-Skips this style if nearest race is not in the list of races
+Skips this midgame if nearest race is not in the list of races
 
 ### include(file)
 
