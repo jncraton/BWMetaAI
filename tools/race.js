@@ -224,7 +224,12 @@ function Race(name) {
         if (config.verbosity >= 10) {
             content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#)).+$/mg, function(original) {
                 function getName(num) {
-                    return num.toString(36)
+                    var valid_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_'
+                    
+                    var tens = Math.floor(num / valid_chars.length)
+                    var remainder = num - (tens * valid_chars.length)
+                    
+                    return '' + valid_chars[tens] + valid_chars[remainder]
                 }
                 
                 debug_count += 1;
