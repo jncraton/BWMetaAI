@@ -214,8 +214,8 @@ function Race(name) {
         }
         
         function debug(message) {
-            debug_count += 1;
-            var block_name = 'd_' + debug_count;
+            block_count += 1;
+            var block_name = 'd_' + block_count;
             
             return ('\ndebug(' + block_name + ', ' + message + ')\n' +
                     '--' + block_name + '--\n');
@@ -228,7 +228,7 @@ function Race(name) {
                 }
                 
                 debug_count += 1;
-                var block_name = 'd_' + getName(debug_count);
+                var block_name = 'd10_' + getName(debug_count);
                 return '\ndebug(' + block_name + ', ' + getName(debug_count) + ')\n' +
                     '--' + block_name + '--\n' +
                     original + '\n';
