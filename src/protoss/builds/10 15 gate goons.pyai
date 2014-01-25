@@ -19,13 +19,12 @@ build_start(20, Probe)
 attack_train(5, Dragoon)
 wait_force(5, Dragoon)
 attack_async()
-# Sometimes attack with multiple waves
---10_15_gate_goons_attack_wave--
-random_jump(128, 10_15_gate_goons_skip_attack)
-attack_train(8, Dragoon)
-wait_force(8, Dragoon)
-attack_async()
-random_jump(64, 10_15_gate_goons_attack_wave)
---10_15_gate_goons_skip_attack--
+
+if random(128):
+    build_start(4, Pylon)
+    attack_train(8, Dragoon)
+    wait_force(8, Dragoon)
+    attack_async()
+
 expand(1, expansion)
 farms_timing()
