@@ -20,7 +20,6 @@ upgrade(1, Grooved Spines, 80)
 stop()
 
 --hyrda_tech_done--
-build_finish(1, Zerg Hydralisk Den)
 attack_train(36, Zerg Hydralisk)
 
 if random(96):
