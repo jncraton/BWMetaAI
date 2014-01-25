@@ -1,18 +1,13 @@
 use_lategame_vs(Terran, Protoss)
 
-train(8, Protoss Dragoon)
-train(8, Protoss Zealot)
-
 if owned(stargate):
     if owned(arbiter tribunal):
-        attack_train(2, Protoss Arbiter)
+        attack_train(1, Protoss Arbiter)
 
 if owned(Templar Archives):
     attack_train(5, Protoss High Templar)
     attack_train(1, Dark Templar)
 
-train(16, Protoss Dragoon)
-train(16, Protoss Zealot)
 attack_train(24, Protoss Dragoon)
 attack_train(24, Protoss Zealot)
 
