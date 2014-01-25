@@ -74,17 +74,16 @@ var parse = function parse(content) {
         return 'multirun(' + start + ')\n' + 
             'goto(' + escape + ')\n' +
             '--' + start + '--\n' +
-            'attack_prepare()\n' +
             'attack_do()\n' +
+            'attack_prepare()\n' +
             'attack_clear()\n' +
             'stop()\n' +
             '--' + escape + '--\n';
     });
     
     content = content.replace(/attack_simple\(\)/g, function(original) {
-        return 'attack_prepare()\n' +
-                'wait(75)\n' +
-                'attack_do()\n' +
+        return 'attack_do()\n' +
+                'attack_prepare()\n' +
                 'attack_clear()'
     });
     
