@@ -229,7 +229,9 @@ function Race(name) {
                     var tens = Math.floor(num / valid_chars.length)
                     var remainder = num - (tens * valid_chars.length)
                     
-                    return '' + valid_chars[tens] + valid_chars[remainder]
+                    tens -= 1
+                    
+                    return '' +  (tens >= 0 ? valid_chars[tens] : '') + valid_chars[remainder]
                 }
                 
                 debug_count += 1;
