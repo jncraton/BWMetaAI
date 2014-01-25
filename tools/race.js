@@ -222,7 +222,7 @@ function Race(name) {
         }
         
         if (config.verbosity >= 10) {
-            content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-)).+$/mg, function(original) {
+            content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#)).+$/mg, function(original) {
                 function getName(num) {
                     return num.toString(36)
                 }
