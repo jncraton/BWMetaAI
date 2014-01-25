@@ -1,6 +1,7 @@
 var fs = require('fs');
 
 var debug_count = 0;
+var block_count = 0;
 var nonce = 0
 
 var config = require('./config.json');
@@ -69,15 +70,17 @@ function Race(name) {
         });
             
         content = content.replace(/multirun_file\((.*)\)/g, function(command, relative_filename) {
-            debug_count += 1;
+            block_count += 1;
+            
+            var done_block = block + "_done_" + block_count
             
             var block = getFileBlock(getFullPath(relative_filename))
             
             return "multirun("+ block + ")\n" +
-                "goto(" + block + "_done_" + debug_count + ")\n" +
+                "goto(" + done_block + ")\n" +
                 loadContents(relative_filename) + "\n" +
                 "stop()\n" +
-                "--" + block + "_done_" + debug_count + "--";
+                "--" + done_block + "--";
         });
 
         function chooseFromDir(dir) {
@@ -220,9 +223,13 @@ function Race(name) {
         
         if (config.verbosity >= 10) {
             content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-)).+$/mg, function(original) {
+                function getName(num) {
+                    return num.toString(36)
+                }
+                
                 debug_count += 1;
-                var block_name = 'd_' + debug_count;
-                return '\ndebug(' + block_name + ', ' + debug_count + ')\n' +
+                var block_name = 'd_' + getName(debug_count);
+                return '\ndebug(' + block_name + ', ' + getName(debug_count) + ')\n' +
                     '--' + block_name + '--\n' +
                     original + '\n';
             });
