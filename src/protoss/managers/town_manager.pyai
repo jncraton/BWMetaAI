@@ -29,13 +29,13 @@ if enemyownsairtech():
         build(2, Cannon, 150)
 
 if time(16):
-    build(1, Pylon, 80)
+    build(1, Pylon, 150)
     build(1, Gateway, 80)
 if time(25):
+    build(2, Pylon, 150)
     if notowns(Forge):
         build(1, Forge, 150)
     if owned(Forge):
-        creep(3)
         build(4, Cannon, 150)
 
 wait(1000)
