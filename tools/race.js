@@ -221,27 +221,6 @@ function Race(name) {
                     '--' + block_name + '--\n');
         }
         
-        if (config.verbosity >= 10 || config[name].verbosity >= 10) {
-            content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#)).+$/mg, function(original) {
-                function getCode(num) {
-                    var valid_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_'
-                    
-                    var tens = Math.floor(num / valid_chars.length)
-                    var remainder = num - (tens * valid_chars.length)
-                    
-                    tens -= 1
-                    
-                    return '' +  (tens >= 0 ? valid_chars[tens] : '') + valid_chars[remainder]
-                }
-                
-                debug_count += 1;
-                var block_name = 'd10_' + debug_count;
-                return '\ndebug(' + block_name + ', ' + getCode(debug_count) + ')\n' +
-                    '--' + block_name + '--\n' +
-                    original + '\n';
-            });
-        }
-        
         return comment + block + content;
     }
     function getFileBlock(filename) {
