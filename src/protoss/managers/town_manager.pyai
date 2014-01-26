@@ -13,7 +13,7 @@ if enemyownscloaked():
         if owned(Robotics Facility):
             if notowns(Observatory):
                 build(1, Observatory, 150)
-            if owned(Observer):
+            if owned(Observatory):
                 do_morph(1, Observer)
     if notowns(Forge):
         build(1, Forge, 150)
