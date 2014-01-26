@@ -31,7 +31,7 @@ if time(16):
             build_start(4, creep colony)
             build_start(5, creep colony)
             build_finish(6, creep colony)
-            build(4, sunken colony, 80)
-            build(2, spore colony, 80)
+            build(2, spore colony, 150)
+            build(4, sunken colony, 150)
 
 repeat()
