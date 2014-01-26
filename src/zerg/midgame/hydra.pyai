@@ -5,21 +5,18 @@ multirun(hyrda_tech)
 goto(hyrda_tech_done)
 
 --hyrda_tech--
-build(1, Zerg Hydralisk Den, 80)
-build(2, Zerg Hatchery, 80)
-wait_buildstart(2, Zerg Hatchery)
-build(1, Zerg Lair, 80)
-wait_buildstart(1, Zerg Lair)
-build(3, Zerg Hatchery, 80)
-wait_buildstart(3, Zerg Hatchery)
+build_start(1, Zerg Hydralisk Den)
+build_start(2, Zerg Hatchery)
+build_start(1, Zerg Lair)
+build_start(3, Zerg Hatchery)
 wait_build(1, Zerg Hydralisk Den)
 upgrade(1, Muscular Augments, 80)
-wait_build(1, Zerg Lair)
-wait(2000)
+wait(3000)
 upgrade(1, Grooved Spines, 80)
 stop()
 
 --hyrda_tech_done--
+wait_build(1, Hydralisk Den)
 attack_train(36, Zerg Hydralisk)
 
 if random(96):

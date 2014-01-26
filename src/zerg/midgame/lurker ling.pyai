@@ -16,9 +16,11 @@ stop()
 --lurker_ling_tech_done--
 
 train(12, Zergling)
+wait_build(1, hydralisk den)
 train(6, Hydralisk)
 
 attack_train(24, Zergling)
+wait_upgrades()
 attack_train(8, Lurker)
 
 if random(96):
