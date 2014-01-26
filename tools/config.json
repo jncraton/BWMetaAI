@@ -1,6 +1,6 @@
 {
     "srcPath": "src/",
-    "verbosity": 10,
+    "verbosity": 0,
     "terran": {
         "verbosity": 0
     },
