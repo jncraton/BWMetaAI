@@ -28,8 +28,13 @@ if owned(hatchery):
 if time(16):
     if owned(pool):
         if owned(evo chamber):
-            creep(3)
-            build(6, creep colony, 80)
+            creep(4)
+            build_start(1, creep colony)
+            build_start(2, creep colony)
+            build_start(3, creep colony)
+            build_start(4, creep colony)
+            build_start(5, creep colony)
+            build_finish(6, creep colony)
             build(4, sunken colony, 80)
             build(2, spore colony, 80)
 
