@@ -221,7 +221,7 @@ function Race(name) {
                     '--' + block_name + '--\n');
         }
         
-        if (config.verbosity >= 10) {
+        if (config.verbosity >= 10 || config[name].verbosity >= 10) {
             content = content.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#)).+$/mg, function(original) {
                 function getCode(num) {
                     var valid_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_'

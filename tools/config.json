@@ -1,4 +1,13 @@
 {
     "srcPath": "src/",
-    "verbosity": 10
+    "verbosity": 0,
+    "terran": {
+        "verbosity": 0
+    },
+    "zerg": {
+        "verbosity": 0
+    },
+    "protoss": {
+        "verbosity": 0
+    }
 }
