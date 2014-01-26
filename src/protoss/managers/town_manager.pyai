@@ -18,7 +18,6 @@ if enemyownscloaked():
     if notowns(Forge):
         build(1, Forge, 150)
     if owned(Forge):
-        creep(3)
         build(2, Cannon, 150)
 
 if enemyownsairtech():
