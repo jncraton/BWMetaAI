@@ -6,7 +6,7 @@ if owned(Cybernetics Core):
     defense_air(Dragoon)
 
 if enemyownscloaked():
-    build(1, Pylon, 150)
+    build_finish(1, Pylon, 150)
     if owned(Cybernetics Core):
         if notowns(Robotics Facility):
             build(1, Robotics Facility, 150)
@@ -21,17 +21,18 @@ if enemyownscloaked():
         build(2, Cannon, 150)
 
 if enemyownsairtech():
-    build(1, Pylon, 150)
+    build_finish(1, Pylon, 150)
     if notowns(Forge):
         build(1, Forge, 150)
     if owned(Forge):
         build(2, Cannon, 150)
 
 if time(16):
-    build(1, Pylon, 150)
+    build_finish(1, Pylon, 150)
     build(1, Gateway, 80)
 if time(25):
-    build(2, Pylon, 150)
+    build_finish(1, Pylon, 150)
+    build_finish(2, Pylon, 150)
     if notowns(Forge):
         build(1, Forge, 150)
     if owned(Forge):
