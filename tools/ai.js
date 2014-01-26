@@ -40,6 +40,7 @@ function AI (race_name) {
                 var block_name = 'd10_' + debug_count;
                 return 'debug(' + block_name + ', ' + getCode(debug_count) + ')\n' +
                     '--' + block_name + '--\n' +
+                    'wait(1)\n' +
                     original + '\n';
             });
         }
