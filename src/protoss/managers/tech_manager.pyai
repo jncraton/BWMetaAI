@@ -15,8 +15,8 @@ build_finish(1, Citadel of Adun)
 upgrade(1, Leg Enhancements, 80)
 
 build_finish(2, Forge)
-upgrade(1, Protoss Ground Weapons, 80)
-upgrade(1, Protoss Armor, 80)
+upgrade(1, Protoss Ground Weapons, 150)
+upgrade(1, Protoss Armor, 150)
 
 build_finish(7, Gateway)
 build_finish(8, Gateway)
@@ -24,8 +24,8 @@ wait(3000)
 
 build_finish(1, Templar Archives, 80)
 tech(Psionic Storm, 80)
-upgrade(2, Protoss Ground Weapons, 80)
-upgrade(2, Protoss Armor, 80)
+upgrade(2, Protoss Ground Weapons, 150)
+upgrade(2, Protoss Armor, 150)
 
 build_finish(1, Stargate)
 build_finish(1, Arbiter Tribunal)
