@@ -21,10 +21,15 @@ function AI (race_name) {
         
         src += race.loadContents('main');
         
+        src = src.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#|debug)).+$/mg, function(original) {
+            return 'wait(1)\n' +
+                original + '\n';
+        });
+            
         if (config.verbosity >= 10 || config[race_name].verbosity >= 10) {
             debug_count = 0
             
-            src = src.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#|debug)).+$/mg, function(original) {
+            src = src.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#|debug|wait)).+$/mg, function(original) {
                 function getCode(num) {
                     var valid_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_'
                     
@@ -40,7 +45,6 @@ function AI (race_name) {
                 var block_name = 'd10_' + debug_count;
                 return 'debug(' + block_name + ', ' + getCode(debug_count) + ')\n' +
                     '--' + block_name + '--\n' +
-                    'wait(1)\n' +
                     original + '\n';
             });
         }
