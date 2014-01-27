@@ -3,7 +3,7 @@ if owned(Factory):
     if owned(Machine Shop):
         defense_ground(Terran Siege Tank)
     if enemyowns(marine):
-        defensebuild_gg(1, Vulture)
+        defense_ground_train(Vulture)
     defense_ground(Terran Vulture)
 if enemyowns(hatchery):
     if owned(Barracks):
@@ -12,19 +12,19 @@ if enemyownsairtech():
     if owned(rax):
         defense_air_train(marine)
 
+build_finish(1, CC)
+
 if enemyownscloaked():
-    if notowns(academy):
-        build(1, Academy, 150)
     if owned(academy):
         build(1, Comsat Station, 150)
-    if notowns(engineering bay):
-        build(1, engineering bay, 150)
+    if notowns(academy):
+        build(1, Academy, 150)
     if owned(engineering bay):
         build(1, missile turret, 150)
-
-if enemyownsairtech():
     if notowns(engineering bay):
         build(1, engineering bay, 150)
+
+if enemyownsairtech():
     if owned(engineering bay):
         build(1, missile turret, 150)
         wait(200)
@@ -33,11 +33,13 @@ if enemyownsairtech():
         build(3, missile turret, 150)
         wait(200)
         build(4, missile turret, 150)
+    if notowns(engineering bay):
+        build(1, engineering bay, 150)
 
 if time(16):
-    build(1, Barracks, 80)
-    build(1, Factory, 80)
-    build(1, Machine Shop, 80)
+    build_finish(1, Barracks, 80)
+    build_finish(1, Factory, 80)
+    build_finish(1, Machine Shop, 80)
 if time(40):
     if notowns(rax):
         build(1, rax, 80)
@@ -57,4 +59,5 @@ if time(40):
                 if notowns(control tower):
                     build(1, control tower, 80)
 
+wait(1000)
 repeat()
