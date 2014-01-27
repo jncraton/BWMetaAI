@@ -75,7 +75,6 @@ var parse = function parse(content) {
             'goto(' + escape + ')\n' +
             '--' + start + '--\n' +
             'attack_do()\n' +
-            'attack_prepare()\n' +
             'attack_clear()\n' +
             'stop()\n' +
             '--' + escape + '--\n';
