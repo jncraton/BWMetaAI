@@ -55,7 +55,7 @@ function Race(name) {
         
         var content = fs.readFileSync(filename, 'utf-8');
         
-        content = content.replace(/repeat\(\)/g, 'wait(300)\ngoto(' + file_block + ')');
+        content = content.replace(/repeat\(\)/g, 'wait(75)\ngoto(' + file_block + ')');
         
         content = content.replace(/include\((.*)\)/g, function(command, filename) {
             return loadContents(filename, true);
