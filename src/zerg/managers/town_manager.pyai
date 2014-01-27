@@ -35,4 +35,5 @@ if time(16):
             build(2, spore colony, 150)
             build(4, sunken colony, 150)
 
+wait(1000)
 repeat()
