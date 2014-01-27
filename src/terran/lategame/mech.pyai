@@ -1,14 +1,14 @@
 use_lategame_vs(Terran, Protoss)
 
-train(6, Siege Tank)
+if owned(Machine Shop):
+    train(6, Siege Tank)
 
-if enemyownsairtech():
-    build_finish(1, Armory)
-    attack_train(8, Goliath)
-    upgrade(1, Charon Booster, 80)
+    if enemyownsairtech():
+        if owned(Armory):
+            attack_train(8, Goliath)
 
-train(8, Vulture)
-attack_train(18, Siege Tank)
-attack_train(15, Vulture)
+    train(8, Vulture)
+    attack_train(18, Siege Tank)
+    attack_train(15, Vulture)
 
-attack_simple()
+    attack_simple()
