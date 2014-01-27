@@ -1,19 +1,27 @@
 use_midgame_vs(Zerg, Terran, Protoss)
 
 train(4, Zerg Zergling)
-multirun(lurker_ling_tech)
-goto(lurker_ling_tech_done)
+multirun(lurker_ling_train)
+goto(lurker_ling_train_skip)
 
---lurker_ling_tech--
+--lurker_ling_train--
+do_morph(5, Zergling)
+do_morph(6, Zergling)
+do_morph(7, Zergling)
+do_morph(8, Zergling)
+do_morph(9, Zergling)
+do_morph(10, Zergling)
+do_morph(11, Zergling)
+do_morph(12, Zergling)
+
+--lurker_ling_train_skip--
+
 build_start(2, Hatchery)
 build_start(1, Lair)
 build_finish(1, Hydralisk Den)
 wait_build(1, Zerg Lair)
-tech(Lurker Aspect, 80)
+tech(Lurker Aspect, 200)
 build_start(3, Hatchery)
-wait(2000)
-stop()
---lurker_ling_tech_done--
 
 train(12, Zergling)
 wait_build(1, hydralisk den)

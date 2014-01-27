@@ -1,21 +1,26 @@
 use_midgame_vs(Zerg, Terran, Protoss)
 
 train(4, Zergling)
-multirun(muta_ling_tech)
-goto(muta_ling_tech_done)
+multirun(muta_ling_train)
+goto(muta_ling_train_skip)
 
---muta_ling_tech--
+--muta_ling_train--
+do_morph(5, Zergling)
+do_morph(6, Zergling)
+do_morph(7, Zergling)
+do_morph(8, Zergling)
+do_morph(9, Zergling)
+do_morph(10, Zergling)
+do_morph(11, Zergling)
+do_morph(12, Zergling)
+
+--muta_ling_train_skip--
 build_start(2, Hatchery)
 build_start(1, Lair, 80)
 expand(99, fortified_expansion)
 wait_build(1, Lair)
 build_start(1, Spire, 80)
 upgrade(1, Metabolic Boost, 80)
-wait(2000)
-build(3, Hatchery, 80)
-stop()
-
---muta_ling_tech_done--
 attack_train(36, Zergling)
 attack_train(12, Mutalisk)
 
