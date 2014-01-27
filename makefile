@@ -1,6 +1,7 @@
 sc_path = d:\games\sc
 launcher = d:\games\sc\Chaoslauncher\chaoslauncher.exe
 src = src
+config = default
 
 all: mpq
 
@@ -27,7 +28,9 @@ combined_scripts: terran.pyai zerg.pyai protoss.pyai
 
 %.pyai:
 	@echo Building $@
+	@cp tools/config_$(config).json tools/config.json
 	@node tools/build_ai $(subst .pyai,,$@) build/$@;
+	@rm tools/config.json
 
 $(sc_path)/patch_rt_original.mpq:
 	@cp $(sc_path)/patch_rt.mpq $(sc_path)/patch_rt_original.mpq
