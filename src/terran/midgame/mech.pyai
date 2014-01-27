@@ -1,7 +1,6 @@
 use_midgame_vs(Terran, Protoss)
 
 build_finish(1, Barracks)
-build_start(1, Factory)
 build_finish(1, Factory)
 build_start(1, Machine Shop)
 build_start(2, Factory)
@@ -15,7 +14,7 @@ build_start(2, Machine Shop)
 train(2, Tank)
 build_start(4, Factory)
 wait_build(3, Factory)
-build_start(3, Machine Shop)
+build_finish(3, Machine Shop)
 tech(Spider Mines, 80)
 
 train(5, Siege Tank)
