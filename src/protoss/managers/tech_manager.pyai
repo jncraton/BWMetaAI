@@ -6,12 +6,14 @@ build_start(3, Gateway)
 build_finish(4, Gateway)
 
 build_finish(1, Cybernetics Core)
+wait_upgrades()
 upgrade(1, Singularity Charge, 80)
 
 build_finish(5, Gateway)
 build_finish(6, Gateway)
 build_start(2, Forge)
 build_finish(1, Citadel of Adun)
+wait_upgrades()
 upgrade(1, Leg Enhancements, 80)
 
 build_finish(2, Forge)
