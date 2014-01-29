@@ -1,7 +1,6 @@
 build_start(2, Zerg Hatchery)
 build_start(1, Zerg Lair)
 build_start(1, Hydralisk Den)
-wait_upgrades()
 upgrade(1, Metabolic Boost, 80)
 build_start(1, evo chamber)
 build_finish(2, evo chamber)
