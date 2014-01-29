@@ -23,7 +23,6 @@ wait_train(9, Mutalisk)
 attack_add(12, Zergling)
 attack_add(9, Mutalisk)
 attack_async()
-farms_timing()
 
 goto(3_hatch_muta_end)
 --gen_expansions_three_hatch_muta_natural--

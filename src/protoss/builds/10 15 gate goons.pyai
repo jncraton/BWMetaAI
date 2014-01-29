@@ -27,4 +27,3 @@ if random(128):
     attack_async()
 
 expand(1, expansion)
-farms_timing()
