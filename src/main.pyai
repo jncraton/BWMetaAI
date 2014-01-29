@@ -55,6 +55,5 @@ goto(lategame_loop)
 
 # Tack on the expansion blocks to the bottom of the script
 include_block(expansion)
-include_block(fortified_expansion)
 include_block(fortified_fe)
 include_block(fast_expansion)
