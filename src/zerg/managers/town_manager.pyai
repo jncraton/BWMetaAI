@@ -13,6 +13,12 @@ if owned(hatchery):
         defense_ground(Ultralisk)
 
 if owned(hatchery):
+    build_start(1, Drone)
+    build_start(2, Drone)
+    build_start(3, Drone)
+    build_start(4, Drone)
+    build_start(5, Drone)
+    build_start(6, Drone)
     if enemyownsairtech():
         if owned(Evolution Chamber):
             creep(4)
