@@ -1,5 +1,5 @@
-defenseclear()
 if owned(hatchery):
+    defenseclear()
     if owned(pool):
         defense_ground(Zergling)
     if owned(den):
@@ -27,19 +27,18 @@ if owned(hatchery):
         if notowns(Zerg Evolution Chamber):
             build(1, Zerg Evolution Chamber, 150)
     if enemyownscloaked():
-
-if time(16):
-    if owned(pool):
-        if owned(evo chamber):
-            creep(4)
-            build_start(1, creep colony)
-            build_start(2, creep colony)
-            build_start(3, creep colony)
-            build_start(4, creep colony)
-            build_start(5, creep colony)
-            build_finish(6, creep colony)
-            build(2, spore colony, 150)
-            build(4, sunken colony, 150)
+    if time(16):
+        if owned(pool):
+            if owned(evo chamber):
+                creep(4)
+                build_start(1, creep colony)
+                build_start(2, creep colony)
+                build_start(3, creep colony)
+                build_start(4, creep colony)
+                build_start(5, creep colony)
+                build_finish(6, creep colony)
+                build(2, spore colony, 150)
+                build(4, sunken colony, 150)
 
 wait(1000)
 repeat()
