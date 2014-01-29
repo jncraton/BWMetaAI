@@ -13,6 +13,7 @@ do_morph(9, Zergling)
 do_morph(10, Zergling)
 do_morph(11, Zergling)
 do_morph(12, Zergling)
+stop()
 
 --muta_ling_train_skip--
 build_start(2, Hatchery)

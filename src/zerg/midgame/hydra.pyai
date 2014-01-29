@@ -7,6 +7,7 @@ goto(hydra_train_skip)
 --hydra_train--
 do_morph(5, Zergling)
 do_morph(6, Zergling)
+stop()
 --hydra_train_skip--
 
 build_start(1, Zerg Hydralisk Den)
