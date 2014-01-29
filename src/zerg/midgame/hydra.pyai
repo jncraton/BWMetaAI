@@ -1,14 +1,6 @@
 use_midgame_vs(Protoss)
 
 train(4, Zerg Zergling)
-multirun(hydra_train)
-goto(hydra_train_skip)
-
---hydra_train--
-do_morph(5, Zergling)
-do_morph(6, Zergling)
-stop()
---hydra_train_skip--
 
 build_start(1, Zerg Hydralisk Den)
 build_start(2, Zerg Hatchery)
