@@ -1,57 +1,43 @@
-defenseclear()
-if owned(Factory):
-    if owned(Machine Shop):
-        defense_ground(Terran Siege Tank)
-    if enemyowns(marine):
-        defense_ground_train(Vulture)
-    defense_ground(Terran Vulture)
-if enemyowns(hatchery):
-    if owned(Barracks):
-        defense_ground(Terran Marine)
-if enemyownsairtech():
-    if owned(rax):
-        defense_air_train(marine)
-        
-build_finish(1, CC)
+async_loop:
+    defenseclear()
+    if owned(Factory):
+        if owned(Machine Shop):
+            defense_ground(Terran Siege Tank)
+        if enemyowns(marine):
+            defense_ground_train(Vulture)
+        defense_ground(Terran Vulture)
+    if enemyowns(hatchery):
+        if owned(Barracks):
+            defense_ground(Terran Marine)
+    if enemyownsairtech():
+        if owned(rax):
+            defense_air_train(marine)
 
-if enemyownscloaked():
-    player_need(1, Academy)
-    build(1, Comsat Station, 80)
-    player_need(1, Engineering Bay)
-    build(1, missile turret, 80)
+async_loop:
+    if enemyownscloaked():
+        player_need(1, Academy)
+        build(1, Comsat Station, 80)
+        player_need(1, Engineering Bay)
+        build(1, missile turret, 80)
+        stop()
 
-if enemyownsairtech():
-    player_need(1, Engineering Bay)
-    build(1, missile turret, 80)
-    wait(200)
-    build(2, missile turret, 80)
-    wait(200)
-    build(3, missile turret, 80)
-    wait(200)
-    build(4, missile turret, 80)
+async_loop:
+    if enemyownsairtech():
+        player_need(1, Engineering Bay)
+        build(1, missile turret, 80)
+        wait(200)
+        build(2, missile turret, 80)
+        wait(200)
+        build(3, missile turret, 80)
+        wait(200)
+        build(4, missile turret, 80)
+        stop()
 
-if time(16):
-    build_finish(1, Barracks, 80)
-    build_finish(1, Factory, 80)
-    build_finish(1, Machine Shop, 80)
-if time(40):
-    if notowns(rax):
-        build(1, rax, 80)
-    if owned(rax):
-        if notowns(factory):
-            build(1, factory, 80)
-        if owned(factory):
-            if notowns(armory):
-                build(1, armory, 80)
-            if notowns(machine shop):
-                build(1, machine shop, 80)
-            if notowns(starport):
-                build(1, starport, 80)
-            if owned(starport):
-                if notowns(science facility):
-                    build(1, science facility, 80)
-                if notowns(control tower):
-                    build(1, control tower, 80)
+async_loop:
+    if time(16):
+        build_finish(1, Barracks, 80)
+        build_finish(1, Factory, 80)
+        build_finish(1, Machine Shop, 80)
+        stop()
 
-wait(1000)
-repeat()
+stop()
