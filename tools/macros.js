@@ -29,7 +29,7 @@ var parse = function parse(content) {
                     line = line.replace('    ', '')
                 } else {
                     indent_level--;
-                    content += '--' + blocks.pop() + '--\n'
+                    content += blocks.pop()
                 }
             }
         }
@@ -47,7 +47,17 @@ var parse = function parse(content) {
         if (line.indexOf(':') > -1) {
             var start_block = nextBlockName()
             var end_block = nextBlockName()
-            blocks.push(end_block)
+
+            if (line.search('async_loop') > -1) {
+                line = line.replace('async_loop', 'multirun()')
+                blocks.push('wait(75)\ngoto(' + 
+                    start_block + 
+                    ')\n' + 
+                    '--' + end_block + '--\n')
+            } else {
+                blocks.push('--' + end_block + '--\n')
+            }
+        
             indent_level++;
             line = line.replace(':', '')
             if (line.search(/[a-zA-Z0-9]\)/) > -1) {
@@ -64,7 +74,7 @@ var parse = function parse(content) {
     })
     
     while (blocks.length > 0) {
-        content += '--' + blocks.pop() + '--\n'
+        content += blocks.pop()
     }
     
     content = content.replace(/attack_async\(\)/g, function(original) {
