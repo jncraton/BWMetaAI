@@ -54,6 +54,10 @@ var parse = function parse(content) {
                     start_block + 
                     ')\n' + 
                     '--' + end_block + '--\n')
+            } else if (line.search('multirun') > -1) {
+                line = line.replace('multirun', 'multirun()')
+                blocks.push('stop()\n' + 
+                    '--' + end_block + '--\n')
             } else {
                 blocks.push('--' + end_block + '--\n')
             }
