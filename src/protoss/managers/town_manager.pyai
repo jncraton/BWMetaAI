@@ -1,42 +1,41 @@
-defenseclear()
-if owned(Gateway):
-    defense_ground(Zealot)
-if owned(Cybernetics Core):
-    defense_ground(Dragoon)
-    defense_air(Dragoon)
-
-if enemyownscloaked():
-    build_finish(1, Pylon, 150)
+async_loop:
+    defenseclear()
+    if owned(Gateway):
+        defense_ground(Zealot)
     if owned(Cybernetics Core):
-        if notowns(Robotics Facility):
-            build(1, Robotics Facility, 150)
-        if owned(Robotics Facility):
-            if notowns(Observatory):
-                build(1, Observatory, 150)
-            if owned(Observatory):
-                do_morph(1, Observer)
-    if notowns(Forge):
-        build(1, Forge, 150)
-    if owned(Forge):
-        build(2, Cannon, 150)
+        defense_ground(Dragoon)
+        defense_air(Dragoon)
 
-if enemyownsairtech():
-    build_finish(1, Pylon, 150)
-    if notowns(Forge):
-        build(1, Forge, 150)
-    if owned(Forge):
-        build(2, Cannon, 150)
+async_loop:
+    if enemyownscloaked():
+        build_finish(1, Pylon, 150)
+        if owned(Cybernetics Core):
+            player_need(1, Robotics Facility)
+            player_need(1, Observatory)
+            do_morph(1, Observer)
+        player_need(1, Forge)
+        build(2, Cannon, 80)
+        stop()
 
-if time(16):
-    build_finish(1, Pylon, 150)
-    build(1, Gateway, 80)
-if time(25):
-    build_finish(1, Pylon, 150)
-    build_finish(2, Pylon, 150)
-    if notowns(Forge):
-        build(1, Forge, 150)
-    if owned(Forge):
-        build(4, Cannon, 150)
+async_loop:
+    if enemyownsairtech():
+        build_finish(1, Pylon, 150)
+        player_need(1, Forge)
+        build(2, Cannon, 80)
+        stop()
 
-wait(1000)
-repeat()
+async_loop:
+    if time(16):
+        build_finish(1, Pylon, 150)
+        build(1, Gateway, 80)
+        stop()
+
+async_loop:
+    if time(25):
+        build_finish(1, Pylon, 150)
+        build_finish(2, Pylon, 150)
+        player_need(1, Forge)
+        build(4, Cannon, 80)
+        stop()
+
+stop()
