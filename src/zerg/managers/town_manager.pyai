@@ -1,4 +1,4 @@
-async_loop:
+multirun_loop:
     if owned(hatchery):
         defenseclear()
         if owned(pool):
@@ -13,7 +13,7 @@ async_loop:
         if owned(ultralisk cavern):
             defense_ground(Ultralisk)
 
-async_loop:
+multirun_loop:
     if enemyownsairtech():
         if owned(hatchery):
             build_start(1, Drone)
@@ -28,7 +28,7 @@ async_loop:
             build(2, Zerg Spore Colony, 150)
             stop()
 
-async_loop:
+multirun_loop:
     if time(16):
         if owned(pool):
             if owned(evo chamber):

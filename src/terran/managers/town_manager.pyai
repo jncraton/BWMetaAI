@@ -1,4 +1,4 @@
-async_loop:
+multirun_loop:
     defenseclear()
     if owned(Factory):
         if owned(Machine Shop):
@@ -13,7 +13,7 @@ async_loop:
         if owned(rax):
             defense_air_train(marine)
 
-async_loop:
+multirun_loop:
     if enemyownscloaked():
         player_need(1, Academy)
         build(1, Comsat Station, 80)
@@ -21,7 +21,7 @@ async_loop:
         build(1, missile turret, 80)
         stop()
 
-async_loop:
+multirun_loop:
     if enemyownsairtech():
         player_need(1, Engineering Bay)
         build(1, missile turret, 80)
@@ -33,7 +33,7 @@ async_loop:
         build(4, missile turret, 80)
         stop()
 
-async_loop:
+multirun_loop:
     if time(16):
         build_finish(1, Barracks, 80)
         build_finish(1, Factory, 80)

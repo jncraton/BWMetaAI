@@ -48,8 +48,8 @@ var parse = function parse(content) {
             var start_block = nextBlockName()
             var end_block = nextBlockName()
 
-            if (line.search('async_loop') > -1) {
-                line = line.replace('async_loop', 'multirun()')
+            if (line.search('multirun_loop') > -1) {
+                line = line.replace('multirun_loop', 'multirun()')
                 blocks.push('wait(75)\ngoto(' + 
                     start_block + 
                     ')\n' + 

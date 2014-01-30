@@ -1,4 +1,4 @@
-async_loop:
+multirun_loop:
     defenseclear()
     if owned(Gateway):
         defense_ground(Zealot)
@@ -6,7 +6,7 @@ async_loop:
         defense_ground(Dragoon)
         defense_air(Dragoon)
 
-async_loop:
+multirun_loop:
     if enemyownscloaked():
         build_finish(1, Pylon, 150)
         if owned(Cybernetics Core):
@@ -17,20 +17,20 @@ async_loop:
         build(2, Cannon, 80)
         stop()
 
-async_loop:
+multirun_loop:
     if enemyownsairtech():
         build_finish(1, Pylon, 150)
         player_need(1, Forge)
         build(2, Cannon, 80)
         stop()
 
-async_loop:
+multirun_loop:
     if time(16):
         build_finish(1, Pylon, 150)
         build(1, Gateway, 80)
         stop()
 
-async_loop:
+multirun_loop:
     if time(25):
         build_finish(1, Pylon, 150)
         build_finish(2, Pylon, 150)
