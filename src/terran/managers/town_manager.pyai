@@ -11,30 +11,24 @@ if enemyowns(hatchery):
 if enemyownsairtech():
     if owned(rax):
         defense_air_train(marine)
-
+        
 build_finish(1, CC)
 
 if enemyownscloaked():
-    if owned(academy):
-        build(1, Comsat Station, 150)
-    if notowns(academy):
-        build(1, Academy, 150)
-    if owned(engineering bay):
-        build(1, missile turret, 150)
-    if notowns(engineering bay):
-        build(1, engineering bay, 150)
+    player_need(1, Academy)
+    build(1, Comsat Station, 80)
+    player_need(1, Engineering Bay)
+    build(1, missile turret, 80)
 
 if enemyownsairtech():
-    if owned(engineering bay):
-        build(1, missile turret, 150)
-        wait(200)
-        build(2, missile turret, 150)
-        wait(200)
-        build(3, missile turret, 150)
-        wait(200)
-        build(4, missile turret, 150)
-    if notowns(engineering bay):
-        build(1, engineering bay, 150)
+    player_need(1, Engineering Bay)
+    build(1, missile turret, 80)
+    wait(200)
+    build(2, missile turret, 80)
+    wait(200)
+    build(3, missile turret, 80)
+    wait(200)
+    build(4, missile turret, 80)
 
 if time(16):
     build_finish(1, Barracks, 80)
