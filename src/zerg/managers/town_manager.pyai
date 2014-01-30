@@ -1,35 +1,34 @@
-build_start(1, Hatchery)
+async_loop:
+    if owned(hatchery):
+        defenseclear()
+        if owned(pool):
+            defense_ground(Zergling)
+        if owned(den):
+            defense_ground(Hydralisk)
+            if enemyownsairtech():
+                defense_air_train(Hydralisk)
+        if owned(hydralisk den):
+            if owned(lurker):
+                defense_ground(Lurker)
+        if owned(ultralisk cavern):
+            defense_ground(Ultralisk)
 
-if owned(hatchery):
-    defenseclear()
-    if owned(pool):
-        defense_ground(Zergling)
-    if owned(den):
-        defense_ground(Hydralisk)
-        if enemyownsairtech():
-            defense_air_train(Hydralisk)
-    if owned(hydralisk den):
-        if owned(lurker):
-            defense_ground(Lurker)
-    if owned(ultralisk cavern):
-        defense_ground(Ultralisk)
-
-build_finish(1, Hatchery)
-
-if owned(hatchery):
-    build_start(1, Drone)
-    build_start(2, Drone)
-    build_start(3, Drone)
-    build_start(4, Drone)
-    build_start(5, Drone)
-    build_start(6, Drone)
+async_loop:
     if enemyownsairtech():
-        if owned(Evolution Chamber):
+        if owned(hatchery):
+            build_start(1, Drone)
+            build_start(2, Drone)
+            build_start(3, Drone)
+            build_start(4, Drone)
+            build_start(5, Drone)
+            build_start(6, Drone)
+            player_need(1, Evolution Chamber)
             creep(3)
             build_finish(2, Zerg Creep Colony, 150)
             build(2, Zerg Spore Colony, 150)
-        if notowns(Zerg Evolution Chamber):
-            build(1, Zerg Evolution Chamber, 150)
+            stop()
+
+async_loop:
     if time(16):
         if owned(pool):
             if owned(evo chamber):
@@ -42,6 +41,6 @@ if owned(hatchery):
                 build_finish(6, creep colony, 150)
                 build(2, spore colony, 150)
                 build(4, sunken colony, 150)
+                stop()
 
-wait(1000)
-repeat()
+stop()
