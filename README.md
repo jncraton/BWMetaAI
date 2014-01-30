@@ -112,6 +112,30 @@ If blocks allow you to write the same code like this:
     
 Else is not yet supported.
 
+### multirun blocks
+
+Blocks of code can be run asyncronously as follows:
+
+    multirun:
+        upgrade(1, Protoss Ground Weapons)
+        wait(5000)
+        upgrade(2, Protoss Ground Weopons)
+        
+    train(5, Zealot)
+    
+A stop command is added at the end of the block automatically.
+
+### multirun_loop blocks
+
+Loops can be run asyncronously as follows:
+
+    multirun_loop:
+        if enemyowns(Dark Templar):
+            build_finish(1, Forge)
+            build_start(2, Photon Cannon)
+            
+The block will automatically repeat after a wait of 75.
+
 ### message(string)
 
 Displays the string as a message from the AI. This does not require a block to jump to like debug() does.
