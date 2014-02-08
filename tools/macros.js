@@ -264,15 +264,30 @@ var parse = function parse(content) {
         
         var mul = 3;
         
+        var more_units_prob = Math.floor(256/mul) 
+        
+        var done_block = nextBlockName()
+        
         for (var i = 1; i <= mul; i++) {
+            var more_units = nextBlockName();
+            
             units.forEach(function (unit) {
                 ret += 'train(' + unit.quantity * i + ', ' + unit.name + ')\n'
             })
+            
+            ret += 'random_jump(' + more_units_prob + ',' + more_units + ')\n'
+            
+            units.forEach(function (unit) {
+                ret += 'attack_add(' + unit.quantity * i + ', ' + unit.name + ')\n'
+            })
+            
+            ret += 'goto(' + done_block + ')\n'
+            
+            ret += '--' + more_units + '--\n'
+        
         }
         
-        units.forEach(function (unit) {
-            ret += 'attack_add(' + unit.quantity * mul + ', ' + unit.name + ')\n'
-        })
+        ret += '--' + done_block + '--\n'
         
         return ret
     });
