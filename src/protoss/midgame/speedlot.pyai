@@ -9,13 +9,14 @@ build_start(4, Protoss Gateway)
 train(10, Protoss Zealot)
 build_start(1, Protoss Forge)
 build_start(1, Protoss Citadel of Adun)
-attack_train(6, Protoss Dragoon)
+train(6, Protoss Dragoon)
 build_finish(1, Protoss Forge)
 upgrade(1, Protoss Ground Weapons, 30)
 build_finish(1, Protoss Citadel of Adun)
 upgrade(1, Leg Enhancements, 30)
 build_start(6, Protoss Gateway)
-attack_train(12, Protoss Zealot)
+
+attack_train_ratio(3, 4 Zealot, 2 Dragoon)
 
 if random(96):
     expand(99, expansion)
