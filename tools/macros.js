@@ -248,7 +248,7 @@ var parse = function parse(content) {
                'defensebuild_aa(1, ' + unit + ')\n'
         });
 
-    content = content.replace(/attack_train_ratio\((.*)\)/g, function(original, params) {
+    content = content.replace(/attack_train_ratio\((.*?), (.*)\)/g, function(original, mul, params) {
         var ret = ''
         
         units = params.split(',')
@@ -261,8 +261,6 @@ var parse = function parse(content) {
                 name: unit.split(' ')[1]
             }
         })
-        
-        var mul = 3;
         
         var more_units_prob = Math.floor(256/mul) 
         
