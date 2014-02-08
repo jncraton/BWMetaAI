@@ -21,8 +21,7 @@ train(5, Siege Tank)
 train(9, Vulture)
 upgrade(1, Ion Thrusters, 80)
 
-attack_train(8, Siege Tank)
-attack_train(12, Vulture)
+attack_multiple(2, 5 Siege Tank, 9 Vulture)
 
 if random(96):
     expand(99, expansion)

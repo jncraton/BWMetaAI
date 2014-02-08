@@ -1,9 +1,9 @@
 use_lategame_vs(Zerg)
 
-attack_train(36, Terran Marine)
-attack_train(10, Terran Medic)
 if owned(science facility):
     if owned(control tower):
         attack_train(1, Terran Science Vessel)
+
+attack_multiple(3, 12 Marine, 4 Medic)
 
 attack_simple()

@@ -11,8 +11,8 @@ build_start(6, Rax)
 wait_build(1, Academy)
 tech(Stim Packs, 80)
 
-attack_train(18, Terran Marine)
-attack_train(5, Terran Medic)
+attack_multiple(2, 9 Marine, 3 Medic)
+
 expand(99, expansion)
 
 attack_simple()
