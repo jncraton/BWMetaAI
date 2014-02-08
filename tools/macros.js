@@ -248,7 +248,7 @@ var parse = function parse(content) {
                'defensebuild_aa(1, ' + unit + ')\n'
         });
 
-    content = content.replace(/attack_mul\((.*?), (.*)\)/g, function(original, mul, params) {
+    content = content.replace(/attack_multiple\((.*?), (.*)\)/g, function(original, mul, params) {
         var ret = ''
         
         units = params.split(',')
