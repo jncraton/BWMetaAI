@@ -5,10 +5,9 @@ if owned(stargate):
         attack_train(1, Protoss Arbiter)
 
 if owned(Templar Archives):
-    attack_train(5, Protoss High Templar)
+    attack_train(3, Protoss High Templar)
     attack_train(1, Dark Templar)
 
-attack_train(24, Protoss Dragoon)
-attack_train(24, Protoss Zealot)
+attack_multiple(3, 8 Zealot, 8 Dragoon)
 
 attack_simple()

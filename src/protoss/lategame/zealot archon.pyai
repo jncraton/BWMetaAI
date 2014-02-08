@@ -1,10 +1,10 @@
 use_lategame_vs(Zerg)
 
-attack_train(30, Protoss Zealot)
-attack_train(8, Protoss Dragoon)
 if owned(Protoss Templar Archives):
-    attack_train(3, Protoss High Templar)
+    attack_multiple(4, 7 Zealot, 2 Dragoon, 1 High Templar, 1 Archon)
     attack_train(1, Protoss Dark Templar)
-    attack_train(2, Protoss Archon)
+
+if notowns(Templar Archives):
+    attack_multiple(4, 7 Zealot, 2 Dragoon)
 
 attack_simple()

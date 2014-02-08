@@ -25,8 +25,7 @@ wait_build(2, Protoss Forge)
 upgrade(1, Protoss Ground Weapons, 80)
 upgrade(1, Protoss Armor, 80)
 
-attack_train(14, Protoss Dragoon)
-attack_train(14, Protoss Zealot)
+attack_multiple(3, 6 Zealot, 6 Dragoon)
 
 if random(96):
     expand(99, expansion)

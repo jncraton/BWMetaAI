@@ -16,7 +16,7 @@ build_finish(1, Protoss Citadel of Adun)
 upgrade(1, Leg Enhancements, 30)
 build_start(6, Protoss Gateway)
 
-attack_train_ratio(3, 4 Zealot, 2 Dragoon)
+attack_multiple(3, 4 Zealot, 2 Dragoon)
 
 if random(96):
     expand(99, expansion)
