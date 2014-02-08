@@ -256,9 +256,11 @@ var parse = function parse(content) {
         units = units.map(function (unit) {
             unit = unit.replace(/^ /g, '')
             
+            unit = unit.split(' ')
+            
             return {
-                quantity: unit.split(' ')[0],
-                name: unit.split(' ')[1]
+                quantity: unit.shift(),
+                name: unit.join(' ')
             }
         })
         
