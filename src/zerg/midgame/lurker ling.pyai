@@ -27,8 +27,7 @@ train(12, Zergling)
 wait_build(1, hydralisk den)
 train(6, Hydralisk)
 
-attack_train(24, Zergling)
-attack_train(8, Lurker)
+attack_multiple(2, 6 Lurker, 18 Zergling)
 
 if random(96):
     expand(99, expansion)

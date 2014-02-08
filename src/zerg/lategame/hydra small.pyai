@@ -1,5 +1,5 @@
 use_lategame_vs(Zerg, Terran, Protoss)
 
 if owned(hydralisk den):
-    attack_train(18, Hydra)
+    attack_multiple(8, 4 Hydra)
     attack_simple()

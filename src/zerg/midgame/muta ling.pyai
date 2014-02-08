@@ -22,8 +22,7 @@ expand(99, expansion)
 wait_build(1, Lair)
 build_start(1, Spire, 80)
 upgrade(1, Metabolic Boost, 80)
-attack_train(36, Zergling)
-attack_train(12, Mutalisk)
+attack_multiple(3, 6 Muta, 12 Zergling)
 
 if random(96):
     expand(99, expansion)

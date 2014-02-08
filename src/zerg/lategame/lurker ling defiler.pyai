@@ -4,6 +4,5 @@ if owned(hive):
     if owned(hydralisk den):
         if owned(defiler mound):
             attack_train(3, defiler)
-        attack_train(24, Ling)
-        attack_train(8, Lurker)
+        attack_multiple(2, 5 Lurker, 16 Ling)
         attack_simple()

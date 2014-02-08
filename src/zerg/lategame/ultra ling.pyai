@@ -1,9 +1,7 @@
 use_lategame_vs(Zerg, Terran, Protoss)
 
-attack_train(36, Zerg Zergling)
-if owned(defiler mound):
-    attack_train(4, Zerg Defiler)
 if owned(Ultralisk cavern):
-    attack_train(6, Zerg Ultralisk)
-
-attack_simple()
+    if owned(defiler mound):
+        attack_train(4, Zerg Defiler)
+    attack_multiple(4, 2 Ultralisk, 12 Zergling)
+    attack_simple()

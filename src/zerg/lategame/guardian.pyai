@@ -1,6 +1,5 @@
 use_lategame_vs(Zerg, Terran, Protoss)
 
 if owned(greater spire):
-    attack_train(12, mutalisk)
-    attack_train(6, guardian)
+    attack_multiple(8, 2 Mutalisk, 1 Guardian)
     attack_simple()

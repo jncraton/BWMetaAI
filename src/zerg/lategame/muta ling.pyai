@@ -1,6 +1,5 @@
 use_lategame_vs(Zerg, Terran, Protoss)
 
-attack_train(36, ling)
 if owned(spire):
-    attack_train(12, muta)
-attack_simple()
+    attack_multiple(3, 4 Muta, 12 Ling)
+    attack_simple()
