@@ -248,6 +248,35 @@ var parse = function parse(content) {
                'defensebuild_aa(1, ' + unit + ')\n'
         });
 
+    content = content.replace(/attack_train_ratio\((.*)\)/g, function(original, params) {
+        var ret = ''
+        
+        units = params.split(',')
+        
+        units = units.map(function (unit) {
+            unit = unit.replace(/^ /g, '')
+            
+            return {
+                quantity: unit.split(' ')[0],
+                name: unit.split(' ')[1]
+            }
+        })
+        
+        var mul = 3;
+        
+        for (var i = 1; i <= mul; i++) {
+            units.forEach(function (unit) {
+                ret += 'train(' + unit.quantity * i + ', ' + unit.name + ')\n'
+            })
+        }
+        
+        units.forEach(function (unit) {
+            ret += 'attack_add(' + unit.quantity * mul + ', ' + unit.name + ')\n'
+        })
+        
+        return ret
+    });
+    
     return content;
 }
 
