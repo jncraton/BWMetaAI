@@ -99,21 +99,25 @@ function Race(name) {
             } catch (e) {
                 console.log('Missing directory ' + config.srcPath + name + '/' + dir);
             }
-
-            if (files.length) {
-                for(var i = 0; i < files.length; i += 1) {
-                    if(files[i][0] == '_') {
-                        append("goto(gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
-                    } else {
-                        append("random_jump(50, " + "gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+            
+            if (dir == 'builds' && config[name].useBuild) {
+                append(loadContents(name + '/' + dir + '/' + config[name].useBuild + '.pyai'));
+            } else {
+                if (files.length) {
+                    for(var i = 0; i < files.length; i += 1) {
+                        if(files[i][0] == '_') {
+                            append("goto(gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+                        } else {
+                            append("random_jump(50, " + "gen_" + dir + "_" + files[i].replace('.pyai','').replace(/ /g,'_').replace(/^_/, '') + ")");
+                        }
                     }
-                }
 
-                append('goto(gen_jump_loop' + dir + ')');
-                
-                for(var i = 0; i < files.length; i += 1) {
-                    append(loadContents(name + '/' + dir + '/' + files[i]));
-                    append('goto(' + 'gen_end_' + dir + ')');
+                    append('goto(gen_jump_loop' + dir + ')');
+                    
+                    for(var i = 0; i < files.length; i += 1) {
+                        append(loadContents(name + '/' + dir + '/' + files[i]));
+                        append('goto(' + 'gen_end_' + dir + ')');
+                    }
                 }
             }
             
