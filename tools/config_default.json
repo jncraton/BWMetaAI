@@ -2,12 +2,15 @@
     "srcPath": "src/",
     "verbosity": 5,
     "terran": {
-        "verbosity": 0
+        "verbosity": 0,
+        "useBuild": ""
     },
     "zerg": {
-        "verbosity": 0
+        "verbosity": 0,
+        "useBuild": ""
     },
     "protoss": {
-        "verbosity": 0
+        "verbosity": 0,
+        "useBuild": ""
     }
 }
