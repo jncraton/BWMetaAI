@@ -58,6 +58,11 @@ var parse = function parse(content) {
                 line = line.replace('multirun', 'multirun()')
                 blocks.push('stop()\n' + 
                     '--' + end_block + '--\n')
+            } else if (line.search('loop') > -1) {
+                line = line.replace('loop', 'goto()')
+                blocks.push('wait(75)\n' + 
+                    'goto(' + start_block + ')\n' +
+                    '--' + end_block + '--\n')
             } else {
                 blocks.push('--' + end_block + '--\n')
             }
