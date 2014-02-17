@@ -7,7 +7,6 @@ multirun_loop:
             defense_ground(Hydralisk)
             if enemyownsairtech():
                 defense_air_train(Hydralisk)
-        if owned(hydralisk den):
             if owned(lurker):
                 defense_ground(Lurker)
         if owned(ultralisk cavern):
