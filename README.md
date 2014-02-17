@@ -3,7 +3,7 @@ BWMetaAI
 
 A Brood War AI designed to follow a metagame closer to modern 1v1 than the original Brood War AI.
 
-![Zeal Goon vs Mech](screenshots/zeal_goon_tanks.png)
+![Zeal Goon vs Mech](screenshots/zeal_goon_tank.png)
 
 Purpose
 --------
