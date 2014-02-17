@@ -9,6 +9,9 @@ multirun_loop:
                 defense_air_train(Hydralisk)
             if owned(lurker):
                 defense_ground(Lurker)
+            if owned(spire):
+                defense_ground(mutalisk)
+                defense_air(mutalisk)
         if owned(ultralisk cavern):
             defense_ground(Ultralisk)
 
