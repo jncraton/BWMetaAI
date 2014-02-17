@@ -120,7 +120,7 @@ Else is not yet supported.
 
 ### loop blocks
 
-Blocks of code can be loop indefinitely as follows:
+Blocks of code can be looped indefinitely as follows:
 
     loop:
         do_morph(36, Terran Marine)
