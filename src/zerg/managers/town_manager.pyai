@@ -16,12 +16,7 @@ multirun_loop:
 multirun_loop:
     if enemyownsairtech():
         if owned(hatchery):
-            build_start(1, Drone)
-            build_start(2, Drone)
-            build_start(3, Drone)
-            build_start(4, Drone)
-            build_start(5, Drone)
-            build_start(6, Drone)
+            build_separately(6, Drone)
             player_need(1, Evolution Chamber)
             creep(3)
             build_finish(2, Zerg Creep Colony, 150)
@@ -32,6 +27,7 @@ multirun_loop:
     if time(16):
         if owned(pool):
             if owned(evo chamber):
+                build_separately(6, Drone)
                 creep(3)
                 build_start(1, creep colony, 150)
                 build_start(2, creep colony, 150)
