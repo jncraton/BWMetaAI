@@ -107,10 +107,17 @@ Many _jump commands can be accessed using a new Pythonic `if` structure. Here's 
 If blocks allow you to write the same code like this:
 
     if random(128):
-        # sometime do this
+        # sometimes do this
     # always do this
     
 Else is not yet supported.
+
+### loop blocks
+
+Blocks of code can be loop indefinitely as follows:
+
+    loop:
+        do_morph(36, Terran Marine)
 
 ### multirun blocks
 
