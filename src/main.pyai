@@ -5,7 +5,7 @@ start_town()
 
 # Build initial town hall and workers
 build_start(1, Town Hall, 150)
-build_start(5, Peon, 80)
+build_start(5, Peon, 150)
 
 # Set initial states
 transports_off()
