@@ -1,0 +1,8 @@
+# Make sure the natural has been taken by this point
+expand(1, expansion)
+
+loop:
+    panic(expansion)
+    wait(2000)
+    if random(65):
+        expand(99, expansion)
