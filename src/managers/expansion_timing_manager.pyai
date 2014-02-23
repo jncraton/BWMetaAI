@@ -1,4 +1,7 @@
-wait(3000)
-if random(100):
-    expand(99, expansion)
-repeat()
+# Make sure the natural has been taken by this point
+expand(1, expansion)
+
+loop:
+    wait(3000)
+    if random(100):
+        expand(99, expansion)
