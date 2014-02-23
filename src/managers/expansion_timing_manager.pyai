@@ -2,6 +2,7 @@
 expand(1, expansion)
 
 loop:
-    wait(3000)
-    if random(100):
+    panic(expansion)
+    wait(2000)
+    if random(40):
         expand(99, expansion)

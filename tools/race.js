@@ -69,6 +69,10 @@ function Race(name) {
             return 'expand(' + num + 'gen_expansions_' + block + ')'
         });
             
+        content = content.replace(/panic\((.*)\)/g, function(command, block) {
+            return 'panic(' + 'gen_expansions_' + block + ')'
+        });
+            
         content = content.replace(/multirun_file\((.*)\)/g, function(command, relative_filename) {
             block_count += 1;
             
