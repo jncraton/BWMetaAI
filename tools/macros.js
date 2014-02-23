@@ -38,6 +38,8 @@ var parse = function parse(content) {
             line = line.replace(/if (.*)\((.*)\)/, function (match, function_name, params) {
                 if (function_name == 'owned') {
                     return 'if_owned(' + params + ')'
+                } else if (function_name == 'townpoint') {
+                    return 'try_townpoint(' + params + ')'
                 } else {
                     return function_name + '_jump(' + params + ')'
                 }
