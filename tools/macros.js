@@ -1,3 +1,5 @@
+var config = require('./config.json');
+
 var block_counter = 0;
 
 var parse = function parse(content) {
@@ -253,7 +255,17 @@ var parse = function parse(content) {
                'defenseuse_aa(1, ' + unit + ')\n' +
                'defensebuild_ag(1, ' + unit + ')\n' +
                'defensebuild_aa(1, ' + unit + ')\n'
-        });
+    });
+
+    content = content.replace(/create_bonus_workers\(()\)/g, function(original) {
+        ret = ''
+        
+        for (var i = 0; i < config.bonusWorkers; i++) {
+            ret += 'create_unit(Peon, 2000, 2000)\n'
+        }
+        
+        return ret
+    });
 
     content = content.replace(/attack_multiple\((.*?), (.*)\)/g, function(original, mul, params) {
         var ret = ''
