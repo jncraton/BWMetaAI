@@ -1,7 +1,7 @@
 {
     "srcPath": "src/",
     "verbosity": 5,
-    "bonusWorkers": 1,
+    "bonusWorkers": 0,
     "terran": {
         "verbosity": 0,
         "useBuild": ""
