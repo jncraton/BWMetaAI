@@ -109,8 +109,8 @@ function Race(name) {
                 contents = loadContents(name + '/' + dir + '/' + build + '.pyai');
                 
                 if (dir == 'builds') {
-                    contents = contents.replace(/(wait_buildstart\(.*?\))/g, function (original) {
-                        original += macros.parse('\nif rush():\n    goto(rush_defense)')
+                    contents = contents.replace(/(build\(.*?\))/g, function (original) {
+                        original = macros.parse('if rush():\n    goto(rush_defense)\n') + original
                         return original
                     })
                 }
