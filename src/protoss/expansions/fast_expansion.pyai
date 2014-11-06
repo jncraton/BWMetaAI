@@ -1,6 +1,7 @@
 start_town()
 creep(3)
 build_finish(1, Protoss Pylon, 80)
+wait_resources(400, 0)
 build_start(1, Town Hall, 150)
 build_finish(1, Protoss Forge, 150)
 build_start(2, Protoss Photon Cannon)
