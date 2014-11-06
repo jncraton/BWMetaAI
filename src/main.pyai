@@ -58,3 +58,9 @@ goto(lategame_loop)
 include_block(expansion)
 include_block(fortified_fe)
 include_block(fast_expansion)
+
+# Special rush defense block
+# Defends and skips original build and transitions to midgame
+--rush_defense--
+include(rush_defense)
+goto(gen_end_builds)

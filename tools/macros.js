@@ -154,6 +154,14 @@ var parse = function parse(content) {
         return expandEnemyOwns(units, block);
     });
 
+    content = content.replace(/rush_jump\((.*)\)/g, function(original, block) {
+        tooLateForBuildings = nextBlockName()
+
+        return 'time_jump(5, ' + tooLateForBuildings + ')\n' + // 5 is roughly 3:30
+               expandEnemyOwns(['Zerg Spawning Pool', 'Terran Barracks', 'Protoss Gateway'], block) + '\n' +
+               '--' + tooLateForBuildings + '--'
+    });
+
     content = content.replace(/enemyownsairtech_jump\((.*)\)/g, function(original, block) {
         var units = ['Terran Starport', 'Protoss Stargate', 'Zerg Spire'];
         return expandEnemyOwns(units, block);

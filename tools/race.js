@@ -104,8 +104,22 @@ function Race(name) {
                 console.log('Missing directory ' + config.srcPath + name + '/' + dir);
             }
             
+            getBuildContents = function (build) {
+                build = build.replace('.pyai','')
+                contents = loadContents(name + '/' + dir + '/' + build + '.pyai');
+                
+                if (dir == 'builds') {
+                    contents = contents.replace(/(wait_buildstart\(.*?\))/g, function (original) {
+                        original += macros.parse('\nif rush():\n    goto(rush_defense)')
+                        return original
+                    })
+                }
+                
+                return contents
+            }
+            
             if (dir == 'builds' && config[name].useBuild) {
-                append(loadContents(name + '/' + dir + '/' + config[name].useBuild + '.pyai'));
+                append(getBuildContents(config[name].useBuild));
             } else {
                 if (files.length) {
                     for(var i = 0; i < files.length; i += 1) {
@@ -119,7 +133,7 @@ function Race(name) {
                     append('goto(gen_jump_loop' + dir + ')');
                     
                     for(var i = 0; i < files.length; i += 1) {
-                        append(loadContents(name + '/' + dir + '/' + files[i]));
+                        append(getBuildContents(files[i]));
                         append('goto(' + 'gen_end_' + dir + ')');
                     }
                 }
