@@ -157,7 +157,7 @@ var parse = function parse(content) {
     content = content.replace(/rush_jump\((.*)\)/g, function(original, block) {
         tooLateForBuildings = nextBlockName()
 
-        return 'time_jump(5, ' + tooLateForBuildings + ')\n' + // 5 is roughly 3:30
+        return 'time_jump(2, ' + tooLateForBuildings + ')\n' + // 5 is roughly 3:30
                expandEnemyOwns(['Zerg Spawning Pool', 'Terran Barracks', 'Protoss Gateway'], block) + '\n' +
                '--' + tooLateForBuildings + '--'
     });
