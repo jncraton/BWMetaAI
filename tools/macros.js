@@ -156,10 +156,14 @@ var parse = function parse(content) {
 
     content = content.replace(/rush_jump\((.*)\)/g, function(original, block) {
         tooLateForBuildings = nextBlockName()
+        tooLateForUnits = nextBlockName()
 
-        return 'time_jump(2, ' + tooLateForBuildings + ')\n' + // 5 is roughly 3:30
+        return 'time_jump(2, ' + tooLateForBuildings + ')\n' + // 2 is roughly 1:20
                expandEnemyOwns(['Zerg Spawning Pool', 'Terran Barracks', 'Protoss Gateway'], block) + '\n' +
-               '--' + tooLateForBuildings + '--'
+               '--' + tooLateForBuildings + '--\n' +
+               'time_jump(4, ' + tooLateForUnits + ')\n' + // 4 is roughly 2:50
+               expandEnemyOwns(['Zerg Zergling', 'Terran Marine', 'Protoss Zealot'], block) + '\n' +
+               '--' + tooLateForUnits + '--'
     });
 
     content = content.replace(/enemyownsairtech_jump\((.*)\)/g, function(original, block) {
