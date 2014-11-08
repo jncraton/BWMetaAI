@@ -29,7 +29,11 @@ The following example may cause a crash:
     attach_do()
     attack_clear()
     stop()
-    
+
+## wait_train
+
+Train followed by wait_train could cause a hang if a unit is killed between the commands.
+
 ## Multithreaded upgrades
 
 # Stagnant AI

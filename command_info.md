@@ -112,7 +112,7 @@ Add all %3(military) to the current attacking party except for %1(byte) of them,
 Research technology %1(technology), at priority %2(byte).
 
 ## train (byte) (military)
-Train %2(military) until it commands %1(byte) of them.
+Train %2(military) until it commands %1(byte) of them. Blocks until the %1 units are either trained or in the training queue.
 
 ## upgrade (byte) (upgrade) (byte)
 Research upgrade %2(upgrade) up to level %1(byte), at priority %3(byte). The maximum supported upgrade level is 31.
@@ -124,7 +124,7 @@ Wait for %1(word) logical game frames. A game frame is 42 milliseconds on fastes
 Wait until attacking party has finished to attack.
 
 ## wait_force (byte) (unit)
-Wait until computer commands %1(byte) %2(unit).
+Wait until computer commands %1(byte) %2(unit). This will train units until %1 of them are completed. It can train extra units as those in the queue when the command finishes will be allowed to complete.
 
 ## wait_build (byte) (building)
 Wait until computer commands %1(byte) %2(building).
@@ -133,7 +133,7 @@ Wait until computer commands %1(byte) %2(building).
 Wait until construction of %1(byte) %2(building) has started.
 
 ## wait_train (byte) (military)
-Wait until computer commands %1(byte) %2(military).
+Wait until computer commands %1(byte) %2(military). Blocks waiting for units to train, but does not actually train them. Train followed by wait_train could cause a hang if a unit is killed between the commands.
 
 # Flow control commands
 
