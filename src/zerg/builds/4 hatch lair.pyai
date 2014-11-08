@@ -21,7 +21,7 @@ if enemyowns(Forge):
     build_finish(1, Hydralisk Den)
     upgrade(1, Muscular Augments, 30)
     train(12, Zerg Hydralisk)
-    wait_train(12, Zerg Hydralisk)
+    wait_force(12, Zerg Hydralisk)
     upgrade(1, Grooved Spines, 30)
     attack_train(24, Zerg Hydralisk)
     attack_simple()
