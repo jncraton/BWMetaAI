@@ -1,0 +1,29 @@
+use_build_vs(Protoss)
+8 Pylon
+10 Gateway
+12 Gas
+13 Zealot
+defensebuild_gg(1, Zealot)
+16 Pylon
+17 Core
+18 Zealot
+22 Dragoon
+23 Pylon
+24 Robo
+26 Dragoon
+28 Gateway
+28 Pylon
+28 Robotics Support Bay
+28 Dragoon
+30 Shuttle
+32 Dragoon
+34 Pylon
+34 Reaver
+train(6, Dragoon)
+wait_train(1, Reaver)
+wait_force(6, Dragoon)
+attack_add(2, Zealot)
+attack_add(6, Dragoon)
+attack_add(1, Reaver)
+attack_add(1, Shuttle)
+attack_async()

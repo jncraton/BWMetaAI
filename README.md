@@ -53,7 +53,8 @@ Build Orders
 * 2 Gate Corsair
 * 2 Gate Zealots
 * Fast DT
-* zcorez expand
+* ZcoreZ Expand
+* ZcoreZ Reaver
 
 Late game 
 ---------
