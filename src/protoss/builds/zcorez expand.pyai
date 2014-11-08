@@ -1,0 +1,13 @@
+use_build_vs(Protoss)
+8 Pylon
+10 Gateway
+12 Gas
+13 Zealot
+defensebuild_gg(1, Zealot)
+16 Pylon
+17 Core
+18 Zealot
+22 Dragoon
+23 Gateway
+23 Pylon
+expand(1, expansion)
