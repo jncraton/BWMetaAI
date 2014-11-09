@@ -1,5 +1,3 @@
-message(defending rush)
-# BBS
 build_start(9, SCV)
 build_start(1, Rax)
 build_start(2, Rax)

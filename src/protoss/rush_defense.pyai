@@ -1,4 +1,3 @@
-message(defending rush)
 build_start(7, Probe, 250)
 build_start(1, Pylon, 250)
 build_start(1, Gateway, 250)
