@@ -1,6 +1,6 @@
 {
     "srcPath": "src/",
-    "verbosity": 5,
+    "verbosity": 0,
     "bonusWorkers": 0,
     "terran": {
         "verbosity": 0,
