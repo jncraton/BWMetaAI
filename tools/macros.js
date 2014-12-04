@@ -150,7 +150,7 @@ var parse = function parse(content) {
     });
 
     content = content.replace(/enemyownscloaked_jump\((.*)\)/g, function(original, block) {
-        var units = ['Zerg Lurker', 'Protoss Templar Archives', 'Protoss Dark Templar', 'Terran Ghost', 'Terran Wraith'];
+        var units = ['Zerg Lurker', 'Protoss Arbiter', 'Protoss Templar Archives', 'Protoss Dark Templar', 'Terran Ghost', 'Terran Wraith'];
         return expandEnemyOwns(units, block);
     });
 
