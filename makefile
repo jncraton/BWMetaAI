@@ -36,4 +36,5 @@ $(sc_path)/patch_rt_original.mpq:
 	@cp $(sc_path)/patch_rt.mpq $(sc_path)/patch_rt_original.mpq
 
 clean:
-	rm build/*
+	@rm build/*.mpq
+	@rm build/*.pyai
