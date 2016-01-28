@@ -21,8 +21,8 @@ multirun_loop:
             build_separately(6, Drone)
             player_need(1, Evolution Chamber)
             creep(3)
-            build_finish(2, Zerg Creep Colony, 150)
-            build(2, Zerg Spore Colony, 150)
+            build_finish(1, Zerg Creep Colony, 150)
+            build(1, Zerg Spore Colony, 150)
             stop()
 
 multirun_loop:
@@ -33,12 +33,9 @@ multirun_loop:
                 creep(3)
                 build_start(1, creep colony, 150)
                 build_start(2, creep colony, 150)
-                build_start(3, creep colony, 150)
-                build_start(4, creep colony, 150)
-                build_start(5, creep colony, 150)
-                build_finish(6, creep colony, 150)
-                build(2, spore colony, 150)
-                build(4, sunken colony, 150)
+                build_finish(3, creep colony, 150)
+                build(1, spore colony, 150)
+                build(2, sunken colony, 150)
                 stop()
 
 stop()
