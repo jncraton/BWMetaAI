@@ -1,5 +1,5 @@
 from utils import *
-from Libs import PCX,FNT,GRP,PAL,TBL,AIBIN,DAT,IScriptBIN
+from Libs import PCX,PAL,TBL,AIBIN,DAT,IScriptBIN
 
 from Tkinter import *
 from tkMessageBox import *
@@ -577,22 +577,7 @@ class MPQSettings(Frame):
 
 class SettingsPanel(Frame):
 	types = {
-		'PCX':(PCX.PCX,'PCX','pcx',[('StarCraft Special Palette','.pcx'),('All Files','*')]),
-		'FNT':(FNT.FNT,'FNT','fnt',[('StarCraft FNT','.fnt'),('All Files','*')]),
-		'GRP':(GRP.GRP,'GRP','grp',[('StarCraft GRP','.grp'),('All Files','*')]),
-		'CacheGRP':(GRP.CacheGRP,'GRP','grp',[('StarCraft GRP','.grp'),('All Files','*')]),
-		'Palette':(PAL.Palette,'Palette','pal',[('RIFF, JASC, and StarCraft PAL','*.pal'),('StarCraft Tileset WPE','*.wpe'),('ZSoft PCX','*.pcx'),('All Files','*')]),
-		'TBL':(TBL.TBL,'TBL','tbl',[('StarCraft TBL Files','*.tbl'),('All Files','*')]),
 		'AIBIN':(AIBIN.AIBIN,'aiscript.bin','bin',[('AI Scripts','*.bin'),('All Files','*')]),
-		'UnitsDAT':(DAT.UnitsDAT,'units.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'WeaponsDAT':(DAT.WeaponsDAT,'weapons.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'FlingyDAT':(DAT.FlingyDAT,'flingy.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'SpritesDAT':(DAT.SpritesDAT,'sprites.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'ImagesDAT':(DAT.ImagesDAT,'images.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'UpgradesDAT':(DAT.UpgradesDAT,'uupgrades.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'TechDAT':(DAT.TechDAT,'techdata.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'SoundsDAT':(DAT.SoundsDAT,'sfxdata.dat','dat',[('StarCraft DAT files','*.dat'),('All Files','*')]),
-		'IScript':(IScriptBIN.IScriptBIN,'iscript.bin','bin',[('IScripts','*.bin'),('All Files','*')]),
 	}
 
 	def __init__(self, parent, entries, settings, mpqhandler, setdlg=None):
