@@ -11,6 +11,8 @@ exports.build = function(input, output) {
         src = src.replace(/{commit}/g, commit);
         fs.writeFileSync(output, src);
     });
+    
+    src = src.replace(/{now}/g, new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''));
 }
 
 if(process.argv[3]) {

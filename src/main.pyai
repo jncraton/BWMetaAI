@@ -14,7 +14,12 @@ farms_notiming()
 defaultbuild_off()
 default_min(7)
 
-message(BWMetaAI version {commit})
+multirun:
+    message(BWMetaAI version {commit})
+    wait(100)
+    message(BWMetaAI built {now})
+    wait(100)
+    message(BWMetaAI github.com/jncraton/BWMetaAI)
 
 # Set maximums for unit production
 include(define_max)
