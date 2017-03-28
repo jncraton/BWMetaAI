@@ -1,5 +1,5 @@
-sc_path = d:\games\sc
-launcher = d:\games\sc\Chaoslauncher\chaoslauncher.exe
+sc_path = .
+launcher = chaoslauncher.exe
 src = src
 config = default
 
@@ -15,7 +15,7 @@ patch: mpq
 mpq: combined_scripts $(sc_path)/patch_rt_original.mpq
 	@echo Creating MPQ
 	@cp $(sc_path)/patch_rt_original.mpq build/patch_rt.mpq
-	@python tools\pyai.pyw -c -w -m ../build/patch_rt.mpq ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
+	@python tools/PyAI.pyw -c -w -m ../build/patch_rt.mpq ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
 	@cp build/patch_rt.mpq $(sc_path)/patch_rt_bwmetaai.mpq
 
 bins: combined_scripts
