@@ -8,18 +8,18 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 Purpose
 --------
 
-This project seeks to create an AI that provides a unique experience with each game while closely mirroring builds and unit compositions used by humans to better bring new players up to speed.
+This project seeks to create an AI that provides a unique experience in each game while closely mirroring builds and unit compositions used by humans.
 
 ![Muta Harass](docs/muta_harass.png)
 
-This AI should provide a significantly better learning experience for new players. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting and early defense important. This should encourage learning what the AI is up to and adapting rather than turtling.
+This provides a much stronger learning experience for new players. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting and early defense important. This should encourage learning what the AI is up to and adapting rather than turtling.
 
 ![Large bio attack](docs/marines_sunkens.png)
 
 Build Orders
 ------------
 
-The scripts include a number of build orders that have been relatively popular in high level play. Once the initial build is completed, one of several common midgame transitions are used to take the AI into a variety of late game pushes.
+BWMetaAI include a number of build orders that have been relatively popular in high level play. Once the initial build is completed, one of several common midgame transitions are used to take the AI into a variety of late game pushes.
 
 ### Terran
 
