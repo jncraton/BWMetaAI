@@ -9,8 +9,8 @@ Running from source
 ### Prerequisites: 
 
 - [node.js](http://nodejs.org/download/)
-- make ([MSYS](http://www.mingw.org/wiki/MSYS) on Windows)
-- [Python](http://www.python.org/download/) 2.7 32 bit on Windows 
+- [GNU Make](https://www.gnu.org/software/make/) (Included with [Git for Windows](https://git-for-windows.github.io/) or [MSYS](http://www.mingw.org/wiki/MSYS))
+- [Python](http://www.python.org/download/) 2.7 32 bit. This particular version is required to be able to interact with the 32 bit storm.dll using ctypes.
 
 Windows is required for mpq manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
 
