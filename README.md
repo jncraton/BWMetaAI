@@ -16,6 +16,8 @@ This provides a much stronger learning experience for new players. It tends to a
 
 ![Large bio attack](docs/marines_sunkens.png)
 
+The included screenshots are from real AI vs AI games to demonstrate the unit compositions used in different matchups.
+
 Build Orders
 ------------
 
