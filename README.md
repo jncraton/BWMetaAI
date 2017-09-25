@@ -8,7 +8,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 Purpose
 --------
 
-This project seeks to create an AI that provides a unique experience with each game and more closely mirrors builds and unit compositions used by humans to better bring new players up to speed.
+This project seeks to create an AI that provides a unique experience with each game while closely mirroring builds and unit compositions used by humans to better bring new players up to speed.
 
 ![Muta Harass](screenshots/muta_harass.png)
 
