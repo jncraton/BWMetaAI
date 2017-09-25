@@ -34,6 +34,21 @@ New AI commands/macros:
 
 This section is most useful once you're familiar with PyAI scripting. It describes new AI preprocessor commands that you can use when contributing.
 
+### Build Orders
+
+When designing build orders, you can use simple supply count syntax just like you would when writing down builds for human usage. This makes it fairly easy to add or modify builds without a deep knowledge of the AI engine.
+
+    9 Depot
+    11 Rax
+    14 Marine
+    16 Expand
+    16 Depot
+    16 Marine
+    18 Barracks
+    18 Marine
+    20 Marine
+    21 Refinery
+
 ### If blocks
 
 Many _jump commands can be accessed using a new Pythonic `if` structure. Here's how you would normally create a block that executes 50% of the time:
