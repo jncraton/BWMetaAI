@@ -15,11 +15,9 @@ defaultbuild_off()
 default_min(7)
 
 multirun:
-    message(BWMetaAI version {commit})
-    wait(100)
-    message(BWMetaAI built {now})
-    wait(100)
-    message(BWMetaAI github.com/jncraton/BWMetaAI)
+    message(BWMetaAI github.com/jncraton/BWMetaAI {now} {commit})
+    wait(200)
+    message(gl hf)
 
 # Set maximums for unit production
 include(define_max)
