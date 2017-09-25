@@ -78,6 +78,17 @@ Late game
 * Zealot Archon
 * Carriers
 
+Difficulty
+----------
+
+This project doesn't seek to create an AI script that performs especially well against either humans or other scripts. Its focus is to follow builds and unit compositions that humans use even if the AI is terrible at executing them properly. 
+
+This project doesn't make use of advanced techniques such as those used in [BWAPI](https://github.com/bwapi/bwapi). This project only rewrites the internal AI scripts that Brood War uses to decide what to build next and when to attack. This is done for a number of reasons but mostly to make it very simple to get set up and play against.
+
+Its micro and building placement are still extremely poor. It targets most spells poorly, sieges tanks at terrible times, unburrows lurkers to chase things that have gone out of range, wanders around instead of attacking wall-ins, and makes all sorts of other mistakes that humans likely wouldn't.
+
+If you're looking for the most challenging AI experience, this isn't it. However, playing against two or three of these at once can still provide a challenging experience even for decent players.
+
 Running from source
 --------------------
 
