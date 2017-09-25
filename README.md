@@ -8,7 +8,7 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 Purpose
 --------
 
-There are a lot of [good BW AI mods](http://broodwarai.com/wiki/index.php?title=AI_script_mods) already available. This project seeks to create an AI that provides a unique experience with each game and more closely mirrors builds and unit compositions used by humans to better bring new players up to speed.
+This project seeks to create an AI that provides a unique experience with each game and more closely mirrors builds and unit compositions used by humans to better bring new players up to speed.
 
 ![Muta Harass](screenshots/muta_harass.png)
 
