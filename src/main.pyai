@@ -66,6 +66,8 @@ include_block(fast_expansion)
 
 # Special rush defense block
 # Defends and skips original build and transitions to midgame
+# This will be called based on a check that happens before each building
+# during the early phase of the build order
 --rush_defense--
 include(rush_defense)
 goto(gen_end_builds)
