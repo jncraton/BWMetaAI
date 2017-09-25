@@ -83,12 +83,8 @@ Once the AI has many bases and all useful tech, it jumps into a loop of common l
 Difficulty
 ----------
 
-This project doesn't seek to create an AI script that performs especially well against either humans or other scripts. Its focus is to follow builds and unit compositions that humans use even if the AI is terrible at executing them properly. 
+This project doesn't seek to create an AI script that performs especially well against either humans or other scripts. Advanced techniques such as those used in [BWAPI](https://github.com/bwapi/bwapi) are not used. This project only rewrites the internal AI scripts that Brood War uses to decide what to build next and when to attack. This is done primarily to make it very simple to get up and running.
 
-Advanced techniques such as those used in [BWAPI](https://github.com/bwapi/bwapi) are not used. This project only rewrites the internal AI scripts that Brood War uses to decide what to build next and when to attack. This is done primarily to make it very simple to get up and running.
-
-Micro and building placement are still extremely poor. The AI targets most spells poorly, sieges tanks at terrible times, unburrows lurkers to chase things that have gone out of range, wanders around instead of attacking wall-ins, and makes all sorts of other mistakes that good humans would not.
-
-If you're looking for the most challenging AI experience, this isn't it. However, playing against two or three of these at once can still provide a challenging experience even for decent players. Playing against one AI should provide a good learning environment for a newer player.
+Micro and building placement are still extremely poor. The AI targets most spells poorly, sieges tanks at terrible times, unburrows lurkers to chase things that have gone out of range, wanders around instead of attacking wall-ins, and makes all sorts of other mistakes that good humans would not. Playing against two or three of these at once can still provide a challenging experience even for decent players. Playing against one AI should provide a good learning environment for a newer player.
 
 With all of that in mind, if you find behavior that you think can reasonably be addressed (e.g. you DT rush a computer and it doesn't attempt to build detection), feel free to open an issue.
