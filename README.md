@@ -110,7 +110,7 @@ Build and patch SC
 New AI commands/macros:
 -----------------------
 
-This includes an AI preprocessor which implements some new commands that you can use if you want to contribute to this project.
+This section is only useful if you're planning to hack on this project and are already familiar with PyAI scripting. It describes new AI preprocessor commands that you can use when contributing.
 
 ### If blocks
 
