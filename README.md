@@ -16,11 +16,11 @@ This AI should provide a significantly better learning experience for new player
 
 ![Large bio attack](screenshots/marines_sunkens.png)
 
-The scripts include a number of build orders that have been relatively popular in high level play. Once the initial build is completed, one of several common midgame transitions are used to take the AI into a variety of late game pushes.
-
 Build Orders
 ------------
- 
+
+The scripts include a number of build orders that have been relatively popular in high level play. Once the initial build is completed, one of several common midgame transitions are used to take the AI into a variety of late game pushes.
+
 ### Terran
 
 * Siege Expand
@@ -59,11 +59,13 @@ Build Orders
 Late game 
 ---------
 
+Once the AI has many bases and all useful tech, it jumps into a loop of common late game unit compositions.
+
 ### Terran
 
-* SK
 * Mech
 * Battlecruisers
+* SK in TvZ only
 
 ### Zerg
 
