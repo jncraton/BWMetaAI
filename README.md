@@ -8,15 +8,15 @@ A Brood War AI designed to follow a metagame closer to modern 1v1 than the origi
 Purpose
 --------
 
-There are a lot of [good BW AI mods](http://broodwarai.com/wiki/index.php?title=AI_script_mods) already available . This project seeks to create a non-cheating AI that provides a unique experience with each game. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting and early defense important.
+There are a lot of [good BW AI mods](http://broodwarai.com/wiki/index.php?title=AI_script_mods) already available. This project seeks to create an AI that provides a unique experience with each game and more closely mirrors builds and unit compositions used by humans to better bring new players up to speed.
 
 ![Muta Harass](screenshots/muta_harass.png)
 
-This AI should provide a significantly better learning experience for new players. Because it rarely performs early all-in style attacks, it encourages scouting and fast expanding to match the AI's economy rather than 1 or 2 base turtle play.
+This AI should provide a significantly better learning experience for new players. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting and early defense important. This should encourage learning what the AI is up to and adapting rather than turtling.
 
 ![Large bio attack](screenshots/marines_sunkens.png)
 
-The scripts include a number of build orders that have been relatively popular in high level play. Once the initial build is completed, one of several common midgame transitions are used to take the AI into a variety of late game attacks.
+The scripts include a number of build orders that have been relatively popular in high level play. Once the initial build is completed, one of several common midgame transitions are used to take the AI into a variety of late game pushes.
 
 Build Orders
 ------------
