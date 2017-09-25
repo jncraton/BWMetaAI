@@ -1,5 +1,5 @@
-sc_path = .
-launcher = chaoslauncher.exe
+sc_path = D:\games\StarCraft
+launcher =  D:\games\StarCraft\starcraft.exe
 src = src
 config = default
 
