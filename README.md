@@ -10,11 +10,11 @@ Purpose
 
 This project seeks to create an AI that provides a unique experience with each game while closely mirroring builds and unit compositions used by humans to better bring new players up to speed.
 
-![Muta Harass](screenshots/muta_harass.png)
+![Muta Harass](docs/muta_harass.png)
 
 This AI should provide a significantly better learning experience for new players. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting and early defense important. This should encourage learning what the AI is up to and adapting rather than turtling.
 
-![Large bio attack](screenshots/marines_sunkens.png)
+![Large bio attack](docs/marines_sunkens.png)
 
 Build Orders
 ------------
