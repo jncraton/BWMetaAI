@@ -18,6 +18,16 @@ This provides a much stronger learning experience for new players. It tends to a
 
 The included screenshots are from real AI vs AI games to demonstrate the unit compositions used in different matchups.
 
+Installation
+------------
+
+The simplest way to get this running is as follows:
+
+1. If using StarCraft 1.18 or greater, open the Blizzard app and update Brood War before continuing.
+2. Browse to your StarCraft folder and make a backup copy of patch_rt.mpq just in case something goes wrong.
+3. Download the latest [patch_rt.mpq](https://github.com/jncraton/BWMetaAI/releases/download/v2.0/patch_rt.mpq) from the releases and save it over your current patch_rt.mpq.
+4. Run StarCraft Brood War and play a game with an AI opponent. If the AI is running correctly you will recieve a message from the AI letting you know it is running.
+
 Build Orders
 ------------
 
