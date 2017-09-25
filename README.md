@@ -88,3 +88,5 @@ This project doesn't make use of advanced techniques such as those used in [BWAP
 Its micro and building placement are still extremely poor. It targets most spells poorly, sieges tanks at terrible times, unburrows lurkers to chase things that have gone out of range, wanders around instead of attacking wall-ins, and makes all sorts of other mistakes that humans likely wouldn't.
 
 If you're looking for the most challenging AI experience, this isn't it. However, playing against two or three of these at once can still provide a challenging experience even for decent players.
+
+With all of that in mind, if you find behavior that you think can reasonably be addressed (e.g. you DT rush a computer and it doesn't attempt to build detection), feel free to open an issue.
