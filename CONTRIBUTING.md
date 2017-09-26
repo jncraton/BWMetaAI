@@ -9,10 +9,10 @@ Running from source
 ### Prerequisites: 
 
 - [node.js](http://nodejs.org/download/)
-- [GNU Make](https://www.gnu.org/software/make/) (Included with [Git for Windows](https://git-for-windows.github.io/) or [MSYS](http://www.mingw.org/wiki/MSYS))
-- [Python](http://www.python.org/download/) 2.7 32 bit. This particular version is required to be able to interact with the 32 bit storm.dll using ctypes.
+- [GNU Make](https://www.gnu.org/software/make/)
+- [Python](http://www.python.org/download/) 2.7 32 bit. This particular version is required to be able to interact with storm.dll using ctypes.
 
-Windows is required for mpq manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
+Windows is required for MPQ manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
 
 ### Build and patch SC
 
@@ -27,7 +27,7 @@ or
 1. Edit the makefile to:
     - Use your SC path
     - Use the absolute path to your prefered SC launcher. This can simply be starcraft.exe if no launcher is used.
-3. Execute `make run` or `run.cmd` to compile the AIs, build an MPQ, and replace the default in your SC directory.
+3. Execute `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory.
 
 New AI commands/macros:
 -----------------------
