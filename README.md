@@ -12,7 +12,7 @@ This project seeks to create an AI that provides a unique experience in each gam
 
 ![Muta Harass](docs/muta_harass.png)
 
-This provides a much stronger learning experience for new players. It tends to avoid all-in strategies in favor of an economic focus, but it also includes a number of rushes to make scouting and early defense important. This should encourage learning what the AI is up to and adapting rather than turtling.
+This provides a much stronger learning experience for new players. Players are encouraged to scout, learn what the AI is doing, and adapt instead of turtle up. The AI tends to avoid all-in strategies in favor of economic builds, but it also includes a number of rushes to make scouting and early defense important.
 
 ![Large bio attack](docs/marines_sunkens.png)
 
