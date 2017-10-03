@@ -14,7 +14,11 @@ Running from source
 
 Windows is required for MPQ manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
 
-### Build and patch SC
+### Build 
+
+Run `make bins` to build aiscript.bin or `make mpq` to build patch_rt.mpq with aiscript.bin included.
+
+### Patch SC
 
 Manually overwrite aiscript.bin in patch_rt.mpq using an MPQ editor
 
