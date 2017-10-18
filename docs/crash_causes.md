@@ -36,6 +36,12 @@ Train followed by wait_train could cause a hang if a unit is killed between the 
 
 ## Multithreaded upgrades
 
+# Buggy AI
+
+## 100 Request Limit
+
+No more than 100 build, tech, and upgrade requests can be issued for a single town. Overflowing this limit causes commands to be issued in other towns and creates very buggy behavior. Loops should not contain these commands or bugs will eventually occur.
+
 # Stagnant AI
 
 ## Supply capped
