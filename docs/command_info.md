@@ -26,17 +26,19 @@ Informs computer to build transports on its own. If start_campaign was called, t
 ## attack_add (byte) (military)
 Add %1(byte) %2(military) to the current attacking party. %1 (byte) can be at most 62, otherwise the command is ignored.
 
+Because of the way attack_add works for morphing Zerg units, it will cause moderate overflows of the unmorphed units. Calls for training of units if attack_prepare was used. Unit IDs of Defiler, Queen, Science Vessel, High Templar will arrive in the grouping region for the attack, but don’t follow the attack force after grouping is finished.
+
 ## attack_clear
-Clear the attack data.
+Clear the attack data. It’s necessary to run this before starting a new attack, both in normal attack scripts and in target_expansion attacks.
 
 ## attack_do
-Attack the enemy with the current attacking party.
+Attack the enemy with the current attacking party. Waits for grouping to finish before resuming script execution.
 
 ## attack_prepare
 Prepare the attack.
 
 ## build (byte) (building) (byte)
-Build %2(building) until it commands %1(byte) of them, at priority %3(byte). The maximum value of %1(byte) is 30.
+Build %2(building) until it commands %1(byte) of them, at priority %3(byte). The maximum value of %1(byte) is 30. At most 100 build/tech/upgrade commands can be issued per town before overflowing and causing buggy behavior in other towns.
 
 ## defensebuild_aa (byte) (military)
 Build %1(byte) %2(military) to defend against enemy attacking air units.
@@ -109,13 +111,13 @@ This command is different from build because it is global and not local to the t
 Add all %3(military) to the current attacking party except for %1(byte) of them, however it must send a minimum of %2(byte) of them.
 
 ## tech (tech) (byte)
-Research technology %1(technology), at priority %2(byte).
+Research technology %1(technology), at priority %2(byte). At most 100 build/tech/upgrade commands can be issued per town before overflowing and causing buggy behavior in other towns.
 
 ## train (byte) (military)
 Train %2(military) until it commands %1(byte) of them. Blocks until the %1 units are either trained or in the training queue.
 
 ## upgrade (byte) (upgrade) (byte)
-Research upgrade %2(upgrade) up to level %1(byte), at priority %3(byte). The maximum supported upgrade level is 31.
+Research upgrade %2(upgrade) up to level %1(byte), at priority %3(byte). The maximum supported upgrade level is 31. At most 100 build/tech/upgrade commands can be issued per town before overflowing and causing buggy behavior in other towns.
 
 ## wait (word)
 Wait for %1(word) logical game frames. A game frame is 42 milliseconds on fastest game speed.
@@ -256,7 +258,7 @@ Jump to %2(block) when the AI owns %1 number of expansions.
 Run code at %2(block) for expansion number %1(byte)
 
 ## multirun (block)
-Run simultaneously code at %1(block).
+Run simultaneously code at %1(block). There’s a limit of 100 scripts working on a map simultaneously.
 
 # Miscellaneous commands
 
