@@ -1,5 +1,5 @@
-sc_path = D:\games\StarCraft
-launcher =  D:\games\StarCraft\starcraft.exe
+sc_path = .
+launcher =  StarCraft.exe
 src = src
 config = default
 
@@ -20,7 +20,7 @@ mpq: combined_scripts $(sc_path)/patch_rt_original.mpq
 
 bins: combined_scripts
 	@echo Creating script binaries
-	@python tools\pyai.pyw -c -w ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
+	@python tools/PyAI.pyw -c -w ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
 
 combined_scripts: terran.pyai zerg.pyai protoss.pyai
 	@echo Combining scripts
