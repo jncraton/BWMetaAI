@@ -20,18 +20,16 @@ Run `make bins` to build aiscript.bin or `make mpq` to build patch_rt.mpq with a
 
 ### Patch SC
 
+1. Edit the makefile to use your SC path
+2. Execute `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory. If you are using Linux, you can use the `make run-wine` task instead to start the game using Wine.
+
+or
+
 Manually overwrite aiscript.bin in patch_rt.mpq using an MPQ editor
 
 or
 
 Inject aiscript.bin to a running Starcraft instance
-
-or
-
-1. Edit the makefile to:
-    - Use your SC path
-    - Use the absolute path to your prefered SC launcher. This can simply be starcraft.exe if no launcher is used.
-3. Execute `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory.
 
 New AI commands/macros:
 -----------------------
