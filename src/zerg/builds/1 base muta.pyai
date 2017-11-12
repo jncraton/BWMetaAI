@@ -1,4 +1,5 @@
 use_build_vs(Zerg, Protoss)
+build_weight(.25)
 build_start(9, Zerg Drone)
 build_start(2, Zerg Overlord)
 build_start(9, Zerg Drone)

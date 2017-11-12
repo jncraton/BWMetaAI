@@ -1,4 +1,5 @@
 use_build_vs(Terran, Protoss)
+build_weight(.25)
 define_max(1, Overlord)
 build_start(9, Zerg Drone)
 build_start(1, Zerg Spawning Pool, 150)
