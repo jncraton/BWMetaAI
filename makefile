@@ -37,5 +37,6 @@ combined_scripts: terran.pyai zerg.pyai protoss.pyai
 	@rm tools/config.json
 
 clean:
+	@rm -f build/*.bin
 	@rm -f build/*.mpq
 	@rm -f build/*.pyai
