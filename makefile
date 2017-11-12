@@ -1,16 +1,19 @@
-sc_path = .
-launcher =  StarCraft.exe
+sc_path = /media/jncraton/2CFAF2F9FAF2BDE0/games/StarCraft
 src = src
 config = default
 
 all: mpq
 
 run: patch
-	@$(launcher)
+	@$(sc_path)/StarCraft.exe -launch
+
+run-wine: patch
+	@wine $(sc_path)/StarCraft.exe -launch
 
 patch: mpq
 	@echo Overwriting existing patch_rt.mpq
-	@cp $(sc_path)/patch_rt_bwmetaai.mpq $(sc_path)\patch_rt.mpq
+	@cp $(sc_path)/patch_rt.mpq $(sc_path)/patch_rt_bak.mpq
+	@cp build/patch_rt.mpq $(sc_path)/patch_rt.mpq
 
 mpq: combined_scripts
 	@echo Creating MPQ
@@ -32,9 +35,6 @@ combined_scripts: terran.pyai zerg.pyai protoss.pyai
 	@cp tools/config_$(config).json tools/config.json
 	@node tools/build_ai $(subst .pyai,,$@) build/$@;
 	@rm tools/config.json
-
-$(sc_path)/patch_rt_original.mpq:
-	@cp $(sc_path)/patch_rt.mpq $(sc_path)/patch_rt_original.mpq
 
 clean:
 	@rm -f build/*.mpq
