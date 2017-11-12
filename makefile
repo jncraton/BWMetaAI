@@ -12,11 +12,12 @@ patch: mpq
 	@echo Overwriting existing patch_rt.mpq
 	@cp $(sc_path)/patch_rt_bwmetaai.mpq $(sc_path)\patch_rt.mpq
 
-mpq: combined_scripts $(sc_path)/patch_rt_original.mpq
+mpq: combined_scripts
 	@echo Creating MPQ
-	@cp $(sc_path)/patch_rt_original.mpq build/patch_rt.mpq
-	@python tools/PyAI.pyw -c -w -m ../build/patch_rt.mpq ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
-	@cp build/patch_rt.mpq $(sc_path)/patch_rt_bwmetaai.mpq
+	@# This effectively replaces a 64050 byte uncompressed aiscript.bin in a patch_rt.mpq file.
+	@# The MPQ was split in half leaving a gap that we can just slot our aiscript.bin into.
+	@truncate -s 64050 build/aiscript.bin
+	@cat tools/patch_rt_pre.mpq build/aiscript.bin tools/patch_rt_post.mpq > build/patch_rt.mpq
 
 bins: combined_scripts
 	@echo Creating script binaries
