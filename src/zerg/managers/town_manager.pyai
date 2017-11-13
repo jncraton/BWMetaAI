@@ -14,19 +14,7 @@ multirun_loop:
                 defense_air(mutalisk)
         if owned(ultralisk cavern):
             defense_ground(Ultralisk)
-
-multirun_loop:
-    if enemyownsairtech():
-        if owned(hatchery):
-            if owned(pool):
-                build_separately(6, Drone)
-                player_need(1, Evolution Chamber)
-                creep(3)
-                build_finish(1, Zerg Creep Colony, 150)
-                build_start(1, Zerg Spore Colony, 150)
-                build_finish(2, Zerg Creep Colony, 150)
-                build_start(1, Zerg Sunken Colony, 150)
-                stop()
+            stop()
 
 loop:
     if enemyownsairtech():
@@ -35,7 +23,8 @@ loop:
         goto(zerg_town_manager_static_d)
 
 --zerg_town_manager_static_d--
-build_separately(3, Drone)
+build_finish(1, Hatchery)
+build_separately(2, Drone)
 player_need(1, Spawning Pool)
 player_need(1, Evolution Chamber)
 creep(3)
