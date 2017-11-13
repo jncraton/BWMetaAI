@@ -1,0 +1,15 @@
+use_build_vs(Protoss)
+
+9 Overlord
+12 Expand
+11 Pool
+expand(99, expansion)
+build_start(15, drone)
+build_start(2, hatchery)
+build_start(1, extractor)
+build_start(3, overlord)
+build_start(1, evo chamber)
+upgrade(1, carapace, 80)
+build_start(3, hatchery)
+build_start(1, lair)
+upgrade(1, Metabolic Boost, 80)
