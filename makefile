@@ -28,7 +28,7 @@ bins: combined_scripts
 	@echo aiscript.bin size:
 	@wc -c < build/aiscript.bin
 
-combined_scripts: terran.pyai zerg.pyai protoss.pyai
+combined_scripts: clean terran.pyai zerg.pyai protoss.pyai
 	@echo Combining scripts
 	@cat build/terran.pyai build/zerg.pyai build/protoss.pyai > build/combined.pyai
 
@@ -39,6 +39,7 @@ combined_scripts: terran.pyai zerg.pyai protoss.pyai
 	@rm tools/config.json
 
 clean:
+	@echo Removing old files
 	@rm -f build/*.bin
 	@rm -f build/*.mpq
 	@rm -f build/*.pyai
