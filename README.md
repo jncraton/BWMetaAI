@@ -46,12 +46,10 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 ### Zerg
  
 * 5 Pool
-* 9 Pool
-* Overpool
 * 1 Base Muta
 * 1 Base Lurker
-* 12 Hatch 12 Pool
 * 4 Hatch Lair
+* 4 Hatch before Gas
 * 2 Hatch Muta
 * 3 Hatch Muta
 
