@@ -15,7 +15,7 @@ patch: mpq
 	@cp $(sc_path)/patch_rt.mpq $(sc_path)/patch_rt_bak.mpq
 	@cp build/patch_rt.mpq $(sc_path)/patch_rt.mpq
 
-mpq: combined_scripts
+mpq: bins
 	@echo Creating MPQ
 	@# This effectively replaces a 64050 byte uncompressed aiscript.bin in a patch_rt.mpq file.
 	@# The MPQ was split in half leaving a gap that we can just slot our aiscript.bin into.
