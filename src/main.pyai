@@ -42,13 +42,13 @@ multirun_file(expansion_timing_manager)
 # be busy doing other things
 multirun_file(unit_training_manager)
 
-# Select a midgame strategy from midgame directory
-choose_from_dir(midgame)
-
 # Start the tech manager
 # This ensures that all necessary tech and research is completed so that
 # the late game attacks don't have to worry about that
 multirun_file(tech_manager)
+
+# Select a midgame strategy from midgame directory
+choose_from_dir(midgame)
 
 # Choose and execute a late game attack from the lategame directory
 # These simply continue until the games ends
