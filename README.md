@@ -52,7 +52,8 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 * 1 Base Lurker
 * 12 Hatch 12 Pool
 * 4 Hatch Lair
-* 3 Hatch muta
+* 2 Hatch Muta
+* 3 Hatch Muta
 
 ### Protoss
 

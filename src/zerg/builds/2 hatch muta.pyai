@@ -1,0 +1,18 @@
+use_build_vs(Terran)
+build_weight(.5)
+
+9 Overlord
+12 Expand
+11 Pool
+10 Extractor
+13 Lair
+13 Zergling
+14 Zergling
+farms_timing()
+upgrade(1, Metabolic Boost, 80)
+build_start(14, Drone)
+build_start(1, Spire)
+build_start(6, Overlord)
+wait_build(1, Spire)
+attack_train(6, Mutalisk)
+attack_simple()
