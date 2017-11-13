@@ -1,4 +1,4 @@
-sc_path = /media/jncraton/2CFAF2F9FAF2BDE0/games/StarCraft
+sc_path = $(SCPATH)
 src = src
 config = default
 
