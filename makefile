@@ -25,6 +25,8 @@ mpq: bins
 bins: combined_scripts
 	@echo Creating script binaries
 	@python tools/PyAI.pyw -c -w ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin
+	@echo aiscript.bin size:
+	@wc -c < build/aiscript.bin
 
 combined_scripts: terran.pyai zerg.pyai protoss.pyai
 	@echo Combining scripts
