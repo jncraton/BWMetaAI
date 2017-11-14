@@ -1,6 +1,9 @@
 # Make sure the natural has been taken by this point
 expand(1, expansion)
 
+# Zerg should have a third by now
+expand(2, expansion)
+
 loop:
     panic(expansion)
     wait(2000)

@@ -3,7 +3,7 @@ use_build_vs(Protoss)
 9 Overlord
 12 Expand
 11 Pool
-expand(99, expansion)
+expand(2, expansion)
 build_start(15, drone)
 build_start(2, hatchery)
 build_start(1, extractor)
