@@ -1,4 +1,4 @@
-use_lategame_vs(Terran, Protoss)
+use_attack_vs(Terran, Protoss)
 
 if owned(stargate):
     if owned(arbiter tribunal):
@@ -8,6 +8,7 @@ if owned(Templar Archives):
     attack_train(3, Protoss High Templar)
     attack_train(1, Dark Templar)
 
-attack_multiple(3, 8 Zealot, 8 Dragoon)
+if owned(Cybernetics Core):
+  attack_multiple(5, 4 Zealot, 4 Dragoon)
 
 attack_simple()

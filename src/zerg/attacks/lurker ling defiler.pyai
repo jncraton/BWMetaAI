@@ -1,4 +1,4 @@
-use_lategame_vs(Zerg, Terran, Protoss)
+use_attack_vs(Zerg, Terran, Protoss)
 
 if owned(hive):
     if owned(hydralisk den):

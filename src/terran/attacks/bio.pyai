@@ -1,4 +1,4 @@
-use_lategame_vs(Zerg)
+use_attack_vs(Zerg)
 
 if owned(science facility):
     if owned(control tower):

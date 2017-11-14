@@ -1,4 +1,4 @@
-use_lategame_vs(Terran, Zerg, Protoss)
+use_attack_vs(Terran, Zerg, Protoss)
 
 if owned(science facility):
     build(4, Starport, 80)

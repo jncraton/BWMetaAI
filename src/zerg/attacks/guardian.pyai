@@ -1,4 +1,4 @@
-use_lategame_vs(Zerg, Terran, Protoss)
+use_attack_vs(Zerg, Terran, Protoss)
 
 if owned(greater spire):
     attack_multiple(8, 2 Mutalisk, 1 Guardian)

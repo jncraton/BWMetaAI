@@ -189,27 +189,16 @@ function Race(name) {
             return race_skip(races, 'gen_builds') + message;
         });
         
-        content = content.replace(/use_midgame_vs\((.*)\)/g, function(original, races) {
+        content = content.replace(/use_attack_vs\((.*)\)/g, function(original, races) {
             var message = '';
             
             if (config.verbosity >= 5) {
-                var styleName = block.replace(/[\-\n ]/g, '').replace('gen_midgame_', '').replace(/_/g, ' ');
-                message = debug('Using ' + styleName + ' midgame');
-            }
-
-            return race_skip(races, 'gen_midgame') + message;
-        });
-
-        content = content.replace(/use_lategame_vs\((.*)\)/g, function(original, races) {
-            var message = '';
-            
-            if (config.verbosity >= 5) {
-                var styleName = block.replace(/[\-\n ]/g, '').replace('gen_lategame_', '').replace(/_/g, ' ');
-                message = debug('Using ' + styleName + ' lategame');
+                var styleName = block.replace(/[\-\n ]/g, '').replace('gen_attack_', '').replace(/_/g, ' ');
+                message = debug('Using ' + styleName + ' attack');
             }
 
             return 'wait(50)\n' +  
-                race_skip(races, 'gen_lategame') + message;
+                race_skip(races, 'gen_attacks') + message;
         });
 
         content = buildConverter.parse(content);

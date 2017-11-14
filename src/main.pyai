@@ -47,15 +47,10 @@ multirun_file(unit_training_manager)
 # the late game attacks don't have to worry about that
 multirun_file(tech_manager)
 
-# Select a midgame strategy from midgame directory
-choose_from_dir(midgame)
-
-# Choose and execute a late game attack from the lategame directory
+# Choose and execute a late game attack from the attacks directory
 # These simply continue until the games ends
---lategame_loop--
-choose_from_dir(lategame)
-wait(50)
-goto(lategame_loop)
+loop:
+  choose_from_dir(attacks)
 
 # Tack on the expansion blocks to the bottom of the script
 include_block(expansion)

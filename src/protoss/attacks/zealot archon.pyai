@@ -1,0 +1,14 @@
+use_attack_vs(Zerg)
+
+if owned(Cybernetics Core):
+    attack_multiple(2, 7 Zealot, 2 Dragoon)
+
+if owned(Templar Archives):
+    if random(128):
+        attack_train(1, Dark Templar)
+    attack_train(1, Archon)
+    attack_train(1, High Templar)
+    if time(18):
+        attack_multiple(2, 5 Zealot, 1 Dragoon, 1 High Templar, 1 Archon)
+
+attack_simple()

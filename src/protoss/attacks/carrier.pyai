@@ -1,0 +1,9 @@
+use_attack_vs(Terran, Protoss)
+
+if owned(stargate):
+    build_start(1, Fleet Beacon)
+    build_start(4, stargate)
+    if owned(Arbiter Tribunal):
+        attack_train(2, Arbiter)
+    attack_multiple(2, 6 Carrier)
+    attack_simple()
