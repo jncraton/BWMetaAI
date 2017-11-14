@@ -210,7 +210,7 @@ var parse = function parse(content) {
         args = args.split(',');
         var amount = args[0];
         var unit = args[1];
-        return 'train(' + amount + ', ' + unit + ')\n' +
+        return 'do_morph(' + amount + ', ' + unit + ')\n' +
                'attack_add(' + amount + ', ' + unit + ')';
     });
 

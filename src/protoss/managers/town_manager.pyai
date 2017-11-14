@@ -13,8 +13,12 @@ multirun_loop:
         if enemyowns(Spire):
             defense_ground(Archon)
             defense_air(Archon)
+        defense_ground(Dark Templar)
         defense_ground(High Templar)
         defense_air(High Templar)
+    if owned(Stargate):
+        if enemyowns(Spire):
+            defense_air(Corsair)
 
 multirun_loop:
     if enemyownscloaked():
