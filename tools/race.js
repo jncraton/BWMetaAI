@@ -66,7 +66,11 @@ function Race(name) {
         });
             
         content = content.replace(/expand\(([\d, ]+)(.*)\)/g, function(command, num, block) {
-            return 'expand(' + num + 'gen_expansions_' + block + ')'
+            if (block.indexOf('gen_expansions') > -1) {
+                return 'expand(' + num + block + ')'
+            } else {
+                return 'expand(' + num + 'gen_expansions_' + block + ')'
+            }
         });
             
         content = content.replace(/panic\((.*)\)/g, function(command, block) {
