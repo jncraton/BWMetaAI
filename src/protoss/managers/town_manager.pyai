@@ -1,3 +1,7 @@
+build_finish(1, Nexus, 50)
+build_finish(1, Probe, 50)
+build_finish(1, Pylon, 50)
+
 multirun_loop:
     defenseclear()
     if owned(Gateway):
@@ -5,37 +9,41 @@ multirun_loop:
     if owned(Cybernetics Core):
         defense_ground(Dragoon)
         defense_air(Dragoon)
+    if owned(Templar Archives):
+        if enemyowns(Spire):
+            defense_ground(Archon)
+            defense_air(Archon)
+        defense_ground(High Templar)
+        defense_air(High Templar)
 
 multirun_loop:
     if enemyownscloaked():
-        build_finish(1, Pylon, 150)
+        build_finish(1, Pylon, 50)
+        player_need(1, Forge)
+        build_start(1, Cannon, 50) # Must be lower priority than that forge at 80
+        build_start(2, Cannon, 50)
+        wait_until(12)
         if owned(Cybernetics Core):
             player_need(1, Robotics Facility)
+            wait(1000)
             player_need(1, Observatory)
-            do_morph(1, Observer)
-        player_need(1, Forge)
-        build(2, Cannon, 80)
+            check_transports()
         stop()
-
-multirun_loop:
     if enemyownsairtech():
-        build_finish(1, Pylon, 150)
+        build_finish(1, Pylon, 50)
         player_need(1, Forge)
-        build(2, Cannon, 80)
+        build(2, Cannon, 50)
         stop()
 
-multirun_loop:
-    if time(16):
-        build_finish(1, Pylon, 150)
-        build(1, Gateway, 80)
-        stop()
+wait_until(12)
+build_finish(1, Pylon, 50)
+build(1, Gateway, 50)
 
-multirun_loop:
-    if time(25):
-        build_finish(1, Pylon, 150)
-        build_finish(2, Pylon, 150)
-        player_need(1, Forge)
-        build(4, Cannon, 80)
-        stop()
+wait_until(21)
+build_finish(1, Pylon, 50)
+build_finish(2, Pylon, 50)
+player_need(1, Forge)
+build(2, Gateway, 50)
+build(4, Cannon, 50)
 
 stop()
