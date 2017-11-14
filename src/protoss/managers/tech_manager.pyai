@@ -31,8 +31,13 @@ upgrade(2, Protoss Ground Weapons, 30)
 upgrade(2, Protoss Armor, 30)
 
 build_finish(1, Stargate)
-build_finish(1, Arbiter Tribunal)
-tech(Stasis Field, 30)
+
+if enemyowns(Command Center):
+    build_finish(1, Arbiter Tribunal)
+    tech(Stasis Field, 30)
+if enemyowns(Nexus):
+    build_finish(1, Arbiter Tribunal)
+    tech(Stasis Field, 30)
 
 upgrade(1, Singularity Charge, 30) # PvZ only, already happened in others
 
@@ -42,3 +47,7 @@ upgrade(3, Protoss Armor, 30)
 
 build_finish(1, robotics facility)
 check_transports()
+
+wait(5000)
+build_finish(1, Fleet Beacon)
+upgrade(1, Carrier Capacity, 30)
