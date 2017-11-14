@@ -49,8 +49,11 @@ multirun_file(tech_manager)
 
 # Choose and execute a late game attack from the attacks directory
 # These simply continue until the games ends
-loop:
-  choose_from_dir(attacks)
+--attack_loop--
+choose_from_dir(attacks)
+
+wait(100)
+goto(attack_loop)
 
 # Tack on the expansion blocks to the bottom of the script
 include_block(expansion)
