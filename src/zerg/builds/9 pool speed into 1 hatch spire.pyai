@@ -1,0 +1,38 @@
+use_build_vs(Zerg)
+
+# It doesn't seem to be possible to actually go 9 pool
+# An overlord gets built once the engine realizes it needs another
+# drone to replace the one building the pools
+
+build_start(8, Drone)
+build_start(1, Pool)
+build_start(1, Extractor)
+build_start(9, Drone)
+build_start(2, Overlord)
+upgrade(1, metabolic boost, 70)
+build(1, lair, 60)
+build(1, spire, 50)
+defense_ground(Zergling)
+attack_train(6, Zergling)
+attack_simple()
+build_start(1, Lair)
+train(2, Zergling)
+build_start(3, Overlord)
+build_finish(1, Lair)
+train(6, Zergling)
+build_start(1, Spire)
+defense_air(mutalisk)
+defense_air(scourge)
+loop:
+    attack_train(3, Mutalisk)
+    attack_train(4, Zergling)
+    attack_simple()
+    wait(300)
+    if random(32):
+      goto(9_pool_speed_muta_done)
+
+--9_pool_speed_muta_done--
+expand(1, expansion)
+attack_train(6, Mutalisk)
+attack_train(8, Zergling)
+attack_simple()

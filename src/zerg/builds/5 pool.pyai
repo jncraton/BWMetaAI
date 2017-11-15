@@ -1,4 +1,4 @@
-use_build_vs(Zerg, Terran, Protoss)
+use_build_vs(Terran, Protoss)
 build_weight(.25)
 build_start(5, Zerg Drone)
 build_start(1, Zerg Spawning Pool)
