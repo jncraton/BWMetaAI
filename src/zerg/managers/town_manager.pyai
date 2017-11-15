@@ -16,6 +16,21 @@ multirun_loop:
             defense_ground(Ultralisk)
             stop()
 
+wait_until(2)
+if enemyowns(pool):
+    player_need(1, Spawning Pool)
+if enemyowns(barracks):
+    player_need(1, Spawning Pool)
+if enemyowns(gateway):
+    player_need(1, Spawning Pool)
+wait_until(4)
+if enemyowns(zergling):
+    player_need(1, Spawning Pool)
+if enemyowns(marine):
+    player_need(1, Spawning Pool)
+if enemyowns(zealot):
+    player_need(1, Spawning Pool)
+
 loop:
     if enemyownsairtech():
         goto(zerg_town_manager_static_d)
