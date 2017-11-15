@@ -1,43 +1,41 @@
 multirun_loop:
     defenseclear()
+    if owned(Barracks):
+        defense_ground(Marine)
+        defense_air(Marine)
     if owned(Factory):
         if owned(Machine Shop):
-            defense_ground(Terran Siege Tank)
+            defense_ground(Siege Tank)
         if enemyowns(marine):
             defense_ground_train(Vulture)
-        defense_ground(Terran Vulture)
-    if enemyowns(hatchery):
-        if owned(Barracks):
-            defense_ground(Terran Marine)
-    if enemyownsairtech():
-        if owned(rax):
-            defense_air_train(marine)
+        defense_ground(Vulture)
+        if owned(Armory):
+                defense_air(Goliath)
+    if enemyowns(Hatchery):
+        if owned(Science Facility):
+            defense_ground(Science Vessel)
+            defense_air(Science Vessel)
 
 multirun_loop:
     if enemyownscloaked():
+        player_need(1, Engineering Bay)
+        build(1, missile turret, 80)
         player_need(1, Academy)
         build(1, Comsat Station, 80)
-        player_need(1, Engineering Bay)
-        build(1, missile turret, 80)
         stop()
-
-multirun_loop:
     if enemyownsairtech():
         player_need(1, Engineering Bay)
-        build(1, missile turret, 80)
-        wait(200)
         build(2, missile turret, 80)
-        wait(200)
-        build(3, missile turret, 80)
-        wait(200)
-        build(4, missile turret, 80)
+        player_need(1, Academy)
+        build(1, Comsat Station, 80)
         stop()
 
-multirun_loop:
-    if time(16):
-        build_finish(1, Barracks, 80)
-        build_finish(1, Factory, 80)
-        build_finish(1, Machine Shop, 80)
-        stop()
+wait_until(15)
+build_finish(1, Factory, 80)
+build_finish(1, Machine Shop, 80)
+build_start(1, Missile Turret)
+build_start(2, Missile Turret)
+build_start(3, Missile Turret)
+build_start(4, Missile Turret)
 
 stop()
