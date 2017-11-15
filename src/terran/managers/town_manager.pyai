@@ -1,3 +1,6 @@
+build_finish(1, Command Center)
+build_finish(1, SCV)
+
 multirun_loop:
     defenseclear()
     if owned(Barracks):
@@ -20,21 +23,28 @@ multirun_loop:
         player_need(1, Academy)
         build_start(1, missile turret, 50)
         build_start(1, Comsat Station, 50)
+        wait_until(18)
+        build_start(2, Missile Turret)
+        build_start(3, Missile Turret)
+        build_start(4, Missile Turret)
         stop()
     if enemyownsairtech():
         player_need(1, Engineering Bay)
         player_need(1, Academy)
+        build_start(1, missile turret, 50)
         build_start(2, missile turret, 50)
         build_start(1, Comsat Station, 50)
+        wait_until(18)
+        build_start(3, Missile Turret)
+        build_start(4, Missile Turret)
+                
         stop()
 
-wait_until(15)
-build_finish(1, Factory)
-build_finish(1, Machine Shop)
-player_need(1, Engineering Bay)
-build_start(1, Missile Turret)
-build_start(2, Missile Turret)
-build_start(3, Missile Turret)
-build_start(4, Missile Turret)
-
-stop()
+loop:
+    if owned(Machine Shop):
+        build_finish(1, Factory)
+        build_finish(1, Machine Shop)
+        wait_until(21)
+        build_finish(2, Factory)
+        build_finish(2, Machine Shop)
+        stop()
