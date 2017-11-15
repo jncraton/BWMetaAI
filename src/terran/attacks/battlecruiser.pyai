@@ -1,8 +1,5 @@
 use_attack_vs(Terran, Zerg, Protoss)
 
-if owned(science facility):
-    build(4, Starport, 80)
-    build(1, physics lab, 80)
-    build(4, Control tower, 80)
-    attack_train(12, battlecruiser)
+if owned(physics lab):
+    attack_multiple(3, 3 battlecruiser)
     attack_simple()
