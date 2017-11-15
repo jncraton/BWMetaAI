@@ -111,14 +111,6 @@ function Race(name) {
             getBuildContents = function (build) {
                 build = build.replace('.pyai','')
                 contents = loadContents(name + '/' + dir + '/' + build + '.pyai');
-                
-                if (dir == 'builds') {
-                    contents = contents.replace(/([\n ]+(build|expand)\(.*?\))/g, function (original) {
-                        original = macros.parse('\nif rush():\n    goto(rush_defense)\n') + original
-                        return original
-                    })
-                }
-                
                 return contents
             }
             
