@@ -1,7 +1,6 @@
 from Libs.utils import *
 from Libs.setutils import *
 from Libs.trace import setup_trace
-from Libs.SFmpq import *
 from Libs import AIBIN, TBL, DAT
 
 from Tkinter import *
