@@ -1,0 +1,37 @@
+build_start(1, spawning pool)
+build_start(1, lair)
+build_start(1, spire)
+
+upgrade(1, metabolic boost, 30)
+
+attack_train(3, Mutalisk)
+
+build_start(4, Overlord)
+
+attack_train(4, Zergling)
+attack_simple()
+
+if random(128):
+  build_start(5, Overlord)
+  attack_multiple(3, 3 Mutalisk, 4 Zergling)
+  attack_simple()
+    
+if random(128):
+  build_start(5, Overlord)
+  attack_multiple(3, 3 Mutalisk, 4 Zergling)
+  attack_simple()
+    
+if random(128):
+  build_start(5, Overlord)
+  attack_multiple(3, 3 Mutalisk, 4 Zergling)
+  attack_simple()
+    
+if random(128):
+  build_start(5, Overlord)
+  attack_multiple(3, 3 Mutalisk, 4 Zergling)
+  attack_simple()
+    
+train(3, Mutalisk)
+expand(1, expansion)
+train(6, Zergling)
+build_start(11, Drone)

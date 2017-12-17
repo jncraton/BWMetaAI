@@ -1,0 +1,22 @@
+use_build_vs(Zerg)
+build_weight(.75)
+
+build_start(9, Drone)
+build_start(2, Overlord)
+build_start(1, Extractor)
+build(1, Lair, 20) # This won't start until 13, but getting it in the queue encourages gas mining
+build_start(11, Drone)
+build_start(1, Spawning Pool)
+build_start(13, Drone)
+build_start(1, Lair)
+build_start(3, Overlord)
+wait_resources(300, 0)
+expand(1, expansion)
+
+upgrade(1, metabolic boost, 30)
+
+attack_multiple(3, 4 Zergling)
+
+build_start(1, Spire)
+
+include(zvz_mid)

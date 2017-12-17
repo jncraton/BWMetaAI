@@ -25,18 +25,4 @@ build_start(1, Spire)
 defense_air(mutalisk)
 defense_air(scourge)
 
-attack_train(3, Mutalisk)
-attack_train(4, Zergling)
-attack_simple()
-
-attack_multiple(3, 3 Mutalisk, 4 Zergling)
-attack_simple()
-
-attack_multiple(3, 3 Mutalisk, 4 Zergling)
-attack_simple()
-
---9_pool_speed_muta_done--
-train(3, Mutalisk)
-expand(1, expansion)
-train(6, Zergling)
-build_start(11, Drone)
+include(zvz_mid)
