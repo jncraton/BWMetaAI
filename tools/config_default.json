@@ -8,7 +8,7 @@
     },
     "zerg": {
         "verbosity": 0,
-        "useBuild": ""
+        "useBuild": "9 hatch"
     },
     "protoss": {
         "verbosity": 0,
