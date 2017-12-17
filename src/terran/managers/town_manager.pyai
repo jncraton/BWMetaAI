@@ -4,8 +4,9 @@ build_finish(1, SCV)
 multirun_loop:
     defenseclear()
     if owned(Barracks):
-        defense_ground(Marine)
-        defense_air(Marine)
+        if notowns(Armory):
+            defense_ground(Marine)
+            defense_air(Marine)
     if owned(Factory):
         if owned(Machine Shop):
             defense_ground(Siege Tank)
