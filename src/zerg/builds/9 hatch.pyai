@@ -3,7 +3,10 @@ build_weight(.5)
 
 build_start(8, Drone)
 wait_resources(300,0)
-expand(1, empty_expansion)
+if random(128):
+    expand(99, delayed_expansion)
+    expand(99, delayed_expansion)
+expand(3, empty_expansion)
 wait(300)
 build_start(1, pool)
 build_start(1, extractor)
@@ -15,7 +18,7 @@ build_start(3, overlord)
 
 wait_force(12, zergling)
 if random(128):
-  wait_force(18, zergling)
+    wait_force(18, zergling)
 
 send_suicide(0)
 
