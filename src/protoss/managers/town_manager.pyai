@@ -50,10 +50,7 @@ player_need(1, Forge)
 build(2, Gateway, 50)
 build(4, Cannon, 50)
 
---town_manager_fleet_beacon_wait--
-if owned(Fleet Beacon):
-    build(1, Stargate, 50)
-    stop()
-
-wait(300)
-goto(town_manager_fleet_beacon_wait)
+loop:
+    if owned(Fleet Beacon):
+        build(1, Stargate, 50)
+        stop()
