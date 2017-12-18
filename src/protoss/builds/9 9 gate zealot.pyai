@@ -1,0 +1,33 @@
+use_build_vs(Zerg, Protoss)
+build_weight(.25)
+
+8 Pylon
+9 Gateway
+9 Gateway
+build_start(11, probe)
+train(1, zealot)
+build_start(2, pylon)
+
+wait_force(3, Zealot)
+attack_add(3, Zealot)
+attack_async()
+
+build_start(1, Assimilator)
+build_start(12, probe)
+build_start(1, core)
+build_start(13, probe)
+
+if random(128):
+    wait_force(4, Zealot)
+    attack_add(4, Zealot)
+    attack_async()
+
+train(2, zealot)
+build_start(15, probe)
+build_start(3, Pylon)
+build_start(1, Cybernetics Core)
+build_start(18, Probe)
+build_start(4, Pylon)
+build_start(20, Probe)
+train(1, Dragoon)
+expand(1, expansion)

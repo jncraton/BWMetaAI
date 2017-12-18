@@ -62,7 +62,8 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 * 2 Gate Range Expand
 * 10/15 Gate Dragoon Pressure
 * 2 Gate Corsair
-* 2 Gate Zealots
+* 9/9 Gate Zealots
+* 10/12 Gate Zealots
 * Fast DT
 * ZcoreZ Expand
 * ZcoreZ Reaver
