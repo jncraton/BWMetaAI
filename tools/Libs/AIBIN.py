@@ -784,41 +784,21 @@ class AIBIN:
 	def ai_ggmilitary(self, data, stage=0):
 		"""gg_military - Same as Military type, but only for defending against an enemy Ground unit attacking your Ground unit"""
 		v = self.ai_military(data, stage)
-		if stage == 3:
-			subunit = self.unitsdat.get_value(v[1],'Subunit1')
-			if self.unitsdat.get_value(v[1],'GroundWeapon') == 130 and not self.unitsdat.get_value(v[1],'AttackUnit') in [53,59] and \
-				(subunit in [None,228] or (self.unitsdat.get_value(subunit,'GroundWeapon') == 130 and not self.unitsdat.get_value(subunit,'AttackUnit') in [53,59])):
-				raise PyMSWarning('Parameter','Unit has no ground weapon', extra=v, level=1)
 		return v
 
 	def ai_agmilitary(self, data, stage=0):
 		"""ag_military - Same as Military type, but only for defending against an enemy Air unit attacking your Ground unit"""
 		v = self.ai_military(data, stage)
-		if stage == 3:
-			subunit = self.unitsdat.get_value(v[1],'Subunit1')
-			if self.unitsdat.get_value(v[1],'AirWeapon') == 130 and self.unitsdat.get_value(v[1],'AttackUnit') != 53 and \
-				(subunit in [None,228] or (self.unitsdat.get_value(subunit,'AirWeapon') == 130 and self.unitsdat.get_value(subunit,'AttackUnit') != 53)):
-				raise PyMSWarning('Parameter','Unit has no air weapon', extra=v, level=1)
 		return v
 
 	def ai_gamilitary(self, data, stage=0):
 		"""ga_military - Same as Military type, but only for defending against an enemy Ground unit attacking your Air unit"""
 		v = self.ai_military(data, stage)
-		if stage == 3:
-			subunit = self.unitsdat.get_value(v[1],'Subunit1')
-			if self.unitsdat.get_value(v[1],'GroundWeapon') == 130 and not self.unitsdat.get_value(v[1],'AttackUnit') in [53,59] and \
-				(subunit in [None,228] or (self.unitsdat.get_value(subunit,'GroundWeapon') == 130 and not self.unitsdat.get_value(subunit,'AttackUnit') in [53,59])):
-				raise PyMSWarning('Parameter','Unit has no ground weapon', extra=v, level=1)
 		return v
 
 	def ai_aamilitary(self, data, stage=0):
 		"""aa_military - Same as Military type, but only for defending against an enemy Air unit attacking your Air unit"""
 		v = self.ai_military(data, stage)
-		if stage == 3:
-			subunit = self.unitsdat.get_value(v[1],'Subunit1')
-			if self.unitsdat.get_value(v[1],'AirWeapon') == 130 and self.unitsdat.get_value(v[1],'AttackUnit') != 53 and \
-				(subunit in [None,228] or (self.unitsdat.get_value(subunit,'AirWeapon') == 130 and not self.unitsdat.get_value(subunit,'AttackUnit') != 53)):
-				raise PyMSWarning('Parameter','Unit has no air weapon', extra=v, level=1)
 		return v
 
 	def ai_upgrade(self, data, stage=0):
