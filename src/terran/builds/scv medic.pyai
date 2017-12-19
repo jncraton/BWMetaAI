@@ -1,0 +1,34 @@
+use_build_vs(Terran,Zerg,Protoss)
+build_weight(.01)
+build_start(8, scv)
+build_start(1, supply depot)
+build_start(12, scv)
+build_start(1, refinery)
+build_start(13, scv)
+build_start(1, engineering bay)
+build_start(14, scv)
+build_start(2, supply depot)
+build_start(15, scv)
+upgrade(1, infantry armor, 80)
+build_start(1, barracks)
+build_start(16, scv)
+wait_resources(400, 0)
+expand(1, expansion)
+build_start(17, scv)
+build_start(1, academy)
+train(1, marine)
+build_start(2, barracks)
+train(3, marine)
+build(20, scv, 80)
+wait_force(2, medic)
+
+send_suicide(1)
+
+do_morph(4, medic)
+do_morph(12, marine)
+send_suicide(1)
+loop:
+    # Do this a repeatedly, as it seems to be required to aquire new targets
+    # It will also catch anyone who was built during the attack
+    send_suicide(1)
+    
