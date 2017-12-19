@@ -8,7 +8,7 @@ run: patch
 	@$(sc_path)/StarCraft.exe -launch
 
 run-wine: patch
-	@wine $(sc_path)/StarCraft.exe -launch
+	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch
 
 patch: mpq
 	@echo Overwriting existing patch_rt.mpq
