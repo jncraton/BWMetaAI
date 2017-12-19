@@ -37,8 +37,7 @@ multirun_loop:
         build_start(1, Comsat Station, 50)
         wait_until(18)
         build_start(3, Missile Turret)
-        build_start(4, Missile Turret)
-                
+        build_start(4, Missile Turret)    
         stop()
 
 loop:
