@@ -39,7 +39,8 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 * 2 Rax Pressure
 * BBS
 * 14 CC
-* 2 Factory Push
+* 2 Factory Vulture
+* 2 Factory Tank/Vulture
 * +1 5 Rax
 * 2 port wraith
 
