@@ -58,14 +58,15 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 ### Protoss
 
 * Forge Fast Expand
-* 12 Nexus
+* 1 Gate Zealot Expand
+* 12 Nexus Expand
 * 2 Gate Range Expand
+* ZcoreZ Expand
 * 10/15 Gate Dragoon Pressure
 * 2 Gate Corsair
 * 9/9 Gate Zealots
 * 10/12 Gate Zealots
 * Fast DT
-* ZcoreZ Expand
 * ZcoreZ Reaver
 
 Late game 
