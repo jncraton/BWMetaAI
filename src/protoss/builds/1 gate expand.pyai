@@ -1,0 +1,34 @@
+use_build_vs(Zerg)
+
+8 Pylon
+10 Gateway
+12 Pylon
+13 Zealot
+17 Zealot
+21 Expand
+22 Zealot
+24 Pylon
+build_start(1, assimilator)
+build(20, probe, 75)
+train(4, zealot)
+build_start(1, core)
+build_start(1, forge)
+farms_timing()
+train(5, zealot)
+build_start(1, stargate)
+upgrade(1, ground weapons, 30)
+train(6, zealot)
+build_start(1, citadel of adun)
+do_morph(1, corsair)
+train(7, zealot)
+build_start(4, gateway)
+wait_force(1, corsair)
+attack_add(1, corsair)
+attack_async()
+upgrade(1, leg enhancements, 30)
+build(20, probe, 80)
+
+if random(128):
+    wait_force(11, zealot)
+    attack_add(11, zealot)
+    attack_async()
