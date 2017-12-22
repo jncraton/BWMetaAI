@@ -28,6 +28,10 @@ maps: bins
 	@truncate -s 64050 build/aiscript.bin
 	@python tools/eud_write_bin.py
 
+triggers: bins
+	@echo Creating triggers
+	@python tools/eud_gen_trigs.py
+
 bins: combined_scripts
 	@echo Creating script binaries
 	@python tools/PyAI.pyw -c -w ../build/combined.pyai ../build/aiscript.bin ../build/bwscript.bin

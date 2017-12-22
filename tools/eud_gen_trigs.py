@@ -39,7 +39,7 @@ with open('build/aiscript.bin', 'rb') as aiscript:
     
   triggers += trigger_end.replace('{{ offset }}', str(actions_per_trigger))
 
-with open('docs\eud.trg') as template:
+with open('docs/eud.trg') as template:
   content = template.read().replace('{{ write_actions }}', triggers)
 
   with open('build/trigs.trg','w') as out:
