@@ -53,3 +53,5 @@ clean:
 	@rm -f build/*.bin
 	@rm -f build/*.mpq
 	@rm -f build/*.pyai
+	@rm -f build/*.trg
+	@rm -f build/*.scx
