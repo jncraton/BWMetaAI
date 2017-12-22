@@ -21,6 +21,10 @@ The included screenshots are from real AI vs AI games to demonstrate the unit co
 Installation
 ------------
 
+You can try out this AI most easily by grabbing one of the UMS maps from the [latest release](https://github.com/jncraton/BWMetaAI/releases). Remember to select "Use Map Settings" when starting the game. This unfortunately limits you to playing on just one map, and you can only play 1v1.
+
+For a more complete experience, you'll want to actually overwrite the default scripts that Brood War uses for melee games. This allows you to play in any game mode that supports computer opponents, including multiplayer if you are both properly patched to the same version of BWMetaAI. Here's how to patch Brood War:
+
 1. If using StarCraft 1.18 or greater, open the Blizzard app and update Brood War before continuing.
 2. Browse to your StarCraft folder and make a backup copy of patch_rt.mpq just in case something goes wrong.
 3. Download the latest [patch_rt.mpq](https://github.com/jncraton/BWMetaAI/releases/download/v2.0/patch_rt.mpq) from the releases and save it over your current patch_rt.mpq.
