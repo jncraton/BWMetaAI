@@ -2,7 +2,7 @@ sc_path = $(SCPATH)
 src = src
 config = default
 
-all: mpq
+all: mpq maps
 
 run: patch
 	@$(sc_path)/StarCraft.exe -launch
@@ -10,10 +10,11 @@ run: patch
 run-wine: patch
 	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch
 
-patch: mpq
+patch: mpq maps
 	@echo Overwriting existing patch_rt.mpq
 	@cp $(sc_path)/patch_rt.mpq $(sc_path)/patch_rt_bak.mpq
 	@cp build/patch_rt.mpq $(sc_path)/patch_rt.mpq
+	@cp build/*.scx $(sc_path)/Maps
 
 mpq: bins
 	@echo Creating MPQ
@@ -21,6 +22,11 @@ mpq: bins
 	@# The MPQ was split in half leaving a gap that we can just slot our aiscript.bin into.
 	@truncate -s 64050 build/aiscript.bin
 	@cat tools/patch_rt_pre.mpq build/aiscript.bin tools/patch_rt_post.mpq > build/patch_rt.mpq
+
+maps: bins
+	@echo Creating Maps
+	@truncate -s 64050 build/aiscript.bin
+	@python tools/eud_write_bin.py
 
 bins: combined_scripts
 	@echo Creating script binaries
