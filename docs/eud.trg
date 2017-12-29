@@ -1,25 +1,8 @@
--- AISCRIPT.BIN EUD Start = 0x0068C104 / 4 = 264040
+-- Copy aiscript.bin pointer to Current Player dividing pointer by 4 during copy
 
--- TMCx Relative Offeset = 864A
--- ZMCx Relative Offset = 99C4 
--- PMCx Relative Offset = A616
-
--- ZMCx absolute offset = 0x99C4 / 4 = 2671 + 264040 = 266711
-
--- script start: 0x032b32 start_town, transports_off, farms_notiming
-
--- ZMCx start: 03 2B 32 3C CD 99 00 93 A2 4B
-
--- 4 stops: 0x24242424 = 606348324
-
-
-
----- Copy AISCRIPT.BIN pointer to Current Player dividing pointer by 4 during copy
-
---- Copy 0x0068C104-> Terran Marine Deaths
-
+-- First, copy aiscript.bin pointer (0x0068C104) to Terran Marine Deaths
 -- Add each bit to Marine and Firebat deaths
--- Note that the original pointer value is modified here
+-- Note that the original pointer value is modified here so we need to put it back later
 for i = 30, 0, -1 do
    Trigger {
        players = {P1},
@@ -50,17 +33,17 @@ for i = 30, 0, -1 do
    }
 end
 
--- Set 0x6509B0 to EPD(0)
+-- Set Current Player (0x006509B0) to EPD(0)
 
 Trigger {
    players={P1},
    actions={
-       SetMemory(0x6509B0, SetTo, EPD(0));
+       SetMemory(0x006509B0, SetTo, EPD(0));
        PreserveTrigger();
    }
 }
 
--- Add AISCRIPT.BIN pointer value divided by 4
+-- Add aiscript.bin pointer (now copied to Terran Marine Deaths) divided by 4
 
 for i = 30, 2, -1 do
    Trigger {
@@ -76,21 +59,26 @@ for i = 30, 2, -1 do
    }
 end
 
--- Write the new AISCRIPT.BIN 
--- Example:
+-- Our modified current player pointer now allows us to write directly to aiscript.bin
+-- Setting Deaths of unit 0 for the current player writes to the first word
+-- Adding to the current player offset (0x006509B0) allows us to move to the next word
+-- A script can easily replace the following with the approptiate write triggers
+
+{{ write_actions }}
+
+-- Here's an example:
 
 --Trigger {
 --   players={P1},
 --   actions={
---       SetMemory(0x6509B0, Add, 0x2671); -- ZMCx offset within AISCRIPT.BIN
---       SetDeaths(CurrentPlayer, SetTo, 0x24131793, 0); -- Stop then magic bytes to find
---       SetMemory(0x6509B0, SetTo, 0); -- Reset Current Player
+--       SetDeaths(CurrentPlayer, SetTo, 0x00000000, 0); -- zero out the first word
+--       SetMemory(0x6509B0, Add, 1); -- move to the second word
+--       SetDeaths(CurrentPlayer, SetTo, 0x00000000, 0); -- zero out the second word
 --       PreserveTrigger();
 --   }
 --}
 
-{{ write_actions }}
-
+-- Put Current Player back to normal
 Trigger {
    players={P1},
    actions={
@@ -100,6 +88,8 @@ Trigger {
 }
 
 -- Trigger the AI
+-- This assumes that the trigger is running on a map with a location called 'AI Start 1'
+-- over player 2's start location, and that player 2 is computer player.
 Trigger {
 	players = {P2},
 	conditions = {
@@ -129,17 +119,6 @@ Trigger {
 		RunAIScriptAt("Terran Expansion Custom Level", "AI Start 1");
 	},
 }
-
--- No frame delay
---Trigger {
---	players = {P1},
---	conditions = {
---		ElapsedTime(AtLeast, 0);
---	},
---	actions = {
---		SetMemory(0x5124F0, SetTo, 1);
---	},
---}
 
 -- Standard Melee Triggers
 Trigger {
