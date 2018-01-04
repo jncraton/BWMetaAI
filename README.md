@@ -21,7 +21,7 @@ The included screenshots are from real AI vs AI games to demonstrate the unit co
 Installation
 ------------
 
-You can try out this AI most easily by grabbing one of the UMS maps from the [latest release](https://github.com/jncraton/BWMetaAI/releases). Remember to select "Use Map Settings" when starting the game. This unfortunately limits you to playing on just one map, and you can only play 1v1.
+You can try out this AI most easily by grabbing one of the UMS maps from the [latest release](https://github.com/jncraton/BWMetaAI/releases). Remember to select "Use Map Settings" when starting the game. This unfortunately limits you to playing on just one map, you can only play 1v1, and the AI tends to begin performing badly at some point in the midgame due to differences between UMS and melee game modes.
 
 For a more complete experience, you'll want to actually overwrite the default scripts that Brood War uses for melee games. This allows you to play in any game mode that supports computer opponents, including multiplayer if you are both properly patched to the same version of BWMetaAI. Here's how to patch Brood War:
 
