@@ -1,5 +1,5 @@
 use_build_vs(Zerg)
-build_weight(.5)
+build_weight(.25)
 build_start(8, Protoss Probe, 80)
 build_start(1, Protoss Pylon, 80)
 build_start(10, Protoss Probe, 80)
