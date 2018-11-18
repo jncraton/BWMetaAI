@@ -1,6 +1,8 @@
 BWMetaAI
 ========
 
+[![Build Status](https://travis-ci.org/jncraton/BWMetaAI.svg?branch=master)](https://travis-ci.org/jncraton/BWMetaAI)
+
 A Brood War AI designed to follow the modern 1v1 metagame.
 
 ![Zeal Goon vs Mech](docs/zeal_goon_tank.png)
