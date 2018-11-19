@@ -21,7 +21,7 @@ function AI (race_name) {
         
         src += race.loadContents('main');
         
-        src = src.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#|debug)).+$/mg, function(original) {
+        src = src.replace(/^(?!(TMCx|ZMCx|PMCx|\-\-|#|debug|random)).+$/mg, function(original) {
             return 'wait(1)\n' +
                 original + '\n';
         });
