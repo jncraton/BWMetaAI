@@ -6,13 +6,13 @@ Before you can hack on this project, you'll need to be able to build it from sou
 Running from source
 --------------------
 
+Linux is strongly recommended for development. Everything should work on other platforms, but I only regularly test this on Linux.
+
 ### Prerequisites: 
 
 - [node.js](http://nodejs.org/download/)
 - [GNU Make](https://www.gnu.org/software/make/)
 - [Python](http://www.python.org/download/) 2.7 32 bit. This particular version is required to be able to interact with storm.dll using ctypes.
-
-Windows is required for MPQ manipulation. If you just want to generate the source of the scripts or aiscript.bin to inject manually, then any OS should be fine.
 
 ### Build 
 
@@ -20,16 +20,16 @@ Run `make bins` to build aiscript.bin or `make mpq` to build patch_rt.mpq with a
 
 ### Patch SC
 
-1. Edit the makefile to use your SC path
-2. Execute `make run` to compile the AIs, build an MPQ, and replace the default in your SC directory. If you are using Linux, you can use the `make run-wine` task instead to start the game using Wine.
+1. Make sure that your SCPATH environment variable is set appropriately e.g. `export SCPATH={path to SC}`.
+2. Execute `make patch` to compile the AIs, build an MPQ, and replace the default in your SC directory. You can use `make run` or `make run-wine` instead to start the game using Wine.
 
-or
+You could also manually overwrite aiscript.bin in patch_rt.mpq using an MPQ editor or inject aiscript.bin to a running Starcraft instance.
 
-Manually overwrite aiscript.bin in patch_rt.mpq using an MPQ editor
+### EUD Injection
 
-or
+There is also work-in-progress support for injecting scripts into UMS maps using EUD triggers. These triggers make use of a buffer overflow in the SetDeaths trigger to overwrite the entire contents of aiscript.bin once a UMS map has loaded. This process is implemented by `tools/eud_gen_trigs.py`.
 
-Inject aiscript.bin to a running Starcraft instance
+Currently, the scripts load properly, but there appear to be several differences between the AI environment between UMS and Melee modes that make the AI itself buggy in UMS mode.
 
 New AI commands/macros:
 -----------------------
