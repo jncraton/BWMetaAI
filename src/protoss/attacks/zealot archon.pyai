@@ -3,6 +3,11 @@ use_attack_vs(Zerg)
 if owned(Cybernetics Core):
     attack_multiple(2, 7 Zealot, 2 Dragoon)
 
+if owned(Stargate):
+    attack_train(1, Corsair)
+    if enemyowns(Spire):
+      attack_multiple(3, 2 Corsair)
+
 if owned(Templar Archives):
     if random(128):
         attack_train(1, Dark Templar)
