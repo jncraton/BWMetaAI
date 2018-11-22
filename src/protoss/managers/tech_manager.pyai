@@ -7,15 +7,15 @@ build_finish(4, Gateway)
 
 build_finish(1, Cybernetics Core)
 if enemyowns(Command Center):
-  upgrade(1, Singularity Charge, 30)
+    upgrade(1, Singularity Charge, 30)
 if enemyowns(Nexus):
-  upgrade(1, Singularity Charge, 30)
+    upgrade(1, Singularity Charge, 30)
 
 build_finish(1, Citadel of Adun)
 upgrade(1, Leg Enhancements, 30)
 
 if enemyowns(Hatchery):
-  build_finish(1, Templar Archives)
+    build_finish(1, Templar Archives)
     
 build_finish(2, Forge)
 upgrade(1, Protoss Ground Weapons, 30)
