@@ -1,4 +1,6 @@
 use_build_vs(Protoss, Terran)
+build_weight(.25)
+
 defenseclear()
 8 Protoss Pylon
 10 Protoss Gateway
