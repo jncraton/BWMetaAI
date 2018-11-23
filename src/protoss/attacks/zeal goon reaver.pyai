@@ -6,6 +6,7 @@ if owned(stargate):
 
 if owned(Robotics Support Bay):
     attack_multiple(2, 1 Reaver)
+    attack_train(1, Shuttle)
 
 if owned(Templar Archives):
     attack_multiple(3, 3 Zealot, 6 Dragoon, 1 High Templar)
