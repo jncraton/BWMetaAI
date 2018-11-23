@@ -1,0 +1,18 @@
+use_attack_vs(Protoss)
+
+if owned(stargate):
+    if owned(arbiter tribunal):
+        attack_train(1, Arbiter)
+
+if owned(Robotics Support Bay):
+    attack_multiple(2, 1 Reaver)
+
+if owned(Templar Archives):
+    attack_multiple(2, 1 High Templar)
+    if random(128):
+        attack_train(1, Dark Templar)
+
+if owned(Cybernetics Core):
+  attack_multiple(7, 2 Zealot, 4 Dragoon)
+
+attack_simple()
