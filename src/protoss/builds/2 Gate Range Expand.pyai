@@ -1,4 +1,4 @@
-use_build_vs(Terran, Protoss)
+use_build_vs(Terran)
 defenseclear()
 8 Protoss Pylon
 10 Protoss Gateway
