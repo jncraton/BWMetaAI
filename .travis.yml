@@ -12,4 +12,5 @@ deploy:
     - build/aiscript.bin
   skip_cleanup: true
   on:
+    tags: true
     repo: jncraton/BWMetaAI
