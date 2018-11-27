@@ -8,5 +8,6 @@ deploy:
   api_key:
     secure: BkF2shrI8j/kMiP0kdcQA2r9VU+pgCzdKzvMXDH8qbm3KnOlanaJi3Yzg7z20fut9r4z1o5yksTI2dD1XIY0ZZFoFZDV3b6nveGI2TCsyudUqKOwRsIkzZkQYe3Zyuf63CzxpH+c9uAtrkqwmr63JbCoFHS1CHxMoR5+elG96NmBHgFSpH3HjM1T7K9kDfZs7EJQTxri6QbstHrB/uezZPyNOYFD3DgcnTWN462taxGRwlCbfdiAvu+94yNCgVSqxRGuxmFsUFF5+4XN4UfTTxyuOmTbT/VRFFEkAb3U5re+vVIAsHHt57naBVcFnl6S2+9Tq5Gx0jfST1h50kFetK5ltmMVKvCWJmugv4NTq/jLNrrTA9yQOmxLuKUNXQmQDaX+sdbLpj5FMccetZ3YUWWFENaNYym0d1psiI+XwRht2SC+WRLPMACN6/T3PgO3bCgyXpRN8v5wBwAg2p/f/V4mvuRDfZFKg+f/sz//Kmf3X+Fh9gxqGmB8EfqzxNUMi+aDB//wiw5HYKrlYs3ctgFbxtszJ+L3End6mVCz2tlynyKNXcvWsZ09GovAv0OvhON/d72fEHs5/AFKQAofkihVA75EFt5vsGLUCrFrU2IlJDzpAI+ihZkCSpGfzK+HshIiE+b7v+jdLpmiH5KuGsxp9AB/PPJlJ56AC++ytFw=
   file: build/patch_rt.mpq
+  skip_cleanup: true
   on:
     repo: jncraton/BWMetaAI
