@@ -1,21 +1,20 @@
 use_build_vs(Zerg, Terran, Protoss)
 build_weight(.25)
-9 Terran Barracks
-9 Terran Barracks
-9 Terran Supply Depot
-build_start(10, Terran SCV)
-attack_train(7, Terran Marine)
+9 Barracks
+9 Barracks
+9 Supply Depot
+build_start(10, SCV)
+attack_train(7, Marine)
+wait_force(7, Marine)
 attack_async()
 build_start(2, Terran Supply Depot)
 expand(1, expansion)
+if random(128):
+    attack_train(10, Marine)
+    wait_force(10, Marine)
+    attack_async()
 build_start(11, Terran SCV)
-train(2, Terran Marine)
-build_start(12, Terran SCV)
-train(4, Terran Marine)
 build_start(3, Terran Supply Depot)
-build_start(16, Terran SCV)
 build_start(1, Terran Refinery)
-train(6, Terran Marine)
-build_start(18, Terran SCV)
-
-
+build_start(14, Terran SCV)
+build(18, Terran SCV, 80)
