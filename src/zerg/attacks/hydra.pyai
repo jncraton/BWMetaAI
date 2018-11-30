@@ -3,3 +3,8 @@ use_attack_vs(Zerg, Terran, Protoss)
 if owned(hydralisk den):
     attack_multiple(8, 4 Hydra)
     attack_simple()
+    if enemyownsair():
+        if owned(spire):
+            attack_train(4, scourge)
+        if owned(greater spire):
+            attack_train(4, scourge)

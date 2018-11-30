@@ -14,13 +14,22 @@ upgrade(1, Zerg Melee Attacks, 80)
 wait_build(1, lair)
 wait_build(1, hydralisk den)
 
+if enemyownsair():
+    build_start(1, spire)
+
 tech(Lurker Aspect, 80)
 
 wait(2000)
 
+if enemyownsair():
+    build_start(1, spire)
+
 build_finish(1, Zerg Queen's Nest, 80)
 build_finish(1, Zerg Hive)
 upgrade(1, Adrenal Glands, 80)
+
+if enemyownsair():
+    build_start(1, spire)
 
 wait(1000)
 upgrade(2, Zerg Carapace, 80)

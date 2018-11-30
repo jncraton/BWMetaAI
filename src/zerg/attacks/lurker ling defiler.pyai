@@ -5,4 +5,10 @@ if owned(hive):
         if owned(defiler mound):
             attack_train(3, defiler)
         attack_multiple(2, 5 Lurker, 16 Ling)
+        if enemyownsair():
+            if owned(spire):
+                attack_train(4, scourge)
+            if owned(greater spire):
+                attack_train(4, scourge)
         attack_simple()
+    

@@ -171,6 +171,11 @@ var parse = function parse(content) {
         return expandEnemyOwns(units, block);
     });
     
+    content = content.replace(/enemyownsair_jump\((.*)\)/g, function(original, block) {
+        var units = ['Terran Science Vessel', 'Terran Wraith', 'Terran Valkyrie', 'Terran Battlecruiser', 'Zerg Mutalisk', 'Zerg Scourge', 'Zerg Guardian', 'Zerg Devourer', 'Zerg Queen', 'Protoss Scout', 'Protoss Corsair', 'Protoss Carrier', 'Protoss Arbiter'];
+        return expandEnemyOwns(units, block);
+    });
+    
     content = content.replace(/build_start\((.*)\)/g, function(original, args) {
         args = args.split(',');
         var amount = args[0];

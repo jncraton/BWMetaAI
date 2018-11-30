@@ -2,4 +2,6 @@ use_attack_vs(Zerg, Terran, Protoss)
 
 if owned(greater spire):
     attack_multiple(8, 2 Mutalisk, 1 Guardian)
+    if enemyownsair():
+        attack_train(4, scourge)
     attack_simple()
