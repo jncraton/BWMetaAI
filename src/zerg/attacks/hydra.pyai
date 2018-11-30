@@ -5,6 +5,6 @@ if owned(hydralisk den):
     attack_simple()
     if enemyownsair():
         if owned(spire):
-            attack_train(4, scourge)
+            attack_train(2, scourge)
         if owned(greater spire):
-            attack_train(4, scourge)
+            attack_train(2, scourge)

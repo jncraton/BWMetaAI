@@ -6,7 +6,7 @@ if owned(Ultralisk cavern):
     attack_multiple(4, 2 Ultralisk, 12 Zergling)
     if enemyownsair():
         if owned(spire):
-            attack_train(4, scourge)
+            attack_train(2, scourge)
         if owned(greater spire):
-            attack_train(4, scourge)
+            attack_train(2, scourge)
     attack_simple()
