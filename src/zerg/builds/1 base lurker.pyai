@@ -31,8 +31,8 @@ train(12, Zergling) # This will end up training 14
 # This allows our lurkers to morph without morphing extra hydras.
 
 # Our supply should currently be:
-#  15 in Drones
-# + 6 in Zerglings
+#  14 in Drones
+# + 7 in Zerglings
 # + 2 in Hydras
 # -------------
 #   23 / 25
