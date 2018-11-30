@@ -1,5 +1,16 @@
 use_build_vs(Terran, Protoss)
 build_weight(.25)
+
+# This build is very tricky to implement for two main reasons:
+# 
+# 1. Gas mining will only happen at full saturation when the build
+# is waiting on gas. e.g. We have to queue Lurker Aspect early in
+# order to get the bot to mine gas quickly.
+#
+# 2. Zerg tends to overbuild units on calls to train. It will continue
+# "queueing" units until it completes the requested number, but it 
+# doesn't dequeue them as with P and T because the units are eggs.
+
 define_max(1, Overlord)
 build_start(9, Zerg Drone)
 build_start(1, Zerg Spawning Pool, 150)
@@ -12,10 +23,28 @@ build_start(3, Zerg Overlord)
 build_start(14, Zerg Drone)
 build_start(1, Zerg Hydralisk Den)
 tech(Lurker Aspect, 150)
-train(3, Zerg Hydralisk)
-train(6, Zerg Zergling)
-attack_train(3, Zerg Lurker)
-attack_train(8, Zerg Zergling)
+train(6, Zergling)
+train(1, Hydralisk) # This will end up training 2
+train(12, Zergling) # This will end up training 14
+
+# We're trying to be supply capped with two hydras on the field here
+# This allows our lurkers to morph without morphing extra hydras.
+
+# Our supply should currently be:
+#  15 in Drones
+# + 6 in Zerglings
+# + 2 in Hydras
+# -------------
+#   23 / 25
+
+train(2, Lurker)
+attack_add(14, Zergling)
+attack_add(2, Lurker)
 attack_async()
 expand(1, expansion)
-build_start(15, Zerg Drone)
+build_start(15, Drone)
+build_start(2, Hatchery)
+train(2, Lurker)
+farms_timing()
+attack_multiple(2, 2 Lurker, 6 Hydra, 12 Zergling)
+attack_simple()
