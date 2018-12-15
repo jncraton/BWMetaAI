@@ -1,6 +1,8 @@
 build_finish(1, Barracks, 80)
 
 if enemyowns(hatchery):
+    if owned(armory):
+        goto(tech_manager_skip_bio)
     build_finish(2, Barracks, 80)
     build_start(1, Academy, 80)
     build_start(3, Barracks, 80)
@@ -19,6 +21,8 @@ if enemyowns(hatchery):
     build_finish(1, Science Facility, 80)
     tech(Irradiate, 30)
     wait(6000)
+
+--tech_manager_skip_bio--
 
 build_start(1, Factory)
 build_start(2, Factory)
