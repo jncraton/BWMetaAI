@@ -34,6 +34,8 @@ if enemyowns(zealot):
 loop:
     if enemyownsairtech():
         goto(zerg_town_manager_static_d)
+    if enemyowns(factory):
+        goto(zerg_town_manager_static_d)
     if time(15):
         goto(zerg_town_manager_static_d)
 
@@ -41,12 +43,24 @@ loop:
 build_finish(1, Hatchery)
 build_separately(2, Drone)
 player_need(1, Spawning Pool)
-player_need(1, Evolution Chamber)
 creep(3)
-build_finish(1, Zerg Creep Colony, 150)
-build_start(1, Zerg Spore Colony, 150)
-build_finish(2, Zerg Creep Colony, 150)
-build_start(1, Zerg Sunken Colony, 150)
+build_finish(1, Creep Colony, 150)
+build_start(1, Sunken Colony, 150)
+
+loop:
+    if enemyownsairtech():
+        player_need(1, Evolution Chamber)
+        if enemyownsair():
+            goto(zerg_town_manager_static_aa)
+        
+    if time(18):
+        goto(zerg_town_manager_static_aa)
+
+--zerg_town_manager_static_aa-- 
+
+player_need(1, Evolution Chamber)
+build_finish(2, Creep Colony, 150)
+build_start(1, Spore Colony, 150)
 
 wait_until(18)
 build_separately(3, Drone)
