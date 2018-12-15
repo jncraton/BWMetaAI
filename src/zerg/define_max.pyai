@@ -5,7 +5,7 @@ define_max(24, Zerg Lurker)
 define_max(48, Zerg Mutalisk)
 define_max(36, Zerg Devourer)
 define_max(36, Zerg Guardian)
-define_max(36, Zerg Defiler)
+define_max(4, Zerg Defiler)
 define_max(36, Zerg Ultralisk)
 define_max(12, Zerg Queen)
 
