@@ -10,8 +10,6 @@ if enemyowns(hatchery):
     tech(Stim Packs, 80)
     build_start(4, Barracks, 80)
     build_finish(4, Barracks, 80)
-    build_finish(5, Barracks, 80)
-    build_finish(6, Barracks, 80)
     build_finish(2, Engineering Bay, 80)
     upgrade(1, Infantry Armor, 30)
     upgrade(1, Infantry Weapons, 30)
