@@ -24,20 +24,47 @@ multirun_loop:
         player_need(1, Academy)
         build_start(1, missile turret, 50)
         build_start(1, Comsat Station, 50)
+        wait(300)
+        if enemyowns(hatchery):
+            if owned(armory):
+                # We're going mech in TvZ, so make more turrets
+                build_start(2, Missile Turret)
+                build_start(3, Missile Turret)
+                build_start(4, Missile Turret)
+                build_start(5, Missile Turret)
         wait_until(18)
         build_start(2, Missile Turret)
         build_start(3, Missile Turret)
         build_start(4, Missile Turret)
+        if enemyowns(hatchery):
+            if owned(armory):
+                # We're going mech in TvZ, so make more turrets
+                build_start(5, Missile Turret)
+                build_start(6, Missile Turret)
+                build_start(7, Missile Turret)
         stop()
     if enemyownsairtech():
         player_need(1, Engineering Bay)
-        player_need(1, Academy)
         build_start(1, missile turret, 50)
         build_start(2, missile turret, 50)
+        if enemyowns(hatchery):
+            if owned(armory):
+                # We're going mech in TvZ, so make more turrets
+                build_start(3, Missile Turret)
+                build_start(4, Missile Turret)
+                build_start(5, Missile Turret)
+        wait(300)
+        player_need(1, Academy)
         build_start(1, Comsat Station, 50)
         wait_until(18)
         build_start(3, Missile Turret)
-        build_start(4, Missile Turret)    
+        build_start(4, Missile Turret)
+        if enemyowns(hatchery):
+            if owned(armory):
+                # We're going mech in TvZ, so make more turrets
+                build_start(5, Missile Turret)
+                build_start(6, Missile Turret)
+                build_start(7, Missile Turret)
         stop()
 
 loop:
