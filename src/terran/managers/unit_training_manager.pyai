@@ -1,4 +1,9 @@
 if enemyowns(hatchery):
+    if enemyowns(spire):
+        if owned(starport):
+            if owned(armory):
+                if owned(control tower):
+                    do_morph(2, valkyrie)
     if owned(science facility):
         if owned(control tower):
             do_morph(8, vessel)
