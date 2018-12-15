@@ -47,6 +47,7 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 * 2 Factory Tank/Vulture
 * +1 5 Rax
 * 2 port wraith
+* [Fantasy](https://liquipedia.net/starcraft/Fantasy_Build)
 
 ### Zerg
  
