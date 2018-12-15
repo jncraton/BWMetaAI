@@ -4,9 +4,8 @@ build_finish(1, SCV)
 multirun_loop:
     defenseclear()
     if owned(Barracks):
-        if notowns(Armory):
-            defense_ground(Marine)
-            defense_air(Marine)
+        defense_ground(Marine)
+        defense_air(Marine)
     if owned(Factory):
         if owned(Machine Shop):
             defense_ground(Siege Tank)
@@ -15,9 +14,13 @@ multirun_loop:
             defense_air(Goliath)
     if enemyowns(Hatchery):
         if owned(Starport):
-            defense_air(Wraith)
-            if owned(Armory):
-                defense_air(Valkyrie)
+            if enemyowns(Nexus):
+                defense_air(Wraith)
+            if enemyowns(Command Center):
+                defense_air(Wraith)
+            if enemyowns(Hatchery):
+                if owned(Armory):
+                    defense_air(Valkyrie)
         if owned(Science Facility):
             defense_ground(Science Vessel)
             defense_air(Science Vessel)
@@ -35,7 +38,6 @@ multirun_loop:
                 build_start(2, Missile Turret)
                 build_start(3, Missile Turret)
                 build_start(4, Missile Turret)
-                build_start(5, Missile Turret)
         wait_until(18)
         build_start(2, Missile Turret)
         build_start(3, Missile Turret)
@@ -45,7 +47,6 @@ multirun_loop:
                 # We're going mech in TvZ, so make more turrets
                 build_start(5, Missile Turret)
                 build_start(6, Missile Turret)
-                build_start(7, Missile Turret)
         stop()
     if enemyownsairtech():
         player_need(1, Engineering Bay)
@@ -56,7 +57,6 @@ multirun_loop:
                 # We're going mech in TvZ, so make more turrets
                 build_start(3, Missile Turret)
                 build_start(4, Missile Turret)
-                build_start(5, Missile Turret)
         wait(300)
         player_need(1, Academy)
         build_start(1, Comsat Station, 50)
@@ -68,14 +68,13 @@ multirun_loop:
                 # We're going mech in TvZ, so make more turrets
                 build_start(5, Missile Turret)
                 build_start(6, Missile Turret)
-                build_start(7, Missile Turret)
         stop()
 
 loop:
     if owned(Machine Shop):
         build_finish(1, Factory)
-        build_finish(1, Machine Shop)
+        build(1, Machine Shop, 80)
         wait_until(21)
         build_finish(2, Factory)
-        build_finish(2, Machine Shop)
+        build(2, Machine Shop, 80)
         stop()
