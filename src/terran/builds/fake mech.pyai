@@ -1,0 +1,43 @@
+# This should be similar to the Fantasy build, except it switches to bio after getting a Wraith
+
+use_build_vs(Zerg)
+8 Supply Depot
+11 Barracks
+12 Refinery
+# We can't `wait` until the factory or we won't mine gas quickly enough
+build(16, scv, 80)
+build(2, supply depot, 80)
+train(2, marine)
+build_start(1, factory)
+build_start(3, supply depot)
+train(4, marine)
+build_start(18, scv)
+train(1, vulture)
+build_start(19, scv)
+build_start(1, starport)
+
+attack_train(1, vulture)
+attack_async()
+
+# Build diverges here. No machine shop or armory are built.
+
+train(5,marine)
+
+expand(1, expansion)
+
+train(6, marine)
+
+train(1, wraith)
+attack_train(1, wraith)
+attack_async()
+
+# Nearly always an ebay will be built here, but the town manager handles this based on enemy Spire timing
+# Players would always just make the ebay, but we have perfect timing info, so we can skip it
+
+train(2, vulture)
+train(7, marine)
+build_start(4, supply depot)
+
+build_start(1, academy)
+build_start(2, barracks)
+build_start(3, barracks)
