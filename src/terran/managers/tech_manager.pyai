@@ -44,6 +44,8 @@ upgrade(1, Vehicle Weapons, 80)
 
 build_finish(1, Starport)
 build_finish(1, Science Facility)
+if enemyowns(hatchery):
+    tech(Irradiate, 30)
 wait(2500)
 upgrade(2, Vehicle Plating, 80)
 upgrade(2, Vehicle Weapons, 80)
