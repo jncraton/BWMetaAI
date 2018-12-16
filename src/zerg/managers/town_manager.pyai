@@ -44,14 +44,16 @@ build_finish(1, Hatchery)
 build_separately(2, Drone)
 player_need(1, Spawning Pool)
 creep(3)
+build_start(1, Creep Colony, 150)
 build_finish(1, Creep Colony, 150)
 build_start(1, Sunken Colony, 150)
 
 loop:
     if enemyownsairtech():
         player_need(1, Evolution Chamber)
-        if enemyownsair():
-            goto(zerg_town_manager_static_aa)
+        loop:
+            if enemyownsair():
+                goto(zerg_town_manager_static_aa)
         
     if time(18):
         goto(zerg_town_manager_static_aa)
@@ -70,6 +72,7 @@ creep(3)
 build_start(1, creep colony, 150)
 build_start(2, creep colony, 150)
 build_finish(3, creep colony, 150)
+build(1, sunken colony, 15)
 build(1, spore colony, 150)
 build(2, sunken colony, 150)
 build_start(2, Town Hall, 150)
