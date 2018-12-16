@@ -8,6 +8,7 @@ run: patch
 	@$(sc_path)/StarCraft.exe -launch
 
 run-wine: patch
+	sudo sysctl kernel.randomize_va_space=0 # Disable ASLR so we can enable a hacks easily
 	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch &
 	sleep 4
 	xdotool search --name Wine windowactivate
@@ -18,6 +19,10 @@ run-wine: patch
 	xdotool key alt o
 	sleep .8
 	xdotool key u
+	sleep .8
+	xdotool key alt o
+	sleep 3
+	sudo gdb -batch -command tools/hacks.gdb $(sc_path)StarCraft.exe `pgrep StarCraft.exe`
 
 patch: mpq maps
 	@echo Overwriting existing patch_rt.mpq
