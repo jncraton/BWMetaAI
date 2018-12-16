@@ -54,6 +54,8 @@ loop:
         loop:
             if enemyownsair():
                 goto(zerg_town_manager_static_aa)
+            if time(18):
+                goto(zerg_town_manager_static_aa)
         
     if time(18):
         goto(zerg_town_manager_static_aa)
