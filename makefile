@@ -8,7 +8,16 @@ run: patch
 	@$(sc_path)/StarCraft.exe -launch
 
 run-wine: patch
-	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch
+	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch &
+	sleep 4
+	xdotool search --name Wine windowactivate
+	xdotool key s
+	sleep .1
+	xdotool key e
+	sleep .8
+	xdotool key alt o
+	sleep .8
+	xdotool key u
 
 patch: mpq maps
 	@echo Overwriting existing patch_rt.mpq
