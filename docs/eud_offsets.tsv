@@ -2,7 +2,7 @@ Address	Player ID	Version	Name	Size	Length	SCR	Description
 							http://farty1billion.dyndns.org/EUDDB/?pg=entry&ver=1.16.1
 0x004FF900	-141977	1.16.1	Filename for Lastreplay	12	1		Contains the string 'LastReplay'
 0x004FF90C	-141974	1.16.1	Replay Speed Limiters	4	7		The speed in milliseconds to spend each frame during a repl...
-0x004FF928	-141967	1.16.1	Replay Command Table	16	2		Contains the replay commands 'show" and "hid...
+0x004FF928	-141967	1.16.1	Replay Command Table	16	2		Contains the replay commands 'show' and 'hid...
 0x004FF948	-141959	1.16.1	Replay show command modifiers	32	12		Contains sub-commands and leaderboard values to use in the ...
 0x004FFAD0	-141861	1.16.1	Menu Info Array	12	27		Contains the menu index, background index, and menu path.
 0x004FFC20	-141777	1.16.1	Campaign List Info	8	85		Contains the campaign listing info. WORD gluHist.tbl inde...
@@ -21,7 +21,7 @@ Address	Player ID	Version	Name	Size	Length	SCR	Description
 0x00512688	-122679	1.16.1	Local Human ID	4	1		The official name for this is g_LocalHumanID.
 0x0051268C	-122678	1.16.1	Local Storm ID	4	1		The official name for this is g_LocalStormID.
 0x00512690	-122677	1.16.1	Cinematic File Name Array	4	28		Contains string pointers for the file names of all game cin...
-0x00512700	-122649	1.16.1	Race Filename Modifiers	8	1		Contains 3 bytes 'ztp" used when loading race-spe...
+0x00512700	-122649	1.16.1	Race Filename Modifiers	8	1		Contains 3 bytes 'ztp' used when loading race-spe...
 0x00512708	-122647	1.16.1	Cursor Filename Array	4	19		Contains pointers to a string for each cursor image.
 0x00512754	-122628	1.16.1	Cursor Scroll Type Modifiers	2	10		Contains the index for the cursor used for scrolling.
 0x005127DC	-122594	1.16.1	Tileset Color Cycle Pointers	4	9		Contains pointers to the tileset color cycle data. Array in...
@@ -182,13 +182,13 @@ Address	Player ID	Version	Name	Size	Length	SCR	Description
 0x0058F440	5175	1.16.1	Is Expansion	1	1	Simple Data	1 if your game is using the Expansion set.
 0x0058F441	5175	1.16.1	BWGame unk_10351	1	1	Simple Data	
 0x0058F442	5175	1.16.1	Unknown Player Color Something	1	8	Simple Data	
-0x0058F44A	5177	1.16.1	BWGame 'Literally Unused"	1	29604	Simple Data	
+0x0058F44A	5177	1.16.1	BWGame 'Literally Unused'	1	29604	Simple Data	
 0x005968A0	12623	1.16.1	Input Procedures	4	19		A list of functions that determine how user input is handle...
 0x005968AC	12626	1.16.1	Mouse Left Click	422	1		Detects the left click of a mouse. Use only actions that...
 0x00596904	12648	1.16.1	Game Mode	2	1		Determines the game's mode. In-Game, in-menu, battle.n...
 0x00596A18	12717	1.16.1	Virtual Key Array	1	256	Backed By Code	An array containing the state of all the virtual key codes ...
-0x005993C4	15384	1.16.1	Pointer to 'MTXM" map tile data	4	1	Backed By Code	
-0x005993D4	15388	1.16.1	Pointer to map 'STR " section	4	1	Backed By Code	Pointer default: first string
+0x005993C4	15384	1.16.1	Pointer to 'MTXM' map tile data	4	1	Backed By Code	
+0x005993D4	15388	1.16.1	Pointer to map 'STR ' section	4	1	Backed By Code	Pointer default: first string
 0x0059BA5C	17854	1.16.1	Game Subtype ID	4	1		Subtype ID specified in GOT template. Top Vs. Bottom: Nu...
 0x0059C080	18247	1.16.1	Mapdata.dat - Mission dir	4	65		Mapdata.tbl string index
 0x0059CC78	19013	1.16.1	Last Time for Drop Window	4	1	Simple Data	Last GetTickCount Win32 API Time for Drop Window shown. ...
@@ -386,8 +386,8 @@ Address	Player ID	Version	Name	Size	Length	SCR	Description
 0x0065FC18	218669	1.16.1	Units.dat - Max Hits (Air)	1	228	Simple Data	This value is for statistics purposes only (?)
 0x0065FD00	218727	1.16.1	Units.dat - Gas Cost	2	228	Simple Data	
 0x0065FEC8	218841	1.16.1	Units.dat - Armor	1	228	Simple Data	
-0x0065FFB0	218899	1.16.1	Units.dat - 'What" Sound Start	2	228	Simple Data	sfxdata.dat start index
-0x00660178	219013	1.16.1	Units.dat - Computer AI Unit Type	1	228	Simple Data	'AI Internal" in DatEdit
+0x0065FFB0	218899	1.16.1	Units.dat - 'What' Sound Start	2	228	Simple Data	sfxdata.dat start index
+0x00660178	219013	1.16.1	Units.dat - Computer AI Unit Type	1	228	Simple Data	'AI Internal' in DatEdit
 0x00660260	219071	1.16.1	Units.dat - name	2	228	Simple Data	0 = Normal Name String Number = stat_txt.tbl's text n...
 0x00660428	219185	1.16.1	Units.dat - Build Time	2	228	Simple Data	
 0x006605F0	219299	1.16.1	Units.dat - Start Direction	1	228	Simple Data	'Direction unit will face after it is created. Values ...
@@ -399,21 +399,21 @@ Address	Player ID	Version	Name	Size	Length	SCR	Description
 0x00660E00	219815	1.16.1	Units.dat - Shield Amount	2	228	Simple Data	
 0x00660FC8	219929	1.16.1	Units.dat - Movement Flags	1	228	Simple Data	
 0x006610B0	219987	1.16.1	Units.dat - Construction Animation	4	228	Simple Data	0 = No graphics
-0x00661440	220215	1.16.1	Units.dat - 'Yes" Sound End	2	106	Simple Data	sfxdata.dat end index
+0x00661440	220215	1.16.1	Units.dat - 'Yes' Sound End	2	106	Simple Data	sfxdata.dat end index
 0x00661518	220269	1.16.1	Units.dat - Staredit Availability Flags	2	228	Simple Data	0x0001 - Non-Neutral 0x0002 - Unit Listing & Palette ...
 0x006616E0	220383	1.16.1	Units.dat - Air Weapon	1	228	Simple Data	Weapons.dat index
 0x006617C8	220441	1.16.1	Units.dat - Unit Dimensions	8	228	Simple Data	Struct: 2 bytes - Left Dimension (from center) 2 bytes - ...
-0x00661EE8	220897	1.16.1	Units.dat - 'Pissed" Sound End	2	106	Simple Data	sfxdata.dat end index
-0x00661FC0	220951	1.16.1	Units.dat - 'Ready" Sound	2	106	Simple Data	sfxdata.dat index
+0x00661EE8	220897	1.16.1	Units.dat - 'Pissed' Sound End	2	106	Simple Data	sfxdata.dat end index
+0x00661FC0	220951	1.16.1	Units.dat - 'Ready' Sound	2	106	Simple Data	sfxdata.dat index
 0x00662098	221005	1.16.1	Units.dat - Right-click Action	1	228	Simple Data	0 = No commands/Auto Attack 1 = Normal movement/Normal Att...
 0x00662180	221063	1.16.1	Units.dat - Size Class	1	228	Simple Data	0 = Independent 1 = Small 2 = Medium 3 = Large
-0x00662268	221121	1.16.1	Units.dat - Human Init Action	1	228	Simple Data	'Human Idle Action" in DatEdit Orders.dat index
+0x00662268	221121	1.16.1	Units.dat - Human Init Action	1	228	Simple Data	'Human Idle Action' in DatEdit Orders.dat index
 0x00662350	221179	1.16.1	Units.dat - Max HP	4	228	Simple Data	Lowest byte is fractional part (*256)
 0x006626E0	221407	1.16.1	Units.dat - Addon Placement	4	96	Simple Data	Struct: 2 bytes - X Pos 2 bytes - Y Pos Only exists fo...
 0x00662860	221503	1.16.1	Units.dat - Building Dimensions	4	228	Simple Data	Struct: 2 bytes - Width 2 bytes - Height Setting to 0 ...
-0x00662BF0	221731	1.16.1	Units.dat - 'What" Sound End	2	228	Simple Data	sfxdata.dat end index
+0x00662BF0	221731	1.16.1	Units.dat - 'What' Sound End	2	228	Simple Data	sfxdata.dat end index
 0x00662DB8	221845	1.16.1	Units.dat - Seek Range	1	228	Simple Data	1 range unit here = 2 range units in Weapons.dat. If the v...
-0x00662EA0	221903	1.16.1	Units.dat - Computer Init Action	1	228	Simple Data	'Computer Idle" in DatEdit Orders.dat index
+0x00662EA0	221903	1.16.1	Units.dat - Computer Init Action	1	228	Simple Data	'Computer Idle' in DatEdit Orders.dat index
 0x00662F88	221961	1.16.1	Units.dat - Portrait	2	228	Simple Data	0xFFFF = No Portrait
 0x00663150	222075	1.16.1	Units.dat - Elevation Level	1	228	Simple Data	Elevation Level (maybe shadow?)
 0x00663238	222133	1.16.1	Units.dat - Sight Range	1	228	Simple Data	Set value from 0-11. Values greater than 11 will crash.
@@ -424,8 +424,8 @@ Address	Player ID	Version	Name	Size	Length	SCR	Description
 0x006637A0	222479	1.16.1	Units.dat - Group Flags	1	228	Simple Data	0x01 - Zerg (Uses underlings, can build on creep) 0x02 - T...
 0x00663888	222537	1.16.1	Units.dat - Mineral Cost	2	228	Simple Data	
 0x00663A50	222651	1.16.1	Units.dat - Attack Move Order ID	1	228	Simple Data	Orders.dat index
-0x00663B38	222709	1.16.1	Units.dat - 'Pissed" Sound Start	2	106	Simple Data	sfxdata.dat start index
-0x00663C10	222763	1.16.1	Units.dat - 'Yes" Sound Start	2	107	Simple Data	sfxdata.dat start index
+0x00663B38	222709	1.16.1	Units.dat - 'Pissed' Sound Start	2	106	Simple Data	sfxdata.dat start index
+0x00663C10	222763	1.16.1	Units.dat - 'Yes' Sound Start	2	107	Simple Data	sfxdata.dat start index
 0x00663CE8	222817	1.16.1	Units.dat - Supply Used	1	228	Simple Data	Value here is twice what you see in-game. (Hence why 2 Zerg...
 0x00663DD0	222875	1.16.1	Units.dat - Rank/Sublabel	1	228	Simple Data	'Controls ground units movement: units with lower Rank...
 0x00663EB8	222933	1.16.1	Units.dat - Kill Score	2	228	Simple Data	Kill Score
@@ -435,7 +435,7 @@ Address	Player ID	Version	Name	Size	Length	SCR	Description
 0x006645E0	223391	1.16.1	Units.dat - Max Hits (Ground)	1	228	Simple Data	This value is for statistics purposes only (?)
 0x006646C8	223449	1.16.1	Units.dat - Supply Provided	1	228	Simple Data	The value is twice what you see in-game.
 0x006647B0	223507	1.16.1	Units.dat - Has Shields	1	228	Simple Data	
-0x00664898	223565	1.16.1	Units.dat - Idle Order	1	228	Simple Data	'Return to Idle" in DatEdit Orders.dat index
+0x00664898	223565	1.16.1	Units.dat - Idle Order	1	228	Simple Data	'Return to Idle' in DatEdit Orders.dat index
 0x00664980	223623	1.16.1	Units.dat - Infestation Unit	2	96	Simple Data	Only exists for buildings (First entry is 106 Command Cente...
 0x00664A40	223671	1.16.1	Orders.dat - Unknown 4	1	189	Simple Data	
 0x00664B00	223719	1.16.1	Orders.dat - Use Weapon Targetting	1	189	Simple Data	
