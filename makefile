@@ -8,6 +8,9 @@ run: patch
 	@$(sc_path)/StarCraft.exe -launch
 
 run-wine: patch
+	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch &
+
+run-wine-adv: patch
 	sudo sysctl kernel.randomize_va_space=0 # Disable ASLR so we can enable a hacks easily
 	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch &
 	sleep 4
