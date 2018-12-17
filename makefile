@@ -19,8 +19,6 @@ run-wine: patch
 	xdotool key alt o
 	sleep .8
 	xdotool key u
-	sleep .8
-	xdotool key alt o
 	sleep 3
 	sudo gdb -batch -command tools/hacks.gdb $(sc_path)StarCraft.exe `pgrep StarCraft.exe`
 
