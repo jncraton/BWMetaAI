@@ -8,7 +8,7 @@ run: patch
 	@$(sc_path)/StarCraft.exe -launch
 
 run-wine: patch
-	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch &
+	@WINEDEBUG=-all wine $(sc_path)/StarCraft.exe -launch
 
 run-wine-adv: patch
 	sudo sysctl kernel.randomize_va_space=0 # Disable ASLR so we can enable a hacks easily
@@ -22,7 +22,10 @@ run-wine-adv: patch
 	xdotool key alt o
 	sleep .8
 	xdotool key u
+	# We have to patch a running game to get the speed hack, so try in 3 seconds and then 20
 	sleep 3
+	sudo gdb -batch -command tools/hacks.gdb $(sc_path)StarCraft.exe `pgrep StarCraft.exe`
+	sleep 20
 	sudo gdb -batch -command tools/hacks.gdb $(sc_path)StarCraft.exe `pgrep StarCraft.exe`
 
 patch: mpq maps
