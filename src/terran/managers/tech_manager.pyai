@@ -18,6 +18,8 @@ if enemyowns(hatchery):
     build_start(1, Control Tower, 80)
     build_finish(1, Science Facility, 80)
     tech(Irradiate, 30)
+    build_finish(2, Starport)
+    build_start(2, Control Tower)
     wait(6000)
 
 --tech_manager_skip_bio--
