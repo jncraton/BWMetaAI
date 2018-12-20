@@ -11,6 +11,7 @@ if enemyowns(hatchery):
     build_start(4, Barracks, 80)
     build_finish(4, Barracks, 80)
     build_finish(2, Engineering Bay, 80)
+    build_start(1, Factory)
     upgrade(1, Infantry Armor, 30)
     upgrade(1, Infantry Weapons, 30)
     build_finish(1, Factory, 80)
