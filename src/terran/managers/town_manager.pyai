@@ -80,11 +80,13 @@ loop:
         build_finish(1, Factory)
         build(1, Machine Shop, 80)
         wait_until(21)
-        build_finish(2, Factory)
-        build(2, Machine Shop, 80)
+        build_finish(2, Factory, 10)
+        build(2, Machine Shop, 10)
         stop()
     if time(10):
         if enemyowns(hatchery):
             build_start(1, barracks)
-            wait(300)
-            build_start(2, barracks)
+            if resources(500,0):
+                build_start(2, barracks, 10)
+            wait(3000)
+            build_start(2, barracks, 10)
