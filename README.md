@@ -64,17 +64,30 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 
 ### Protoss
 
-* Forge Fast Expand
-* 1 Gate Zealot Expand
-* 12 Nexus Expand
+#### Protoss vs Terran
+
+* 2 Base Carrier
 * 2 Gate Range Expand
-* ZcoreZ Expand
 * 10/15 Gate Dragoon Pressure
+* 12 Nexus
+
+#### Protoss vs Zerg
+
+* Forge Fast Expand
+* 10/12 Gate Zealots
+* 1 Gate Zealot Expand
 * 2 Gate Corsair
 * 9/9 Gate Zealots
-* 10/12 Gate Zealots
-* Fast DT
+* 2 Gate Dark Templar
+
+#### Protoss vs Protoss
+
+* 12 Nexus
+* ZcoreZ Expand
 * ZcoreZ Reaver
+* 10/12 Gate Zealots
+* 9/9 Gate Zealots
+* 2 Gate Dark Templar
 
 Late game 
 ---------

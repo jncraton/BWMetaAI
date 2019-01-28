@@ -1,0 +1,50 @@
+use_build_vs(Terran)
+
+# This starts very similar to a 2 gate range expand build
+
+8 Protoss Pylon
+10 Protoss Gateway
+12 Protoss Assimilator
+13 Protoss Cybernetics Core
+15 Protoss Pylon
+build_start(18, Protoss Probe, 80)
+upgrade(1, Singularity Charge, 150)
+build_start(2, Protoss Gateway)
+build_start(20, Protoss Probe, 80)
+expand(1, expansion_fast_gas)
+train(2, Protoss Dragoon)
+defense_ground(Protoss Dragoon)
+build_start(3, Protoss Pylon, 80)
+train(4, Protoss Dragoon)
+build_start(20, Protoss Probe, 80)
+
+# Build diverges from range expand here
+
+if random(64):
+    attack_train(4, Protoss Dragoon)
+    attack_simple()
+
+train(2, Dragoon)
+build_start(1, Robotics Facility)
+farms_timing()
+train(6, Dragoon)
+build_start(1, Observatory)
+
+build_start(1, Stargate)
+upgrade(1, Air Weapons, 30)
+train(8, Dragoon)
+build_start(2, Stargate)
+build_start(1, Fleet Beacon)
+
+train(10, Dragoon)
+train(2, Carrier)
+train(1, Observer)
+train(12, Dragoon)
+upgrade(1, Carrier Capacity, 80)
+build_start(4, Gateway)
+train(4, Carrier)
+train(20, Dragoon)
+attack_train(6, Carrier)
+attack_train(28, Dragoon)
+wait_force(6, Carrier)
+attack_simple()
