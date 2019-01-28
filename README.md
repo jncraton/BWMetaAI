@@ -37,27 +37,55 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 
 ### Terran
 
-* Siege Expand
-* 1 Rax FE
-* 2 Rax FE
-* 2 Rax Pressure
+#### Terran vs Terran
+
 * BBS
 * 14 CC
-* 2 Factory Vulture
+* Siege Expand
 * 2 Factory Tank/Vulture
-* +1 5 Rax
+* 2 Factory Vulture
+
+#### Terran vs Zerg
+
+* BBS
+* 2 Rax Pressure
 * 2 port wraith
-* [Fantasy](https://liquipedia.net/starcraft/Fantasy_Build)
+* +1 5 Rax
+* 1 Rax FE
+* 2 Rax FE
 * [Fake Mech](https://liquipedia.net/starcraft/Iloveoov_Fake_Mech)
+* [Fantasy](https://liquipedia.net/starcraft/Fantasy_Build)
+
+#### Terran vs Protoss
+
+* BBS
+* 14 CC
+* Siege Expand
+* 2 Factory Tank/Vulture
+* 2 port wraith
+
+
 
 ### Zerg
- 
+
+#### Zerg vs Terran
+
 * 5 Pool
 * 1 Base Lurker
-* 4 Hatch Lair
-* 4 Hatch before Gas
 * 2 Hatch Muta
 * 3 Hatch Muta
+
+#### Zerg vs Protoss
+
+* 5 Pool
+* 1 Base Lurker
+* 3 Hatch Muta
+* 4 Hatch before Gas
+* 4 Hatch Lair
+
+#### Zerg vs Zerg
+
+* 5 Pool
 * 9 Pool Speed into Spire
 * 9 Hatch
 * Overgas
