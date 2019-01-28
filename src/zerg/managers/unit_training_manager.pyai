@@ -1,8 +1,0 @@
-if resources(600,0):
-    if owned(spawning pool):
-        do_morph(36, zergling)
-if owned(hydralisk den):
-    do_morph(6, hydralisk)
-if owned(ultralisk cavern):
-    do_morph(2, ultralisk)
-repeat()

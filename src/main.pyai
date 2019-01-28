@@ -37,11 +37,6 @@ farms_timing()
 # This handles expanding at appropriate times
 multirun_file(expansion_timing_manager)
 
-# Start the unit training manager
-# This ensures that there are units to train when the main script may 
-# be busy doing other things
-multirun_file(unit_training_manager)
-
 # Start the tech manager
 # This ensures that all necessary tech and research is completed so that
 # the late game attacks don't have to worry about that
