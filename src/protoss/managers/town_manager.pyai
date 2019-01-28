@@ -19,6 +19,8 @@ multirun_loop:
     if owned(Stargate):
         if enemyowns(Spire):
             defense_air(Corsair)
+    if owned(Fleet Beacon):
+        defense_ground(Carrier)
 
 multirun_loop:
     if enemyownscloaked():
