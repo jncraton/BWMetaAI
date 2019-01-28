@@ -38,8 +38,15 @@ multirun_loop:
     if enemyownsairtech():
         build_finish(1, Pylon, 50)
         player_need(1, Forge)
-        build(2, Cannon, 50)
-        stop()
+            # We get just the forge then wait to see an air unit until we get cannons
+            # This will hopefully be fast enough to stop mutas in time in most positions
+            #
+            # This wait prevents us from building defensive cannons in all bases
+            # if if the starport/stargate is just being used as a tech structure for now
+            loop:
+                if enemyownsair():
+                    build(2, Cannon, 50)
+                    stop()
 
 wait_until(12)
 build_finish(1, Pylon, 50)
