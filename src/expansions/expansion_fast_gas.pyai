@@ -1,0 +1,6 @@
+start_town()
+build_finish(1, Town Hall, 150)
+multirun(gen_managers_town_manager)
+build_start(1, Peon, 80)
+build(1, Gas, 80)
+build_separately(20, Peon)
