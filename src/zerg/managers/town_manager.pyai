@@ -1,3 +1,8 @@
+build_finish(1, Hatchery)
+build_finish(1, Drone)
+
+include(freemoney)
+
 multirun_loop:
     if owned(hatchery):
         defenseclear()

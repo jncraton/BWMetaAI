@@ -2,6 +2,8 @@ build_finish(1, Nexus, 50)
 build_finish(1, Probe, 50)
 build_finish(1, Pylon, 50)
 
+include(freemoney)
+
 multirun_loop:
     defenseclear()
     if owned(Gateway):

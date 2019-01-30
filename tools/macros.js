@@ -274,6 +274,10 @@ var parse = function parse(content) {
                'defensebuild_aa(1, ' + unit + ')\n'
     });
 
+    content = content.replace(/\(difficulty/g, function(original) {
+        return '(' + config.difficulty
+    });
+
     content = content.replace(/create_bonus_workers\(()\)/g, function(original) {
         ret = ''
         

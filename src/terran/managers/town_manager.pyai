@@ -1,6 +1,8 @@
 build_finish(1, Command Center)
 build_finish(1, SCV)
 
+include(freemoney)
+
 multirun_loop:
     defenseclear()
     if owned(Barracks):

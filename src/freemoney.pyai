@@ -1,14 +1,113 @@
 # This is included in the middle of every town manager
+# It provides a chance of topping off resources to 2k/2k for an active base
 
-wait_until(8)
-if random(0):
-    give_money()
+# The basic idea is to offer a chance of free money as long as the base is
+# actively being mined. This is tricky to do, as there is no way to check
+# an active worker count, or determine if there are minerals left to be 
+# mined.
 
-if random(0):
-    multirun_loop:
-        # provide a chance of topping up resources to 2000/2000 for free
-        wait_until(4)
-        wait_build(1, assimilator)
-        if random(25): # 1 in 10
-            give_money()
-        wait(450) # 10 seconds
+# We work around these issues by waiting a number of times to see a town hall
+# and at least 8 workers present at the base. Each time the conditions are met,
+# there is a chance of free money being awarded. After some number of passed
+# opportunities, equivalent to the time it takes to mine out a base, the checks 
+# stop.
+
+# It takes around 13 minutes to mine out a base at 2x saturation
+# This works out to about 10x the time it takes to build a CC (1800 frames)
+# We'll use this as our random check timer to give us a nice round number
+# and a known reference time.
+
+# The random chance can be used to adjust difficulty. A value of 25 (1 in 10)
+# creates an expected value of 1 give_money() call over the life of a base.
+# A standard base has 12000 minerals available, so this effectively provides 
+# 2000/12000 = 16% more minerals per base.
+
+# Here is a table for other values:
+# Chance      Expected Percent Increase
+# 0/255       0%
+# 25/255      16%
+# 50/255      33%
+# 75/255      50%
+# 100/255     66%
+# 125/255     83%
+# 150/255     100%
+# 175/255     116%
+# 200/255     133%
+# 225/255     150%
+# 255/255     166%
+
+# Note that because the give_money() call only tops off minerals, the calls do 
+# not stack fully. A subsequent call only matters if the computer has spent all
+# of the money from the previous call. The above table will be an overestimate.
+
+# It's worth noting that the AI won't be able to properly spend this much
+# money, so the difficulty won't be as high as it seems like it might. No 
+# additional macro structures are produced, so the AI will be limited by the
+# number of larva, gateways, factories, etc in most situations.
+
+multirun:
+    # Wait until approximately 6 in-game minutes have passed before any free
+    # money is given. This insures that build orders and early production are
+    # fairly accurate
+    wait_until(8)
+    
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+
+    wait_build(1, Town Hall)
+    wait_build(8, Peon)
+    if random(difficulty):
+        give_money()
+    wait(1800)
+    stop()
