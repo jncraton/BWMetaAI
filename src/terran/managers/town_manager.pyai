@@ -33,6 +33,7 @@ multirun_loop:
 
 multirun_loop:
     if enemyownscloaked():
+        player_need(1, Barracks)
         player_need(1, Engineering Bay)
         player_need(1, Academy)
         build_start(1, missile turret, 50)
