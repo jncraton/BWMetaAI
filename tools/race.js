@@ -58,6 +58,7 @@ function Race(name) {
         content = content.replace(/repeat\(\)/g, 'wait(75)\ngoto(' + file_block + ')');
         
         content = content.replace(/include\((.*)\)/g, function(command, filename) {
+            if (filename == 'freemoney' && config.difficulty == 0) { return "" }
             return loadContents(filename, true);
         });
             
