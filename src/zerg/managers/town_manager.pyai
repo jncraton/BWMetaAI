@@ -68,6 +68,9 @@ loop:
 --zerg_town_manager_static_aa-- 
 
 player_need(1, Evolution Chamber)
+build_separately(2, Drone)
+build_start(1, Creep Colony, 150)
+build_start(2, Creep Colony, 150)
 build_finish(2, Creep Colony, 150)
 build_start(1, Spore Colony, 150)
 
