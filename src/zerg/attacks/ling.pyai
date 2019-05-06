@@ -1,6 +1,0 @@
-use_attack_vs(Zerg, Terran, Protoss)
-
-if owned(hatchery):
-    if owned(pool):
-        attack_multiple(4, 8 ling)
-        attack_simple()
