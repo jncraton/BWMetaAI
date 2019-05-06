@@ -7,8 +7,9 @@ multirun_loop:
     defenseclear()
     if owned(Barracks):
         if enemyowns(hatchery):
-            defense_ground(Marine)
-            defense_air(Marine)
+            if notowns(Armory):
+                defense_ground(Marine)
+                defense_air(Marine)
         if notowns(factory):
             defense_ground(Marine)
             defense_air(Marine)            
