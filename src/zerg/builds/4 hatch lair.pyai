@@ -24,4 +24,5 @@ if enemyowns(Forge):
     wait_force(12, Zerg Hydralisk)
     upgrade(1, Grooved Spines, 30)
     attack_train(24, Zerg Hydralisk)
+    wait_force(24, Hydralisk)
     attack_simple()
