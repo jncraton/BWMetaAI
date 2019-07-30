@@ -5,9 +5,9 @@ write_gap = 64
 writes_per_trig = 31
 
 maps = [
-  ('(2)Destination [BWMetaAI Protoss].scx',  0x74be2),
-  ('(2)Destination [BWMetaAI Terran].scx',  0x74be4),
-  ('(2)Destination [BWMetaAI Zerg].scx',  0x74bb3),
+  ('(1)Destination BWMetaAI P.scx',  0x74be2),
+  ('(1)Destination BWMetaAI T.scx',  0x74be4),
+  ('(1)Destination BWMetaAI Z.scx',  0x74bb3),
 ]
 
 def write_map(map_filename, offset):
