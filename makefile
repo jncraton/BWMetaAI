@@ -52,7 +52,7 @@ triggers: build/aiscript.bin
 
 build/aiscript.bin: build/combined.pyai
 	@echo Creating script binaries
-	@python tools/PyAI.pyw -c -w ../$< ../$@ ../build/bwscript.bin
+	@python tools/PyAI.pyw --compile --hidewarns ../$< ../$@ ../build/bwscript.bin
 	@echo aiscript.bin size:
 	@wc -c < $@
 
