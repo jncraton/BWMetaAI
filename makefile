@@ -58,7 +58,7 @@ build/aiscript.bin: build/combined.pyai
 
 build/combined.pyai: build/terran.pyai build/zerg.pyai build/protoss.pyai
 	@echo Combining scripts
-	@cat $^ > $@
+	@cat $^ src/ums-scripts.pyai > $@
 
 build/%.pyai: src/%
 	@echo Building $@ $<

@@ -1,0 +1,216 @@
+# A collection of small scripts from aiscript.bin that are commonly accessed
+# using triggers in UMS maps. We include them in our output aiscript.bin
+# to make UMS maps function correctly using this mod.
+#
+# These are direct exports from the Blizzard aiscript.bin scripts, and 
+# should probably not be modified.
+
+# stat_txt.tbl entry 1126: Send All Units on Strategic Suicide Missions<0>
+Suic(1126, 000, aiscript):
+	send_suicide(0)
+	stop()
+
+
+# stat_txt.tbl entry 1127: Send All Units on Random Suicide Missions<0>
+SuiR(1127, 000, aiscript):
+	send_suicide(1)
+	stop()
+
+
+# stat_txt.tbl entry 1131: Switch Computer Player to Rescue Passive<0>
+Rscu(1131, 000, aiscript):
+	switch_rescue()
+	stop()
+
+	fatal_error()
+	stop()
+
+
+# stat_txt.tbl entry 1520: Turn ON Shared Vision for Player 1<0>
++Vi0(1520, 010, aiscript):
+	sharedvision_on(0)
+	stop()
+
+
+# stat_txt.tbl entry 1521: Turn ON Shared Vision for Player 2<0>
++Vi1(1521, 010, aiscript):
+	sharedvision_on(1)
+	stop()
+
+
+# stat_txt.tbl entry 1522: Turn ON Shared Vision for Player 3<0>
++Vi2(1522, 010, aiscript):
+	sharedvision_on(2)
+	stop()
+
+
+# stat_txt.tbl entry 1523: Turn ON Shared Vision for Player 4<0>
++Vi3(1523, 010, aiscript):
+	sharedvision_on(3)
+	stop()
+
+
+# stat_txt.tbl entry 1524: Turn ON Shared Vision for Player 5<0>
++Vi4(1524, 010, aiscript):
+	sharedvision_on(4)
+	stop()
+
+
+# stat_txt.tbl entry 1525: Turn ON Shared Vision for Player 6<0>
++Vi5(1525, 010, aiscript):
+	sharedvision_on(5)
+	stop()
+
+
+# stat_txt.tbl entry 1526: Turn ON Shared Vision for Player 7<0>
++Vi6(1526, 010, aiscript):
+	sharedvision_on(6)
+	stop()
+
+
+# stat_txt.tbl entry 1527: Turn ON Shared Vision for Player 8<0>
++Vi7(1527, 010, aiscript):
+	sharedvision_on(7)
+	stop()
+
+
+# stat_txt.tbl entry 1528: Turn OFF Shared Vision for Player 1<0>
+-Vi0(1528, 010, aiscript):
+	sharedvision_off(0)
+	stop()
+
+
+# stat_txt.tbl entry 1529: Turn OFF Shared Vision for Player 2<0>
+-Vi1(1529, 010, aiscript):
+	sharedvision_off(1)
+	stop()
+
+
+# stat_txt.tbl entry 1530: Turn OFF Shared Vision for Player 3<0>
+-Vi2(1530, 010, aiscript):
+	sharedvision_off(2)
+	stop()
+
+
+# stat_txt.tbl entry 1531: Turn OFF Shared Vision for Player 4<0>
+-Vi3(1531, 010, aiscript):
+	sharedvision_off(3)
+	stop()
+
+
+# stat_txt.tbl entry 1532: Turn OFF Shared Vision for Player 5<0>
+-Vi4(1532, 010, aiscript):
+	sharedvision_off(4)
+	stop()
+
+
+# stat_txt.tbl entry 1533: Turn OFF Shared Vision for Player 6<0>
+-Vi5(1533, 010, aiscript):
+	sharedvision_off(5)
+	stop()
+
+
+# stat_txt.tbl entry 1534: Turn OFF Shared Vision for Player 7<0>
+-Vi6(1534, 010, aiscript):
+	sharedvision_off(6)
+	stop()
+
+
+# stat_txt.tbl entry 1535: Turn OFF Shared Vision for Player 8<0>
+-Vi7(1535, 010, aiscript):
+	sharedvision_off(7)
+	stop()
+
+
+# stat_txt.tbl entry 1130: Move Dark Templars to Region<0>
+MvTe(1130, 011, aiscript):
+	move_dt()
+	stop()
+
+
+# stat_txt.tbl entry 1134: Clear Previous Combat Data<0>
+ClrC(1134, 011, aiscript):
+	clear_combatdata()
+	stop()
+
+
+# stat_txt.tbl entry 1128: Set Player to Enemy<0>
+Enmy(1128, 001, aiscript):
+	player_enemy()
+	stop()
+
+
+# stat_txt.tbl entry 1129: Set Player to Ally<0>
+Ally(1129, 001, aiscript):
+	player_ally()
+	stop()
+
+
+# stat_txt.tbl entry 1133: Value This Area Higher<0>
+VluA(1133, 001, aiscript):
+	value_area()
+	stop()
+
+
+# stat_txt.tbl entry 1132: Enter Closest Bunker<0>
+EnBk(1132, 001, aiscript):
+	enter_bunker()
+	stop()
+
+
+# stat_txt.tbl entry 1516: Set Generic Command Target<0>
+StTg(1516, 011, aiscript):
+	set_gencmd()
+	stop()
+
+
+# stat_txt.tbl entry 1517: Make These Units Patrol<0>
+StPt(1517, 011, aiscript):
+	wait(1)
+
+	make_patrol()
+	stop()
+
+
+# stat_txt.tbl entry 1518: Enter Transport<0>
+EnTr(1518, 001, aiscript):
+	enter_transport()
+	stop()
+
+
+# stat_txt.tbl entry 1519: Exit Transport<0>
+ExTr(1519, 001, aiscript):
+	exit_transport()
+	stop()
+
+
+# stat_txt.tbl entry 1536: AI Nuke Here<0>
+NuHe(1536, 011, aiscript):
+	nuke_location()
+	stop()
+
+
+# stat_txt.tbl entry 1537: AI Harass Here<0>
+HaHe(1537, 011, aiscript):
+	harass_location()
+	stop()
+
+
+# stat_txt.tbl entry 1538: Set Unit Order To: Junk Yard Dog<0>
+JYDg(1538, 011, aiscript):
+	junkyard_dog()
+	stop()
+
+
+# stat_txt.tbl entry 1536: AI Nuke Here<0>
+DWHe(1536, 111, aiscript):
+	disruption_web()
+	stop()
+
+
+# stat_txt.tbl entry 1536: AI Nuke Here<0>
+ReHe(1536, 011, aiscript):
+	recall_location()
+	stop()
+
+
