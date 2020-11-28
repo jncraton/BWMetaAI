@@ -25,7 +25,6 @@ multirun:
 multirun:
     loop:
         if resources(1500,0):
-            message(supply watchdog activated)
             farms_timing()
             stop()
 
