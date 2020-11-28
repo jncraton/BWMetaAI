@@ -19,6 +19,16 @@ multirun:
     wait(200)
     message(gl hf)
 
+# Watchdog to activate automatic supply management (farms_timing) if resources
+# get too high. This prevents a very rare soft hang when getting supply blocked 
+# in a build.
+multirun:
+    loop:
+        if resources(1500,0):
+            message(supply watchdog activated)
+            farms_timing()
+            stop()
+
 # Set maximums for unit production
 include(define_max)
 
