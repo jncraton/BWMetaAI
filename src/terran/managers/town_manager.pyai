@@ -31,6 +31,9 @@ multirun_loop:
         if owned(Science Facility):
             defense_ground(Science Vessel)
             defense_air(Science Vessel)
+        if owned(Physics Lab):
+            defense_ground(Battlecruiser)
+            defense_air(Battlecruiser)
 
 multirun_loop:
     if enemyownscloaked():
