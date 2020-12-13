@@ -1,25 +1,22 @@
 # Make sure the natural has been taken by this point
 expand(1, expansion)
 
-# Zerg should have a third by now
-expand(2, expansion)
-
 loop:
     --expansion-timing-manager-loop--
     panic(expansion)
-    wait(2000)
+    wait(3000)
     if random(10):
         expand(99, expansion)
         goto(expansion-timing-manager-loop)
 
     panic(expansion)
-    wait(2000)
+    wait(3000)
     if random(64):
         expand(99, expansion)
         goto(expansion-timing-manager-loop)
 
     panic(expansion)
-    wait(2000)
+    wait(3000)
     if random(128):
         expand(99, expansion)
         goto(expansion-timing-manager-loop)
