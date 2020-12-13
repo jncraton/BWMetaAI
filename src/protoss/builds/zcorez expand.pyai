@@ -3,7 +3,7 @@ use_build_vs(Protoss)
 10 Gateway
 12 Gas
 13 Zealot
-defensebuild_gg(1, Zealot)
+defenseuse_gg(1, Zealot)
 16 Pylon
 17 Core
 18 Zealot
