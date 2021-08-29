@@ -26,6 +26,7 @@ attack_async()
 
 attack_train(2, Dragoon)
 build_start(18, Protoss Probe, 80)
+expand(1, expansion)
 wait_force(2, Dragoon)
 attack_async()
 
@@ -34,6 +35,5 @@ build_start(20, Protoss Probe, 80)
 wait_force(3, Dragoon)
 attack_async()
 
-expand(1, expansion)
 build_start(2, Protoss Gateway)
 build_start(3, Protoss Gateway)
