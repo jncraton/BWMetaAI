@@ -44,15 +44,15 @@ build/patch_rt.mpq: build/aiscript.bin
 maps: build/aiscript.bin
 	@echo Creating Maps
 	@truncate -s 64050 build/aiscript.bin
-	@python tools/eud_write_bin.py
+	@python2 tools/eud_write_bin.py
 
 triggers: build/aiscript.bin
 	@echo Creating triggers
-	@python tools/eud_gen_trigs.py
+	@python2 tools/eud_gen_trigs.py
 
 build/aiscript.bin: build/combined.pyai
 	@echo Creating script binaries
-	@python tools/PyAI.pyw --compile --hidewarns ../$< ../$@ ../build/bwscript.bin
+	@python2 tools/PyAI.pyw --compile --hidewarns ../$< ../$@ ../build/bwscript.bin
 	@echo aiscript.bin size:
 	@wc -c < $@
 
