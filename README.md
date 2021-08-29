@@ -109,6 +109,7 @@ BWMetaAI includes a number of build orders that have been relatively popular in 
 * 2 Base Carrier
 * 2 Gate Range Expand
 * 10/15 Gate Dragoon Pressure
+* 1 Gate Zealot Dragoon Pressure
 * 12 Nexus
 
 #### Protoss vs Zerg
