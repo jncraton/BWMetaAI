@@ -1,43 +1,30 @@
 use_build_vs(Terran)
 
-build_start(8, Protoss Probe, 80)
-build_start(1, Protoss Pylon, 80)
-build_start(10, Protoss Probe, 80)
-build_start(1, Protoss Gateway)
-build_start(11, Protoss Probe, 80)
-build_start(1, Protoss Assimilator)
-build_start(13, Protoss Probe, 80)
-build_start(1, Cybernetics Core, 80)
+8 Pylon
+10 Gateway
+12 Assimilator
+13 Zealot
+16 Pylon
+18 Core
 
-train(1, Zealot)
-build_start(14, Protoss Probe, 80)
-build_start(2, Protoss Pylon, 80)
-wait_force(1, Zealot)
-attack_add(1, Zealot)
 if random(192):
+    attack_add(1, Zealot)
     attack_async()
 
+train(3, Zealot)
 wait_build(1, Cybernetics Core)
 upgrade(1, Singularity Charge, 150)
 build_start(3, Protoss Pylon, 80)
 
 train(1, Dragoon)
 build_start(16, Protoss Probe, 80)
-wait_force(1, Dragoon)
-attack_add(1, Dragoon)
-attack_async()
 
-attack_train(2, Dragoon)
 build_start(17, Protoss Probe, 80)
 expand(1, expansion)
-wait_force(2, Dragoon)
-attack_add(2, Dragoon)
-attack_async()
 
-attack_train(3, Dragoon)
 build_start(19, Protoss Probe, 80)
-wait_force(3, Dragoon)
-attack_add(3, Dragoon)
+attack_add(2, Zealot)
+attack_add(1, Dragoon)
 attack_async()
 
 build_start(2, Protoss Gateway)
