@@ -13,6 +13,6 @@
     },
     "protoss": {
         "verbosity": 0,
-        "useBuild": "1 gate zealot goon"
+        "useBuild": ""
     }
 }
