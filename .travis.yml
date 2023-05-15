@@ -1,5 +1,0 @@
-language: node_js
-before_install:
-- sudo apt-get install python-tk
-script:
-- make
