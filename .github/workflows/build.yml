@@ -18,8 +18,5 @@ jobs:
     - name: Install python-tk
       run: sudo apt-get install python-tk
 
-    - name: Install dependencies
-      run: npm ci
-
     - name: Run make
       run: make
