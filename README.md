@@ -2,6 +2,9 @@ BWMetaAI
 ========
 
 [![Build Status](https://travis-ci.org/jncraton/BWMetaAI.svg?branch=master)](https://travis-ci.org/jncraton/BWMetaAI)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5327653.svg)](https://doi.org/10.5281/zenodo.5327653)
+
+
 
 A Brood War AI designed to follow the modern 1v1 metagame.
 
