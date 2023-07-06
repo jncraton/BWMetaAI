@@ -1,4 +1,3 @@
-#message(Executing tech_manager script)
 build_start(2, Zerg Hatchery)
 build_finish(1, Zerg Hatchery)
 build_finish(1, Spawning Pool)
@@ -18,12 +17,10 @@ wait_build(1, hydralisk den)
 if enemyownsair():
     build_start(1, spire)
 
-#message(starting upgrades hydralisk speed)
 upgrade(1, Muscular Augments, 80)
 
 wait(2000)
 
-#message(starting upgrades lurkers overlord speed burrowing)
 tech(Lurker Aspect, 80)
 upgrade(1, Pneumatized Carapace, 80)
 upgrade(2, Zerg Carapace, 80)
@@ -41,13 +38,11 @@ if enemyownsair():
 
 wait(1000)
 
-#message(starting upgrades hydralisk range overlord capacity)
 upgrade(1, Zerg Missile Attacks, 80)
 upgrade(1, Grooved Spines, 80)
 upgrade(1, Ventral Sacs, 80)
 build_start(1, spire)
 build_finish(2, spire)
-#message(starting upgrades level 1 air)
 upgrade(1, Zerg Flyer Attacks, 80)
 upgrade(1, Zerg Flyer Carapace, 80)
 
@@ -68,14 +63,12 @@ build_start(1, greater spire)
 upgrade(1, Anabolic Synthesis, 80)
 upgrade(3, Zerg Melee Attacks, 80)
 upgrade(2, Zerg Missile Attacks, 80)
-#message(starting upgrades level 2 air)
 upgrade(2, Zerg Flyer Attacks, 80)
 upgrade(2, Zerg Flyer Carapace, 80)
 
 wait(5000)
 
 upgrade(3, Zerg Missile Attacks, 80)
-#message(starting upgrades level 3 air)
 upgrade(3, Zerg Flyer Attacks, 80)
 upgrade(3, Zerg Flyer Carapace, 80)
 upgrade(1, Antennae, 80)
