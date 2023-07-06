@@ -44,10 +44,8 @@ build_start(1, spire)
 build_finish(1, spire)
 upgrade(1, Zerg Flyer Carapace, 80)
 
-build_start(1, Zerg Ultralisk Cavern)
 wait(4000)
 
-upgrade(1, Chitinous Plating, 80)
 upgrade(2, Zerg Melee Attacks, 80)
 upgrade(3, Zerg Carapace, 80)
 upgrade(1, Zerg Flyer Attacks, 80)
@@ -55,7 +53,6 @@ upgrade(1, Zerg Flyer Attacks, 80)
 wait(4000)
 
 build_start(1, greater spire)
-upgrade(1, Anabolic Synthesis, 80)
 upgrade(3, Zerg Melee Attacks, 80)
 upgrade(2, Zerg Missile Attacks, 80)
 upgrade(2, Zerg Flyer Carapace, 80)
@@ -64,6 +61,13 @@ wait(5000)
 
 upgrade(3, Zerg Missile Attacks, 80)
 upgrade(2, Zerg Flyer Attacks, 80)
+
+build_finish(1, Zerg Ultralisk Cavern)
+upgrade(1, Chitinous Plating, 80)
+
+wait(5000)
+
+upgrade(1, Anabolic Synthesis, 80)
 
 wait(5000)
 
