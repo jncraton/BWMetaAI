@@ -41,10 +41,9 @@ upgrade(2, Zerg Carapace, 80)
 upgrade(1, Grooved Spines, 80)
 upgrade(1, Ventral Sacs, 80)
 build_start(1, spire)
+wait(4000)
 build_finish(1, spire)
 upgrade(1, Zerg Flyer Attacks, 80)
-
-wait(4000)
 
 upgrade(2, Zerg Melee Attacks, 80)
 upgrade(3, Zerg Carapace, 80)
