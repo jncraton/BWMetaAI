@@ -17,11 +17,11 @@ wait_build(1, hydralisk den)
 if enemyownsair():
     build_start(1, spire)
 
-upgrade(1, Muscular Augments, 80)
+tech(Lurker Aspect, 80)
 
 wait(2000)
 
-tech(Lurker Aspect, 80)
+upgrade(1, Muscular Augments, 80)
 upgrade(1, Pneumatized Carapace, 80)
 upgrade(2, Zerg Carapace, 80)
 
