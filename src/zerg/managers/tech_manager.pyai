@@ -23,7 +23,6 @@ wait(2000)
 
 upgrade(1, Muscular Augments, 80)
 upgrade(1, Pneumatized Carapace, 80)
-upgrade(2, Zerg Carapace, 80)
 
 if enemyownsair():
     build_start(1, spire)
@@ -38,6 +37,7 @@ if enemyownsair():
 wait(1000)
 
 upgrade(1, Zerg Missile Attacks, 80)
+upgrade(2, Zerg Carapace, 80)
 upgrade(1, Grooved Spines, 80)
 upgrade(1, Ventral Sacs, 80)
 build_start(1, spire)
