@@ -52,7 +52,6 @@ tech(Plague, 80)
 
 wait(4000)
 
-tech(Consume, 80)
 upgrade(1, Chitinous Plating, 80)
 upgrade(2, Zerg Melee Attacks, 80)
 upgrade(3, Zerg Carapace, 80)
