@@ -24,7 +24,6 @@ wait(2000)
 tech(Lurker Aspect, 80)
 upgrade(1, Pneumatized Carapace, 80)
 upgrade(2, Zerg Carapace, 80)
-tech(Burrowing, 80)
 
 if enemyownsair():
     build_start(1, spire)
