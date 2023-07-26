@@ -3,7 +3,7 @@ use_attack_vs(Terran, Protoss, Zerg)
 if owned(Machine Shop):
     train(6, Siege Tank)
 
-    if enemyownsairtech():
+    if enemyownsair():
         if owned(Armory):
             attack_train(8, Goliath)
 
