@@ -19,15 +19,15 @@ multirun_loop:
         defense_ground(Vulture)
         if owned(Armory):
             defense_air(Goliath)
+    if owned(Starport):
+        if enemyowns(Nexus):
+            defense_air(Wraith)
+        if enemyowns(Command Center):
+            defense_air(Wraith)
+        if enemyowns(Hatchery):
+            if owned(Armory):
+                defense_air(Valkyrie)
     if enemyowns(Hatchery):
-        if owned(Starport):
-            if enemyowns(Nexus):
-                defense_air(Wraith)
-            if enemyowns(Command Center):
-                defense_air(Wraith)
-            if enemyowns(Hatchery):
-                if owned(Armory):
-                    defense_air(Valkyrie)
         if owned(Science Facility):
             defense_ground(Science Vessel)
             defense_air(Science Vessel)
