@@ -52,4 +52,4 @@ build_start(1, control tower)
 train(4, goliath)
 
 if enemyowns(spire):
-    train(1, valkyrie)
+    train(2, valkyrie)
