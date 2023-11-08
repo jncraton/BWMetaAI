@@ -34,6 +34,14 @@ for i = 30, 0, -1 do
 end
 
 -- Set Current Player (0x006509B0) to EPD(0)
+--
+-- EPD(0) is death_table / 4 (-1452249)
+--
+-- This value negates the native offset of the death table
+--
+-- Adding a memory location to Current Player will then correctly allow
+-- access to that memory location when reading or writing Marine deaths
+
 
 Trigger {
    players={P1},
