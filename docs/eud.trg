@@ -1,4 +1,10 @@
 -- Copy aiscript.bin pointer to Current Player dividing pointer by 4 during copy
+--| Address     | Description                 |
+--| ----------- | --------------------------- |
+--| 0x0058A364  | Death Table Start           |
+--| 0x006509B0  | Current Player              |
+--| 0x0068C104  | Pointer to aiscript.bin     |
+--| *0x0068C104 | aiscript.bin                |
 
 -- First, copy aiscript.bin pointer (0x0068C104) to Terran Marine Deaths
 -- Add each bit to Marine and Firebat deaths
