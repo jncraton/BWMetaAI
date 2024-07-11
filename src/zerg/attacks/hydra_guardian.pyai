@@ -1,7 +1,7 @@
 use_attack_vs(Zerg, Terran, Protoss)
 
 if owned(hydralisk den):
-    attack_multiple(8, 4 Hydra)
+    attack_multiple(2, 16 Hydra)
 
     if owned(greater spire):
         attack_multiple(2, 4 Guardian)
