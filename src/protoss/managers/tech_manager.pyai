@@ -7,16 +7,15 @@ if enemyowns(Nexus):
     build_finish(1, Robotics Facility)
     build_start(1, Robotics Support Bay)
 
-if enemyowns(Command Center):
-    build_finish(1, Observatory)
-    train(2, Observer)
-
 build_start(3, Gateway)
 build_finish(4, Gateway)
 
 build_finish(1, Cybernetics Core)
 if enemyowns(Command Center):
     upgrade(1, Singularity Charge, 30)
+    build_finish(1, Robotics Facility)
+    build_finish(1, Observatory)
+    train(1, Observer)
 if enemyowns(Nexus):
     upgrade(1, Singularity Charge, 30)
 
