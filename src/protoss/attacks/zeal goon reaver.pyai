@@ -4,19 +4,15 @@ if owned(stargate):
     if owned(arbiter tribunal):
         attack_train(1, Arbiter)
 
-if owned(Robotics Support Bay):
-    attack_multiple(2, 1 Reaver)
-    attack_train(1, Shuttle)
-
 if owned(Templar Archives):
-    attack_multiple(3, 3 Zealot, 6 Dragoon, 1 High Templar)
+    attack_train(2, High Templar)
     if random(128):
         attack_train(1, Dark Templar)
-    goto(zeal_goon_reaver_do)
 
 if owned(Cybernetics Core):
-    attack_multiple(3, 2 Zealot, 4 Dragoon)
+    attack_multiple(3, 3 Zealot, 6 Dragoon)
 
---zeal_goon_reaver_do--
+if owned(Robotics Support Bay):
+    attack_train(1, Reaver)
 
 attack_simple()
