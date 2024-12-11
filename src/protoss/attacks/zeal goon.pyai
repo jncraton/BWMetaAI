@@ -5,7 +5,7 @@ if owned(stargate):
         attack_train(1, Protoss Arbiter)
 
 if owned(Templar Archives):
-    attack_train(3, Protoss High Templar)
+    attack_train(2, Protoss High Templar)
     if random(128):
         attack_train(1, Dark Templar)
 
