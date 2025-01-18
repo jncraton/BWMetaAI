@@ -16,7 +16,7 @@ jobs:
         node-version: 14
 
     - name: Install python-tk
-      run: sudo apt-get install python-tk
+      run: sudo apt-get install --fix-missing python-tk
 
     - name: Run make
       run: make
