@@ -11,30 +11,27 @@ build_finish(2, evo chamber)
 upgrade(1, Zerg Carapace, 80)
 upgrade(1, Zerg Melee Attacks, 80)
 
+build_start(1, lair)
+build_start(1, hydralisk den)
 wait_build(1, lair)
 wait_build(1, hydralisk den)
 
-if enemyownsair():
-    build_start(1, spire)
-
+build_start(1, spire)
 tech(Lurker Aspect, 80)
+upgrade(1, Pneumatized Carapace, 80)
 
 wait(2000)
 
+wait_build(1, spire)
 upgrade(1, Muscular Augments, 80)
-upgrade(1, Pneumatized Carapace, 80)
-
-if enemyownsair():
-    build_start(1, spire)
+upgrade(1, Flyer Carapace, 80)
 
 build_finish(1, Zerg Queen's Nest, 80)
 upgrade(1, Zerg Missile Attacks, 80)
 upgrade(2, Zerg Carapace, 80)
 build_finish(1, Zerg Hive)
+upgrade(1, Flyer Attacks, 80)
 upgrade(1, Adrenal Glands, 80)
-
-if enemyownsair():
-    build_start(1, spire)
 
 wait(1000)
 
@@ -42,36 +39,28 @@ upgrade(2, Zerg Melee Attacks, 80)
 upgrade(3, Zerg Carapace, 80)
 upgrade(1, Grooved Spines, 80)
 upgrade(1, Ventral Sacs, 80)
-build_start(1, spire)
 wait(4000)
-build_finish(1, spire)
-upgrade(1, Flyer Attacks, 80)
 
 upgrade(3, Zerg Melee Attacks, 80)
 upgrade(2, Zerg Missile Attacks, 80)
+upgrade(2, Flyer Carapace, 80)
 
 wait(4000)
 
 upgrade(3, Zerg Missile Attacks, 80)
 build_finish(1, Zerg Ultralisk Cavern)
 upgrade(1, Chitinous Plating, 80)
+upgrade(2, Flyer Attacks, 80)
 
 wait(5000)
 
 upgrade(1, Anabolic Synthesis, 80)
+upgrade(3, Flyer Attacks, 80)
 
 wait(5000)
 
 build_start(1, greater spire)
 build_finish(1, defiler mound)
 tech(Plague, 80)
-
-upgrade(1, Flyer Carapace, 80)
-wait(3000)
-upgrade(2, Flyer Attacks, 80)
-wait(4000)
-upgrade(2, Flyer Carapace, 80)
-wait(4000)
-upgrade(3, Flyer Attacks, 80)
-wait(5000)
+build_finish(1, greater spire)
 upgrade(3, Flyer Carapace, 80)

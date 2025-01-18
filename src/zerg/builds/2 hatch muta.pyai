@@ -14,5 +14,7 @@ build_start(14, Drone)
 build_start(1, Spire)
 build_start(6, Overlord)
 wait_build(1, Spire)
+
+upgrade(1, Flyer Carapace, 30)
 attack_train(6, Mutalisk)
 attack_simple()

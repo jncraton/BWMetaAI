@@ -4,6 +4,9 @@ build_start(1, spire)
 
 upgrade(1, metabolic boost, 30)
 
+wait_build(1, spire)
+upgrade(1, Flyer Carapace, 30)
+
 attack_train(3, Mutalisk)
 
 build_start(4, Overlord)
