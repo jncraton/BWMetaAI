@@ -741,7 +741,7 @@ class AIBIN:
 		if not stage:
 			v = ord(data[0])
 		elif stage == 1:
-			s = self.tbl.strings[data].split('\x00')
+			s = self.tbl.strings[data].split(b'\x00')
 			if s[1] != '*':
 				v = TBL.decompile_string('\x00'.join(s[:2]), '\x0A\x28\x29\x2C')
 			else:
@@ -755,8 +755,9 @@ class AIBIN:
 					raise
 			except:
 				for i,name in enumerate(self.tbl.strings[:DAT.UnitsDAT.count]):
-					n = name.split('\x00')[:2]
-					if TBL.compile_string(data) == n[0] or (n[1] != '*' and TBL.compile_string(data) == '\x00'.join(n)):
+					n = name.split(b'\x00')[:2] if isinstance(name, bytes) else name.split('\x00')[:2]
+					compiled_data = TBL.compile_string(data).encode('latin-1') if isinstance(name, bytes) else TBL.compile_string(data)
+					if compiled_data == n[0] or (n[1] != b'*' if isinstance(name, bytes) else n[1] != '*') and (compiled_data == (b'\x00' if isinstance(name, bytes) else '\x00').join(n)):
 						v = i
 						break
 				else:
@@ -806,7 +807,7 @@ class AIBIN:
 		if not stage:
 			v = ord(data[0])
 		elif stage == 1:
-			v = TBL.decompile_string(self.tbl.strings[self.upgradesdat.get_value(data,'Label') - 1].split('\x00',1)[0].strip(), '\x0A\x28\x29\x2C')
+			v = TBL.decompile_string(self.tbl.strings[self.upgradesdat.get_value(data,'Label') - 1].split(b'\x00', 1)[0].strip(), '\x0A\x28\x29\x2C')
 		elif stage == 2:
 			v = chr(data) + '\x00'
 		else:
@@ -816,7 +817,7 @@ class AIBIN:
 					raise
 			except:
 				for i in range(len(self.upgradesdat.entries)):
-					if TBL.compile_string(data) == self.tbl.strings[self.upgradesdat.get_value(i,'Label') - 1].split('\x00', 1)[0].strip():
+					if TBL.compile_string(data).encode("latin-1") == self.tbl.strings[self.upgradesdat.get_value(i,'Label') - 1].split(b'\x00', 1)[0].strip():
 						v = i
 						break
 				else:
@@ -828,7 +829,7 @@ class AIBIN:
 		if not stage:
 			v = ord(data[0])
 		elif stage == 1:
-			v = TBL.decompile_string(self.tbl.strings[self.techdat.get_value(data,'Label') - 1].split('\x00',1)[0].strip(), '\x0A\x28\x29\x2C')
+			v = TBL.decompile_string(self.tbl.strings[self.techdat.get_value(data,'Label') - 1].split(b'\x00', 1)[0].strip(), '\x0A\x28\x29\x2C')
 		elif stage == 2:
 			v = chr(data) + '\x00'
 		else:
@@ -838,7 +839,7 @@ class AIBIN:
 					raise
 			except:
 				for i in range(len(self.techdat.entries)):
-					if TBL.compile_string(data) == self.tbl.strings[self.techdat.get_value(i,'Label') - 1].split('\x00', 1)[0].strip():
+					if TBL.compile_string(data).encode("latin-1") == self.tbl.strings[self.techdat.get_value(i,'Label') - 1].split(b'\x00', 1)[0].strip():
 						v = i
 						break
 				else:
@@ -918,7 +919,7 @@ class AIBIN:
 				if len(l) > 1:
 					line = l.strip().split('#',1)[0]
 					if line:
-						match = re.match('\\A(\\S+)\\s+(.+)\\s+=\\s+(.+?)(?:\\s*\\{(.+)\\})?\\Z', line)
+						match = re.match(r'\A(\\S+)\s+(.+)\s+=\s+(.+?)(?:\s*\{(.+)\})?\Z', line)
 						if match:
 							t,name,dat,vinfo = match.groups()
 							if re.match('[\x00,(){}]',name):
@@ -977,11 +978,11 @@ class AIBIN:
 							else:
 								nextinfo[0][nextinfo[1]][0] += line + '\n'
 						else:
-							match = re.match('\\Aextdef\\s*(.+)\\Z',line)
+							match = re.match(r'\Aextdef\s*(.+)\Z',line)
 							if match:
 								load_defs(match.group(1))
 								continue
-							match = re.match('\\A(\\S+)\\s+(\\S+)\\s+=\\s+(.+?)(?:\\s*\\{(.+)\\})?\\Z', line)
+							match = re.match(r'\A(\\S+)\s+(\\S+)\s+=\s+(.+?)(?:\s*\{(.+)\})?\Z', line)
 							if match:
 								t,name,dat,vinfo = match.groups()
 								if re.match('[\x00,(){}]',name):
@@ -1014,8 +1015,8 @@ class AIBIN:
 								else:
 									nextinfo = [2,varinfo[name]]
 								continue
-							if re.match(r'\\A[^(]+\\([^)]+\\):\\s*(?:\\{.+\\})?\\Z', line):
-								newai = re.match(r'\\A(.+)\\(\s*(.+)\s*,\s*(.+)\s*,\s*(\w+)\s*\\):\\s*(?:\\{(.+)\\})?\\Z', line)
+							if re.match(r'\A[^(]+\([^)]+\):\s*(?:\{.+\})?\Z', line):
+								newai = re.match(r'\A(.+)\(\s*(.+)\s*,\s*(.+)\s*,\s*(\w+)\s*\):\s*(?:\{(.+)\})?\Z', line)
 								if not newai:
 									raise PyMSError('Interpreting','Invalid syntax, expected a new script header',n,line, warnings=warnings)
 								id = newai.group(1)
@@ -1094,7 +1095,7 @@ class AIBIN:
 								cmdn = 0
 								continue
 							if ai:
-								match = re.match('\\A(.+)\\(\\s*(.+)?\\s*\\)\\Z', line)
+								match = re.match(r'\A(.+)\(\s*(.+)?\s*\)\Z', line)
 								if match:
 									cmd = match.group(1).lower()
 									if cmd in self.labels:
@@ -1112,7 +1113,7 @@ class AIBIN:
 										notused = False
 									dat = []
 									if match.group(2):
-										dat = re.split('\\s*,\\s*', match.group(2))
+										dat = re.split(r'\s*,\s*', match.group(2))
 									params = self.parameters[ai[4][-1][0]]
 									if params and len(dat) != len(params):
 										raise PyMSError('Interpreting','Incorrect amount of parameters (got %s, needed %s)' % (len(dat), len(params)),n,line, warnings=warnings)
@@ -1123,7 +1124,7 @@ class AIBIN:
 										for d,p in zip(dat,params):
 											if p == self.ai_address:
 												aisize += 2
-												match = re.match('\\A(.+):(.+)\\Z', d)
+												match = re.match(r'\A(.+):(.+)\Z', d)
 												if match:
 													cid,label = match.group(1),match.group(2)
 													if cid in default_ais:
@@ -1238,7 +1239,7 @@ class AIBIN:
 									cmdn += 1
 									nextinfo = None
 									continue
-								match = re.match(r'\\A--\s*(.+)\s*--\\s*(?:\\{(.+)\\})?\\Z', line)
+								match = re.match(r'\A--\s*(.+)\s*--\s*(?:\{(.+)\})?\Z', line)
 								if match:
 									notused = False
 									label = match.group(1)
@@ -1301,7 +1302,7 @@ class AIBIN:
 							if line.startswith('{'):
 								if not nextinfo:
 									raise PyMSError('Interpreting','An Information Comment must be afer a variable, a script header, or a block label',n,line, warnings=warnings)
-								match = re.match('\\A\\{(?:(.+)\\})?\\Z', line)
+								match = re.match(r'\A\{(?:(.+)\})?\Z', line)
 								if match.group(1):
 									if len(nextinfo) == 3:
 										nextinfo[0][curinfo[1]][1][curinfo[2]] = match.group(1)
@@ -1367,7 +1368,7 @@ class AIBIN:
 						else:
 							bwinfo[i[0]][1].remove(l)
 			for b,r in enumerate(remove):
-				for i in r.iterkeys():
+				for i in r.keys():
 					if r[i]:
 						r[i].sort()
 						n = 0
@@ -1483,7 +1484,7 @@ class AIBIN:
 					if len(l) > 1:
 						line = l.strip().split('#',1)[0]
 						if line:
-							match = re.match('\\A(\\S+)\\s+(.+)\\s+=\\s+(.+?)(?:\\s*\\{(.+)\\})?\\Z', line)
+							match = re.match(r'\A(\\S+)\s+(.+)\s+=\s+(.+?)(?:\s*\{(.+)\})?\Z', line)
 							if match:
 								t,name,dat,vinfo = match.groups()
 								if re.match('[\x00,(){}]',name):
@@ -1662,8 +1663,8 @@ class AIBIN:
 		else:
 			f = file
 		warnings = []
-		ais = ''
-		table = ''
+		ais = b''
+		table = b''
 		offset = 4
 		totaloffsets = {}
 		for id in self.ais.keys():
@@ -1691,9 +1692,9 @@ class AIBIN:
 		for id in self.ais.keys():
 			loc,string,flags,ai,jumps = self.ais[id]
 			if loc:
-				table += struct.pack('<4s3L', id, offset, string+1, flags)
+				table += struct.pack('<4s3L', id.encode('latin-1') if isinstance(id, str) else id, offset, string+1, flags)
 				for cmd in ai:
-					ais += chr(cmd[0])
+					ais += bytes([cmd[0]])
 					if self.parameters[cmd[0]]:
 						for p,t in zip(cmd[1:],self.parameters[cmd[0]]):
 							try:

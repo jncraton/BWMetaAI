@@ -90,6 +90,9 @@ def compile_string(string):
 	return re.sub(r'<(\\d+)>', special_chr, string)
 
 def decompile_string(string, exclude='', include=''):
+	# Handle bytes in Python 3
+	if isinstance(string, bytes):
+		string = string.decode('latin-1')
 	def special_chr(o):
 		return '<%s>' % ord(o.group(0))
 	decompile = DEF_DECOMPILE + include

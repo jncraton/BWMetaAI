@@ -1304,6 +1304,10 @@ class odict:
 		for k in self.keynames:
 			iter.append((k,self.dict[k]))
 		return iter
+	
+	def items(self):
+		"""Python 3 compatibility"""
+		return self.iteritems()
 
 	def iterkeys(self):
 		return list(self.keynames)
