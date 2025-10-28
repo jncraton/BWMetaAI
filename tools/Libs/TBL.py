@@ -1,4 +1,4 @@
-from utils import *
+from .utils import *
 
 import struct, re
 
@@ -87,9 +87,12 @@ def compile_string(string):
 		if -1 > c or 255 < c:
 			return o.group(0)
 		return chr(c)
-	return re.sub('<(\d+)>', special_chr, string)
+	return re.sub(r'<(\\d+)>', special_chr, string)
 
 def decompile_string(string, exclude='', include=''):
+	# Handle bytes in Python 3
+	if isinstance(string, bytes):
+		string = string.decode('latin-1')
 	def special_chr(o):
 		return '<%s>' % ord(o.group(0))
 	decompile = DEF_DECOMPILE + include
@@ -117,7 +120,7 @@ class TBL:
 			findlen = {}
 			for x in offsets:
 				findlen[x] = 1
-			findlen = findlen.keys() + [len(data)]
+			findlen = list(findlen.keys()) + [len(data)]
 			findlen.sort()
 			strings = []
 			for o in offsets:

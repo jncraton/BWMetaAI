@@ -1,5 +1,5 @@
-from utils import *
-import TBL,DAT
+from .utils import *
+from . import TBL, DAT
 
 import struct, re, os
 try:
@@ -630,7 +630,7 @@ class IScriptBIN:
 				return curoffset
 			while cur_offset < len(data)-3:
 				id,offset = struct.unpack('<HH', data[cur_offset:cur_offset+4])
-				#print '%s - %s' % (id,offset)
+				#print('%s - %s') % (id,offset)
 				if id == 65535 and offset == 0:
 					if cur_offset+4 < len(data):
 						try:
@@ -657,7 +657,7 @@ class IScriptBIN:
 					raise PyMSError('Load','Invalid iscript entry header, could possibly be a corrupt iscript.bin')
 				headers[id] = header
 				cur_offset += 4
-			for id,dat in headers.iteritems():
+			for id,dat in headers.items():
 				for n,o in enumerate(dat[2]):
 					if o != None:
 						if not o in offsets:
@@ -729,7 +729,7 @@ class IScriptBIN:
 		def interpret_params(cmd,p,d):
 			try:
 				cmd.append(p(2, self, d))
-			except PyMSWarning, w:
+			except PyMSWarning as w:
 				cmd.append(w.extra)
 				# ai[4][-1].append(w.extra)
 				w.line = n + 1
@@ -738,7 +738,7 @@ class IScriptBIN:
 				# if var:
 					# var.warning += ' when the above warning happened'
 					# warnings.append(var)
-			except PyMSError, e:
+			except PyMSError as e:
 				e.line = n + 1
 				e.code = line
 				e.warnings = warnings
@@ -797,7 +797,7 @@ class IScriptBIN:
 							extrainfo[id] = m.group(1)
 						continue
 					line = l.strip().split('#',1)[0]
-					# print line
+					# print(line)
 					if line:
 						if re.match('\\A\\.headerstart\\s*\\Z',line):
 							if not state in [0,4]:
@@ -860,9 +860,9 @@ class IScriptBIN:
 									raise PyMSError('Interpreting', 'Duplicate label name "%s"' % label,n,line, warnings=warnings)
 								labels[label] = offset
 								if label in findlabels:
-									#print label
+									#print(label)
 									for d in findlabels[label]:
-										#print d
+										#print(d)
 										if isinstance(d, tuple):
 											d[0][3][d[1]] = offset
 											if not offset in offsets:
@@ -944,21 +944,21 @@ class IScriptBIN:
 				r = odict(code, sorted(code.keys()))
 				self.remove_code(labels[l], code=r, offsets=offsets)
 				code = r.dict
-		# print 'Headers: ' + pprint(headers)
-		# print 'Offsets: ' + pprint(offsets)
-		# print 'Code   : ' + pprint(code)
-		# print 'Labels : ' + pprint(labels)
-		# print 'FLabels: ' + pprint(findlabels)
+		# print('Headers: ') + pprint(headers)
+		# print('Offsets: ') + pprint(offsets)
+		# print('Code   : ') + pprint(code)
+		# print('Labels : ') + pprint(labels)
+		# print('FLabels: ') + pprint(findlabels)
 		for id in headers.keys():
 			if id in self.headers:
 				for o in self.headers[id][2]:
 					if o != None and o in self.offsets:
 						self.remove_code(o,id)
 			self.headers[id] = headers[id]
-		for o,i in offsets.iteritems():
+		for o,i in offsets.items():
 			self.offsets[o] = i
 		c = dict(self.code.dict)
-		for o,cmd in code.iteritems():
+		for o,cmd in code.items():
 			c[o] = cmd
 		k = c.keys()
 		k.sort()
@@ -1007,12 +1007,12 @@ class IScriptBIN:
 					local += 1
 				code += labels[o] + ':\n'
 				curcmd = self.code.index(o)
-				# print '\t%s' % o
+				# print('\t%s') % o
 				donext = []
 				while True:
-					# print curcmd
+					# print(curcmd)
 					co = self.code.getkey(curcmd)
-					# print co
+					# print(co)
 					if co in self.offsets and not co in labels:
 						local += setlabel(co,local,entry)
 						completed.append(co)
@@ -1120,9 +1120,9 @@ class IScriptBIN:
 		code = ''
 		offsets = {}
 		offset = 1372
-		for o,cmd in self.code.iteritems():
+		for o,cmd in self.code.items():
 			offsets[o] = offset
-			#print sum([1] + [p(0,self) for p in OPCODES[cmd[0]][1]])
+			#print(sum)([1] + [p(0,self) for p in OPCODES[cmd[0]][1]])
 			offset += 1
 			ps = OPCODES[cmd[0]][1]
 			if ps:
@@ -1131,7 +1131,7 @@ class IScriptBIN:
 					offset += sum([-p1,ps[1](0,self)*cmd[1]])
 				else:
 					offset += sum([p(0,self) for p in ps])
-		for o,cmd in self.code.iteritems():
+		for o,cmd in self.code.items():
 			ps = OPCODES[cmd[0]][1]
 			if ps:
 				p1 = ps[0](0,self)
@@ -1146,10 +1146,10 @@ class IScriptBIN:
 							code += struct.pack(['','B','<H'][p(0,self)], v)
 			else:
 				code += chr(cmd[0])
-		# print offset-1372
-		# print len(code)
+		# print(offset)-1372
+		# print(len)(code)
 		table = ''
-		for id,dat in self.headers.iteritems():
+		for id,dat in self.headers.items():
 			table += struct.pack('<HH', id,offset)
 			entry = 'SCPE%s\x00\x00\x00' % chr(dat[0])
 			for o in dat[2]:
@@ -1176,14 +1176,14 @@ class IScriptBIN:
 		# i.decompile('test.txt',[27])
 		## gwarnings.append(i.interpret('test.txt'))
 		## i.decompile('test2.txt',[27])
-	# except PyMSError, e:
+	# except PyMSError as e:
 		# if gwarnings:
 			# for warning in gwarnings:
-				# print repr(warning)
-		# print repr(e)
+				# print(repr)(warning)
+		# print(repr)(e)
 	# except:
 		# raise
 	# else:
 		# if gwarnings:
 			# for warning in gwarnings:
-				# print repr(warning)
+				# print(repr)(warning)

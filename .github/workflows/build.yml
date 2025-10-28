@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout repository
@@ -15,8 +15,14 @@ jobs:
       with:
         node-version: 14
 
-    - name: Install python-tk
-      run: sudo apt-get install --fix-missing python-tk
+    - name: Install python3-tk
+      run: sudo apt-get install --fix-missing python3-tk
 
     - name: Run make
       run: make
+    
+    - name: Verify build output
+      run: |
+        echo "Build completed successfully"
+        ls -lh build/aiscript.bin build/patch_rt.mpq
+        sha256sum build/aiscript.bin build/patch_rt.mpq
