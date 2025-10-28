@@ -1,5 +1,5 @@
-from utils import *
-import TBL, DAT
+from .utils import *
+from . import TBL, DAT
 
 import struct, re, os, sys
 from math import log, floor
@@ -557,7 +557,7 @@ class AIBIN:
 						totaloffsets[curoffset+loc] = [id,len(cmdoffsets)]
 						cmdoffsets.append(curoffset)
 						cmd,curoffset = ord(curdata[curoffset]),curoffset + 1
-						#print id,loc,curoffset,self.short_labels[cmd]
+						#print(id),loc,curoffset,self.short_labels[cmd]
 						if not cmd and curoffset == len(curdata):
 							break
 						if cmd >= len(self.labels):
@@ -573,8 +573,8 @@ class AIBIN:
 										tos = totaloffsets[d[1]]
 										ais[id][4].append(tos)
 										ai.append(tos)
-										# print tos
-										# print externaljumps
+										# print(tos)
+										# print(externaljumps)
 										if not tos[0] in externaljumps[0][0]:
 											externaljumps[0][0][tos[0]] = {}
 										if not tos[1] in externaljumps[0][0][tos[0]]:
@@ -684,7 +684,7 @@ class AIBIN:
 				if depth == 1:
 					return string[:-3]
 				return string
-			print pprint(self.externaljumps)
+			print(pprint)(self.externaljumps)
 			return warnings
 		except PyMSError:
 			raise
@@ -932,12 +932,12 @@ class AIBIN:
 								warnings.append(PyMSWarning('External Definition',"External definition files do not support Information Comments, information is discarded",n,line))
 							try:
 								v = self.types[t][0](dat,3)[1]
-							except PyMSWarning, w:
+							except PyMSWarning as w:
 								w.line = n + 1
 								w.code = line
 								warnings.append(w)
 								v = w.extra[1]
-							except PyMSError, e:
+							except PyMSError as e:
 								e.line = n + 1
 								e.code = line
 								e.warnings = warnings
@@ -993,11 +993,11 @@ class AIBIN:
 									raise PyMSError('Interpreting',"The variable name '%s' is already in use" % name,n,line, warnings=warnings)
 								try:
 									self.types[t][0](dat,3)
-								except PyMSWarning, w:
+								except PyMSWarning as w:
 									w.line = n
 									w.code = line
 									warnings.append(w)
-								except PyMSError, e:
+								except PyMSError as e:
 									e.line = n + 1
 									e.code = line
 									e.warnings = warnings
@@ -1014,8 +1014,8 @@ class AIBIN:
 								else:
 									nextinfo = [2,varinfo[name]]
 								continue
-							if re.match('\\A[^(]+\\([^)]+\\):\\s*(?:\\{.+\\})?\\Z', line):
-								newai = re.match('\\A(.+)\\(\s*(.+)\s*,\s*(.+)\s*,\s*(\w+)\s*\\):\\s*(?:\\{(.+)\\})?\\Z', line)
+							if re.match(r'\\A[^(]+\\([^)]+\\):\\s*(?:\\{.+\\})?\\Z', line):
+								newai = re.match(r'\\A(.+)\\(\s*(.+)\s*,\s*(.+)\s*,\s*(\w+)\s*\\):\\s*(?:\\{(.+)\\})?\\Z', line)
 								if not newai:
 									raise PyMSError('Interpreting','Invalid syntax, expected a new script header',n,line, warnings=warnings)
 								id = newai.group(1)
@@ -1048,7 +1048,7 @@ class AIBIN:
 									if ai[4][-1][0] not in self.script_endings:
 										warnings.append(PyMSWarning('Interpreting', "The AI with ID '%s' does not end with a stop or definite loop. To ensure your script doesn't run into the next script, it must end with one of: goto(), stop(), debug(), time_jump(), or race_jump()" % ai[0], level=1))
 									if ai[0] in findgoto:
-										for l,f in findgoto[ai[0]].iteritems():
+										for l,f in findgoto[ai[0]].items():
 											if f[0]:
 												del findgoto[ai[0]][l]
 										if not findgoto[ai[0]]:
@@ -1212,7 +1212,7 @@ class AIBIN:
 													cs = p(da,3)
 													ai[4][-1].append(cs[1])
 													aisize += cs[0]
-												except PyMSWarning, w:
+												except PyMSWarning as w:
 													ai[4][-1].append(w.extra[1])
 													aisize += w.extra[0]
 													w.line = n + 1
@@ -1221,7 +1221,7 @@ class AIBIN:
 													if var:
 														var.warning += ' when the above warning happened'
 														warnings.append(var)
-												except PyMSError, e:
+												except PyMSError as e:
 													e.line = n + 1
 													e.code = line
 													e.warnings = warnings
@@ -1238,7 +1238,7 @@ class AIBIN:
 									cmdn += 1
 									nextinfo = None
 									continue
-								match = re.match('\\A--\s*(.+)\s*--\\s*(?:\\{(.+)\\})?\\Z', line)
+								match = re.match(r'\\A--\s*(.+)\s*--\\s*(?:\\{(.+)\\})?\\Z', line)
 								if match:
 									notused = False
 									label = match.group(1)
@@ -1328,7 +1328,7 @@ class AIBIN:
 			if ai[4][-1][0] not in self.script_endings:
 				warnings.append(PyMSWarning('Interpreting', "The AI with ID '%s' does not end with a stop or definite loop. To ensure your script doesn't run into the next script, it must end with one of: goto(), stop(), debug(), time_jump(), or race_jump()" % ai[0], level=1))
 			if ai[0] in findgoto:
-				for l,f in findgoto[ai[0]].iteritems():
+				for l,f in findgoto[ai[0]].items():
 					if f[0]:
 						del findgoto[ai[0]][l]
 				if not findgoto[ai[0]]:
@@ -1355,10 +1355,10 @@ class AIBIN:
 			raise PyMSError('Interpreting',"The external jump '%s:%s' in AI script '%s' jumps to an AI script that was not found while interpreting (you must include the scripts for all external jumps)" % (i[0],l[0],l[1][0][4]), warnings=warnings)
 		if findgoto:
 			remove = [{},{}]
-			for i in findgoto.iteritems():
+			for i in findgoto.items():
 				if not i[0] in remove:
 					remove[i[0] not in aiinfo][i[0]] = []
-				for l,f in i[1].iteritems():
+				for l,f in i[1].items():
 					if not f[0]:
 						warnings.append(PyMSWarning('Interpeting',"The label '%s' in AI script '%s' is unused, label is discarded" % (l,i[0])))
 						remove[i[0] not in aiinfo][i[0]].append(f[1])
@@ -1377,23 +1377,23 @@ class AIBIN:
 							else:
 								del ais[i][4][x-n]
 							n += 1
-		for id,u in unused.iteritems():
+		for id,u in unused.items():
 			if u and (not id[0] in findgoto or not id[1] in findgoto[id[0]]):
 				warnings.append(PyMSWarning('Interpeting',"The label '%s' in AI script '%s' is only referenced by commands that cannot be reached and is therefore unused" % (id[1],id[0])))
 		if self.ais:
-			for id,dat in ais.iteritems():
+			for id,dat in ais.items():
 				self.ais[id] = dat
 		else:
 			self.ais = ais
 		self.aisizes = aisizes
 		for a,b in ((0,0),(0,1),(1,0),(1,1)):
 			if self.externaljumps[a][b]:
-				for id,dat in externaljumps[a][b].iteritems():
+				for id,dat in externaljumps[a][b].items():
 					self.externaljumps[a][b][id] = dat
 			else:
 				self.externaljumps[a][b] = externaljumps[a][b]
 		if self.bwscript.ais:
-			for id,dat in bwais.iteritems():
+			for id,dat in bwais.items():
 				self.bwscript.ais[id] = dat
 		else:
 			self.bwscript.ais = bwais
@@ -1497,12 +1497,12 @@ class AIBIN:
 									warnings.append(PyMSWarning('External Definition',"External definition files do not support Information Comments, information is discarded",n,line))
 								try:
 									v = self.types[t][0](dat,3)[1]
-								except PyMSWarning, w:
+								except PyMSWarning as w:
 									w.line = n
 									w.code = line
 									warnings.append(w)
 									v = w.extra[1]
-								except PyMSError, e:
+								except PyMSError as e:
 									e.line = n + 1
 									e.code = line
 									e.warnings = warnings
@@ -1517,7 +1517,7 @@ class AIBIN:
 				loaded.append(dname)
 			f.write('\n')
 		values = {}
-		for name,dat in self.varinfo.iteritems():
+		for name,dat in self.varinfo.items():
 			vtype = types[dat[0]]
 			if dat[2] != None:
 				f.write('%s %s = %s' % (vtype,name,dat[1]))
@@ -1681,7 +1681,7 @@ class AIBIN:
 									offset += t(0,2)[0]
 								else:
 									offset += t(p,2)[0]
-							except PyMSWarning, e:
+							except PyMSWarning as e:
 								if not warnings:
 									warnings.append(e)
 								offset += e.extra[0]
@@ -1704,7 +1704,7 @@ class AIBIN:
 										d = t(totaloffsets[id][p],2)
 								else:
 									d = t(p,2)
-							except PyMSWarning, e:
+							except PyMSWarning as e:
 								if not warnings:
 									warnings.append(e)
 								offset += e.extra[0]
@@ -1718,13 +1718,13 @@ class AIBIN:
 		f.write('%s%s%s\x00\x00\x00\x00' % (struct.pack('<L', offset),ais,table))
 		if extra and (self.varinfo or self.aiinfo):
 			info = ''
-			for var,dat in self.varinfo.iteritems():
+			for var,dat in self.varinfo.items():
 				if dat[2] != None:
 					info += '%s%s\x00%s%s\x00' % (chr(dat[0]+1),var,self.types[types[dat[0]]][0](dat[1],2)[1],dat[2])
 			info += '\x00'
-			for ai,dat in self.aiinfo.iteritems():
+			for ai,dat in self.aiinfo.items():
 				info += '%s%s\x00' % (ai,dat[0])
-				for label,desc in dat[1].iteritems():
+				for label,desc in dat[1].items():
 					info += '%s\x00%s\x00' % (label,desc)
 				info += '\x00'
 				if dat[2]:
@@ -2050,7 +2050,7 @@ class BWBIN(AIBIN):
 									offset += t(0,1)[0]
 								else:
 									offset += t(p,1)[0]
-							except PyMSWarning, e:
+							except PyMSWarning as e:
 								if not warnings:
 									warnings.append(e)
 					cmdn += 1
@@ -2073,16 +2073,16 @@ class BWBIN(AIBIN):
 								d = t(p,2)
 							ais += d[1]
 							offset += d[0]
-						except PyMSWarning, e:
+						except PyMSWarning as e:
 							if not warnings:
 								warnings.append(e)
 				offset += 1
 		f.write('%s%s%s\x00\x00\x00\x00' % (struct.pack('<L', offset),ais,table))
 		if extra and self.aiinfo:
 			info = ''
-			for ai,dat in self.aiinfo.iteritems():
+			for ai,dat in self.aiinfo.items():
 				info += '%s%s\x00' % (ai,dat[0])
-				for label,desc in dat[1].iteritems():
+				for label,desc in dat[1].items():
 					info += '%s\x00%s\x00' % (label,desc)
 				info += '\x00'
 				for label in dat[2]:
@@ -2105,7 +2105,7 @@ class BWBIN(AIBIN):
 #a.load_file('ai.bin')
 	# b = AIBIN('')
 	# gwarnings.extend(a.warnings)
-	# print a.interpret('test.txt')
+	# print(a).interpret('test.txt')
 	# gwarnings.extend(a.load_file('Default\\aiscript.bin'))#'aitest.bin'))
 	# for n in a.ais.keys():
 		# if n not in ['ZB3C','ZB3E']:
@@ -2116,21 +2116,21 @@ class BWBIN(AIBIN):
 	# gwarnings.extend(a.decompile('test.txt'))#, False, True, ['ZB3C','ZB3E']))
 	# gwarnings.extend(b.interpret('test.txt'))
 	# a.compile('aitest.bin','bwtest.bin')
-	# print time.time() - t
+	# print(time).time() - t
 	
 	# a = AIBIN('bw.bin')
 	# gwarnings.extend(a.load_file('ai.bin'))
 	# gwarnings.extend(a.decompile('aitestd.txt'))
 	# gwarnings.extend(a.interpret('aitest.txt'))
 	# gwarnings.extend(a.compile('ai.bin','bw.bin',True))
-# except PyMSError, e:
+# except PyMSError as e:
 	# if gwarnings:
 		# for warning in gwarnings:
-			# print repr(warning)
-	# print repr(e)
+			# print(repr)(warning)
+	# print(repr)(e)
 # except:
 	# raise
 # else:
 	# if gwarnings:
 		# for warning in gwarnings:
-			# print repr(warning)
+			# print(repr)(warning)

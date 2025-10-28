@@ -1,8 +1,12 @@
-from utils import *
+from .utils import *
 from Libs import PCX,PAL,TBL,AIBIN,DAT,IScriptBIN
 
-from Tkinter import *
-from tkMessageBox import *
+try:
+    from Tkinter import *
+    from tkMessageBox import *
+except ImportError:
+    from tkinter import *
+    from tkinter.messagebox import *
 
 import re, os
 
@@ -51,7 +55,7 @@ def loadsettings(program, default={}):
 	settings = default
 	try:
 		settings.update(eval(file(os.path.join(BASE_DIR,'Settings','%s.txt' % program), 'r').read(),{}))
-	except IOError, e:
+	except IOError as e:
 		if e.args[0] != 2:
 			raise
 	return settings
@@ -201,11 +205,11 @@ class MPQHandler:
 				close = False
 			if self.open and self.open != True:
 				f = SFileOpenFileEx(self.open, '\\'.join(path), SFILE_SEARCH_ALL_OPEN)
-				print f
+				print(f)
 				if not SFInvalidHandle(f):
 					r = SFileReadFile(f)
 					SFileCloseFile(f)
-					print r
+					print(r)
 					p = SFile(r[0], '\\'.join(path))
 					return p
 			if close:
@@ -665,13 +669,13 @@ class SettingsPanel(Frame):
 					try:
 						c.load_file(file[1])
 						self.variables[f][1].set(file[0].file)
-					except PyMSError, err:
+					except PyMSError as err:
 						ErrorDialog(self.setdlg, err)
 						return
 			else:
 				try:
 					c.load_file(file)
-				except PyMSError, e:
+				except PyMSError as e:
 					ErrorDialog(self.setdlg, e)
 					return
 				self.variables[f][1].set(file)

@@ -1,5 +1,5 @@
-from utils import *
-import TBL
+from .utils import *
+from . import TBL
 
 import struct, os, re
 
@@ -366,7 +366,7 @@ class UnitsDAT:
 		for n,l in enumerate(data):
 			if len(l) > 1:
 				ln = l.strip().split('#',1)[0]
-				line = re.split('\s+', ln)
+				line = re.split(r'\s+', ln)
 				if entrydata:
 					if line[0] == self.header + 'ID':
 						raise PyMSError('Interpreting',"Unexpected line, expected a value",n,ln)
@@ -409,7 +409,7 @@ class UnitsDAT:
 					entrydata = True
 		if None in entries[curentry]:
 			raise PyMSError('Interpreting',"Entry '%s' is missing a value for %s" % (curentry,self.labels[entries.curentry.index(None)]),n,ln)
-		for id,entry in entries.iteritems():
+		for id,entry in entries.items():
 			self.entries[id] = entry
 		return entries.keys()
 
@@ -420,7 +420,7 @@ class UnitsDAT:
 			raise PyMSError('Interpreting',"Could not load file '%s'" % file)
 		if ref:
 			f.write('#----------------------------------------------------')
-			for file,name in DATA_REFERENCE.iteritems():
+			for file,name in DATA_REFERENCE.items():
 				f.write('\n# %s:' % name)
 				for n,value in enumerate(DATA_CACHE[file]):
 					pad = ' ' * (3 - len(str(n)))
@@ -1079,7 +1079,7 @@ class OrdersDAT(UnitsDAT):
 
 # for DAT in [SpritesDAT]:#UnitsDAT,WeaponsDAT,FlingyDAT,SpritesDAT,ImagesDAT,UpgradesDAT,TechDAT,SoundsDAT,PortraitDAT,CampaignDAT,OrdersDAT]:
 	# d = DAT()
-	# print d.datname
+	# print(d).datname
 	# d.load_file('Default\\' + d.datname)
 	# d.compile('Test\\' + d.datname)
 #d = ImagesDAT()

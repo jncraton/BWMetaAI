@@ -1,22 +1,42 @@
-from Tkinter import *
-from tkMessageBox import askquestion,OK
-import tkFileDialog
+try:
+    from Tkinter import *
+    from tkMessageBox import askquestion, OK
+    import tkFileDialog
+except ImportError:
+    from tkinter import *
+    from tkinter.messagebox import askquestion, OK
+    import tkinter.filedialog as tkFileDialog
+
 from textwrap import wrap
-import os,re,webbrowser,sys,traceback,urllib
+import os, re, webbrowser, sys, traceback
+try:
+    import urllib
+except ImportError:
+    import urllib.request as urllib
+
 win_reg = True
 try:
-	from _winreg import *
-except:
-	win_reg = False
+    from _winreg import *
+except ImportError:
+    try:
+        from winreg import *
+    except ImportError:
+        win_reg = False
 
 PyMS_VERSION = (1,2,1)
 PyMS_LONG_VERSION = 'v%s.%s.%s' % PyMS_VERSION
 if hasattr(sys, 'frozen'):
-	BASE_DIR = os.path.dirname(unicode(sys.executable, sys.getfilesystemencoding()))
+    try:
+        BASE_DIR = os.path.dirname(str(sys.executable))
+    except:
+        BASE_DIR = os.path.dirname(sys.executable)
 else:
-	BASE_DIR = os.path.dirname(os.path.dirname(unicode(__file__, sys.getfilesystemencoding())))
+    try:
+        BASE_DIR = os.path.dirname(os.path.dirname(str(__file__)))
+    except:
+        BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 if os.path.exists(BASE_DIR):
-	os.chdir(BASE_DIR)
+    os.chdir(BASE_DIR)
 SC_DIR = ''
 if win_reg:
 	try:
@@ -39,7 +59,7 @@ def register_registry(prog,type,filetype,progpath,icon):
 	def delkey(key,sub_key):
 		try:
 			h = OpenKey(key,sub_key)
-		except WindowsError, e:
+		except WindowsError as e:
 			if e.errno == 2:
 				return
 			raise
@@ -924,7 +944,7 @@ class CodeText(Frame):
 		self.update_range(i, i + "+%dc" % len(text))
 
 	def delete(self, start, end=None):
-		#print start,end
+		#print(start),end
 		self.setedit()
 		try:
 			self.tk.call(self.text.orig, 'delete', start, end)
@@ -1131,30 +1151,30 @@ class IntegerVar(StringVar):
 		self.trace('w', self.editvalue)
 
 	def editvalue(self, *_):
-		#print self.check
+		#print(self).check
 		if self.check:
-			#print s,self.range
+			#print(s),self.range
 			if self.get(True):
 				try:
 					s = self.get()
 					if self.range[0] != None and self.range[0] >= 0 and self.get(True).startswith('-'):
-						#print '1'
+						#print('1')
 						raise
 					s = self.get()
 					if s in self.exclude:
-						#print '2'
+						#print('2')
 						raise
 				except:
 					#raise
 					s = self.lastvalid
 				else:
 					if self.range[0] != None and s < self.range[0]:
-						#print '3'
+						#print('3')
 						s = self.range[0]
 					elif self.range[1] != None and s > self.range[1]:
-						#print '4'
+						#print('4')
 						s = self.range[1]
-				#print s
+				#print(s)
 				self.set(s)
 				if self.callback:
 					self.callback(s)
@@ -1303,7 +1323,7 @@ class odict:
 		return self.dict[key]
 
 	def getkey(self, n):
-		print 'len',len(self.keynames),type(self.keynames),n
+		print('len'),len(self.keynames),type(self.keynames),n
 		return self.keynames[n]
 
 	def getitem(self, n):

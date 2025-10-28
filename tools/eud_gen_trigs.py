@@ -18,7 +18,7 @@ with open('build/aiscript.bin', 'rb') as aiscript:
 
   while(next):
     # Null pad
-    next = (next + '\x00\x00\x00\x00')[0:4]
+    next = (next + b'\x00\x00\x00\x00')[0:4]
 
     value = struct.unpack('i', next)[0]
 
