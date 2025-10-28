@@ -703,7 +703,7 @@ class AIBIN:
 		elif stage == 1:
 			v = str(data)
 		elif stage == 2:
-			v = chr(data)
+			v = bytes([data])
 		else:
 			try:
 				v = int(data)
@@ -747,7 +747,7 @@ class AIBIN:
 			else:
 				v = TBL.decompile_string(s[0], '\x0A\x28\x29\x2C')
 		elif stage == 2:
-			v = chr(data) + '\x00'
+			v = bytes([data]) + b'\x00'
 		else:
 			try:
 				v = int(data)
@@ -809,7 +809,7 @@ class AIBIN:
 		elif stage == 1:
 			v = TBL.decompile_string(self.tbl.strings[self.upgradesdat.get_value(data,'Label') - 1].split(b'\x00', 1)[0].strip(), '\x0A\x28\x29\x2C')
 		elif stage == 2:
-			v = chr(data) + '\x00'
+			v = bytes([data]) + b'\x00'
 		else:
 			try:
 				v = int(data)
@@ -831,7 +831,7 @@ class AIBIN:
 		elif stage == 1:
 			v = TBL.decompile_string(self.tbl.strings[self.techdat.get_value(data,'Label') - 1].split(b'\x00', 1)[0].strip(), '\x0A\x28\x29\x2C')
 		elif stage == 2:
-			v = chr(data) + '\x00'
+			v = bytes([data]) + b'\x00'
 		else:
 			try:
 				v = int(data)
@@ -857,7 +857,7 @@ class AIBIN:
 			s = TBL.compile_string(data)
 			if '\x00' in s:
 				raise PyMSError('Parameter',"String '%s' contains a null (<0>)" % data)
-			return [len(s) + 1,s + '\x00']
+			return [len(s) + 1,s.encode('latin-1') + b'\x00']
 		return [len(data),data]
 
 	def interpret(self, files, defs=None, extra=False):
@@ -1715,8 +1715,8 @@ class AIBIN:
 								offset += d[0]
 					offset += 1
 			else:
-				table += struct.pack('<4s3L', id, 0, string+1, flags)
-		f.write('%s%s%s\x00\x00\x00\x00' % (struct.pack('<L', offset),ais,table))
+				table += struct.pack('<4s3L', id.encode('latin-1') if isinstance(id, str) else id, 0, string+1, flags)
+		f.write(struct.pack('<L', offset) + ais + table + b'\x00\x00\x00\x00')
 		if extra and (self.varinfo or self.aiinfo):
 			info = ''
 			for var,dat in self.varinfo.items():
@@ -2033,8 +2033,8 @@ class BWBIN(AIBIN):
 				raise PyMSError('Compile',"Could not load file '%s'" % file)
 		else:
 			f = file
-		ais = ''
-		table = ''
+		ais = b''
+		table = b''
 		offset = 4
 		totaloffsets = {}
 		for id in self.ais.keys():
@@ -2059,9 +2059,9 @@ class BWBIN(AIBIN):
 		offset = 4
 		for id in self.ais.keys():
 			loc,ai,jumps = self.ais[id]
-			table += struct.pack('<4sL', id, offset)
+			table += struct.pack('<4sL', id.encode('latin-1') if isinstance(id, str) else id, offset)
 			for cmd in ai:
-				ais += chr(cmd[0])
+				ais += bytes([cmd[0]])
 				if self.parameters[cmd[0]]:
 					for p,t in zip(cmd[1:],self.parameters[cmd[0]]):
 						try:
@@ -2078,7 +2078,7 @@ class BWBIN(AIBIN):
 							if not warnings:
 								warnings.append(e)
 				offset += 1
-		f.write('%s%s%s\x00\x00\x00\x00' % (struct.pack('<L', offset),ais,table))
+		f.write(struct.pack('<L', offset) + ais + table + b'\x00\x00\x00\x00')
 		if extra and self.aiinfo:
 			info = ''
 			for ai,dat in self.aiinfo.items():
