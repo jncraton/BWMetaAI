@@ -301,6 +301,9 @@ def parse(content):
     # defense_ground_train
     def replace_defense_ground_train(match):
         unit = match.group(1)
+        # JavaScript allocates these but doesn't use them - replicating the behavior
+        do_build = next_block_name()
+        skip_build = next_block_name()
         return (f'defenseuse_gg(1, {unit})\n'
                 f'defenseuse_ga(1, {unit})\n'
                 f'defensebuild_gg(1, {unit})\n'
@@ -311,6 +314,9 @@ def parse(content):
     # defense_air_train
     def replace_defense_air_train(match):
         unit = match.group(1)
+        # JavaScript allocates these but doesn't use them - replicating the behavior
+        do_build = next_block_name()
+        skip_build = next_block_name()
         return (f'defenseuse_ag(1, {unit})\n'
                 f'defenseuse_aa(1, {unit})\n'
                 f'defensebuild_ag(1, {unit})\n'
