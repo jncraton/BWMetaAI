@@ -10,9 +10,8 @@ Linux is strongly recommended for development. Everything should work on other p
 
 ### Prerequisites: 
 
-- [node.js](http://nodejs.org/download/)
 - [GNU Make](https://www.gnu.org/software/make/)
-- [Python](http://www.python.org/download/) 2.7 32 bit. This particular version is required to be able to interact with storm.dll using ctypes.
+- [Python](http://www.python.org/download/) 2.7 32 bit for PyAI compiler (interacting with storm.dll) and Python 3.6+ for build scripts
 
 ### Build 
 

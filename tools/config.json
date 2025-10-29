@@ -1,0 +1,18 @@
+{
+    "srcPath": "src/",
+    "verbosity": 0,
+    "bonusWorkers": 0,
+    "difficulty": 0,
+    "terran": {
+        "verbosity": 0,
+        "useBuild": ""
+    },
+    "zerg": {
+        "verbosity": 0,
+        "useBuild": ""
+    },
+    "protoss": {
+        "verbosity": 0,
+        "useBuild": ""
+    }
+}

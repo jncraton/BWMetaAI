@@ -63,7 +63,7 @@ build/combined.pyai: build/terran.pyai build/zerg.pyai build/protoss.pyai
 build/%.pyai: src/%
 	@echo Building $@ $<
 	@cp tools/config_$(config).json tools/config.json
-	@node tools/build_ai $(subst src/,,$<) $@;
+	@python3 tools/build_ai.py $(subst src/,,$<) $@;
 	@rm tools/config.json
 
 clean:
